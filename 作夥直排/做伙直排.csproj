@@ -109,7 +109,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon-20191015110306927.ico</ApplicationIcon>
+    <ApplicationIcon>kiichoicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -219,6 +219,7 @@
     <EmbeddedResource Include="Strings.zh-TW.resx" />
     <Content Include="favicon-20191015110306927.ico" />
     <Content Include="icon.ico" />
+    <Content Include="kiichoicon.ico" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

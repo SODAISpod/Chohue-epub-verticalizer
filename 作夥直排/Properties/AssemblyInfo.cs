@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("做伙直排提供將書本直排還有簡體轉換等的多項服務。")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("做伙直排 Csharp ver")]
+[assembly: AssemblyProduct("做伙直排")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 您可以指定所有的值，也可以依照以下的方式，使用 '*' 將組建和修訂編號
 // 指定為預設值: 
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.9.5.19")]
-[assembly: AssemblyFileVersion("0.9.5.19")]
+[assembly: AssemblyVersion("0.9.7")]
+[assembly: AssemblyFileVersion("0.9.7")]
