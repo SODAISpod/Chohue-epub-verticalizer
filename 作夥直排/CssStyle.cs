@@ -263,7 +263,7 @@ namespace ChoHoe
                 styleToSend += item.Key + ": " + item.Value+";" + System.Environment.NewLine;
 
             }
-            Logger.logger.Trace($"styleToSend:{styleToSend}");
+            Logger.logger.Trace(System.Environment.NewLine + $"style returning:" + System.Environment.NewLine+ $"{styleToSend}");
             return styleToSend;
 
         }
