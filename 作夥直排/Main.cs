@@ -24,21 +24,9 @@ namespace ChoHoeBV
     {
 
 
-        
-
-
-
         BackgroundWorker bw = new BackgroundWorker();
         BackgroundWorker bwConvert = new BackgroundWorker();
 
-        string[] g_LangStringSplited;
-                         
-                  
-                
-
-        string OpfBasedPath;
-        string OpfPath;
-   
         string UserSelectedFilePath;
         //單本專用ㄉ變數R
         Book abook = new Book();
@@ -46,28 +34,24 @@ namespace ChoHoeBV
         List<Book> batchBookList = new List<Book>();
 
         //ResourceManager Rm = new ResourceManager("作夥直排_Csharp_ver.Strings", Assembly.GetExecutingAssembly());
-        FileStream Log;
-        StreamWriter sww;
+ 
         bool ToTradictional =true ;
         ArrayList xhtml = new ArrayList();
       
        
-        Boolean SingleFileImportant = false;
-        bool ToTridiction = true;
+        
+       
         public Form1()
         {
             InitializeComponent();
             Make_Btn.Enabled = false;
-            Logger.logger.Info("//////////////////App Started///////////////////////");
+            Logger.logger.Info("🦄//////////////////🦄 - App Started - 🧛///////////////////////🧛");
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(IfDoModifyPageDirection_Chkbox, "預設會強制指定為由右而左，直排小說的翻頁方向。");
             SetInitialValue();
            
             //呼叫語言func
 
-          
-
-          
             LanguageChanging(Convert.ToString(languagecombobox.SelectedValue));
             this.StyleManager = metroStyleManager1;
          
@@ -94,8 +78,7 @@ namespace ChoHoeBV
         {
 
         }
-
-
+        
         private void ToTraditionValue_Cmd_Click(object sender, EventArgs e)
         {
             
@@ -115,20 +98,9 @@ namespace ChoHoeBV
 
         public void LanguageChanging(string langCode)
         {
-          
-                 
+                       
         }
-        private string LanguageMatching(string optionText, int LengthOfString)
-        {
-            for (int i = 0; i < LengthOfString; i++)
-            {
-                if (optionText == g_LangStringSplited[i])
-                {
-                    return g_LangStringSplited[i + 1];
-                }
-            }
-            return optionText;
-        }
+      
 
         private void Language_Convert_TCT_Switcher_Btn_Batch_Click(object sender, EventArgs e)
         {
@@ -156,11 +128,6 @@ namespace ChoHoeBV
             if (Import_File.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
 
-
-
-
-
-                
                 // bw.ProgressChanged += new ProgressChangedEventHandler(bw_ProgressChanged);
                 bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(loadBack_RunWorkerCompleted) ;
 
@@ -180,11 +147,6 @@ namespace ChoHoeBV
             }
 
 
-
-
-
-
-
         }
 
 
@@ -195,23 +157,11 @@ namespace ChoHoeBV
         {
 
         }
-        private void LogWindowsSender(string logs)
-        {
-
-
-            string textoglog = Environment.NewLine + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + ":" + logs;
-           
-
-            sww.WriteLine(textoglog);
-            sww.Flush();
-
-        }
-
         private void Make_Btn_Click(object sender, EventArgs e)
         {
-
-
+            
             Make_Btn.Enabled = false;
+            StatusLabel.Text = "轉檔中...";
             bwConvert.RunWorkerCompleted += new RunWorkerCompletedEventHandler(convertBack_RunWorkerCompleted);
 
 
@@ -227,96 +177,9 @@ namespace ChoHoeBV
             bwConvert.RunWorkerAsync(argument: IfDoModifyPageDirection_Chkbox.Checked);
 
 
-
-
-
-
-            
-            
-
-          
-
-
-
-
-          
-
         }
-        private void TCT_Converter()
-        {
-
-
-            ArrayList source = new ArrayList();
-
-
-            int len = xhtml.Count;
-            for (int i = 0; i < len - 1; i++)
-            {
-                HtmlAgility_test((string)xhtml[i]);
-               
-            }
-
-        }
-        private void HtmlAgility_test(string url)
-        {
-            string fullpath = @"temp\unzipping\" + OpfBasedPath + @"\" + url;
-            FileStream xhtmlloder = new FileStream(fullpath, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(xhtmlloder);
-            string source = sr.ReadToEnd();
-            string before="",after="";
-            
-          
-
-            var doc = new HtmlAgilityPack.HtmlDocument();
-            doc.LoadHtml(source);  
-            foreach (HtmlNode node in   doc.DocumentNode.SelectNodes("//text()"))
-            {
-                
-                before = node.InnerText;
-                if (ToTradictional==true)
-                {
-                    after = ChineseConverter.Convert(before, ChineseConversionDirection.SimplifiedToTraditional);
-                }
-                else
-                {
-                    after = ChineseConverter.Convert(before, ChineseConversionDirection.TraditionalToSimplified);
-                }
-                node.ParentNode.ReplaceChild(HtmlTextNode.CreateNode(after), node);
-                
-                before = "";after = "";
-            }
-            xhtmlloder.Close();
-            doc.Save(fullpath,System.Text.Encoding.UTF8);
        
 
-     
-        }
-        private ArrayList  TCT_Converter_File_Reading(string URL)
-        {
-
-            ArrayList source = new ArrayList();
-            ArrayList sourceProcessed = new ArrayList();
-            string stc = "";
-            string str = "";
-            FileStream xhtmlloder = new FileStream(@"temp\unzipping\"+ OpfBasedPath+@"\" + URL, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(xhtmlloder);
-
-              source.Add(sr.ReadToEnd());
-            stc = (string)source[0];
-          
-            int len = stc.Length - 1;
-            for (int i = 0; i < len; i++)
-            {
-            str = stc.Substring(0, 1);
-            sourceProcessed.Add(str);
-            stc = stc.Substring(1);
-            }
-            xhtmlloder.Close();
-            return sourceProcessed;
-        }
-        private void TCT_Converter_Filiter(ArrayList source)
-
-        { }
         private void ClearDirectory(string path)
         {
             if (Directory.Exists(path))
@@ -336,12 +199,8 @@ namespace ChoHoeBV
             {
                 Directory.CreateDirectory(path);
             }
-
-            
+          
         }
-
-        private void CssEditer(string path) { }
-       
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -451,7 +310,7 @@ namespace ChoHoeBV
 
             bool Modifypage = (bool)e.Argument;
 
-            StatusLabel.Text = "轉檔中...";
+           
 
             if (Modifypage)
             {

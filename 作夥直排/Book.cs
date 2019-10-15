@@ -20,6 +20,7 @@ using Ionic.Zlib;
 using MetroFramework;
 using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace ChoHoeBV
 {
@@ -147,19 +148,19 @@ namespace ChoHoeBV
         private void OpfWriter(bool PageDirection,bool Img,string Title,string Author)
         {
 
-            Logger.logger.Trace($"Write to Opf");
+            Logger.logger.Trace($"Write to opf");
 
             {
                 string PageDirectionString = PageDirection ? "rtl" : "ltr";
                 Logger.logger.Trace($"PageDirection : {PageDirectionString}");
                 if (Img)
                 {
-                    Logger.logger.Trace($"Set True to replace image in book");
+                    Logger.logger.Trace($"True set to replace image in book.");
                     ImgReplace();
                 }
                 else
                 {
-                    Logger.logger.Trace($"Set False to replace image in book");
+                    Logger.logger.Trace($"False set to replace image in book.");
                 }
                 XmlDocument XDOC = new XmlDocument();
                 string _opfrootpath = _uncompressedPath + _opfPath;
@@ -356,10 +357,13 @@ namespace ChoHoeBV
             }
             else if (root.Attributes["version"].Value != "3.2")//事實上3.2也會寫成3.0
             {
+                
+
                 Logger.logger.Trace($"epub版本為2，進行轉換 ");
                 //     EpubVersion = Convert.ToInt32( root.Attributes["version"].Value);
                 try
                 {
+
                     using (System.Diagnostics.Process p = new System.Diagnostics.Process())
                     {
                         string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
@@ -393,6 +397,7 @@ namespace ChoHoeBV
                 catch (Exception e)
                 {
                     Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
+                    MessageBox.Show("EPUB 2.0 的檔案需要使用 Pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
                     throw;
                 }
                
@@ -658,7 +663,7 @@ namespace ChoHoeBV
             // _cssstrings = css.Replace();
             css.Replace();
             Logger.logger.Debug($"Replace \"html\" ");
-            css.NewReplacement(reHtml,"htnl");
+            css.NewReplacement(reHtml,"html");
             css.Replace();
             _cssstrings = css.GetCss();
 
@@ -697,7 +702,16 @@ namespace ChoHoeBV
             string fileExsistedIndexing = title;
             if (!Directory.Exists("output"))
             {
-                System.IO.Directory.CreateDirectory("output");
+                try
+                {
+                    System.IO.Directory.CreateDirectory("output");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Source.ToString());
+                    throw;
+                }
+                
             }
             if (System.IO.File.Exists($@"output\{filenameEPUB}"))
             {
@@ -760,7 +774,6 @@ namespace ChoHoeBV
                             PINFO.Arguments = $@"""{ outputPath}"" ""{ outputMobi }.mobi"" --mobi-file-type=both";
                             p.StartInfo = PINFO;
                             p.StartInfo.FileName = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + exeName;
-
                             p.StartInfo.UseShellExecute = false;
                             p.StartInfo.RedirectStandardOutput = false;
                             p.StartInfo.CreateNoWindow = false;
@@ -791,7 +804,6 @@ namespace ChoHoeBV
                             PINFO.Arguments = $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" ";
                             p.StartInfo = PINFO;
                             p.StartInfo.FileName = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + exeName;
-
                             p.StartInfo.UseShellExecute = false;
                             p.StartInfo.RedirectStandardOutput = false;
                             p.StartInfo.CreateNoWindow = false;
