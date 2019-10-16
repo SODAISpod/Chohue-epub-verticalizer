@@ -6,7 +6,8 @@
  
 ## 這裡是官方網站
 >[kiicho.cc/Chohue](http://kiicho.cc/Chohue)
-
+## 這裡是使用者手冊
+>[使用者手冊](http://kiicho.cc/Chohue/sidebar/manual.php)
 ## 功能介紹
 * ### 圖片替換
     * 把在公共場合不方便打開的圖片給替換掉，不管什麼樣書都可以盡情的閱讀。
