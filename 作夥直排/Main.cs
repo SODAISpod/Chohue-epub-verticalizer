@@ -54,6 +54,13 @@ namespace ChoHoeBV
 
             LanguageChanging(Convert.ToString(languagecombobox.SelectedValue));
             this.StyleManager = metroStyleManager1;
+
+
+            NewVersionCheck versionCheck=new NewVersionCheck();
+            if (versionCheck.Hasnew())
+            {
+
+            } 
          
         }
 
@@ -174,6 +181,7 @@ namespace ChoHoeBV
             Logger.logger.Trace("開始轉檔");
 
             Make_Btn.Enabled = false;
+            bwConvert.WorkerSupportsCancellation = true;
             bwConvert.RunWorkerAsync(argument: IfDoModifyPageDirection_Chkbox.Checked);
 
 
@@ -322,8 +330,8 @@ namespace ChoHoeBV
             }
 
 
-
-
+            e.Cancel = true;
+            return;
 
            
         }
