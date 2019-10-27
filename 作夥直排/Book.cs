@@ -118,31 +118,40 @@ namespace ChoHoeBV
         private string Container(string _containerpath)
         {
             Logger.logger.Debug($"Read Container: {_containerpath}");
-            XmlDocument xdoc = new XmlDocument();
-            xdoc.Load(_containerpath);
-            XmlNode root = xdoc.DocumentElement;
-            foreach (XmlNode node in root.ChildNodes)
+            try
             {
-                if (node.Name == "rootfiles")
+                XmlDocument xdoc = new XmlDocument();
+                xdoc.Load(_containerpath);
+                XmlNode root = xdoc.DocumentElement;
+                foreach (XmlNode node in root.ChildNodes)
                 {
-                    foreach (XmlNode childnode in node.ChildNodes)
+                    if (node.Name == "rootfiles")
                     {
-                        if (childnode.Name == "rootfile")
+                        foreach (XmlNode childnode in node.ChildNodes)
                         {
-                            _opfPath = childnode.Attributes["full-path"].Value;
-                            //return _uncompressedPath + @"/" + childnode.Attributes["full-path"].Value;
-                            //if (Batch_or_not == 1)
-                            //{
+                            if (childnode.Name == "rootfile")
+                            {
+                                _opfPath = childnode.Attributes["full-path"].Value;
+                                //return _uncompressedPath + @"/" + childnode.Attributes["full-path"].Value;
+                                //if (Batch_or_not == 1)
+                                //{
 
-                            //    //make.opfImport(childnode.Attributes["full-path"].Value);
-                            //    //form1f.SandOpf.Add(childnode.Attributes["full-path"].Value);
-                            //}
+                                //    //make.opfImport(childnode.Attributes["full-path"].Value);
+                                //    //form1f.SandOpf.Add(childnode.Attributes["full-path"].Value);
+                                //}
 
+                            }
                         }
                     }
                 }
+                return "1";
             }
-            return "1";
+            catch (Exception e)
+            {
+                Logger.logger.Error($"{e.ToString()}");
+                throw;
+            }
+
 
         }
         private void OpfWriter(bool PageDirection,bool Img,string Title,string Author)
@@ -355,7 +364,7 @@ namespace ChoHoeBV
                 
 
             }
-            else if (root.Attributes["version"].Value != "3.2")//事實上3.2也會寫成3.0
+            else //if (root.Attributes["version"].Value != "3.2")//事實上3.2也會寫成3.0
             {
                 
 
