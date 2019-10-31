@@ -57,10 +57,8 @@ namespace ChoHoeBV
 
 
             NewVersionCheck versionCheck=new NewVersionCheck();
-            if (versionCheck.Hasnew())
-            {
-
-            } 
+          var t=  versionCheck.HasnewAsync();
+           
          
         }
 
