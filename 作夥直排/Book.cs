@@ -572,8 +572,8 @@ namespace ChoHoeBV
             StreamReader sr = new StreamReader(xhtmlloder);
            
             string source = sr.ReadToEnd();
-            source = HttpUtility.HtmlDecode(source); 
-           
+            source = HttpUtility.HtmlDecode(source);
+            sr.Close();
             xhtmlloder.Close();
            
 
@@ -595,7 +595,7 @@ namespace ChoHoeBV
                         {
                             foreach (HtmlNode item in bodynode.ChildNodes)
                             {
-                                RecursivelyReplaceText(item,ToTraidional);
+                                RecursivelyReplaceText(item,ToTraidional,DoTransfer);
                             }
                         }
 
@@ -615,10 +615,13 @@ namespace ChoHoeBV
                
             }
             Console.WriteLine(doc.DocumentNode.InnerHtml);
-            doc.Save(path, System.Text.Encoding.UTF8);
-
+            FileStream sw = new FileStream(path, FileMode.Create);
+        //  doc.DocumentNode.InnerHtml=  HttpUtility.HtmlEncode(doc.ParsedText);
+            doc.Save(sw, System.Text.Encoding.UTF8);
+            
+            sw.Close();
         }
-        private void RecursivelyReplaceText( HtmlNode innernode,bool toTraditional)
+        private void RecursivelyReplaceText( HtmlNode innernode,bool toTraditional,bool doTransfer)
         {
             foreach (HtmlNode childinnenode in innernode.ChildNodes)
             {
@@ -629,21 +632,41 @@ namespace ChoHoeBV
                     string tempinnertext= childinnenode.InnerHtml;
 
                     // tempinnertext = HttpUtility.HtmlDecode(tempinnertext);
-                    if (toTraditional)
+
+                    if (doTransfer)
                     {
-                        childinnenode.InnerHtml = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.SimplifiedToTraditional);
+                        if (toTraditional)
+                        {
+                            childinnenode.InnerHtml = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.SimplifiedToTraditional);
+                        }
+                        else
+                        {
+                            childinnenode.InnerHtml = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.TraditionalToSimplified);
+                        }
                     }
-                    else
-                    {
-                        childinnenode.InnerHtml = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.TraditionalToSimplified);
-                    }
-                  
+                    childinnenode.InnerHtml = EscapeCharacterReplacement(childinnenode.InnerHtml);
+
                 }
                 else
                 {
-                    RecursivelyReplaceText(childinnenode,toTraditional);
+                    RecursivelyReplaceText(childinnenode,toTraditional,doTransfer);
                 }
             }
+
+        }
+        private string EscapeCharacterReplacement(string replacement )
+        {
+            //if (fuck.Substring(fuck.IndexOf("&") - 1, 1)!= "\\")
+            //{
+            //    fuck.Remove(fuck.IndexOf("&"), 1);
+            //    fuck.Insert(fuck.IndexOf("&"), "&amp;");
+            //}
+
+            // Dictionary<string, string> MyDictionary = ChoHoe.Properties.Resources.escapecharacter_txt.Split(',').ToDictionary(x => x.Split('|')[0], x => x.Split('|')[1]);
+
+
+            return HttpUtility.HtmlEncode(replacement);
+
 
         }
         private void CSSEdit(string path,bool fontEmbed)
