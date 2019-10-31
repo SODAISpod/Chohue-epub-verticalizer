@@ -24,7 +24,7 @@ using System.Windows.Forms;
 
 namespace ChoHoeBV
 {
-    class Book
+    public class Book
     {
         private const bool V = true;
         public
@@ -37,7 +37,7 @@ namespace ChoHoeBV
         private
              string  title = "", author = "";
         string _uncompressedPath = "",
-                   _containerXML = "",
+               _containerXML = "",
                    _opfPath = "",
                    _OEBPSPath="",
                     _originalFilePath="";
@@ -58,6 +58,14 @@ namespace ChoHoeBV
             OpfReader();
 
         }
+        public void Load(string path,string pandoc)
+        {
+            //For unit test uses.
+            ChoHoe.Properties.Settings.Default.PandocPath = pandoc;
+            ChoHoe.Properties.Settings.Default.Save();
+            Load(path);
+
+        }
         public string PathEditor()
         {
           
@@ -71,6 +79,7 @@ namespace ChoHoeBV
             _containerXML = _uncompressedPath + @"\META-INF\container.xml";
 
             Logger.logger.Trace($"Container.xml Path:{_containerXML}");
+            Console.WriteLine("解壓縮の路徑:"+_uncompressedPath);
             return _uncompressedPath;
         }
         private void Uncompressing(string path, string _uncompresslocation)
@@ -614,7 +623,7 @@ namespace ChoHoeBV
                 //node.InnerText.Replace(node.InnerText,after);
                
             }
-            Console.WriteLine(doc.DocumentNode.InnerHtml);
+          //  Console.WriteLine(doc.DocumentNode.InnerHtml);
             FileStream sw = new FileStream(path, FileMode.Create);
         //  doc.DocumentNode.InnerHtml=  HttpUtility.HtmlEncode(doc.ParsedText);
             doc.Save(sw, System.Text.Encoding.UTF8);

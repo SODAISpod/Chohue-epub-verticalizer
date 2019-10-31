@@ -10,9 +10,9 @@ using Octokit;
 
 namespace ChoHoe
 {
-    class NewVersionCheck
+    public class NewVersionCheck
     {
-        Uri url = new Uri("http://api.github.com/repos/SODAIS69/Chohue-EpubVerticalizationer/releases/latest");
+     
 
        public async Task<bool> HasnewAsync()
         {
@@ -24,19 +24,23 @@ namespace ChoHoe
             if (compareVersion(latest.TagName)) //
             {
                 string info = "✨更新內容:" + Environment.NewLine +Environment.NewLine + latest.Body+Environment.NewLine+ Environment.NewLine + "請問要前往下載嗎?";
+
                 string title = $"🆕 發現新版本:{latest.TagName}!";
+                
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
 
-                result = MessageBox.Show(info, title, buttons);
+                result = MessageBox.Show(info, title, buttons,MessageBoxIcon.Information);
 
                 if (result == System.Windows.Forms.DialogResult.Yes)//
                 {
                     System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/?utm_source=Chehue&utm_medium=PopNotify");
+                    
                 }
-
+                return true;
             }
-            
+            return false;
+
 
 
 
@@ -48,7 +52,7 @@ namespace ChoHoe
               
             ////    var json = wc.DownloadString(url);
             //}
-            return true;
+            
         }
         private bool compareVersion(string latestVersion)
         {
