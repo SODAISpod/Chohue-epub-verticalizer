@@ -25,13 +25,17 @@ namespace ChoHoeBV
 
 
         BackgroundWorker bw = new BackgroundWorker();
+        BackgroundWorker bwBatch = new BackgroundWorker();
         BackgroundWorker bwConvert = new BackgroundWorker();
+        BackgroundWorker bwConvertBatch = new BackgroundWorker();
+
 
         string UserSelectedFilePath;
         //單本專用ㄉ變數R
         Book abook = new Book();
         //多本專用ㄉ變數
         List<Book> batchBookList = new List<Book>();
+        List<string[]> rows = new List<string[]>();
 
         //ResourceManager Rm = new ResourceManager("作夥直排_Csharp_ver.Strings", Assembly.GetExecutingAssembly());
  
@@ -76,6 +80,8 @@ namespace ChoHoeBV
 
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;
+
+
 
         }
             
@@ -234,17 +240,19 @@ namespace ChoHoeBV
 
             }
 
-           
+            inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            inprogressBar.MarqueeAnimationSpeed = 30;
+            BatchGridView.ColumnCount = 2;
+            BatchGridView.RowHeadersVisible = false;
+            BatchGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            BatchGridView.Columns[0].Name = "書名";
+            BatchGridView.Columns[1].Name = "作者";
+            StatusLabel.Text = "轉檔中...";
+            bwBatch.DoWork += new DoWorkEventHandler(loadBatchBackgroundworker_DoWork);
+            bwBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(loadBackBatch_RunWorkerCompleted);
+            
+            bwBatch.RunWorkerAsync(Import_File);
 
-
-
-            foreach (string name in Import_File.FileNames)
-            {
-                Batch_grid.Rows.Add(new object[] { System.IO.Path.GetFileNameWithoutExtension(name) });
-                Book abooks = new Book();
-                abooks.Load(name);
-                batchBookList.Add(abook);
-            }
         }
 
         private void Make_Batch_Click(object sender, EventArgs e)
@@ -311,6 +319,40 @@ namespace ChoHoeBV
          
             abook.Load(path);
         }
+
+        private void loadBatchBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            OpenFileDialog paths = (OpenFileDialog)e.Argument;
+
+
+            foreach (string name in paths.FileNames)
+            {
+
+                Book abooks = new Book();
+                abooks.Load(name);
+              //  Batch_grid.Rows.Add(new object[] { abooks.GetTitle() });
+
+                string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
+                rows.Add(row1);
+               // BatchGridView.Rows.Add(row1);
+                batchBookList.Add(abooks);
+
+            }
+
+          
+        }
+        private void loadBackBatch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+            foreach (string[] row in rows)
+            {
+                BatchGridView.Rows.Add(row);
+            }
+            // Title_Imported_TextBox.Text = debugstring;
+            StatusLabel.Text = "讀取完畢。";
+            inprogressBar.MarqueeAnimationSpeed = 0;
+            inprogressBar.Value = 0;
+        }
         private void convertBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
 
@@ -359,6 +401,55 @@ namespace ChoHoeBV
             inprogressBar.MarqueeAnimationSpeed = 0;
             inprogressBar.Value = 0;
         }
+
+
+
+        private void convertBatchBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+            bool Modifypage = (bool)e.Argument;
+
+            foreach (Book item in batchBookList)
+            {
+                if (Modifypage)
+                {
+                    abook.Convert(IfDoToChineseChkbox.Checked, ToTradictional, PageRTL_Radio.Checked, IfConvertMobi_Chkbox.Checked, IfEmbdedFont_Chkbox.Checked, IfReplacePicture_Chkbox.Checked, Author_Imported_TextBox.Text, Title_Imported_TextBox.Text);
+                }
+                else
+                {
+                    abook.Convert(IfDoToChineseChkbox.Checked, ToTradictional, true, IfConvertMobi_Chkbox.Checked, IfEmbdedFont_Chkbox.Checked, IfReplacePicture_Chkbox.Checked, Author_Imported_TextBox.Text, Title_Imported_TextBox.Text);
+                }
+            }
+
+         
+
+
+            e.Cancel = true;
+            return;
+
+
+        }
+        private void convertBackBatch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            Author_Imported_TextBox.Text = "";
+            Title_Imported_TextBox.Text = "";
+            Make_Btn.Enabled = false;
+
+            StatusLabel.Text = "轉檔完畢。";
+            ClearDirectory("temp");
+            inprogressBar.MarqueeAnimationSpeed = 0;
+            inprogressBar.Value = 0;
+        }
+
+
+
+
+
+
+
+
+
+
         private void SetCustomizeLocalizationWord_cmd_Click(object sender, EventArgs e)
         {
 
@@ -369,6 +460,39 @@ namespace ChoHoeBV
             AboutBox1 aboutboxxx = new AboutBox1();
             Setting settingForm = new Setting();
             settingForm.Show();
+        }
+
+        private void Batch_grid_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+
+
+        }
+
+        private void Batch_grid_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+             foreach (DataGridViewRow item in Batch_grid.Rows)
+            {
+                if (item.Selected==true)
+                {
+                    batchBookList.RemoveAt(item.Index);
+                }
+            }
+        }
+
+        private void r(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            foreach (DataGridViewRow item in BatchGridView.Rows)
+            {
+                if (item.Selected == true)
+                {
+                    batchBookList.RemoveAt(item.Index);
+                }
+            }
         }
     }
 

@@ -969,6 +969,27 @@
   <data name="&gt;&gt;TabPage_Single.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="BatchGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="BatchGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 151</value>
+  </data>
+  <data name="BatchGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;BatchGridView.Name" xml:space="preserve">
+    <value>BatchGridView</value>
+  </data>
+  <data name="&gt;&gt;BatchGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BatchGridView.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;BatchGridView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -994,61 +1015,64 @@
     <value>TabPage_Batch</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="replacepic_batch_Chkbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="replacepic_batch_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 308</value>
-  </data>
-  <data name="replacepic_batch_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
-  </data>
-  <data name="replacepic_batch_Chkbox.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="replacepic_batch_Chkbox.Text" xml:space="preserve">
-    <value>將插圖替換</value>
-  </data>
-  <data name="&gt;&gt;replacepic_batch_Chkbox.Name" xml:space="preserve">
-    <value>replacepic_batch_Chkbox</value>
-  </data>
-  <data name="&gt;&gt;replacepic_batch_Chkbox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;replacepic_batch_Chkbox.Parent" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;replacepic_batch_Chkbox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="batch_embemed_check.AutoSize" type="System.Boolean, mscorlib">
+  <data name="IfReplacePicture_Chkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="batch_embemed_check.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 281</value>
+  <data name="IfReplacePicture_Chkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 285</value>
   </data>
-  <data name="batch_embemed_check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 25</value>
+  <data name="IfReplacePicture_Chkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 25</value>
   </data>
-  <data name="batch_embemed_check.TabIndex" type="System.Int32, mscorlib">
+  <data name="IfReplacePicture_Chkbox_Batch.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="batch_embemed_check.Text" xml:space="preserve">
-    <value>嵌入字體</value>
+  <data name="IfReplacePicture_Chkbox_Batch.Text" xml:space="preserve">
+    <value>將插圖替換</value>
   </data>
-  <data name="&gt;&gt;batch_embemed_check.Name" xml:space="preserve">
-    <value>batch_embemed_check</value>
+  <data name="&gt;&gt;IfReplacePicture_Chkbox_Batch.Name" xml:space="preserve">
+    <value>IfReplacePicture_Chkbox_Batch</value>
   </data>
-  <data name="&gt;&gt;batch_embemed_check.Type" xml:space="preserve">
+  <data name="&gt;&gt;IfReplacePicture_Chkbox_Batch.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;batch_embemed_check.Parent" xml:space="preserve">
+  <data name="&gt;&gt;IfReplacePicture_Chkbox_Batch.Parent" xml:space="preserve">
     <value>TabPage_Batch</value>
   </data>
-  <data name="&gt;&gt;batch_embemed_check.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;IfReplacePicture_Chkbox_Batch.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox_Batch.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 316</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 25</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox_Batch.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox_Batch.Text" xml:space="preserve">
+    <value>嵌入字體</value>
+  </data>
+  <data name="&gt;&gt;IfEmbdedFont_Chkbox_Batch.Name" xml:space="preserve">
+    <value>IfEmbdedFont_Chkbox_Batch</value>
+  </data>
+  <data name="&gt;&gt;IfEmbdedFont_Chkbox_Batch.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;IfEmbdedFont_Chkbox_Batch.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;IfEmbdedFont_Chkbox_Batch.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="Make_Batch.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1078,96 +1102,96 @@
     <value>TabPage_Batch</value>
   </data>
   <data name="&gt;&gt;Make_Batch.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="metroCheckBox1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroCheckBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 224</value>
-  </data>
-  <data name="metroCheckBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="metroCheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="metroCheckBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="metroCheckBox1.Text" xml:space="preserve">
-    <value>指定翻頁方向</value>
-  </data>
-  <data name="&gt;&gt;metroCheckBox1.Name" xml:space="preserve">
-    <value>metroCheckBox1</value>
-  </data>
-  <data name="&gt;&gt;metroCheckBox1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroCheckBox1.Parent" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;metroCheckBox1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="metroRadioButton1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="IfDoModifyPageDirection_Chkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="metroRadioButton1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="IfDoModifyPageDirection_Chkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 224</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox_Batch.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox_Batch.Text" xml:space="preserve">
+    <value>指定翻頁方向</value>
+  </data>
+  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox_Batch.Name" xml:space="preserve">
+    <value>IfDoModifyPageDirection_Chkbox_Batch</value>
+  </data>
+  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox_Batch.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox_Batch.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox_Batch.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="PageRTL_Radio_Batch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PageRTL_Radio_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 10</value>
   </data>
-  <data name="metroRadioButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="PageRTL_Radio_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="metroRadioButton1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PageRTL_Radio_Batch.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 25</value>
   </data>
-  <data name="metroRadioButton1.TabIndex" type="System.Int32, mscorlib">
+  <data name="PageRTL_Radio_Batch.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="metroRadioButton1.Text" xml:space="preserve">
+  <data name="PageRTL_Radio_Batch.Text" xml:space="preserve">
     <value>由右往左翻</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton1.Name" xml:space="preserve">
-    <value>metroRadioButton1</value>
+  <data name="&gt;&gt;PageRTL_Radio_Batch.Name" xml:space="preserve">
+    <value>PageRTL_Radio_Batch</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;PageRTL_Radio_Batch.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PageRTL_Radio_Batch.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PageRTL_Radio_Batch.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="metroRadioButton2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="PageLTR_Radio_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="metroRadioButton2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PageLTR_Radio_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 80</value>
   </data>
-  <data name="metroRadioButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="PageLTR_Radio_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="metroRadioButton2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PageLTR_Radio_Batch.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 25</value>
   </data>
-  <data name="metroRadioButton2.TabIndex" type="System.Int32, mscorlib">
+  <data name="PageLTR_Radio_Batch.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="metroRadioButton2.Text" xml:space="preserve">
+  <data name="PageLTR_Radio_Batch.Text" xml:space="preserve">
     <value>由左往右翻</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton2.Name" xml:space="preserve">
-    <value>metroRadioButton2</value>
+  <data name="&gt;&gt;PageLTR_Radio_Batch.Name" xml:space="preserve">
+    <value>PageLTR_Radio_Batch</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton2.Type" xml:space="preserve">
+  <data name="&gt;&gt;PageLTR_Radio_Batch.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PageLTR_Radio_Batch.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;metroRadioButton2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PageLTR_Radio_Batch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
@@ -1180,7 +1204,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 158</value>
+    <value>146, 158</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1195,67 +1219,67 @@
     <value>TabPage_Batch</value>
   </data>
   <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="Convert_to_Mobi_Chkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Convert_to_Mobi_Chkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 253</value>
-  </data>
-  <data name="Convert_to_Mobi_Chkbox_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Convert_to_Mobi_Chkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 25</value>
-  </data>
-  <data name="Convert_to_Mobi_Chkbox_Batch.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="Convert_to_Mobi_Chkbox_Batch.Text" xml:space="preserve">
-    <value>轉換成.mobi</value>
-  </data>
-  <data name="&gt;&gt;Convert_to_Mobi_Chkbox_Batch.Name" xml:space="preserve">
-    <value>Convert_to_Mobi_Chkbox_Batch</value>
-  </data>
-  <data name="&gt;&gt;Convert_to_Mobi_Chkbox_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Convert_to_Mobi_Chkbox_Batch.Parent" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;Convert_to_Mobi_Chkbox_Batch.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Language_Convert_Chkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
+  <data name="IfConvertMobi_Chkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Language_Convert_Chkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 164</value>
+  <data name="IfConvertMobi_Chkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 253</value>
   </data>
-  <data name="Language_Convert_Chkbox_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="IfConvertMobi_Chkbox_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="Language_Convert_Chkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
+  <data name="IfConvertMobi_Chkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 25</value>
   </data>
-  <data name="Language_Convert_Chkbox_Batch.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="IfConvertMobi_Chkbox_Batch.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="Language_Convert_Chkbox_Batch.Text" xml:space="preserve">
-    <value>正體簡體轉換</value>
+  <data name="IfConvertMobi_Chkbox_Batch.Text" xml:space="preserve">
+    <value>轉換成.mobi</value>
   </data>
-  <data name="&gt;&gt;Language_Convert_Chkbox_Batch.Name" xml:space="preserve">
-    <value>Language_Convert_Chkbox_Batch</value>
+  <data name="&gt;&gt;IfConvertMobi_Chkbox_Batch.Name" xml:space="preserve">
+    <value>IfConvertMobi_Chkbox_Batch</value>
   </data>
-  <data name="&gt;&gt;Language_Convert_Chkbox_Batch.Type" xml:space="preserve">
+  <data name="&gt;&gt;IfConvertMobi_Chkbox_Batch.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;Language_Convert_Chkbox_Batch.Parent" xml:space="preserve">
+  <data name="&gt;&gt;IfConvertMobi_Chkbox_Batch.Parent" xml:space="preserve">
     <value>TabPage_Batch</value>
   </data>
-  <data name="&gt;&gt;Language_Convert_Chkbox_Batch.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;IfConvertMobi_Chkbox_Batch.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="IfDoToChineseChkbox_Batch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfDoToChineseChkbox_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 164</value>
+  </data>
+  <data name="IfDoToChineseChkbox_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IfDoToChineseChkbox_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="IfDoToChineseChkbox_Batch.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="IfDoToChineseChkbox_Batch.Text" xml:space="preserve">
+    <value>正體簡體轉換</value>
+  </data>
+  <data name="&gt;&gt;IfDoToChineseChkbox_Batch.Name" xml:space="preserve">
+    <value>IfDoToChineseChkbox_Batch</value>
+  </data>
+  <data name="&gt;&gt;IfDoToChineseChkbox_Batch.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;IfDoToChineseChkbox_Batch.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;IfDoToChineseChkbox_Batch.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="ST_Label_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1348,7 +1372,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 56</value>
+    <value>146, 56</value>
   </data>
   <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1363,7 +1387,7 @@
     <value>TabPage_Batch</value>
   </data>
   <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1384,7 +1408,7 @@
     <value>20</value>
   </data>
   <data name="Batch_grid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 144</value>
+    <value>324, 144</value>
   </data>
   <data name="Batch_grid.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1399,10 +1423,7 @@
     <value>TabPage_Batch</value>
   </data>
   <data name="&gt;&gt;Batch_grid.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="OpenBtn_Batch.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>12</value>
   </data>
   <data name="OpenBtn_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 382</value>
@@ -1429,7 +1450,7 @@
     <value>TabPage_Batch</value>
   </data>
   <data name="&gt;&gt;OpenBtn_Batch.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="TabPage_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 38</value>
