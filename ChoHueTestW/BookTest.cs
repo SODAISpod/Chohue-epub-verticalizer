@@ -2,12 +2,29 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ChoHoeBV;
 using ChoHoe;
+using System.Windows.Forms;
+
 namespace ChoHueTestW
 {
     [TestClass]
     public class BookTest
     {
 
+        bool dotranslate = false;
+        bool totriditional = true;
+        bool pageDirection = true;
+        bool convertMobi = false;
+        bool fontemb = false;
+        bool replacepicture = true;
+
+        string book20 = @"J:\development\EPUB vertical sample file\2.0.epub";
+        string book30 = @"J:\development\EPUB vertical sample file\Fei Dan De Ya Li Ya  27 - Mo Zhe.epub";
+        public void OptionConversion()
+        {
+            MessageBox.Show("test");
+            
+
+        }
 
 
         
@@ -15,28 +32,23 @@ namespace ChoHueTestW
         public void Load20Book()
         {
             var bk = new Book();
-            bk.Load(@"J:\development\EPUB vertical sample file\2.0.epub",@"C:\");
+            bk.Load(book20, @"C:\");
             
         }
         [TestMethod]
         public void Load30Book()
         {
             var bk = new Book();
-            bk.Load(@"J:\development\EPUB vertical sample file\Fei Dan De Ya Li Ya  27 - Mo Zhe.epub");
+            bk.Load(book30);
            
         }
         [TestMethod]
         public void Convert20Book()
         {
             var bk = new Book();
-            bk.Load(@"J:\development\EPUB vertical sample file\2.0.epub", @"C:\");
+            bk.Load( book20, @"C:\");
             
-            bool dotranslate = false;
-            bool totriditional = true;
-            bool pageDirection = false;
-            bool convertMobi = false;
-            bool fontemb = false;
-            bool replacepicture = true;
+           
             int debugcount= ChoHueTestW.Properties.Settings.Default.debugCount;
             string debugtext= $"偵錯用 2.0 書本 編號 #{debugcount} 「{bk.GetTitle()}」";
             ChoHueTestW.Properties.Settings.Default.debugCount++;
@@ -49,14 +61,9 @@ namespace ChoHueTestW
         public void Convert30Book()
         {
             var bk = new Book();
-            bk.Load(@"J:\development\EPUB vertical sample file\Fei Dan De Ya Li Ya  27 - Mo Zhe.epub");
+            bk.Load(book30);
             
-            bool dotranslate = false;
-            bool totriditional = true;
-            bool pageDirection = false;
-            bool convertMobi = false;
-            bool fontemb = false;
-            bool replacepicture = true;
+           
 
             int debugcount = ChoHueTestW.Properties.Settings.Default.debugCount;
             string debugtext = $"偵錯用 3.0 書本 編號 #{debugcount} 「{bk.GetTitle()}」";
@@ -66,10 +73,12 @@ namespace ChoHueTestW
 
             bk.Convert(dotranslate, totriditional, pageDirection, convertMobi, fontemb, replacepicture, bk.GetAuthor(), debugtext);
         }
+        [TestMethod]
+        public void ConvertNoCssBook()
+        {
 
-
-
-
+          
+        }
 
         [TestMethod]
         public async void CheckNewVersionTrue()
@@ -91,6 +100,8 @@ namespace ChoHueTestW
             Assert.AreEqual(expected, testResult);
 
         }
+        
+
     }
 }
 
