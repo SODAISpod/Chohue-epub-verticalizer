@@ -65,16 +65,17 @@
             this.ToTraditionValue_Cmd = new MetroFramework.Controls.MetroButton();
             this.CT_Label = new MetroFramework.Controls.MetroLabel();
             this.TabPage_Batch = new MetroFramework.Controls.MetroTabPage();
+            this.BatchGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.replacepic_batch_Chkbox = new MetroFramework.Controls.MetroCheckBox();
-            this.batch_embemed_check = new MetroFramework.Controls.MetroCheckBox();
+            this.IfReplacePicture_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
+            this.IfEmbdedFont_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
             this.Make_Batch = new MetroFramework.Controls.MetroButton();
-            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.IfDoModifyPageDirection_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.Convert_to_Mobi_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
-            this.Language_Convert_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
+            this.PageRTL_Radio_Batch = new MetroFramework.Controls.MetroRadioButton();
+            this.PageLTR_Radio_Batch = new MetroFramework.Controls.MetroRadioButton();
+            this.IfConvertMobi_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
+            this.IfDoToChineseChkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.ST_Label_Batch = new MetroFramework.Controls.MetroLabel();
             this.Language_Convert_TCT_Switcher_Btn_Batch = new MetroFramework.Controls.MetroButton();
@@ -94,6 +95,7 @@
             this.groupBox4.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.TabPage_Batch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Batch_grid)).BeginInit();
@@ -116,7 +118,7 @@
             this.TabControl1.FontSize = MetroFramework.MetroTabControlSize.Tall;
             resources.ApplyResources(this.TabControl1, "TabControl1");
             this.TabControl1.Name = "TabControl1";
-            this.TabControl1.SelectedIndex = 0;
+            this.TabControl1.SelectedIndex = 1;
             this.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl1.UseSelectable = true;
             // 
@@ -403,14 +405,15 @@
             // 
             // TabPage_Batch
             // 
+            this.TabPage_Batch.Controls.Add(this.BatchGridView);
             this.TabPage_Batch.Controls.Add(this.label2);
-            this.TabPage_Batch.Controls.Add(this.replacepic_batch_Chkbox);
-            this.TabPage_Batch.Controls.Add(this.batch_embemed_check);
+            this.TabPage_Batch.Controls.Add(this.IfReplacePicture_Chkbox_Batch);
+            this.TabPage_Batch.Controls.Add(this.IfEmbdedFont_Chkbox_Batch);
             this.TabPage_Batch.Controls.Add(this.Make_Batch);
-            this.TabPage_Batch.Controls.Add(this.metroCheckBox1);
+            this.TabPage_Batch.Controls.Add(this.IfDoModifyPageDirection_Chkbox_Batch);
             this.TabPage_Batch.Controls.Add(this.groupBox5);
-            this.TabPage_Batch.Controls.Add(this.Convert_to_Mobi_Chkbox_Batch);
-            this.TabPage_Batch.Controls.Add(this.Language_Convert_Chkbox_Batch);
+            this.TabPage_Batch.Controls.Add(this.IfConvertMobi_Chkbox_Batch);
+            this.TabPage_Batch.Controls.Add(this.IfDoToChineseChkbox_Batch);
             this.TabPage_Batch.Controls.Add(this.GroupBox2);
             this.TabPage_Batch.Controls.Add(this.Batch_grid);
             this.TabPage_Batch.Controls.Add(this.OpenBtn_Batch);
@@ -423,24 +426,35 @@
             this.TabPage_Batch.VerticalScrollbarHighlightOnWheel = false;
             this.TabPage_Batch.VerticalScrollbarSize = 3;
             // 
+            // BatchGridView
+            // 
+            this.BatchGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BatchGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BatchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.BatchGridView, "BatchGridView");
+            this.BatchGridView.Name = "BatchGridView";
+            this.BatchGridView.RowTemplate.Height = 24;
+            this.BatchGridView.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.r);
+            this.BatchGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DataGridView1_RowsRemoved);
+            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // replacepic_batch_Chkbox
+            // IfReplacePicture_Chkbox_Batch
             // 
-            resources.ApplyResources(this.replacepic_batch_Chkbox, "replacepic_batch_Chkbox");
-            this.replacepic_batch_Chkbox.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.replacepic_batch_Chkbox.Name = "replacepic_batch_Chkbox";
-            this.replacepic_batch_Chkbox.UseSelectable = true;
+            resources.ApplyResources(this.IfReplacePicture_Chkbox_Batch, "IfReplacePicture_Chkbox_Batch");
+            this.IfReplacePicture_Chkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.IfReplacePicture_Chkbox_Batch.Name = "IfReplacePicture_Chkbox_Batch";
+            this.IfReplacePicture_Chkbox_Batch.UseSelectable = true;
             // 
-            // batch_embemed_check
+            // IfEmbdedFont_Chkbox_Batch
             // 
-            resources.ApplyResources(this.batch_embemed_check, "batch_embemed_check");
-            this.batch_embemed_check.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.batch_embemed_check.Name = "batch_embemed_check";
-            this.batch_embemed_check.UseSelectable = true;
+            resources.ApplyResources(this.IfEmbdedFont_Chkbox_Batch, "IfEmbdedFont_Chkbox_Batch");
+            this.IfEmbdedFont_Chkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.IfEmbdedFont_Chkbox_Batch.Name = "IfEmbdedFont_Chkbox_Batch";
+            this.IfEmbdedFont_Chkbox_Batch.UseSelectable = true;
             // 
             // Make_Batch
             // 
@@ -449,49 +463,49 @@
             this.Make_Batch.UseSelectable = true;
             this.Make_Batch.Click += new System.EventHandler(this.Make_Batch_Click);
             // 
-            // metroCheckBox1
+            // IfDoModifyPageDirection_Chkbox_Batch
             // 
-            resources.ApplyResources(this.metroCheckBox1, "metroCheckBox1");
-            this.metroCheckBox1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.UseSelectable = true;
+            resources.ApplyResources(this.IfDoModifyPageDirection_Chkbox_Batch, "IfDoModifyPageDirection_Chkbox_Batch");
+            this.IfDoModifyPageDirection_Chkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.IfDoModifyPageDirection_Chkbox_Batch.Name = "IfDoModifyPageDirection_Chkbox_Batch";
+            this.IfDoModifyPageDirection_Chkbox_Batch.UseSelectable = true;
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox5.Controls.Add(this.metroRadioButton1);
-            this.groupBox5.Controls.Add(this.metroRadioButton2);
+            this.groupBox5.Controls.Add(this.PageRTL_Radio_Batch);
+            this.groupBox5.Controls.Add(this.PageLTR_Radio_Batch);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
-            // metroRadioButton1
+            // PageRTL_Radio_Batch
             // 
-            resources.ApplyResources(this.metroRadioButton1, "metroRadioButton1");
-            this.metroRadioButton1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.UseSelectable = true;
+            resources.ApplyResources(this.PageRTL_Radio_Batch, "PageRTL_Radio_Batch");
+            this.PageRTL_Radio_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.PageRTL_Radio_Batch.Name = "PageRTL_Radio_Batch";
+            this.PageRTL_Radio_Batch.UseSelectable = true;
             // 
-            // metroRadioButton2
+            // PageLTR_Radio_Batch
             // 
-            resources.ApplyResources(this.metroRadioButton2, "metroRadioButton2");
-            this.metroRadioButton2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.UseSelectable = true;
+            resources.ApplyResources(this.PageLTR_Radio_Batch, "PageLTR_Radio_Batch");
+            this.PageLTR_Radio_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.PageLTR_Radio_Batch.Name = "PageLTR_Radio_Batch";
+            this.PageLTR_Radio_Batch.UseSelectable = true;
             // 
-            // Convert_to_Mobi_Chkbox_Batch
+            // IfConvertMobi_Chkbox_Batch
             // 
-            resources.ApplyResources(this.Convert_to_Mobi_Chkbox_Batch, "Convert_to_Mobi_Chkbox_Batch");
-            this.Convert_to_Mobi_Chkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.Convert_to_Mobi_Chkbox_Batch.Name = "Convert_to_Mobi_Chkbox_Batch";
-            this.Convert_to_Mobi_Chkbox_Batch.UseSelectable = true;
+            resources.ApplyResources(this.IfConvertMobi_Chkbox_Batch, "IfConvertMobi_Chkbox_Batch");
+            this.IfConvertMobi_Chkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.IfConvertMobi_Chkbox_Batch.Name = "IfConvertMobi_Chkbox_Batch";
+            this.IfConvertMobi_Chkbox_Batch.UseSelectable = true;
             // 
-            // Language_Convert_Chkbox_Batch
+            // IfDoToChineseChkbox_Batch
             // 
-            resources.ApplyResources(this.Language_Convert_Chkbox_Batch, "Language_Convert_Chkbox_Batch");
-            this.Language_Convert_Chkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.Language_Convert_Chkbox_Batch.Name = "Language_Convert_Chkbox_Batch";
-            this.Language_Convert_Chkbox_Batch.UseSelectable = true;
+            resources.ApplyResources(this.IfDoToChineseChkbox_Batch, "IfDoToChineseChkbox_Batch");
+            this.IfDoToChineseChkbox_Batch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.IfDoToChineseChkbox_Batch.Name = "IfDoToChineseChkbox_Batch";
+            this.IfDoToChineseChkbox_Batch.UseSelectable = true;
             // 
             // GroupBox2
             // 
@@ -567,6 +581,8 @@
             this.Batch_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Batch_grid.RowTemplate.Height = 24;
             this.Batch_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Batch_grid.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Batch_grid_RowsRemoved);
+            this.Batch_grid.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.Batch_grid_RowStateChanged);
             // 
             // Column1
             // 
@@ -641,6 +657,7 @@
             this.GroupBox1.PerformLayout();
             this.TabPage_Batch.ResumeLayout(false);
             this.TabPage_Batch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.GroupBox2.ResumeLayout(false);
@@ -668,8 +685,8 @@
         internal MetroFramework.Controls.MetroLabel Author_Label;
         internal MetroFramework.Controls.MetroTabPage TabPage_Batch;
         internal MetroFramework.Controls.MetroButton Make_Batch;
-        internal MetroFramework.Controls.MetroCheckBox Convert_to_Mobi_Chkbox_Batch;
-        internal MetroFramework.Controls.MetroCheckBox Language_Convert_Chkbox_Batch;
+        internal MetroFramework.Controls.MetroCheckBox IfConvertMobi_Chkbox_Batch;
+        internal MetroFramework.Controls.MetroCheckBox IfDoToChineseChkbox_Batch;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal MetroFramework.Controls.MetroLabel ST_Label_Batch;
         internal MetroFramework.Controls.MetroButton Language_Convert_TCT_Switcher_Btn_Batch;
@@ -682,10 +699,10 @@
         private MetroFramework.Controls.MetroRadioButton PageRTL_Radio;
         internal System.Windows.Forms.GroupBox groupBox3;
         internal System.Windows.Forms.GroupBox groupBox4;
-        private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
+        private MetroFramework.Controls.MetroCheckBox IfDoModifyPageDirection_Chkbox_Batch;
         internal System.Windows.Forms.GroupBox groupBox5;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
+        private MetroFramework.Controls.MetroRadioButton PageRTL_Radio_Batch;
+        private MetroFramework.Controls.MetroRadioButton PageLTR_Radio_Batch;
         private MetroFramework.Controls.MetroCheckBox IfEmbdedFont_Chkbox;
         internal MetroFramework.Controls.MetroLabel ST_Label;
         public MetroFramework.Components.MetroStyleManager metroStyleManager1;
@@ -694,8 +711,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private MetroFramework.Controls.MetroCheckBox batch_embemed_check;
-        private MetroFramework.Controls.MetroCheckBox replacepic_batch_Chkbox;
+        private MetroFramework.Controls.MetroCheckBox IfEmbdedFont_Chkbox_Batch;
+        private MetroFramework.Controls.MetroCheckBox IfReplacePicture_Chkbox_Batch;
         private MetroFramework.Controls.MetroCheckBox IfReplacePicture_Chkbox;
         private System.Windows.Forms.GroupBox groupBox6;
         private MetroFramework.Controls.MetroButton IfCustomizeLocalizationWord_cmd;
@@ -706,6 +723,7 @@
         private System.Windows.Forms.Label StatusLabel;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroButton SettingCmd;
+        private System.Windows.Forms.DataGridView BatchGridView;
     }
 }
 
