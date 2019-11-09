@@ -1,4 +1,4 @@
-# 做伙直排 Chohue Epub Verticalizationer
+# 做伙直排 Chohue Epub verticalizer
 
 ![image](https://github.com/SODAIS69/Chohue-EpubVerticalizationer/blob/master/githubbanner.png?raw=true)
 
