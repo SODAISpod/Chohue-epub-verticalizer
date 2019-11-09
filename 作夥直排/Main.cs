@@ -30,7 +30,7 @@ namespace ChoHoeBV
         BackgroundWorker bwConvertBatch = new BackgroundWorker();
 
 
-        string UserSelectedFilePath;
+        
         //單本專用ㄉ變數R
         Book abook = new Book();
         //多本專用ㄉ變數
@@ -133,21 +133,23 @@ namespace ChoHoeBV
             Make_Btn.Enabled = false;
             Logger.logger.Info(System.Environment.NewLine+$"///////////////Open File///////////////"+System.Environment.NewLine+"////////////////////////////////");
             Logger.logger.Debug("開啟檔案");
-            OpenFileDialog Import_File = new OpenFileDialog();
-            Import_File.Filter = "EPUB檔案|*.epub";
-            Import_File.Title = "請選擇一個epub檔案";
+            OpenFileDialog Import_File = new OpenFileDialog
+            {
+                Filter = "EPUB檔案|*.epub",
+                Title = "請選擇一個epub檔案"
+            };
             if (Import_File.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
 
                 // bw.ProgressChanged += new ProgressChangedEventHandler(bw_ProgressChanged);
-                bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(loadBack_RunWorkerCompleted) ;
+                bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(LoadBack_RunWorkerCompleted) ;
 
 
                 inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
                 inprogressBar.MarqueeAnimationSpeed = 30;
                 abook = new Book();
                 Logger.logger.Trace($"{Import_File.SafeFileName}");
-                bw.DoWork += new DoWorkEventHandler(loadBackgroundworker_DoWork);
+                bw.DoWork += new DoWorkEventHandler(LoadBackgroundworker_DoWork);
                 Logger.logger.Trace("開始讀取檔案");
 
                 bw.RunWorkerAsync(argument: Import_File.FileName);
@@ -173,7 +175,7 @@ namespace ChoHoeBV
             
             Make_Btn.Enabled = false;
             StatusLabel.Text = "轉檔中...";
-            bwConvert.RunWorkerCompleted += new RunWorkerCompletedEventHandler(convertBack_RunWorkerCompleted);
+            bwConvert.RunWorkerCompleted += new RunWorkerCompletedEventHandler(ConvertBack_RunWorkerCompleted);
 
 
             inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -181,7 +183,7 @@ namespace ChoHoeBV
             
 
             //Logger.logger.Trace($"{}");
-            bwConvert.DoWork += new DoWorkEventHandler(convertBackgroundworker_DoWork);
+            bwConvert.DoWork += new DoWorkEventHandler(ConvertBackgroundworker_DoWork);
             Logger.logger.Trace("開始轉檔");
 
             Make_Btn.Enabled = false;
@@ -214,7 +216,7 @@ namespace ChoHoeBV
           
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AboutBox1 aboutboxxx = new AboutBox1();
             Setting settingForm = new Setting();
@@ -225,11 +227,13 @@ namespace ChoHoeBV
 
         private void OpenBtn_Batch_Click(object sender, EventArgs e)
         {
-            OpenFileDialog Import_File = new OpenFileDialog();
-            Import_File.Filter = "EPUB檔案|*.epub";
-            Import_File.Title = "請選擇一個epub檔案";
-            Import_File.Multiselect = true;
-         
+            OpenFileDialog Import_File = new OpenFileDialog
+            {
+                Filter = "EPUB檔案|*.epub",
+                Title = "請選擇一個epub檔案",
+                Multiselect = true
+            };
+
 
             if (Import_File.ShowDialog() != System.Windows.Forms.DialogResult.OK)
             {
@@ -243,13 +247,14 @@ namespace ChoHoeBV
             inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             inprogressBar.MarqueeAnimationSpeed = 30;
             BatchGridView.ColumnCount = 2;
+            BatchGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             BatchGridView.RowHeadersVisible = false;
             BatchGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BatchGridView.Columns[0].Name = "書名";
             BatchGridView.Columns[1].Name = "作者";
-            StatusLabel.Text = "轉檔中...";
-            bwBatch.DoWork += new DoWorkEventHandler(loadBatchBackgroundworker_DoWork);
-            bwBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(loadBackBatch_RunWorkerCompleted);
+            StatusLabel.Text = "讀取中...";
+            bwBatch.DoWork += new DoWorkEventHandler(LoadBatchBackgroundworker_DoWork);
+            bwBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(LoadBackBatch_RunWorkerCompleted);
             
             bwBatch.RunWorkerAsync(Import_File);
 
@@ -312,7 +317,7 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.EmbedFont = IfEmbdedFont_Chkbox.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
-        private void loadBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        private void LoadBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
             
             string path = (string)e.Argument;
@@ -320,7 +325,7 @@ namespace ChoHoeBV
             abook.Load(path);
         }
 
-        private void loadBatchBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        private void LoadBatchBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
             OpenFileDialog paths = (OpenFileDialog)e.Argument;
 
@@ -341,7 +346,7 @@ namespace ChoHoeBV
 
           
         }
-        private void loadBackBatch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void LoadBackBatch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
 
             foreach (string[] row in rows)
@@ -353,7 +358,7 @@ namespace ChoHoeBV
             inprogressBar.MarqueeAnimationSpeed = 0;
             inprogressBar.Value = 0;
         }
-        private void convertBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        private void ConvertBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
 
             bool Modifypage = (bool)e.Argument;
@@ -375,7 +380,7 @@ namespace ChoHoeBV
 
            
         }
-        private void loadBack_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void LoadBack_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             Author_Imported_TextBox.Text = abook.GetAuthor();
             Title_Imported_TextBox.Text = abook.GetTitle();
@@ -390,7 +395,7 @@ namespace ChoHoeBV
             inprogressBar.MarqueeAnimationSpeed = 0;
             inprogressBar.Value = 0;
         }
-        private void convertBack_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void ConvertBack_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             Author_Imported_TextBox.Text = "";
             Title_Imported_TextBox.Text = "";
@@ -404,7 +409,7 @@ namespace ChoHoeBV
 
 
 
-        private void convertBatchBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
+        private void ConvertBatchBackgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
 
             bool Modifypage = (bool)e.Argument;
@@ -429,7 +434,7 @@ namespace ChoHoeBV
 
 
         }
-        private void convertBackBatch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void ConvertBackBatch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             Author_Imported_TextBox.Text = "";
             Title_Imported_TextBox.Text = "";
@@ -457,7 +462,7 @@ namespace ChoHoeBV
 
         private void SettingCmd_Click(object sender, EventArgs e)
         {
-            AboutBox1 aboutboxxx = new AboutBox1();
+           
             Setting settingForm = new Setting();
             settingForm.Show();
         }
@@ -486,13 +491,30 @@ namespace ChoHoeBV
 
         private void DataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            foreach (DataGridViewRow item in BatchGridView.Rows)
+
+        }
+
+        private void about_cmd_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutboxxx = new AboutBox1();
+            aboutboxxx.Show();
+        }
+
+        private void bookdelete_cmd_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in BatchGridView.SelectedRows)
             {
-                if (item.Selected == true)
-                {
-                    batchBookList.RemoveAt(item.Index);
-                }
+                
+                batchBookList.RemoveAt(item.Index);
+                
             }
+            foreach (DataGridViewRow item in BatchGridView.SelectedRows)
+            {
+
+                BatchGridView.Rows.RemoveAt(item.Index);
+
+            }
+
         }
     }
 

@@ -65,6 +65,7 @@
             this.ToTraditionValue_Cmd = new MetroFramework.Controls.MetroButton();
             this.CT_Label = new MetroFramework.Controls.MetroLabel();
             this.TabPage_Batch = new MetroFramework.Controls.MetroTabPage();
+            this.bookdelete_cmd = new MetroFramework.Controls.MetroButton();
             this.BatchGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.IfReplacePicture_Chkbox_Batch = new MetroFramework.Controls.MetroCheckBox();
@@ -83,11 +84,11 @@
             this.Batch_grid = new MetroFramework.Controls.MetroGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OpenBtn_Batch = new MetroFramework.Controls.MetroButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.inprogressBar = new System.Windows.Forms.ProgressBar();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.SettingCmd = new MetroFramework.Controls.MetroButton();
+            this.about_cmd = new MetroFramework.Controls.MetroButton();
             this.TabControl1.SuspendLayout();
             this.TabPage_Single.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -405,6 +406,7 @@
             // 
             // TabPage_Batch
             // 
+            this.TabPage_Batch.Controls.Add(this.bookdelete_cmd);
             this.TabPage_Batch.Controls.Add(this.BatchGridView);
             this.TabPage_Batch.Controls.Add(this.label2);
             this.TabPage_Batch.Controls.Add(this.IfReplacePicture_Chkbox_Batch);
@@ -425,6 +427,15 @@
             this.TabPage_Batch.VerticalScrollbarBarColor = true;
             this.TabPage_Batch.VerticalScrollbarHighlightOnWheel = false;
             this.TabPage_Batch.VerticalScrollbarSize = 3;
+            // 
+            // bookdelete_cmd
+            // 
+            this.bookdelete_cmd.BackColor = System.Drawing.Color.Tomato;
+            this.bookdelete_cmd.BackgroundImage = global::ChoHoe.Properties.Resources.baseline_close_white_18dp;
+            resources.ApplyResources(this.bookdelete_cmd, "bookdelete_cmd");
+            this.bookdelete_cmd.Name = "bookdelete_cmd";
+            this.bookdelete_cmd.UseSelectable = true;
+            this.bookdelete_cmd.Click += new System.EventHandler(this.bookdelete_cmd_Click);
             // 
             // BatchGridView
             // 
@@ -601,13 +612,6 @@
             this.OpenBtn_Batch.UseSelectable = true;
             this.OpenBtn_Batch.Click += new System.EventHandler(this.OpenBtn_Batch_Click);
             // 
-            // linkLabel1
-            // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = this;
@@ -630,15 +634,24 @@
             this.SettingCmd.UseSelectable = true;
             this.SettingCmd.Click += new System.EventHandler(this.SettingCmd_Click);
             // 
+            // about_cmd
+            // 
+            this.about_cmd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.about_cmd.BackgroundImage = global::ChoHoe.Properties.Resources.outline_info_black_36dp;
+            resources.ApplyResources(this.about_cmd, "about_cmd");
+            this.about_cmd.Name = "about_cmd";
+            this.about_cmd.UseSelectable = true;
+            this.about_cmd.Click += new System.EventHandler(this.about_cmd_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.about_cmd);
             this.Controls.Add(this.SettingCmd);
             this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.inprogressBar);
             this.Controls.Add(this.languagecombobox);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.TabControl1);
             this.Name = "Form1";
             this.Resizable = false;
@@ -693,7 +706,6 @@
         internal MetroFramework.Controls.MetroLabel CT_Label_Batch;
         internal MetroFramework.Controls.MetroGrid Batch_grid;
         internal MetroFramework.Controls.MetroButton OpenBtn_Batch;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private MetroFramework.Controls.MetroCheckBox IfDoModifyPageDirection_Chkbox;
         private MetroFramework.Controls.MetroRadioButton PageLTR_Radio;
         private MetroFramework.Controls.MetroRadioButton PageRTL_Radio;
@@ -724,6 +736,8 @@
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroButton SettingCmd;
         private System.Windows.Forms.DataGridView BatchGridView;
+        private MetroFramework.Controls.MetroButton about_cmd;
+        private MetroFramework.Controls.MetroButton bookdelete_cmd;
     }
 }
 

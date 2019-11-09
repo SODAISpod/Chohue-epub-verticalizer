@@ -106,5 +106,20 @@ namespace ChoHoeBV
         {
 
         }
+
+        private void AboutBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
