@@ -61,6 +61,26 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap AboutBoxBanner {
+            get {
+                object obj = ResourceManager.GetObject("AboutBoxBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_close_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_close_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 test|fuck,gg|a 的當地語系化字串。
         /// </summary>
         internal static string escapecharacter_txt {
@@ -84,6 +104,26 @@ namespace ChoHoe.Properties {
         internal static string JpegReplacement {
             get {
                 return ResourceManager.GetString("JpegReplacement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 (圖示) 的類型 System.Drawing.Icon 當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Icon kiichoicon {
+            get {
+                object obj = ResourceManager.GetObject("kiichoicon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_info_black_36dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_info_black_36dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
