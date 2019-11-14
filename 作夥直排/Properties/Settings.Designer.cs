@@ -12,7 +12,7 @@ namespace ChoHoe.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -164,6 +164,90 @@ namespace ChoHoe.Properties {
             }
             set {
                 this["PandocPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_ToTriditional {
+            get {
+                return ((bool)(this["Batch_ToTriditional"]));
+            }
+            set {
+                this["Batch_ToTriditional"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_ReplaceImg {
+            get {
+                return ((bool)(this["Batch_ReplaceImg"]));
+            }
+            set {
+                this["Batch_ReplaceImg"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_PageDirection {
+            get {
+                return ((bool)(this["Batch_PageDirection"]));
+            }
+            set {
+                this["Batch_PageDirection"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_EmbedFont {
+            get {
+                return ((bool)(this["Batch_EmbedFont"]));
+            }
+            set {
+                this["Batch_EmbedFont"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_IfChangePageDirection {
+            get {
+                return ((bool)(this["Batch_IfChangePageDirection"]));
+            }
+            set {
+                this["Batch_IfChangePageDirection"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_ChineseConvert {
+            get {
+                return ((bool)(this["Batch_ChineseConvert"]));
+            }
+            set {
+                this["Batch_ChineseConvert"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_ConvertMobi {
+            get {
+                return ((bool)(this["Batch_ConvertMobi"]));
+            }
+            set {
+                this["Batch_ConvertMobi"] = value;
             }
         }
     }
