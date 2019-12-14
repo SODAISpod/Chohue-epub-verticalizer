@@ -21,7 +21,7 @@ namespace ChoHoe
             var release = await client.Repository.Release.GetAll("SODAIS69", "Chohue-EpubVerticalizationer");
             var latest = release[0];
 
-            if (compareVersion(latest.TagName)) //
+            if (CompareVersion(latest.TagName)) //
             {
                 string info = "✨更新內容:" + Environment.NewLine +Environment.NewLine + latest.Body+Environment.NewLine+ Environment.NewLine + "請問要前往下載嗎?";
 
@@ -44,7 +44,6 @@ namespace ChoHoe
 
 
 
-            Console.WriteLine(latest.TagName);
 
             //using (WebClient wc = new WebClient())
             //{
@@ -54,11 +53,11 @@ namespace ChoHoe
             //}
             
         }
-        private bool compareVersion(string latestVersion)
+        private bool CompareVersion(string latestVersion)
         {
             Version thisversion = Assembly.GetEntryAssembly().GetName().Version;
             Version newVersion =new Version(latestVersion);
-            int a = thisversion.CompareTo(newVersion);
+          
             if (thisversion.CompareTo(newVersion)<=0)
             {
                 return true;

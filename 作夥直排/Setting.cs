@@ -160,5 +160,15 @@ namespace ChoHoe
 
             }
         }
+
+        private void mobi_manual_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/sidebar/manual.php?utm_source=Chehue&utm_medium=InSetting&utm_campaign=Plugin_mobi&utm_content=manual_install_plugin#v-pills-install");
+        }
+
+        private void epub_manual_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/sidebar/manual.php?utm_source=Chehue&utm_medium=InSetting&utm_campaign=Plugin_epub&utm_content=manual_install_plugin#v-pills-install");
+        }
     }
 }

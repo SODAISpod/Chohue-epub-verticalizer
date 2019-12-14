@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mobi_manual = new System.Windows.Forms.LinkLabel();
             this.OutputMobiUsingKindlegen = new System.Windows.Forms.RadioButton();
             this.OutputMobiUsingCalibre = new System.Windows.Forms.RadioButton();
             this.KindlegenPathValidResult = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linklbPacdoc = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
+            this.epub_manual = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -54,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.mobi_manual);
             this.groupBox1.Controls.Add(this.OutputMobiUsingKindlegen);
             this.groupBox1.Controls.Add(this.OutputMobiUsingCalibre);
             this.groupBox1.Controls.Add(this.KindlegenPathValidResult);
@@ -68,6 +71,13 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // mobi_manual
+            // 
+            resources.ApplyResources(this.mobi_manual, "mobi_manual");
+            this.mobi_manual.Name = "mobi_manual";
+            this.mobi_manual.TabStop = true;
+            this.mobi_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.mobi_manual_LinkClicked);
             // 
             // OutputMobiUsingKindlegen
             // 
@@ -150,6 +160,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.epub_manual);
             this.groupBox3.Controls.Add(this.PandocPathValidResult);
             this.groupBox3.Controls.Add(this.linkLabel2);
             this.groupBox3.Controls.Add(this.linklbPacdoc);
@@ -182,6 +193,13 @@
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
+            // 
+            // epub_manual
+            // 
+            resources.ApplyResources(this.epub_manual, "epub_manual");
+            this.epub_manual.Name = "epub_manual";
+            this.epub_manual.TabStop = true;
+            this.epub_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.epub_manual_LinkClicked);
             // 
             // Setting
             // 
@@ -221,5 +239,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton OutputMobiUsingKindlegen;
         private System.Windows.Forms.RadioButton OutputMobiUsingCalibre;
+        private System.Windows.Forms.LinkLabel mobi_manual;
+        private System.Windows.Forms.LinkLabel epub_manual;
     }
 }

@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.languagecombobox = new System.Windows.Forms.ComboBox();
             this.TabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.TabPage_Single = new MetroFramework.Controls.MetroTabPage();
@@ -43,12 +43,12 @@
             this.SetCustomizeLocalizationWord_cmd = new MetroFramework.Controls.MetroButton();
             this.SetCustomizeCss_cmd = new MetroFramework.Controls.MetroButton();
             this.IfEmbdedFont_Chkbox = new MetroFramework.Controls.MetroCheckBox();
-            this.Make_Btn = new MetroFramework.Controls.MetroButton();
+            this.Convert_Btn = new MetroFramework.Controls.MetroButton();
             this.IfReplacePicture_Chkbox = new MetroFramework.Controls.MetroCheckBox();
             this.IfDoModifyPageDirection_Chkbox = new MetroFramework.Controls.MetroCheckBox();
             this.IfConvertMobi_Chkbox = new MetroFramework.Controls.MetroCheckBox();
             this.IfDoToChineseChkbox = new MetroFramework.Controls.MetroCheckBox();
-            this.OpenBtn_Single = new MetroFramework.Controls.MetroButton();
+            this.Load_cmd = new MetroFramework.Controls.MetroButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PageRTL_Radio = new MetroFramework.Controls.MetroRadioButton();
@@ -70,7 +70,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Batch_IfReplacePicture_Chkbox = new MetroFramework.Controls.MetroCheckBox();
             this.Batch_IfEmbdedFont_Chkbox = new MetroFramework.Controls.MetroCheckBox();
-            this.Make_Batch = new MetroFramework.Controls.MetroButton();
+            this.Convert_Batch = new MetroFramework.Controls.MetroButton();
             this.Batch_IfDoModifyPageDirection_Chkbox = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Batch_PageRTL_Radio = new MetroFramework.Controls.MetroRadioButton();
@@ -83,7 +83,7 @@
             this.CT_Label_Batch = new MetroFramework.Controls.MetroLabel();
             this.Batch_grid = new MetroFramework.Controls.MetroGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OpenBtn_Batch = new MetroFramework.Controls.MetroButton();
+            this.Load_Batch_cmd = new MetroFramework.Controls.MetroButton();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.inprogressBar = new System.Windows.Forms.ProgressBar();
             this.StatusLabel = new System.Windows.Forms.Label();
@@ -119,7 +119,7 @@
             this.TabControl1.FontSize = MetroFramework.MetroTabControlSize.Tall;
             resources.ApplyResources(this.TabControl1, "TabControl1");
             this.TabControl1.Name = "TabControl1";
-            this.TabControl1.SelectedIndex = 1;
+            this.TabControl1.SelectedIndex = 0;
             this.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl1.UseSelectable = true;
             // 
@@ -127,12 +127,12 @@
             // 
             this.TabPage_Single.Controls.Add(this.groupBox6);
             this.TabPage_Single.Controls.Add(this.IfEmbdedFont_Chkbox);
-            this.TabPage_Single.Controls.Add(this.Make_Btn);
+            this.TabPage_Single.Controls.Add(this.Convert_Btn);
             this.TabPage_Single.Controls.Add(this.IfReplacePicture_Chkbox);
             this.TabPage_Single.Controls.Add(this.IfDoModifyPageDirection_Chkbox);
             this.TabPage_Single.Controls.Add(this.IfConvertMobi_Chkbox);
             this.TabPage_Single.Controls.Add(this.IfDoToChineseChkbox);
-            this.TabPage_Single.Controls.Add(this.OpenBtn_Single);
+            this.TabPage_Single.Controls.Add(this.Load_cmd);
             this.TabPage_Single.Controls.Add(this.groupBox3);
             this.TabPage_Single.Controls.Add(this.groupBox4);
             this.TabPage_Single.Controls.Add(this.GroupBox1);
@@ -190,15 +190,15 @@
             this.IfEmbdedFont_Chkbox.UseSelectable = true;
             this.IfEmbdedFont_Chkbox.CheckedChanged += new System.EventHandler(this.IfEmbdedFont_Chkbox_CheckedChanged);
             // 
-            // Make_Btn
+            // Convert_Btn
             // 
-            this.Make_Btn.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Make_Btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            resources.ApplyResources(this.Make_Btn, "Make_Btn");
-            this.Make_Btn.Name = "Make_Btn";
-            this.Make_Btn.Style = MetroFramework.MetroColorStyle.Lime;
-            this.Make_Btn.UseSelectable = true;
-            this.Make_Btn.Click += new System.EventHandler(this.Make_Btn_Click);
+            this.Convert_Btn.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Convert_Btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            resources.ApplyResources(this.Convert_Btn, "Convert_Btn");
+            this.Convert_Btn.Name = "Convert_Btn";
+            this.Convert_Btn.Style = MetroFramework.MetroColorStyle.Lime;
+            this.Convert_Btn.UseSelectable = true;
+            this.Convert_Btn.Click += new System.EventHandler(this.Convert_Click);
             // 
             // IfReplacePicture_Chkbox
             // 
@@ -232,18 +232,18 @@
             this.IfDoToChineseChkbox.UseSelectable = true;
             this.IfDoToChineseChkbox.CheckedChanged += new System.EventHandler(this.IfDoToTriditionChkbox_CheckChanged);
             // 
-            // OpenBtn_Single
+            // Load_cmd
             // 
-            this.OpenBtn_Single.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.OpenBtn_Single.CausesValidation = false;
-            this.OpenBtn_Single.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.OpenBtn_Single.ForeColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.OpenBtn_Single, "OpenBtn_Single");
-            this.OpenBtn_Single.Name = "OpenBtn_Single";
-            this.OpenBtn_Single.Style = MetroFramework.MetroColorStyle.Lime;
-            this.OpenBtn_Single.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.OpenBtn_Single.UseSelectable = true;
-            this.OpenBtn_Single.Click += new System.EventHandler(this.OpenBtn_Single_Click);
+            this.Load_cmd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Load_cmd.CausesValidation = false;
+            this.Load_cmd.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.Load_cmd.ForeColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.Load_cmd, "Load_cmd");
+            this.Load_cmd.Name = "Load_cmd";
+            this.Load_cmd.Style = MetroFramework.MetroColorStyle.Lime;
+            this.Load_cmd.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Load_cmd.UseSelectable = true;
+            this.Load_cmd.Click += new System.EventHandler(this.Load_Click);
             // 
             // groupBox3
             // 
@@ -260,7 +260,6 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // PageRTL_Radio
             // 
@@ -412,14 +411,14 @@
             this.TabPage_Batch.Controls.Add(this.label2);
             this.TabPage_Batch.Controls.Add(this.Batch_IfReplacePicture_Chkbox);
             this.TabPage_Batch.Controls.Add(this.Batch_IfEmbdedFont_Chkbox);
-            this.TabPage_Batch.Controls.Add(this.Make_Batch);
+            this.TabPage_Batch.Controls.Add(this.Convert_Batch);
             this.TabPage_Batch.Controls.Add(this.Batch_IfDoModifyPageDirection_Chkbox);
             this.TabPage_Batch.Controls.Add(this.groupBox5);
             this.TabPage_Batch.Controls.Add(this.Batch_IfConvertMobi_Chkbox);
             this.TabPage_Batch.Controls.Add(this.Batch_IfDoToChineseChkbox);
             this.TabPage_Batch.Controls.Add(this.GroupBox2);
             this.TabPage_Batch.Controls.Add(this.Batch_grid);
-            this.TabPage_Batch.Controls.Add(this.OpenBtn_Batch);
+            this.TabPage_Batch.Controls.Add(this.Load_Batch_cmd);
             this.TabPage_Batch.HorizontalScrollbarBarColor = true;
             this.TabPage_Batch.HorizontalScrollbarHighlightOnWheel = false;
             this.TabPage_Batch.HorizontalScrollbarSize = 2;
@@ -436,7 +435,7 @@
             resources.ApplyResources(this.bookdelete_cmd, "bookdelete_cmd");
             this.bookdelete_cmd.Name = "bookdelete_cmd";
             this.bookdelete_cmd.UseSelectable = true;
-            this.bookdelete_cmd.Click += new System.EventHandler(this.bookdelete_cmd_Click);
+            this.bookdelete_cmd.Click += new System.EventHandler(this.Bookdelete_cmd_Click);
             // 
             // BatchGridView
             // 
@@ -446,7 +445,6 @@
             resources.ApplyResources(this.BatchGridView, "BatchGridView");
             this.BatchGridView.Name = "BatchGridView";
             this.BatchGridView.RowTemplate.Height = 24;
-            this.BatchGridView.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.r);
             this.BatchGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DataGridView1_RowsRemoved);
             // 
             // label2
@@ -470,12 +468,12 @@
             this.Batch_IfEmbdedFont_Chkbox.UseSelectable = true;
             this.Batch_IfEmbdedFont_Chkbox.CheckedChanged += new System.EventHandler(this.Batch_IfEmbdedFont_Chkbox_CheckedChanged);
             // 
-            // Make_Batch
+            // Convert_Batch
             // 
-            resources.ApplyResources(this.Make_Batch, "Make_Batch");
-            this.Make_Batch.Name = "Make_Batch";
-            this.Make_Batch.UseSelectable = true;
-            this.Make_Batch.Click += new System.EventHandler(this.Make_Batch_Click);
+            resources.ApplyResources(this.Convert_Batch, "Convert_Batch");
+            this.Convert_Batch.Name = "Convert_Batch";
+            this.Convert_Batch.UseSelectable = true;
+            this.Convert_Batch.Click += new System.EventHandler(this.Convert_Batch_Click);
             // 
             // Batch_IfDoModifyPageDirection_Chkbox
             // 
@@ -562,41 +560,41 @@
             this.Batch_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Batch_grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Batch_grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Batch_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Batch_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Batch_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Batch_grid.ColumnHeadersVisible = false;
             this.Batch_grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
             this.Batch_grid.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Batch_grid.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Batch_grid.DefaultCellStyle = dataGridViewCellStyle3;
             this.Batch_grid.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.Batch_grid, "Batch_grid");
             this.Batch_grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Batch_grid.Name = "Batch_grid";
             this.Batch_grid.ReadOnly = true;
             this.Batch_grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Batch_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Batch_grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Batch_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Batch_grid.RowTemplate.Height = 24;
             this.Batch_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -606,19 +604,19 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // OpenBtn_Batch
+            // Load_Batch_cmd
             // 
-            resources.ApplyResources(this.OpenBtn_Batch, "OpenBtn_Batch");
-            this.OpenBtn_Batch.Name = "OpenBtn_Batch";
-            this.OpenBtn_Batch.UseSelectable = true;
-            this.OpenBtn_Batch.Click += new System.EventHandler(this.OpenBtn_Batch_Click);
+            resources.ApplyResources(this.Load_Batch_cmd, "Load_Batch_cmd");
+            this.Load_Batch_cmd.Name = "Load_Batch_cmd";
+            this.Load_Batch_cmd.UseSelectable = true;
+            this.Load_Batch_cmd.Click += new System.EventHandler(this.Load_Batch_Click);
             // 
             // metroStyleManager1
             // 
@@ -649,7 +647,7 @@
             resources.ApplyResources(this.about_cmd, "about_cmd");
             this.about_cmd.Name = "about_cmd";
             this.about_cmd.UseSelectable = true;
-            this.about_cmd.Click += new System.EventHandler(this.about_cmd_Click);
+            this.about_cmd.Click += new System.EventHandler(this.About_cmd_Click);
             // 
             // Form1
             // 
@@ -693,10 +691,10 @@
         #endregion
         internal System.Windows.Forms.ComboBox languagecombobox;
         internal MetroFramework.Controls.MetroTabPage TabPage_Single;
-        internal MetroFramework.Controls.MetroButton Make_Btn;
+        internal MetroFramework.Controls.MetroButton Convert_Btn;
         internal MetroFramework.Controls.MetroCheckBox IfConvertMobi_Chkbox;
         internal MetroFramework.Controls.MetroCheckBox IfDoToChineseChkbox;
-        internal MetroFramework.Controls.MetroButton OpenBtn_Single;
+        internal MetroFramework.Controls.MetroButton Load_cmd;
         internal MetroFramework.Controls.MetroTextBox Title_Imported_TextBox;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal MetroFramework.Controls.MetroButton ToTraditionValue_Cmd;
@@ -705,7 +703,7 @@
         internal MetroFramework.Controls.MetroLabel Book_Tittle_Lebel;
         internal MetroFramework.Controls.MetroLabel Author_Label;
         internal MetroFramework.Controls.MetroTabPage TabPage_Batch;
-        internal MetroFramework.Controls.MetroButton Make_Batch;
+        internal MetroFramework.Controls.MetroButton Convert_Batch;
         internal MetroFramework.Controls.MetroCheckBox Batch_IfConvertMobi_Chkbox;
         internal MetroFramework.Controls.MetroCheckBox Batch_IfDoToChineseChkbox;
         internal System.Windows.Forms.GroupBox GroupBox2;
@@ -713,7 +711,7 @@
         internal MetroFramework.Controls.MetroButton Batch_ToTraditionValue_Cmd;
         internal MetroFramework.Controls.MetroLabel CT_Label_Batch;
         internal MetroFramework.Controls.MetroGrid Batch_grid;
-        internal MetroFramework.Controls.MetroButton OpenBtn_Batch;
+        internal MetroFramework.Controls.MetroButton Load_Batch_cmd;
         private MetroFramework.Controls.MetroCheckBox IfDoModifyPageDirection_Chkbox;
         private MetroFramework.Controls.MetroRadioButton PageLTR_Radio;
         private MetroFramework.Controls.MetroRadioButton PageRTL_Radio;
