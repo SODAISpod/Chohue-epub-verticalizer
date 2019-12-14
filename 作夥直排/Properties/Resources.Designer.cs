@@ -145,5 +145,24 @@ namespace ChoHoe.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   查詢類似 html {
+        ///writing-mode: vertical-rl;
+        ///-webkit-writing-mode: vertical-rl;
+        ///-epub-writing-mode: vertical-rl;
+        ///}
+        ///body {
+        ///writing-mode: vertical-rl;
+        ///-webkit-writing-mode: vertical-rl;
+        ///-epub-writing-mode: vertical-rl;
+        ///
+        ///} 的當地語系化字串。
+        /// </summary>
+        internal static string VerticalStyle {
+            get {
+                return ResourceManager.GetString("VerticalStyle", resourceCulture);
+            }
+        }
     }
 }

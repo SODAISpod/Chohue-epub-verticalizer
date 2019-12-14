@@ -590,7 +590,7 @@ namespace ChoHoeBV
 
             var doc = new HtmlAgilityPack.HtmlDocument();
             // doc.OptionOutputAsXml = true;
-       
+            bool hasCSSStylesheet = false;
             doc.OptionWriteEmptyNodes = true;
             doc.LoadHtml(source);
             foreach (HtmlNode node in doc.DocumentNode.ChildNodes)
@@ -599,7 +599,25 @@ namespace ChoHoeBV
                 {
                     foreach (HtmlNode bodynode in node.ChildNodes)
                     {
-
+                        if (bodynode.Name=="head")
+                        {
+                            foreach (HtmlNode item in bodynode.ChildNodes)
+                            {
+                                if (item.Name=="link")
+                                {
+                                    if (item.Attributes["rel"].Value == "stylesheet"&& item.Attributes["type"].Value == "text/css")
+                                    {
+                                        hasCSSStylesheet = true;
+                                    }
+                                }
+                            }
+                            if (hasCSSStylesheet==false)
+                            {
+                                HtmlNode verticalstyle = doc.CreateElement("style");
+                                verticalstyle.InnerHtml = ChoHoe.Properties.Resources.VerticalStyle;
+                                bodynode.AppendChild(verticalstyle);
+                            }
+                        }
                         if (bodynode.Name=="body")
                         {
                             foreach (HtmlNode item in bodynode.ChildNodes)
