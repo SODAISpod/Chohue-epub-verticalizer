@@ -109,7 +109,7 @@
             this.TabControl1.FontSize = MetroFramework.MetroTabControlSize.Tall;
             resources.ApplyResources(this.TabControl1, "TabControl1");
             this.TabControl1.Name = "TabControl1";
-            this.TabControl1.SelectedIndex = 0;
+            this.TabControl1.SelectedIndex = 1;
             this.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl1.UseSelectable = true;
             // 
