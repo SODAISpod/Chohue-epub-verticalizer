@@ -77,7 +77,7 @@
             resources.ApplyResources(this.mobi_manual, "mobi_manual");
             this.mobi_manual.Name = "mobi_manual";
             this.mobi_manual.TabStop = true;
-            this.mobi_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.mobi_manual_LinkClicked);
+            this.mobi_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Mobi_manual_LinkClicked);
             // 
             // OutputMobiUsingKindlegen
             // 
@@ -199,7 +199,7 @@
             resources.ApplyResources(this.epub_manual, "epub_manual");
             this.epub_manual.Name = "epub_manual";
             this.epub_manual.TabStop = true;
-            this.epub_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.epub_manual_LinkClicked);
+            this.epub_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Epub_manual_LinkClicked);
             // 
             // Setting
             // 
