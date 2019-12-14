@@ -153,6 +153,123 @@
   <data name="&gt;&gt;languagecombobox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="IfCustomizeLocalizationWord_cmd.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="IfCustomizeLocalizationWord_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 45</value>
+  </data>
+  <data name="IfCustomizeLocalizationWord_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="IfCustomizeLocalizationWord_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="IfCustomizeLocalizationWord_cmd.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Name" xml:space="preserve">
+    <value>IfCustomizeLocalizationWord_cmd</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="IfCustomizeCss_cmd.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="IfCustomizeCss_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 19</value>
+  </data>
+  <data name="IfCustomizeCss_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="IfCustomizeCss_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="IfCustomizeCss_cmd.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeCss_cmd.Name" xml:space="preserve">
+    <value>IfCustomizeCss_cmd</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeCss_cmd.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeCss_cmd.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;IfCustomizeCss_cmd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SetCustomizeLocalizationWord_cmd.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SetCustomizeLocalizationWord_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 45</value>
+  </data>
+  <data name="SetCustomizeLocalizationWord_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="SetCustomizeLocalizationWord_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="SetCustomizeLocalizationWord_cmd.Text" xml:space="preserve">
+    <value>用語轉換</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Name" xml:space="preserve">
+    <value>SetCustomizeLocalizationWord_cmd</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SetCustomizeCss_cmd.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SetCustomizeCss_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="SetCustomizeCss_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="SetCustomizeCss_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="SetCustomizeCss_cmd.Text" xml:space="preserve">
+    <value>自訂CSS</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeCss_cmd.Name" xml:space="preserve">
+    <value>SetCustomizeCss_cmd</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeCss_cmd.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeCss_cmd.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;SetCustomizeCss_cmd.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 339</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 88</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
   <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
     <value>groupBox6</value>
   </data>
@@ -164,6 +281,24 @@
   </data>
   <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 304</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 25</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="IfEmbdedFont_Chkbox.Text" xml:space="preserve">
+    <value>嵌入字體</value>
   </data>
   <data name="&gt;&gt;IfEmbdedFont_Chkbox.Name" xml:space="preserve">
     <value>IfEmbdedFont_Chkbox</value>
@@ -177,17 +312,50 @@
   <data name="&gt;&gt;IfEmbdedFont_Chkbox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;Make_Btn.Name" xml:space="preserve">
-    <value>Make_Btn</value>
+  <data name="Convert_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 448</value>
   </data>
-  <data name="&gt;&gt;Make_Btn.Type" xml:space="preserve">
+  <data name="Convert_Btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Convert_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 85</value>
+  </data>
+  <data name="Convert_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Convert_Btn.Text" xml:space="preserve">
+    <value>製作</value>
+  </data>
+  <data name="&gt;&gt;Convert_Btn.Name" xml:space="preserve">
+    <value>Convert_Btn</value>
+  </data>
+  <data name="&gt;&gt;Convert_Btn.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;Make_Btn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Convert_Btn.Parent" xml:space="preserve">
     <value>TabPage_Single</value>
   </data>
-  <data name="&gt;&gt;Make_Btn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Convert_Btn.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="IfReplacePicture_Chkbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfReplacePicture_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 243</value>
+  </data>
+  <data name="IfReplacePicture_Chkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IfReplacePicture_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 25</value>
+  </data>
+  <data name="IfReplacePicture_Chkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="IfReplacePicture_Chkbox.Text" xml:space="preserve">
+    <value>替換圖片</value>
   </data>
   <data name="&gt;&gt;IfReplacePicture_Chkbox.Name" xml:space="preserve">
     <value>IfReplacePicture_Chkbox</value>
@@ -201,6 +369,24 @@
   <data name="&gt;&gt;IfReplacePicture_Chkbox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="IfDoModifyPageDirection_Chkbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 175</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="IfDoModifyPageDirection_Chkbox.Text" xml:space="preserve">
+    <value>指定翻頁方向</value>
+  </data>
   <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox.Name" xml:space="preserve">
     <value>IfDoModifyPageDirection_Chkbox</value>
   </data>
@@ -212,6 +398,24 @@
   </data>
   <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="IfConvertMobi_Chkbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfConvertMobi_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 276</value>
+  </data>
+  <data name="IfConvertMobi_Chkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IfConvertMobi_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 25</value>
+  </data>
+  <data name="IfConvertMobi_Chkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="IfConvertMobi_Chkbox.Text" xml:space="preserve">
+    <value>轉換成.mobi</value>
   </data>
   <data name="&gt;&gt;IfConvertMobi_Chkbox.Name" xml:space="preserve">
     <value>IfConvertMobi_Chkbox</value>
@@ -225,6 +429,24 @@
   <data name="&gt;&gt;IfConvertMobi_Chkbox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="IfDoToChineseChkbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IfDoToChineseChkbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 112</value>
+  </data>
+  <data name="IfDoToChineseChkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="IfDoToChineseChkbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="IfDoToChineseChkbox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="IfDoToChineseChkbox.Text" xml:space="preserve">
+    <value>正體簡體轉換</value>
+  </data>
   <data name="&gt;&gt;IfDoToChineseChkbox.Name" xml:space="preserve">
     <value>IfDoToChineseChkbox</value>
   </data>
@@ -237,17 +459,167 @@
   <data name="&gt;&gt;IfDoToChineseChkbox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;OpenBtn_Single.Name" xml:space="preserve">
-    <value>OpenBtn_Single</value>
+  <data name="Load_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 448</value>
   </data>
-  <data name="&gt;&gt;OpenBtn_Single.Type" xml:space="preserve">
+  <data name="Load_cmd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Load_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 85</value>
+  </data>
+  <data name="Load_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Load_cmd.Text" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="&gt;&gt;Load_cmd.Name" xml:space="preserve">
+    <value>Load_cmd</value>
+  </data>
+  <data name="&gt;&gt;Load_cmd.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;OpenBtn_Single.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Load_cmd.Parent" xml:space="preserve">
     <value>TabPage_Single</value>
   </data>
-  <data name="&gt;&gt;OpenBtn_Single.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Load_cmd.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 12pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 36</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>小說，文本</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PageRTL_Radio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PageRTL_Radio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 10</value>
+  </data>
+  <data name="PageRTL_Radio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="PageRTL_Radio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 25</value>
+  </data>
+  <data name="PageRTL_Radio.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="PageRTL_Radio.Text" xml:space="preserve">
+    <value>由右往左翻</value>
+  </data>
+  <data name="&gt;&gt;PageRTL_Radio.Name" xml:space="preserve">
+    <value>PageRTL_Radio</value>
+  </data>
+  <data name="&gt;&gt;PageRTL_Radio.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;PageRTL_Radio.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;PageRTL_Radio.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PageLTR_Radio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PageLTR_Radio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 80</value>
+  </data>
+  <data name="PageLTR_Radio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="PageLTR_Radio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 25</value>
+  </data>
+  <data name="PageLTR_Radio.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="PageLTR_Radio.Text" xml:space="preserve">
+    <value>由左往右翻</value>
+  </data>
+  <data name="&gt;&gt;PageLTR_Radio.Name" xml:space="preserve">
+    <value>PageLTR_Radio</value>
+  </data>
+  <data name="&gt;&gt;PageLTR_Radio.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;PageLTR_Radio.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;PageLTR_Radio.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 12pt, style=Bold</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 106</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>漫畫，圖書</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 176</value>
+  </data>
+  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 158</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
     <value>groupBox3</value>
@@ -261,6 +633,195 @@
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="Notice_Title_Can_Edit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Notice_Title_Can_Edit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 66</value>
+  </data>
+  <data name="Notice_Title_Can_Edit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 15</value>
+  </data>
+  <data name="Notice_Title_Can_Edit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Notice_Title_Can_Edit.Text" xml:space="preserve">
+    <value>*你可以在製作前修改</value>
+  </data>
+  <data name="Notice_Title_Can_Edit.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Notice_Title_Can_Edit.Name" xml:space="preserve">
+    <value>Notice_Title_Can_Edit</value>
+  </data>
+  <data name="&gt;&gt;Notice_Title_Can_Edit.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Notice_Title_Can_Edit.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;Notice_Title_Can_Edit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Author_Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Author_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 14</value>
+  </data>
+  <data name="Author_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 25</value>
+  </data>
+  <data name="Author_Label.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Author_Label.Text" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="&gt;&gt;Author_Label.Name" xml:space="preserve">
+    <value>Author_Label</value>
+  </data>
+  <data name="&gt;&gt;Author_Label.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Author_Label.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;Author_Label.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Book_Tittle_Lebel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Book_Tittle_Lebel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 41</value>
+  </data>
+  <data name="Book_Tittle_Lebel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 25</value>
+  </data>
+  <data name="Book_Tittle_Lebel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Book_Tittle_Lebel.Text" xml:space="preserve">
+    <value>書名</value>
+  </data>
+  <data name="&gt;&gt;Book_Tittle_Lebel.Name" xml:space="preserve">
+    <value>Book_Tittle_Lebel</value>
+  </data>
+  <data name="&gt;&gt;Book_Tittle_Lebel.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Book_Tittle_Lebel.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;Book_Tittle_Lebel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="resource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 1</value>
+  </data>
+  <data name="resource.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="resource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 19</value>
+  </data>
+  <data name="resource.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Author_Imported_TextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 14</value>
+  </data>
+  <data name="Author_Imported_TextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Author_Imported_TextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 21</value>
+  </data>
+  <data name="Author_Imported_TextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Author_Imported_TextBox.Name" xml:space="preserve">
+    <value>Author_Imported_TextBox</value>
+  </data>
+  <data name="&gt;&gt;Author_Imported_TextBox.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Author_Imported_TextBox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;Author_Imported_TextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="resource.ImeMode1" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="resource.Location1" type="System.Drawing.Point, System.Drawing">
+    <value>205, 1</value>
+  </data>
+  <data name="resource.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="resource.Size1" type="System.Drawing.Size, System.Drawing">
+    <value>19, 19</value>
+  </data>
+  <data name="resource.TabIndex1" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="resource.Visible1" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Title_Imported_TextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 42</value>
+  </data>
+  <data name="Title_Imported_TextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Title_Imported_TextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 21</value>
+  </data>
+  <data name="Title_Imported_TextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Title_Imported_TextBox.Name" xml:space="preserve">
+    <value>Title_Imported_TextBox</value>
+  </data>
+  <data name="&gt;&gt;Title_Imported_TextBox.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Title_Imported_TextBox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;Title_Imported_TextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 88</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
     <value>groupBox4</value>
   </data>
@@ -272,6 +833,102 @@
   </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <data name="ST_Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ST_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="ST_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 25</value>
+  </data>
+  <data name="ST_Label.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ST_Label.Text" xml:space="preserve">
+    <value>簡體</value>
+  </data>
+  <data name="&gt;&gt;ST_Label.Name" xml:space="preserve">
+    <value>ST_Label</value>
+  </data>
+  <data name="&gt;&gt;ST_Label.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;ST_Label.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;ST_Label.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToTraditionValue_Cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 10</value>
+  </data>
+  <data name="ToTraditionValue_Cmd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="ToTraditionValue_Cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 38</value>
+  </data>
+  <data name="ToTraditionValue_Cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ToTraditionValue_Cmd.Text" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="&gt;&gt;ToTraditionValue_Cmd.Name" xml:space="preserve">
+    <value>ToTraditionValue_Cmd</value>
+  </data>
+  <data name="&gt;&gt;ToTraditionValue_Cmd.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;ToTraditionValue_Cmd.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;ToTraditionValue_Cmd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CT_Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CT_Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 20</value>
+  </data>
+  <data name="CT_Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 25</value>
+  </data>
+  <data name="CT_Label.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="CT_Label.Text" xml:space="preserve">
+    <value>正體</value>
+  </data>
+  <data name="&gt;&gt;CT_Label.Name" xml:space="preserve">
+    <value>CT_Label</value>
+  </data>
+  <data name="&gt;&gt;CT_Label.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;CT_Label.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;CT_Label.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 112</value>
+  </data>
+  <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 56</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
     <value>GroupBox1</value>
@@ -441,34 +1098,34 @@
   <data name="&gt;&gt;Batch_IfEmbdedFont_Chkbox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="Make_Batch.Enabled" type="System.Boolean, mscorlib">
+  <data name="Convert_Batch.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="Make_Batch.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Convert_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>98, 421</value>
   </data>
-  <data name="Make_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Convert_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="Make_Batch.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Convert_Batch.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 71</value>
   </data>
-  <data name="Make_Batch.TabIndex" type="System.Int32, mscorlib">
+  <data name="Convert_Batch.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="Make_Batch.Text" xml:space="preserve">
+  <data name="Convert_Batch.Text" xml:space="preserve">
     <value>製作</value>
   </data>
-  <data name="&gt;&gt;Make_Batch.Name" xml:space="preserve">
-    <value>Make_Batch</value>
+  <data name="&gt;&gt;Convert_Batch.Name" xml:space="preserve">
+    <value>Convert_Batch</value>
   </data>
-  <data name="&gt;&gt;Make_Batch.Type" xml:space="preserve">
+  <data name="&gt;&gt;Convert_Batch.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;Make_Batch.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Convert_Batch.Parent" xml:space="preserve">
     <value>TabPage_Batch</value>
   </data>
-  <data name="&gt;&gt;Make_Batch.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Convert_Batch.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="Batch_IfDoModifyPageDirection_Chkbox.AutoSize" type="System.Boolean, mscorlib">
@@ -648,1167 +1305,6 @@
   <data name="&gt;&gt;Batch_IfDoToChineseChkbox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;ST_Label_Batch.Name" xml:space="preserve">
-    <value>ST_Label_Batch</value>
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Batch_ToTraditionValue_Cmd.Name" xml:space="preserve">
-    <value>Batch_ToTraditionValue_Cmd</value>
-  </data>
-  <data name="&gt;&gt;Batch_ToTraditionValue_Cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Batch_ToTraditionValue_Cmd.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;Batch_ToTraditionValue_Cmd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.Name" xml:space="preserve">
-    <value>CT_Label_Batch</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 193</value>
-  </data>
-  <data name="GroupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="GroupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 56</value>
-  </data>
-  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Column1.HeaderText" xml:space="preserve">
-    <value>書名</value>
-  </data>
-  <data name="Batch_grid.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11px</value>
-  </data>
-  <data name="Batch_grid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
-  </data>
-  <data name="Batch_grid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Batch_grid.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="Batch_grid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>324, 144</value>
-  </data>
-  <data name="Batch_grid.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Batch_grid.Name" xml:space="preserve">
-    <value>Batch_grid</value>
-  </data>
-  <data name="&gt;&gt;Batch_grid.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroGrid, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Batch_grid.Parent" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;Batch_grid.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="OpenBtn_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 421</value>
-  </data>
-  <data name="OpenBtn_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="OpenBtn_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 71</value>
-  </data>
-  <data name="OpenBtn_Batch.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="OpenBtn_Batch.Text" xml:space="preserve">
-    <value>開啟</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Batch.Name" xml:space="preserve">
-    <value>OpenBtn_Batch</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Batch.Parent" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Batch.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="TabPage_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 38</value>
-  </data>
-  <data name="TabPage_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="TabPage_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 553</value>
-  </data>
-  <data name="TabPage_Batch.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabPage_Batch.Text" xml:space="preserve">
-    <value>批次</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Batch.Name" xml:space="preserve">
-    <value>TabPage_Batch</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Batch.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Batch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TabControl1.ItemSize" type="System.Drawing.Size, System.Drawing">
-    <value>70, 34</value>
-  </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 74</value>
-  </data>
-  <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 595</value>
-  </data>
-  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Name" xml:space="preserve">
-    <value>IfCustomizeLocalizationWord_cmd</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.Name" xml:space="preserve">
-    <value>IfCustomizeCss_cmd</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Name" xml:space="preserve">
-    <value>SetCustomizeLocalizationWord_cmd</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.Name" xml:space="preserve">
-    <value>SetCustomizeCss_cmd</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 339</value>
-  </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 88</value>
-  </data>
-  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="IfCustomizeLocalizationWord_cmd.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="IfCustomizeLocalizationWord_cmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 45</value>
-  </data>
-  <data name="IfCustomizeLocalizationWord_cmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="IfCustomizeLocalizationWord_cmd.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="IfCustomizeLocalizationWord_cmd.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Name" xml:space="preserve">
-    <value>IfCustomizeLocalizationWord_cmd</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeLocalizationWord_cmd.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="IfCustomizeCss_cmd.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="IfCustomizeCss_cmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 19</value>
-  </data>
-  <data name="IfCustomizeCss_cmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="IfCustomizeCss_cmd.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="IfCustomizeCss_cmd.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.Name" xml:space="preserve">
-    <value>IfCustomizeCss_cmd</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;IfCustomizeCss_cmd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="SetCustomizeLocalizationWord_cmd.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SetCustomizeLocalizationWord_cmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 45</value>
-  </data>
-  <data name="SetCustomizeLocalizationWord_cmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="SetCustomizeLocalizationWord_cmd.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="SetCustomizeLocalizationWord_cmd.Text" xml:space="preserve">
-    <value>用語轉換</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Name" xml:space="preserve">
-    <value>SetCustomizeLocalizationWord_cmd</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeLocalizationWord_cmd.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="SetCustomizeCss_cmd.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SetCustomizeCss_cmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 19</value>
-  </data>
-  <data name="SetCustomizeCss_cmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="SetCustomizeCss_cmd.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="SetCustomizeCss_cmd.Text" xml:space="preserve">
-    <value>自訂CSS</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.Name" xml:space="preserve">
-    <value>SetCustomizeCss_cmd</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;SetCustomizeCss_cmd.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="IfEmbdedFont_Chkbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="IfEmbdedFont_Chkbox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="IfEmbdedFont_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 304</value>
-  </data>
-  <data name="IfEmbdedFont_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 25</value>
-  </data>
-  <data name="IfEmbdedFont_Chkbox.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="IfEmbdedFont_Chkbox.Text" xml:space="preserve">
-    <value>嵌入字體</value>
-  </data>
-  <data name="&gt;&gt;IfEmbdedFont_Chkbox.Name" xml:space="preserve">
-    <value>IfEmbdedFont_Chkbox</value>
-  </data>
-  <data name="&gt;&gt;IfEmbdedFont_Chkbox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfEmbdedFont_Chkbox.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;IfEmbdedFont_Chkbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Make_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 448</value>
-  </data>
-  <data name="Make_Btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Make_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 85</value>
-  </data>
-  <data name="Make_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="Make_Btn.Text" xml:space="preserve">
-    <value>製作</value>
-  </data>
-  <data name="&gt;&gt;Make_Btn.Name" xml:space="preserve">
-    <value>Make_Btn</value>
-  </data>
-  <data name="&gt;&gt;Make_Btn.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Make_Btn.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;Make_Btn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="IfReplacePicture_Chkbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="IfReplacePicture_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 243</value>
-  </data>
-  <data name="IfReplacePicture_Chkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="IfReplacePicture_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 25</value>
-  </data>
-  <data name="IfReplacePicture_Chkbox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="IfReplacePicture_Chkbox.Text" xml:space="preserve">
-    <value>替換圖片</value>
-  </data>
-  <data name="&gt;&gt;IfReplacePicture_Chkbox.Name" xml:space="preserve">
-    <value>IfReplacePicture_Chkbox</value>
-  </data>
-  <data name="&gt;&gt;IfReplacePicture_Chkbox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfReplacePicture_Chkbox.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;IfReplacePicture_Chkbox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="IfDoModifyPageDirection_Chkbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="IfDoModifyPageDirection_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 175</value>
-  </data>
-  <data name="IfDoModifyPageDirection_Chkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="IfDoModifyPageDirection_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="IfDoModifyPageDirection_Chkbox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="IfDoModifyPageDirection_Chkbox.Text" xml:space="preserve">
-    <value>指定翻頁方向</value>
-  </data>
-  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox.Name" xml:space="preserve">
-    <value>IfDoModifyPageDirection_Chkbox</value>
-  </data>
-  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;IfDoModifyPageDirection_Chkbox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="IfConvertMobi_Chkbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="IfConvertMobi_Chkbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 276</value>
-  </data>
-  <data name="IfConvertMobi_Chkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="IfConvertMobi_Chkbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 25</value>
-  </data>
-  <data name="IfConvertMobi_Chkbox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="IfConvertMobi_Chkbox.Text" xml:space="preserve">
-    <value>轉換成.mobi</value>
-  </data>
-  <data name="&gt;&gt;IfConvertMobi_Chkbox.Name" xml:space="preserve">
-    <value>IfConvertMobi_Chkbox</value>
-  </data>
-  <data name="&gt;&gt;IfConvertMobi_Chkbox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfConvertMobi_Chkbox.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;IfConvertMobi_Chkbox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="IfDoToChineseChkbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="IfDoToChineseChkbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 112</value>
-  </data>
-  <data name="IfDoToChineseChkbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="IfDoToChineseChkbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="IfDoToChineseChkbox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="IfDoToChineseChkbox.Text" xml:space="preserve">
-    <value>正體簡體轉換</value>
-  </data>
-  <data name="&gt;&gt;IfDoToChineseChkbox.Name" xml:space="preserve">
-    <value>IfDoToChineseChkbox</value>
-  </data>
-  <data name="&gt;&gt;IfDoToChineseChkbox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;IfDoToChineseChkbox.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;IfDoToChineseChkbox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="OpenBtn_Single.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 448</value>
-  </data>
-  <data name="OpenBtn_Single.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="OpenBtn_Single.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 85</value>
-  </data>
-  <data name="OpenBtn_Single.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="OpenBtn_Single.Text" xml:space="preserve">
-    <value>開啟</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Single.Name" xml:space="preserve">
-    <value>OpenBtn_Single</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Single.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Single.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;OpenBtn_Single.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.Name" xml:space="preserve">
-    <value>PageRTL_Radio</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.Name" xml:space="preserve">
-    <value>PageLTR_Radio</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 176</value>
-  </data>
-  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 158</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 36</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 21</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>小說，文本</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PageRTL_Radio.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PageRTL_Radio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 10</value>
-  </data>
-  <data name="PageRTL_Radio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="PageRTL_Radio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
-  </data>
-  <data name="PageRTL_Radio.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="PageRTL_Radio.Text" xml:space="preserve">
-    <value>由右往左翻</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.Name" xml:space="preserve">
-    <value>PageRTL_Radio</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;PageRTL_Radio.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PageLTR_Radio.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PageLTR_Radio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 80</value>
-  </data>
-  <data name="PageLTR_Radio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="PageLTR_Radio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
-  </data>
-  <data name="PageLTR_Radio.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="PageLTR_Radio.Text" xml:space="preserve">
-    <value>由左往右翻</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.Name" xml:space="preserve">
-    <value>PageLTR_Radio</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;PageLTR_Radio.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt, style=Bold</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 106</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 21</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>漫畫，圖書</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.Name" xml:space="preserve">
-    <value>Notice_Title_Can_Edit</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.Name" xml:space="preserve">
-    <value>Author_Label</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.Name" xml:space="preserve">
-    <value>Book_Tittle_Lebel</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.Name" xml:space="preserve">
-    <value>Author_Imported_TextBox</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.Name" xml:space="preserve">
-    <value>Title_Imported_TextBox</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 10</value>
-  </data>
-  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 88</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="Notice_Title_Can_Edit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Notice_Title_Can_Edit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 66</value>
-  </data>
-  <data name="Notice_Title_Can_Edit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 15</value>
-  </data>
-  <data name="Notice_Title_Can_Edit.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Notice_Title_Can_Edit.Text" xml:space="preserve">
-    <value>*你可以在製作前修改</value>
-  </data>
-  <data name="Notice_Title_Can_Edit.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.Name" xml:space="preserve">
-    <value>Notice_Title_Can_Edit</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Notice_Title_Can_Edit.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Author_Label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Author_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 14</value>
-  </data>
-  <data name="Author_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="Author_Label.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Author_Label.Text" xml:space="preserve">
-    <value>作者</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.Name" xml:space="preserve">
-    <value>Author_Label</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Author_Label.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Book_Tittle_Lebel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Book_Tittle_Lebel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 41</value>
-  </data>
-  <data name="Book_Tittle_Lebel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="Book_Tittle_Lebel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Book_Tittle_Lebel.Text" xml:space="preserve">
-    <value>書名</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.Name" xml:space="preserve">
-    <value>Book_Tittle_Lebel</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Book_Tittle_Lebel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="resource.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 1</value>
-  </data>
-  <data name="resource.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="resource.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 19</value>
-  </data>
-  <data name="resource.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="resource.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Author_Imported_TextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 14</value>
-  </data>
-  <data name="Author_Imported_TextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Author_Imported_TextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 21</value>
-  </data>
-  <data name="Author_Imported_TextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.Name" xml:space="preserve">
-    <value>Author_Imported_TextBox</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Author_Imported_TextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode1" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="resource.Location1" type="System.Drawing.Point, System.Drawing">
-    <value>205, 1</value>
-  </data>
-  <data name="resource.Margin1" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="resource.Size1" type="System.Drawing.Size, System.Drawing">
-    <value>19, 19</value>
-  </data>
-  <data name="resource.TabIndex1" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="resource.Visible1" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Title_Imported_TextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 42</value>
-  </data>
-  <data name="Title_Imported_TextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Title_Imported_TextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 21</value>
-  </data>
-  <data name="Title_Imported_TextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.Name" xml:space="preserve">
-    <value>Title_Imported_TextBox</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;Title_Imported_TextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.Name" xml:space="preserve">
-    <value>ST_Label</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.Name" xml:space="preserve">
-    <value>ToTraditionValue_Cmd</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.Name" xml:space="preserve">
-    <value>CT_Label</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 112</value>
-  </data>
-  <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 56</value>
-  </data>
-  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>TabPage_Single</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="ST_Label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ST_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 20</value>
-  </data>
-  <data name="ST_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="ST_Label.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="ST_Label.Text" xml:space="preserve">
-    <value>簡體</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.Name" xml:space="preserve">
-    <value>ST_Label</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;ST_Label.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToTraditionValue_Cmd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 10</value>
-  </data>
-  <data name="ToTraditionValue_Cmd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="ToTraditionValue_Cmd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 38</value>
-  </data>
-  <data name="ToTraditionValue_Cmd.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="ToTraditionValue_Cmd.Text" xml:space="preserve">
-    <value>&gt;</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.Name" xml:space="preserve">
-    <value>ToTraditionValue_Cmd</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;ToTraditionValue_Cmd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CT_Label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CT_Label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 20</value>
-  </data>
-  <data name="CT_Label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="CT_Label.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="CT_Label.Text" xml:space="preserve">
-    <value>正體</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.Name" xml:space="preserve">
-    <value>CT_Label</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;CT_Label.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="ST_Label_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1889,6 +1385,150 @@
   </data>
   <data name="&gt;&gt;CT_Label_Batch.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 193</value>
+  </data>
+  <data name="GroupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="GroupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 56</value>
+  </data>
+  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>書名</value>
+  </data>
+  <data name="Batch_grid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11px</value>
+  </data>
+  <data name="Batch_grid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="Batch_grid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Batch_grid.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="Batch_grid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>324, 144</value>
+  </data>
+  <data name="Batch_grid.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Batch_grid.Name" xml:space="preserve">
+    <value>Batch_grid</value>
+  </data>
+  <data name="&gt;&gt;Batch_grid.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroGrid, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Batch_grid.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;Batch_grid.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Load_Batch_cmd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 421</value>
+  </data>
+  <data name="Load_Batch_cmd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Load_Batch_cmd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 71</value>
+  </data>
+  <data name="Load_Batch_cmd.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Load_Batch_cmd.Text" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="&gt;&gt;Load_Batch_cmd.Name" xml:space="preserve">
+    <value>Load_Batch_cmd</value>
+  </data>
+  <data name="&gt;&gt;Load_Batch_cmd.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;Load_Batch_cmd.Parent" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;Load_Batch_cmd.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="TabPage_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="TabPage_Batch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TabPage_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 553</value>
+  </data>
+  <data name="TabPage_Batch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPage_Batch.Text" xml:space="preserve">
+    <value>批次</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Batch.Name" xml:space="preserve">
+    <value>TabPage_Batch</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Batch.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Batch.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Batch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabControl1.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>70, 34</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 74</value>
+  </data>
+  <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 595</value>
+  </data>
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="metroStyleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

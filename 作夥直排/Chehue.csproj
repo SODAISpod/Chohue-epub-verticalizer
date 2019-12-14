@@ -134,13 +134,13 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>0F1E30084D900D7C3B267BE7D518DC34BEB3DF28</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>00F265BA1E5A83B8790CFAD664E2390AB2FB42B2</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Chehue_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Chehue_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -256,6 +256,7 @@
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
     </Compile>
     <None Include="Chehue_1_TemporaryKey.pfx" />
+    <None Include="Chehue_2_TemporaryKey.pfx" />
     <None Include="Chehue_TemporaryKey.pfx" />
     <None Include="Resources\kiichoicon.ico" />
     <None Include="Resources\AboutBoxBanner.png" />

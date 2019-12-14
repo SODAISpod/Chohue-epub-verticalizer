@@ -26,10 +26,10 @@ namespace ChoHoeBV
 {
     public class Book
     {
-        private const bool V = true;
-        public
+       
+        private
            
-        List<string> opfpath = new List<string>() ,css = new List<string>(), xHtml = new List<string>();
+        List<string> css = new List<string>(), xHtml = new List<string>();
         Dictionary<string, List<string>> imgpath = new Dictionary<string, List<string>>();
         
         
@@ -48,7 +48,7 @@ namespace ChoHoeBV
 
         public void Load( string _path)
         {
-            ProgressBar(true);
+           
             imgpath = new Dictionary<string, List<string>>();
             _originalFilePath = _path;
             PathEditor();
@@ -117,7 +117,7 @@ namespace ChoHoeBV
             {
                 File.Delete(_uncompressedPath + "\\mimetype");
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 Logger.logger.Error($"No such Mimetype file at: {_uncompressedPath + "\\mimetype"}");
                 throw;
@@ -264,7 +264,7 @@ namespace ChoHoeBV
                 }
                 catch (Exception e)
                 {
-                    Logger.logger.Error($"Error while write to opf: {_opfrootpath} \n ");
+                    Logger.logger.Error($"Error while writing to opf: {_opfrootpath} \n ");
                     if (e.Source != null)
                         Logger.logger.Error($"{e.Source}:{e.Message} ");
                     
@@ -552,18 +552,18 @@ namespace ChoHoeBV
         {
             this.author = author;
             this.title = title;
-            Logger.logger.Debug($"Edit Css");
+            Logger.logger.Debug($"CSS Editing ");
             
             foreach (string path in css)
             {
-                Logger.logger.Trace($"Call CSSEdit({path},{fontEmbed})");
+                Logger.logger.Trace($"invoked CSSEdit({path},{fontEmbed})");
                 CSSEdit(path, fontEmbed);
                 
             }
-            Logger.logger.Debug($"Edit Html");
+            Logger.logger.Debug($"Html Editing ");
             foreach (string path in xHtml)
             {
-                Logger.logger.Trace($"Call HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
+                Logger.logger.Trace($"invoked HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
                 HtmlEdit(path,DoChineseTransfer,ToTradictional);
             }
             OpfWriter(pageDirection, replacePicture, title, author);
@@ -873,23 +873,7 @@ namespace ChoHoeBV
         {
             return title;
         }
-        private void ProgressBar(bool stop)
-        {
-            if (stop==true)
-            {
-                    
-      
-                return;
-            }
-            else
-            {
-                
-
-                
-                  
-                
-            }
-        }
+       
     }
     
     
