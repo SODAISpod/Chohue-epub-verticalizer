@@ -117,45 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="languagecombobox.Items" xml:space="preserve">
-    <value>zh_TW</value>
-  </data>
-  <data name="languagecombobox.Items1" xml:space="preserve">
-    <value>zh_CN</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="languagecombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 25</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="languagecombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="languagecombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 22</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="languagecombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="languagecombobox.Text" xml:space="preserve">
-    <value>中文(台灣)</value>
-  </data>
-  <data name="&gt;&gt;languagecombobox.Name" xml:space="preserve">
-    <value>languagecombobox</value>
-  </data>
-  <data name="&gt;&gt;languagecombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;languagecombobox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;languagecombobox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="IfCustomizeLocalizationWord_cmd.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="IfCustomizeLocalizationWord_cmd.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 45</value>
   </data>
@@ -315,6 +281,7 @@
   <data name="Convert_Btn.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 448</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Convert_Btn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
@@ -1528,7 +1495,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="metroStyleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

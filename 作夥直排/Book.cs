@@ -71,20 +71,20 @@ namespace ChoHoeBV
           
 
             string directoryName = System.IO.Path.GetRandomFileName().Replace(".", "");
-            Logger.logger.Trace($"GetRandomFileName:{directoryName}");
+            Logger.logger.Info($"GetRandomFileName:{directoryName}");
             _uncompressedPath = $@"temp\{directoryName}\";
 
-            Logger.logger.Trace($"Uncompressed Path:{_uncompressedPath}");
+            Logger.logger.Info($"Uncompressed Path:{_uncompressedPath}");
             // _oebpsPath = _uncompressedPath + "OEBPS" + @"\";
             _containerXML = _uncompressedPath + @"\META-INF\container.xml";
 
-            Logger.logger.Trace($"Container.xml Path:{_containerXML}");
+            Logger.logger.Info($"Container.xml Path:{_containerXML}");
             Console.WriteLine("解壓縮の路徑:"+_uncompressedPath);
             return _uncompressedPath;
         }
         private void Uncompressing(string path, string _uncompresslocation)
         {
-            Logger.logger.Trace($"Uncompressing");
+            Logger.logger.Info($"Uncompressing");
             //  ClearDirectory(unzipDirectory);
             try
             {
@@ -112,7 +112,7 @@ namespace ChoHoeBV
         }
         private void Mimetype()
         {
-            Logger.logger.Trace($"Delete Mimetype: {_uncompressedPath + "\\mimetype"}");
+            Logger.logger.Info($"Delete Mimetype: {_uncompressedPath + "\\mimetype"}");
             try
             {
                 File.Delete(_uncompressedPath + "\\mimetype");
@@ -126,7 +126,7 @@ namespace ChoHoeBV
         }
         private string Container(string _containerpath)
         {
-            Logger.logger.Debug($"Read Container: {_containerpath}");
+            Logger.logger.Info($"Read Container: {_containerpath}");
             try
             {
                 XmlDocument xdoc = new XmlDocument();
@@ -166,11 +166,11 @@ namespace ChoHoeBV
         private void OpfWriter(bool PageDirection,bool Img,string Title,string Author)
         {
 
-            Logger.logger.Trace($"Write to opf");
+            Logger.logger.Info($"Writing to opf");
 
             {
                 string PageDirectionString = PageDirection ? "rtl" : "ltr";
-                Logger.logger.Trace($"PageDirection : {PageDirectionString}");
+                Logger.logger.Debug($"PageDirection : {PageDirectionString}");
                 if (Img)
                 {
                     Logger.logger.Trace($"True set to replace image in book.");
@@ -290,7 +290,7 @@ namespace ChoHoeBV
 
 
                 {
-                    Logger.logger.Trace($"Replace gif: {path} ");
+                    Logger.logger.Info($"Replace gif: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image gif = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
@@ -311,7 +311,7 @@ namespace ChoHoeBV
             {
                 foreach (string path in imgpath["jpeg"])
                 {
-                    Logger.logger.Trace($"Replace jpg: {path} ");
+                    Logger.logger.Info($"Replace jpg: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image jpg = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
@@ -333,7 +333,7 @@ namespace ChoHoeBV
             {
                 foreach (string path in imgpath["png"])
                 {
-                    Logger.logger.Trace($"Replace png: {path} ");
+                    Logger.logger.Info($"Replace png: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image png = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
@@ -357,7 +357,7 @@ namespace ChoHoeBV
             string _opfrootpath = _uncompressedPath + _opfPath;
            
             _opfrootpath = _opfrootpath.Replace(@"/", @"\");
-            Logger.logger.Trace($"Opf read: {_opfrootpath} ");
+            Logger.logger.Info($"Opf read: {_opfrootpath} ");
             XDOC.Load(_opfrootpath);
             _OEBPSPath = _opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\" ;
             XmlNode root = XDOC.DocumentElement;
@@ -552,7 +552,7 @@ namespace ChoHoeBV
         {
             this.author = author;
             this.title = title;
-            Logger.logger.Debug($"CSS Editing ");
+            Logger.logger.Info($"CSS Editing ");
             
             foreach (string path in css)
             {
@@ -560,7 +560,7 @@ namespace ChoHoeBV
                 CSSEdit(path, fontEmbed);
                 
             }
-            Logger.logger.Debug($"Html Editing ");
+            Logger.logger.Info($"Html Editing ");
             foreach (string path in xHtml)
             {
                 Logger.logger.Trace($"invoked HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
@@ -705,7 +705,7 @@ namespace ChoHoeBV
             StreamReader sr = new StreamReader(fst);
 
             List <string> _cssstrings = new List<string>();
-            Logger.logger.Debug($"Read .css from stream");
+            Logger.logger.Info($"Read .css from stream");
             while (sr.EndOfStream != true)
             {
                 _cssstrings.Add(sr.ReadLine());
@@ -716,8 +716,8 @@ namespace ChoHoeBV
             StreamWriter sw = new StreamWriter(rst);
             Regex reBody = new Regex(@"[bB][oO][dD][yY][\s]*[{]");
             Regex reHtml = new Regex(@"[Hh][Tt][Mm][Ll][\s]*[{]");
-            Logger.logger.Debug($"Define CssStyle ");
-            Logger.logger.Debug($"Replace \"body\" ");
+            Logger.logger.Info($"Define CssStyle ");
+            Logger.logger.Info($"Replace \"body\" ");
             CssStyle css = new CssStyle(_cssstrings,reBody,"body");
             // _cssstrings = css.Replace();
             css.Replace();

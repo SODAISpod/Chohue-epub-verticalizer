@@ -30,9 +30,9 @@ namespace ChoHoe
             _selectorName = selectorn;
             _RawCss= Raw;
             _regex = regex;
-            Logger.logger.Trace($"FindRawStyle()");
+            Logger.logger.Info($"FindRawStyle()");
             FindRawStyle();
-            Logger.logger.Trace($"ProcessRawStyle()");
+            Logger.logger.Info($"ProcessRawStyle()");
             ProcessRawStyle();
             
         }
@@ -124,7 +124,7 @@ namespace ChoHoe
 
             }
 
-            Logger.logger.Info($"scope:{Scope["StartRow"]},{Scope["StartPosition"]},{Scope["EndRow"]},{Scope["EndPosition"]}");
+            Logger.logger.Debug($"scope:{Scope["StartRow"]},{Scope["StartPosition"]},{Scope["EndRow"]},{Scope["EndPosition"]}");
 
             if (Scope["StartRow"] != -1 && Scope["EndRow"] != -1)
             {
@@ -186,8 +186,8 @@ namespace ChoHoe
                 _RawCss.Insert(insertPosition, WriteBackSelector);
 
 
-                Logger.logger.Debug($"無此selector");
-                Logger.logger.Debug($"Intert to :{insertPosition}");
+                Logger.logger.Info($"無此selector");
+                Logger.logger.Info($"Intert to :{insertPosition}");
                
             }
             else if(Scope["EndRow"] != -1)
@@ -203,8 +203,8 @@ namespace ChoHoe
                 }
 
 
-                Logger.logger.Debug($"Intert to :{insertPosition}");
-                Logger.logger.Debug($"Remove range : From {Scope["StartRow"]} remove counts {removeCount}");
+                Logger.logger.Info($"Intert to :{insertPosition}");
+                Logger.logger.Info($"Remove range : From {Scope["StartRow"]} remove counts {removeCount}");
 
             }
             else
@@ -230,7 +230,7 @@ namespace ChoHoe
             Style.Clear();
             _RawStyles=_RawStyles.Replace(" ", "");
 
-            Logger.logger.Debug($"Raw Style:{_RawStyles}");
+            Logger.logger.Info($"Raw Style:{_RawStyles}");
 
             char[] delimiterChars = { ';'};
             string[] tempsplited = _RawStyles.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
@@ -247,7 +247,7 @@ namespace ChoHoe
         }
        public void SetWritingMode()
         {
-            Logger.logger.Trace($"SetWritingMode()");
+            Logger.logger.Info($"SetWritingMode()");
 
             Style["writing-mode"] = "vertical-rl";
             Style["-webkit-writing-mode"] = "vertical-rl";
@@ -256,14 +256,14 @@ namespace ChoHoe
         }
         public string GetStyleText()
         {
-            Logger.logger.Trace($"GetStyleText()");
+            Logger.logger.Info($"GetStyleText()");
             string styleToSend = "";
             foreach (KeyValuePair<string,string> item in Style)
             {
                 styleToSend += item.Key + ": " + item.Value+";" + System.Environment.NewLine;
 
             }
-            Logger.logger.Trace(System.Environment.NewLine + $"style returning:" + System.Environment.NewLine+ $"{styleToSend}");
+            Logger.logger.Info(System.Environment.NewLine + $"style returning:" + System.Environment.NewLine+ $"{styleToSend}");
             return styleToSend;
 
         }
@@ -271,7 +271,7 @@ namespace ChoHoe
         public  List<string> GetCss()
         {
 
-            Logger.logger.Debug($"return List<string> GetCss()");
+            Logger.logger.Info($"return List<string> GetCss()");
             return _RawCss;
         }
     }
