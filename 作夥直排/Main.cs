@@ -36,7 +36,7 @@ namespace ChoHoeBV
         {
             InitializeComponent();
             Convert_Btn.Enabled = false;
-            Logger.logger.Info("🦄//////////////////🦄 - App Started - 🧛///////////////////////🧛");
+            Logger.logger.Info("🦄//////////////////🦄 - App Started - 🦄///////////////////////🦄");
 
             const string Caption = "預設會強制指定為由右而左，直排小說的翻頁方向。";
             toolTip.SetToolTip(IfDoModifyPageDirection_Chkbox, Caption);
@@ -137,7 +137,7 @@ namespace ChoHoeBV
         {
             Convert_Btn.Enabled = false;
             Logger.logger.Info(System.Environment.NewLine + $"///////////////Open File///////////////" + System.Environment.NewLine + "////////////////////////////////");
-            Logger.logger.Debug("開啟檔案");
+            Logger.logger.Info("開啟檔案");
 
             using (OpenFileDialog Import_File = new OpenFileDialog())
             {
@@ -152,9 +152,9 @@ namespace ChoHoeBV
                     inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
                     inprogressBar.MarqueeAnimationSpeed = 30;
                     abook = new Book();
-                    Logger.logger.Trace($"{Import_File.SafeFileName}");
+                    Logger.logger.Info($"{Import_File.SafeFileName}");
 
-                    Logger.logger.Trace("開始讀取檔案");
+                    Logger.logger.Info("開始讀取檔案");
 
                     bw.RunWorkerAsync(argument: Import_File.FileName);
                     //abook.Load(Import_File.FileName);
@@ -189,7 +189,7 @@ namespace ChoHoeBV
 
             //Logger.logger.Trace($"{}");
 
-            Logger.logger.Trace("開始轉檔");
+            Logger.logger.Info("開始轉檔");
 
             Convert_Btn.Enabled = false;
 
@@ -284,7 +284,7 @@ namespace ChoHoeBV
 
             //Logger.logger.Trace($"{}");
 
-            Logger.logger.Trace("開始轉檔");
+            Logger.logger.Info("開始轉檔");
 
 
             bwConvertBatch.RunWorkerAsync(argument: IfDoModifyPageDirection_Chkbox.Checked);
@@ -505,6 +505,7 @@ namespace ChoHoeBV
 
         private void Bookdelete_cmd_Click(object sender, EventArgs e)
         {
+           
             foreach (DataGridViewRow item in BatchGridView.SelectedRows)
             {
 

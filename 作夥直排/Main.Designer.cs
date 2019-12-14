@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.languagecombobox = new System.Windows.Forms.ComboBox();
             this.TabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.TabPage_Single = new MetroFramework.Controls.MetroTabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -102,15 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Batch_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // languagecombobox
-            // 
-            this.languagecombobox.FormattingEnabled = true;
-            this.languagecombobox.Items.AddRange(new object[] {
-            resources.GetString("languagecombobox.Items"),
-            resources.GetString("languagecombobox.Items1")});
-            resources.ApplyResources(this.languagecombobox, "languagecombobox");
-            this.languagecombobox.Name = "languagecombobox";
             // 
             // TabControl1
             // 
@@ -657,7 +647,6 @@
             this.Controls.Add(this.SettingCmd);
             this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.inprogressBar);
-            this.Controls.Add(this.languagecombobox);
             this.Controls.Add(this.TabControl1);
             this.Name = "Form1";
             this.Resizable = false;
@@ -689,7 +678,6 @@
         }
 
         #endregion
-        internal System.Windows.Forms.ComboBox languagecombobox;
         internal MetroFramework.Controls.MetroTabPage TabPage_Single;
         internal MetroFramework.Controls.MetroButton Convert_Btn;
         internal MetroFramework.Controls.MetroCheckBox IfConvertMobi_Chkbox;
