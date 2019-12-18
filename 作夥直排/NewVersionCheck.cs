@@ -23,9 +23,9 @@ namespace ChoHoe
 
             if (CompareVersion(latest.TagName)) //
             {
-                string info = "✨更新內容:" + Environment.NewLine +Environment.NewLine + latest.Body+Environment.NewLine+ Environment.NewLine + "請問要前往下載嗎?";
+                string info = "✨ 更新內容:" + Environment.NewLine +Environment.NewLine + latest.Body+Environment.NewLine+ Environment.NewLine + "請問要前往下載嗎?";
 
-                string title = $"🆕 發現新版本:{latest.TagName}!";
+                string title = $"🍄 發現新版本: {latest.TagName} !";
                 
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
