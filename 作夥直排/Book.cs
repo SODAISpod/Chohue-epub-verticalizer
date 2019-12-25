@@ -46,16 +46,81 @@ namespace ChoHoeBV
         List<string> png = new List<string>();
         List<string> jpeg = new List<string>();
 
+
+
         public void Load( string _path)
         {
-           
-            imgpath = new Dictionary<string, List<string>>();
             _originalFilePath = _path;
+            imgpath = new Dictionary<string, List<string>>();
+            string Fileformat=System.IO.Path.GetExtension(_path);
+
+            if (string.Compare(Fileformat,".epub",true)==0)
+            {
+                LoadAsEpub(_path);
+            }
+            else if (string.Compare(Fileformat, ".txt", true) == 0)
+            {
+                LoadAsTxt();
+            }
+            else
+            {
+
+            }
+            
+            
+
+        }
+        private void LoadAsEpub(string _path) {
+
             PathEditor();
             Uncompressing(_path, _uncompressedPath);
             Mimetype();
             Container(_containerXML);
             OpfReader();
+        }
+        private void LoadAsTxt()
+        {
+            try
+            {
+
+                using (System.Diagnostics.Process p = new System.Diagnostics.Process())
+                {
+                    string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
+
+                    System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
+                    string argument = $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""";
+                    PINFO.Arguments = argument;
+                    p.StartInfo = PINFO;
+                    p.StartInfo.FileName = $@"{ChoHoe.Properties.Settings.Default.PandocPath}\pandoc.exe";
+                    p.StartInfo.Verb = "runas";
+                    p.StartInfo.UseShellExecute = false;
+                    p.StartInfo.RedirectStandardOutput = true;
+                    p.StartInfo.CreateNoWindow = true;
+
+                    p.Start();
+
+                    //waitforexit 重要 如果未經等待即執行下一步 會造成檔案尚未建立就解壓縮無法讀取的窘境
+                    p.WaitForExit();
+
+
+                    p.Close();
+
+
+
+
+                    Load($@"temp\{namer}.epub");
+
+                    return;
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
+                MessageBox.Show(".txt 文字檔需要使用 Pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
+                throw;
+            }
+
+
 
         }
         public void Load(string path,string pandoc)

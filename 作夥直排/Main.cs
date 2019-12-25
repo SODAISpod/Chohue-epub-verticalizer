@@ -141,8 +141,8 @@ namespace ChoHoeBV
 
             using (OpenFileDialog Import_File = new OpenFileDialog())
             {
-                Import_File.Filter = "EPUB檔案|*.epub";
-                Import_File.Title = "請選擇一個epub檔案";
+                Import_File.Filter = "EPUB檔案|*.epub|TXT檔案|*.txt";
+                Import_File.Title = "請選擇一個電子書檔案";
                 if (Import_File.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
 
@@ -236,8 +236,8 @@ namespace ChoHoeBV
         {
             using (OpenFileDialog Import_File = new OpenFileDialog())
             {
-                Import_File.Filter = "EPUB檔案|*.epub";
-                Import_File.Title = "請選擇一個epub檔案";
+                Import_File.Filter = "EPUB檔案|*.epub|TXT檔案|*.txt";
+                Import_File.Title = "請選擇一個電子書檔案";
                 Import_File.Multiselect = true;
 
 
