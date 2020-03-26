@@ -148,9 +148,10 @@ namespace ChoHoeBV
 
                     // bw.ProgressChanged += new ProgressChangedEventHandler(bw_ProgressChanged);
 
-
+                    runningUi("載入中...", true);
                     inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
                     inprogressBar.MarqueeAnimationSpeed = 30;
+
                     abook = new Book();
                     Logger.logger.Info($"{Import_File.SafeFileName}");
 
@@ -181,11 +182,8 @@ namespace ChoHoeBV
         {
 
             Convert_Btn.Enabled = false;
-            StatusLabel.Text = "轉檔中...";
-
-            inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            inprogressBar.MarqueeAnimationSpeed = 30;
-
+            runningUi("轉檔中...", true);
+            
 
             //Logger.logger.Trace($"{}");
 
@@ -250,6 +248,8 @@ namespace ChoHoeBV
 
                 }
 
+                runningLogo.Visible = true;
+
                 inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
                 inprogressBar.MarqueeAnimationSpeed = 30;
                 BatchGridView.ColumnCount = 2;
@@ -274,12 +274,10 @@ namespace ChoHoeBV
         private void Convert_Batch_Click(object sender, EventArgs e)
         {
             Convert_Batch.Enabled = false;
-            StatusLabel.Text = "轉檔中...";
-
-
-
-            inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            inprogressBar.MarqueeAnimationSpeed = 30;
+            
+            runningUi("轉檔中...", true);
+            
+            
 
 
             //Logger.logger.Trace($"{}");
@@ -361,7 +359,8 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.Save();
 
             // Title_Imported_TextBox.Text = debugstring;
-            StatusLabel.Text = "讀取完畢。";
+
+            runningUi("讀取完畢。", false);
             inprogressBar.MarqueeAnimationSpeed = 0;
             inprogressBar.Value = 0;
         }
@@ -392,10 +391,11 @@ namespace ChoHoeBV
                 BatchGridView.Rows.Add(row);
             }
             // Title_Imported_TextBox.Text = debugstring;
-            StatusLabel.Text = "讀取完畢。";
+
+            runningUi("讀取完畢。", false);
+
             Convert_Batch.Enabled = true;
-            inprogressBar.MarqueeAnimationSpeed = 0;
-            inprogressBar.Value = 0;
+
         }
 
         private void Convert_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
@@ -420,10 +420,9 @@ namespace ChoHoeBV
             Title_Imported_TextBox.Text = "";
             Convert_Btn.Enabled = false;
 
-            StatusLabel.Text = "轉檔完畢。";
+
+            runningUi("轉檔完畢。",false);
             ClearDirectory("temp");
-            inprogressBar.MarqueeAnimationSpeed = 0;
-            inprogressBar.Value = 0;
         }
 
 
@@ -450,10 +449,15 @@ namespace ChoHoeBV
         {
             Convert_Batch.Enabled = false;
 
-            StatusLabel.Text = "轉檔完畢。";
+
+
+            batchBookList.Clear();
+            BatchGridView.Rows.Clear();
+            
+            runningUi("轉檔完畢。", false);
             ClearDirectory("temp");
-            inprogressBar.MarqueeAnimationSpeed = 0;
-            inprogressBar.Value = 0;
+
+            
         }
 
 
@@ -508,14 +512,24 @@ namespace ChoHoeBV
            
             foreach (DataGridViewRow item in BatchGridView.SelectedRows)
             {
+                if (batchBookList.Count!=0)
+                {
 
                 batchBookList.RemoveAt(item.Index);
+                }
+                else
+                {
+                    return;
+                }
 
             }
             foreach (DataGridViewRow item in BatchGridView.SelectedRows)
             {
-
+                if (BatchGridView.Rows.Count!=0)
+                {
                 BatchGridView.Rows.RemoveAt(item.Index);
+
+                }
 
             }
 
@@ -570,6 +584,25 @@ namespace ChoHoeBV
                 ChoHoe.Properties.Settings.Default.Batch_PageDirection = Batch_PageLTR_Radio.Checked;
                 ChoHoe.Properties.Settings.Default.Save();
             }
+        }
+        private void runningUi(string message, bool enabled)
+        {
+
+
+            StatusLabel.Text = message;
+            runningLogo.Visible = enabled;
+            if (enabled)
+            {
+                inprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+                inprogressBar.MarqueeAnimationSpeed = 30;
+            }
+            else {
+                inprogressBar.MarqueeAnimationSpeed = 0;
+                inprogressBar.Value = 0;
+            }
+
+
+
         }
 
     }

@@ -16,7 +16,7 @@ namespace ChoHueTestW
         bool convertMobi = false;
         bool fontemb = false;
         bool replacepicture = true;
-
+        string booktxt = @"J:\development\EPUB vertical sample file\Dao Jian Shen Yu  04 - Chuan Yuan Li.txt";
         string book20 = @"J:\development\EPUB vertical sample file\2.0.epub";
         string book30 = @"J:\development\EPUB vertical sample file\Fei Dan De Ya Li Ya  27 - Mo Zhe.epub";
         public void OptionConversion()
@@ -27,7 +27,13 @@ namespace ChoHueTestW
         }
 
 
-        
+        [TestMethod]
+        public void LoadTxtBook()
+        {
+            var bk = new Book();
+            bk.Load(booktxt, @"C:\");
+
+        }
         [TestMethod]
         public void Load20Book()
         {
