@@ -83,12 +83,17 @@ namespace ChoHoeBV
             try
             {
 
+                string metadata = $"<dc:title>{Path.GetFileNameWithoutExtension(_originalFilePath)}</dc:title> \n";
+
+                string metadataXml=Path.GetRandomFileName()+".xml";
+                System.IO.File.WriteAllText($@"temp/{metadataXml}", metadata);
+
                 using (System.Diagnostics.Process p = new System.Diagnostics.Process())
                 {
                     string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
 
                     System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
-                    string argument = $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""";
+                    string argument = $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }"" --epub-metadata ""temp/{metadataXml}""" ;
                     PINFO.Arguments = argument;
                     p.StartInfo = PINFO;
                     p.StartInfo.FileName = $@"{ChoHoe.Properties.Settings.Default.PandocPath}\pandoc.exe";

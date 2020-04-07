@@ -255,12 +255,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
     </Compile>
+    <None Include="Resources\Replacement_Image.bmp" />
     <None Include="Chehue_1_TemporaryKey.pfx" />
     <None Include="Chehue_2_TemporaryKey.pfx" />
     <None Include="Chehue_TemporaryKey.pfx" />
     <None Include="Resources\kiichoicon.ico" />
     <None Include="Resources\AboutBoxBanner.png" />
-    <None Include="Resources\Replacement_Image.bmp" />
     <None Include="Resources\baseline_close_white_18dp.png" />
     <None Include="Resources\outline_info_black_36dp.png" />
     <None Include="Resources\aboutboxbanner1.png" />
