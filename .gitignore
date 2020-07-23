@@ -6,3 +6,8 @@ pandoc.exe
 /作夥直排 Csharp ver/bin/Debug/pandoc.exe
 bin
 obj
+/Packages
+.vs/
+/TestResults
+/Setup/Debug
+/Setup/Release

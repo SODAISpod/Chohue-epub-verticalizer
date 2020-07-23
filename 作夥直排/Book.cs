@@ -21,26 +21,27 @@ using MetroFramework;
 using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ChoHoeBV
 {
     public class Book
     {
-       
-        private
-           
-        List<string> css = new List<string>(), xHtml = new List<string>();
-        Dictionary<string, List<string>> imgpath = new Dictionary<string, List<string>>();
-        
-        
 
         private
-             string  title = "", author = "";
+
+        List<string> css = new List<string>(), xHtml = new List<string>();
+        Dictionary<string, List<string>> imgpath = new Dictionary<string, List<string>>();
+
+
+
+        private
+             string title = "", author = "";
         string _uncompressedPath = "",
                _containerXML = "",
                    _opfPath = "",
-                   _OEBPSPath="",
-                    _originalFilePath="";
+                   _OEBPSPath = "",
+                    _originalFilePath = "";
 
         List<string> gif = new List<string>();
         List<string> png = new List<string>();
@@ -48,13 +49,13 @@ namespace ChoHoeBV
 
 
 
-        public void Load( string _path)
+        public void Load(string _path)
         {
             _originalFilePath = _path;
             imgpath = new Dictionary<string, List<string>>();
-            string Fileformat=System.IO.Path.GetExtension(_path);
+            string Fileformat = System.IO.Path.GetExtension(_path);
 
-            if (string.Compare(Fileformat,".epub",true)==0)
+            if (string.Compare(Fileformat, ".epub", true) == 0)
             {
                 LoadAsEpub(_path);
             }
@@ -66,11 +67,12 @@ namespace ChoHoeBV
             {
 
             }
-            
-            
+
+
 
         }
-        private void LoadAsEpub(string _path) {
+        private void LoadAsEpub(string _path)
+        {
 
             PathEditor();
             Uncompressing(_path, _uncompressedPath);
@@ -85,38 +87,15 @@ namespace ChoHoeBV
 
                 string metadata = $"<dc:title>{Path.GetFileNameWithoutExtension(_originalFilePath)}</dc:title> \n";
 
-                string metadataXml=Path.GetRandomFileName()+".xml";
+                string metadataXml = Path.GetRandomFileName() + ".xml";
                 System.IO.File.WriteAllText($@"temp/{metadataXml}", metadata);
-
-                using (System.Diagnostics.Process p = new System.Diagnostics.Process())
-                {
-                    string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
-
-                    System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
-                    string argument = $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }"" --epub-metadata ""temp/{metadataXml}""" ;
-                    PINFO.Arguments = argument;
-                    p.StartInfo = PINFO;
-                    p.StartInfo.FileName = $@"{ChoHoe.Properties.Settings.Default.PandocPath}\pandoc.exe";
-                    p.StartInfo.Verb = "runas";
-                    p.StartInfo.UseShellExecute = false;
-                    p.StartInfo.RedirectStandardOutput = true;
-                    p.StartInfo.CreateNoWindow = true;
-
-                    p.Start();
-
-                    //waitforexit 重要 如果未經等待即執行下一步 會造成檔案尚未建立就解壓縮無法讀取的窘境
-                    p.WaitForExit();
+                string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
+                string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }"" --epub-metadata ""temp/{metadataXml}""", namer };
 
 
-                    p.Close();
+                extProcess(extMethod.pandocWithReload, argu);
 
 
-
-
-                    Load($@"temp\{namer}.epub");
-
-                    return;
-                }
             }
             catch (Exception e)
             {
@@ -128,7 +107,7 @@ namespace ChoHoeBV
 
 
         }
-        public void Load(string path,string pandoc)
+        public void Load(string path, string pandoc)
         {
             //For unit test uses.
             ChoHoe.Properties.Settings.Default.PandocPath = pandoc;
@@ -138,7 +117,7 @@ namespace ChoHoeBV
         }
         public string PathEditor()
         {
-          
+
 
             string directoryName = System.IO.Path.GetRandomFileName().Replace(".", "");
             Logger.logger.Info($"GetRandomFileName:{directoryName}");
@@ -149,7 +128,7 @@ namespace ChoHoeBV
             _containerXML = _uncompressedPath + @"\META-INF\container.xml";
 
             Logger.logger.Info($"Container.xml Path:{_containerXML}");
-            Console.WriteLine("解壓縮の路徑:"+_uncompressedPath);
+            Console.WriteLine("解壓縮の路徑:" + _uncompressedPath);
             return _uncompressedPath;
         }
         private void Uncompressing(string path, string _uncompresslocation)
@@ -187,12 +166,12 @@ namespace ChoHoeBV
             {
                 File.Delete(_uncompressedPath + "\\mimetype");
             }
-            catch (Exception )
+            catch (Exception)
             {
                 Logger.logger.Error($"No such Mimetype file at: {_uncompressedPath + "\\mimetype"}");
                 throw;
             }
-            
+
         }
         private string Container(string _containerpath)
         {
@@ -233,7 +212,7 @@ namespace ChoHoeBV
 
 
         }
-        private void OpfWriter(bool PageDirection,bool Img,string Title,string Author)
+        private void OpfWriter(bool PageDirection, bool Img, string Title, string Author)
         {
 
             Logger.logger.Info($"Writing to opf");
@@ -257,7 +236,7 @@ namespace ChoHoeBV
                 _OEBPSPath = _opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\";
                 XmlNode root = XDOC.DocumentElement;
 
-               
+
                 try
                 {
 
@@ -270,7 +249,7 @@ namespace ChoHoeBV
                                 if (titlenode.Name == "dc:creator")
                                 {
                                     titlenode.InnerText = Author;
-                                                                   }
+                                }
                                 if (titlenode.Name == "dc:title")
                                 {
                                     titlenode.InnerText = Title;
@@ -280,13 +259,13 @@ namespace ChoHoeBV
                         if (node.Name == "manifest")
 
                         {
-                            
+
                             foreach (XmlNode childnode in node.ChildNodes)
                             {
                                 if (childnode.Name == "item")
 
                                 {
-                                   
+
 
                                 }
                             }
@@ -337,7 +316,7 @@ namespace ChoHoeBV
                     Logger.logger.Error($"Error while writing to opf: {_opfrootpath} \n ");
                     if (e.Source != null)
                         Logger.logger.Error($"{e.Source}:{e.Message} ");
-                    
+
                     throw;
                 }
                 XmlWriterSettings writerSettings = new XmlWriterSettings();
@@ -422,16 +401,16 @@ namespace ChoHoeBV
         }
         private void OpfReader()
         {
-            
+
             XmlDocument XDOC = new XmlDocument();
             string _opfrootpath = _uncompressedPath + _opfPath;
-           
+
             _opfrootpath = _opfrootpath.Replace(@"/", @"\");
             Logger.logger.Info($"Opf read: {_opfrootpath} ");
             XDOC.Load(_opfrootpath);
-            _OEBPSPath = _opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\" ;
+            _OEBPSPath = _opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\";
             XmlNode root = XDOC.DocumentElement;
-            
+
             imgpath.Add("gif", gif);
             imgpath.Add("png", png);
             imgpath.Add("jpeg", jpeg);
@@ -440,47 +419,23 @@ namespace ChoHoeBV
             Logger.logger.Trace($"epub version : {root.Attributes["version"].Value} ");
             if (root.Attributes["version"].Value == "3.0")
             {
-                
+
 
             }
             else //if (root.Attributes["version"].Value != "3.2")//事實上3.2也會寫成3.0
             {
-                
+
 
                 Logger.logger.Trace($"epub版本為2，進行轉換 ");
                 //     EpubVersion = Convert.ToInt32( root.Attributes["version"].Value);
                 try
                 {
+                    string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
 
-                    using (System.Diagnostics.Process p = new System.Diagnostics.Process())
-                    {
-                        string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
+                    string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""", namer };
 
-                        System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
-                        string argument = $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""";
-                        PINFO.Arguments = argument;
-                        p.StartInfo = PINFO;
-                        p.StartInfo.FileName = $@"{ChoHoe.Properties.Settings.Default.PandocPath}\pandoc.exe";
-                        p.StartInfo.Verb = "runas";
-                        p.StartInfo.UseShellExecute = false;
-                        p.StartInfo.RedirectStandardOutput = true;
-                        p.StartInfo.CreateNoWindow = true;
-
-                        p.Start();
-
-                        //waitforexit 重要 如果未經等待即執行下一步 會造成檔案尚未建立就解壓縮無法讀取的窘境
-                        p.WaitForExit();
-
-
-                        p.Close();
-
-
-
-
-                        Load($@"temp\{namer}.epub");
-
-                        return;
-                    }
+                    extProcess(extMethod.pandocWithReload, argu);
+                    return;
                 }
                 catch (Exception e)
                 {
@@ -488,8 +443,8 @@ namespace ChoHoeBV
                     MessageBox.Show("EPUB 2.0 的檔案需要使用 Pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
                     throw;
                 }
-               
-                
+
+
             }
             try
             {
@@ -519,10 +474,10 @@ namespace ChoHoeBV
                             {
                                 if (childnode.Attributes["media-type"].Value == "text/css")
                                 {
-                                    
-                                    css.Add(_OEBPSPath+childnode.Attributes["href"].Value);
-                                   
-                                   // css.Add(_opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\" + childnode.Attributes["href"].Value);
+
+                                    css.Add(_OEBPSPath + childnode.Attributes["href"].Value);
+
+                                    // css.Add(_opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\" + childnode.Attributes["href"].Value);
                                     //string _folderstrinf = g_opfpath + @"\" + childnode.Attributes["href"].Value;
                                     //int _count = 0;
                                     ////  for (int i = 0; i < _folderstrinf.Length; i++)
@@ -540,11 +495,11 @@ namespace ChoHoeBV
 
                             }
                         }
-                        
+
                         foreach (XmlNode childnode in node.ChildNodes)
                         {
                             if (childnode.Name == "item")
-                                                     
+
                             {
 
 
@@ -557,7 +512,7 @@ namespace ChoHoeBV
                                         imgpath["jpeg"].Add(_OEBPSPath + childnode.Attributes["href"].Value);
                                         break;
                                     case "image/png":
-                                        imgpath["png"].Add(_OEBPSPath + childnode.Attributes["href"].Value);                                       
+                                        imgpath["png"].Add(_OEBPSPath + childnode.Attributes["href"].Value);
                                         break;
                                     case "application/xhtml+xml":
                                         xHtml.Add(_OEBPSPath + childnode.Attributes["href"].Value);
@@ -565,11 +520,11 @@ namespace ChoHoeBV
                                     default:
                                         break;
                                 }
-                               
+
 
                             }
                         }
-                       
+
                     }
                 }
 
@@ -591,18 +546,18 @@ namespace ChoHoeBV
 
 
                         // page direction attributes has been removed will be append in class making
-               
+
                         //                        node.Attributes.Remove(node.Attributes["page-progression-direction"]);
-                        
+
 
 
                         //move to making
                         //   XmlAttribute _newspine = XDOC.CreateAttribute("page-progression-direction");
                         // _newspine.Value = "rtl";
                         // node.Attributes.Append(_newspine);
-                       
-                    
-                    // XDOC.Save(_oebpsPath + g_opfpath);
+
+
+                        // XDOC.Save(_oebpsPath + g_opfpath);
                     }
                 }
 
@@ -618,23 +573,23 @@ namespace ChoHoeBV
 
         }
 
-        public bool Convert(bool DoChineseTransfer,bool ToTradictional,bool pageDirection,bool convertMobi,bool fontEmbed, bool replacePicture,string author,string title)
+        public bool Convert(bool DoChineseTransfer, bool ToTradictional, bool pageDirection, bool convertMobi, bool fontEmbed, bool replacePicture, string author, string title)
         {
             this.author = author;
             this.title = title;
             Logger.logger.Info($"CSS Editing ");
-            
+
             foreach (string path in css)
             {
                 Logger.logger.Trace($"invoked CSSEdit({path},{fontEmbed})");
                 CSSEdit(path, fontEmbed);
-                
+
             }
             Logger.logger.Info($"Html Editing ");
             foreach (string path in xHtml)
             {
                 Logger.logger.Trace($"invoked HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
-                HtmlEdit(path,DoChineseTransfer,ToTradictional);
+                HtmlEdit(path, DoChineseTransfer, ToTradictional);
             }
             OpfWriter(pageDirection, replacePicture, title, author);
             ZipUp(convertMobi);
@@ -642,19 +597,19 @@ namespace ChoHoeBV
 
         }
 
-        private void HtmlEdit(string path,bool DoTransfer, bool ToTraidional)
+        private void HtmlEdit(string path, bool DoTransfer, bool ToTraidional)
         {
-            
-           // string fullpath = @"temp\unzipping\" + OpfBasedPath + @"\" + url;
+
+            // string fullpath = @"temp\unzipping\" + OpfBasedPath + @"\" + url;
             FileStream xhtmlloder = new FileStream(path, FileMode.Open, FileAccess.Read);
-            
+
             StreamReader sr = new StreamReader(xhtmlloder);
-           
+
             string source = sr.ReadToEnd();
             source = HttpUtility.HtmlDecode(source);
             sr.Close();
             xhtmlloder.Close();
-           
+
 
 
 
@@ -665,40 +620,40 @@ namespace ChoHoeBV
             doc.LoadHtml(source);
             foreach (HtmlNode node in doc.DocumentNode.ChildNodes)
             {
-                if (node.Name=="html")
+                if (node.Name == "html")
                 {
                     foreach (HtmlNode bodynode in node.ChildNodes)
                     {
-                        if (bodynode.Name=="head")
+                        if (bodynode.Name == "head")
                         {
                             foreach (HtmlNode item in bodynode.ChildNodes)
                             {
-                                if (item.Name=="link")
+                                if (item.Name == "link")
                                 {
-                                    if (item.Attributes["rel"].Value == "stylesheet"&& item.Attributes["type"].Value == "text/css")
+                                    if (item.Attributes["rel"].Value == "stylesheet" && item.Attributes["type"].Value == "text/css")
                                     {
                                         hasCSSStylesheet = true;
                                     }
                                 }
                             }
-                            if (hasCSSStylesheet==false)
+                            if (hasCSSStylesheet == false)
                             {
                                 HtmlNode verticalstyle = doc.CreateElement("style");
                                 verticalstyle.InnerHtml = ChoHoe.Properties.Resources.VerticalStyle;
                                 bodynode.AppendChild(verticalstyle);
                             }
                         }
-                        if (bodynode.Name=="body")
+                        if (bodynode.Name == "body")
                         {
                             foreach (HtmlNode item in bodynode.ChildNodes)
                             {
-                                RecursivelyReplaceText(item,ToTraidional,DoTransfer);
+                                RecursivelyReplaceText(item, ToTraidional, DoTransfer);
                             }
                         }
 
                     }
                 }
-               
+
                 //if (ToTradictional == true)
                 //{
                 //    after = ChineseConverter.Convert(before, ChineseConversionDirection.SimplifiedToTraditional);
@@ -709,24 +664,24 @@ namespace ChoHoeBV
                 //}
                 //node.ParentNode.ReplaceChild(HtmlTextNode.CreateNode(after), node);
                 //node.InnerText.Replace(node.InnerText,after);
-               
+
             }
-          //  Console.WriteLine(doc.DocumentNode.InnerHtml);
+            //  Console.WriteLine(doc.DocumentNode.InnerHtml);
             FileStream sw = new FileStream(path, FileMode.Create);
-        //  doc.DocumentNode.InnerHtml=  HttpUtility.HtmlEncode(doc.ParsedText);
+            //  doc.DocumentNode.InnerHtml=  HttpUtility.HtmlEncode(doc.ParsedText);
             doc.Save(sw, System.Text.Encoding.UTF8);
-            
+
             sw.Close();
         }
-        private void RecursivelyReplaceText( HtmlNode innernode,bool toTraditional,bool doTransfer)
+        private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer)
         {
             foreach (HtmlNode childinnenode in innernode.ChildNodes)
             {
-                
-                if (childinnenode.ChildNodes.Count==0)
+
+                if (childinnenode.ChildNodes.Count == 0)
                 {
                     //Logger.logger.Debug($"To translate Xpath { childinnenode.XPath}");
-                    string tempinnertext= childinnenode.InnerHtml;
+                    string tempinnertext = childinnenode.InnerHtml;
 
                     // tempinnertext = HttpUtility.HtmlDecode(tempinnertext);
 
@@ -746,12 +701,12 @@ namespace ChoHoeBV
                 }
                 else
                 {
-                    RecursivelyReplaceText(childinnenode,toTraditional,doTransfer);
+                    RecursivelyReplaceText(childinnenode, toTraditional, doTransfer);
                 }
             }
 
         }
-        private string EscapeCharacterReplacement(string replacement )
+        private string EscapeCharacterReplacement(string replacement)
         {
             //if (fuck.Substring(fuck.IndexOf("&") - 1, 1)!= "\\")
             //{
@@ -766,15 +721,15 @@ namespace ChoHoeBV
 
 
         }
-        private void CSSEdit(string path,bool fontEmbed)
+        private void CSSEdit(string path, bool fontEmbed)
         {
 
-            
+
 
             FileStream fst = new FileStream(path, FileMode.Open);
             StreamReader sr = new StreamReader(fst);
 
-            List <string> _cssstrings = new List<string>();
+            List<string> _cssstrings = new List<string>();
             Logger.logger.Info($"Read .css from stream");
             while (sr.EndOfStream != true)
             {
@@ -788,11 +743,11 @@ namespace ChoHoeBV
             Regex reHtml = new Regex(@"[Hh][Tt][Mm][Ll][\s]*[{]");
             Logger.logger.Info($"Define CssStyle ");
             Logger.logger.Info($"Replace \"body\" ");
-            CssStyle css = new CssStyle(_cssstrings,reBody,"body");
+            CssStyle css = new CssStyle(_cssstrings, reBody, "body");
             // _cssstrings = css.Replace();
             css.Replace();
             Logger.logger.Debug($"Replace \"html\" ");
-            css.NewReplacement(reHtml,"html");
+            css.NewReplacement(reHtml, "html");
             css.Replace();
             _cssstrings = css.GetCss();
 
@@ -818,7 +773,7 @@ namespace ChoHoeBV
 
             rst.Flush();
             rst.Close();
-            
+
 
         }
         private void ZipUp(bool convertMobi)
@@ -840,7 +795,7 @@ namespace ChoHoeBV
                     MessageBox.Show(e.Source.ToString());
                     throw;
                 }
-                
+
             }
             if (System.IO.File.Exists($@"output\{filenameEPUB}"))
             {
@@ -870,17 +825,17 @@ namespace ChoHoeBV
 
                 byte[] mimetype = System.Text.Encoding.ASCII.GetBytes("application/epub+zip");
                 zs.Write(mimetype, 0, mimetype.Length);
-                
-                
-               
+
+
+
             }
             using (ZipFile zip = new ZipFile(outputPath))
             {
 
                 zip.CompressionLevel = Ionic.Zlib.CompressionLevel.None;
-               // zip.AddFile(_uncompressedPath + "mimetype", "");
-                zip.AddDirectory(_uncompressedPath );
-                
+                // zip.AddFile(_uncompressedPath + "mimetype", "");
+                zip.AddDirectory(_uncompressedPath);
+
                 zip.EmitTimesInWindowsFormatWhenSaving = false;
                 zip.UseZip64WhenSaving = Zip64Option.Never;
                 zip.Save();
@@ -893,66 +848,131 @@ namespace ChoHoeBV
 
                 if (ChoHoe.Properties.Settings.Default.UseCalibre)
                 {
-                    using (System.Diagnostics.Process p = new System.Diagnostics.Process())
-                    {
-                        try
-                        {
-                            string exeName = "ebook-convert.exe";
-                            string outputMobi = outputPath.Substring(0, outputPath.Length - 5);
-                            System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
-                            PINFO.Arguments = $@"""{ outputPath}"" ""{ outputMobi }.mobi"" --mobi-file-type=both";
-                            p.StartInfo = PINFO;
-                            p.StartInfo.FileName = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + exeName;
-                            p.StartInfo.UseShellExecute = false;
-                            p.StartInfo.RedirectStandardOutput = false;
-                            p.StartInfo.CreateNoWindow = false;
-                            p.Start();
-                            p.WaitForExit();
-                            p.Close();
-                        }
-                        catch (Exception e)
-                        {
-                            Logger.logger.Error($"輸出mobi時出現錯誤:{e.Source},{e.Message}");
-                            throw;
-                        }
 
-                       
-                        //Console.Write(p.StandardOutput.ReadToEnd());
-                    }
+                    string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
+                    string[] argu = { $@"""{ outputPath}"" ""{ outputfilename }.mobi"" --mobi-file-type=both" };
+                    extProcess(extMethod.calibre, argu);
                 }
                 else
                 {
-                    using (System.Diagnostics.Process p = new System.Diagnostics.Process())
-                    {
-                        try
-                        {
-                            string exeName = "kindlegen.exe";
-                            string outputMobi = outputPath.Substring(0, outputPath.Length - 5);
-                            string outputfilename = Path.GetFileName(outputMobi);
-                            System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
-                            PINFO.Arguments = $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" ";
-                            p.StartInfo = PINFO;
-                            p.StartInfo.FileName = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + exeName;
-                            p.StartInfo.UseShellExecute = false;
-                            p.StartInfo.RedirectStandardOutput = false;
-                            p.StartInfo.CreateNoWindow = false;
-                            p.Start();
-                            p.WaitForExit();
-                            p.Close();
-                        }
-                        catch (Exception e)
-                        {
-                            Logger.logger.Error($"輸出mobi時出現錯誤:{e.Source},{e.Message}");
-                            throw;
-                        }
-                        
-                        //Console.Write(p.StandardOutput.ReadToEnd());
-                    }
+                    string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
+                    string[] argu = { $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" " };
+                    extProcess(extMethod.kindle, argu);
+
                 }
             }
 
         }
-        
+
+        private void extProcess(extMethod method, string[] argum)
+        {
+            string filename = "";
+
+            switch (method)
+            {
+                case extMethod.calibre:
+                    filename = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + "ebook-convert.exe";
+                    break;
+                case extMethod.kindle:
+                    filename = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + "kindlegen.exe";
+                    break;
+                case extMethod.pandoc:
+                case extMethod.pandocWithReload:
+
+                    filename = ChoHoe.Properties.Settings.Default.PandocPath + "\\" + "pandoc.exe";
+                    break;
+
+            }
+
+            using (System.Diagnostics.Process p = new System.Diagnostics.Process())
+            {
+                try
+                {
+
+                    //argum[0]=arguments for processes.
+                    //argum[1]=reloading filename
+
+
+                    System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
+                    PINFO.Arguments = argum[0];
+                    p.StartInfo = PINFO;
+                    p.StartInfo.FileName = filename;
+                    p.StartInfo.UseShellExecute = false;
+                    p.StartInfo.RedirectStandardOutput = false;
+                    p.StartInfo.CreateNoWindow = false;
+                    p.Start();
+                    p.WaitForExit();
+                    int result = p.ExitCode;
+                    p.Close();
+
+
+                    switch (method)
+                    {
+                        case extMethod.calibre:
+                            break;
+                        case extMethod.kindle:
+                            if (result == 2)
+                            {
+                                MessageBox.Show("kindlegen發生錯誤，無法輸出mobi檔");
+
+                            }
+                            break;
+                        case extMethod.pandoc:
+                            if (result == 0)
+                            {
+
+                            }
+
+                            //3   PandocFailOnWarningError
+                            //4   PandocAppError
+                            //5   PandocTemplateError
+                            //6   PandocOptionError
+                            //21  PandocUnknownReaderError
+                            //22  PandocUnknownWriterError
+                            //23  PandocUnsupportedExtensionError
+                            //31  PandocEpubSubdirectoryError
+                            //43  PandocPDFError
+                            //47  PandocPDFProgramNotFoundError
+                            //61  PandocHttpError
+                            //62  PandocShouldNeverHappenError
+                            //63  PandocSomeError
+                            //64  PandocParseError
+                            //65  PandocParsecError
+                            //66  PandocMakePDFError
+                            //67  PandocSyntaxMapError
+                            //83  PandocFilterError
+                            //91  PandocMacroLoop
+                            //92  PandocUTF8DecodingError
+                            //93  PandocIpynbDecodingError
+                            //97  PandocCouldNotFindDataFileError
+                            //99  PandocResourceNotFound
+                            break;
+                        case extMethod.pandocWithReload:
+                            Load($@"temp\{argum[1]}.epub");
+                            break;
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    Logger.logger.Error($"輸出{argum.ToString()}時出現錯誤:{e.Source},{e.Message}");
+                    throw;
+                }
+
+                //Console.Write(p.StandardOutput.ReadToEnd());
+            }
+
+
+
+
+        }
+        enum extMethod
+        {
+            calibre,
+            kindle,
+            pandoc,
+            pandocWithReload
+        }
         public string GetAuthor()
         {
             return author;
@@ -961,9 +981,9 @@ namespace ChoHoeBV
         {
             return title;
         }
-       
+
     }
-    
-    
+
+
 }
 

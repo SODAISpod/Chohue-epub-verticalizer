@@ -1,0 +1,66 @@
+﻿<Window x:Class="ChehueWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChehueWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="751.5" Width="804">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="296*"/>
+            <RowDefinition Height="425*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="{x:Type [Label,CheckBox,RadioButton]}">
+                <Setter Property="FontSize" Value="36">
+
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <DataGrid Margin="10" Grid.Row="1"/>
+        <StackPanel Margin="10,25,0,10" HorizontalAlignment="Left" Width="506">
+            <DockPanel Height="78" LastChildFill="False">
+                <CheckBox Content="CheckBox" Width="218"/>
+                <GroupBox Header="GroupBox" Width="278">
+                    <GroupBox.Resources>
+                        
+                    </GroupBox.Resources>
+                    <DockPanel LastChildFill="False" Margin="0,0,-2,-4" HorizontalAlignment="Center">
+                        <Label Content="正體" Height="60" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="36"/>
+                        <Button Content="&gt;" Height="40" Width="36" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Padding="1,0,1,1"/>
+                        <Label Content="簡體" Height="60" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="36"/>
+                    </DockPanel>
+                </GroupBox>
+            </DockPanel>
+            <DockPanel Height="108" LastChildFill="False" HorizontalAlignment="Left" Width="505">
+                <CheckBox Content="CheckBox" Width="218"/>
+                <GroupBox Header="GroupBox" Width="279">
+                    <StackPanel HorizontalAlignment="Left" Margin="20,20,0,-1" Width="238">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Margin" Value="0,0,0,10"/>
+                                <Setter Property="FontSize" Value="20px"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <RadioButton Content="由左往右翻"/>
+                        <RadioButton Content="由右往左翻"/>
+                    </StackPanel>
+                </GroupBox>
+            </DockPanel>
+            <CheckBox Content="CheckBox"/>
+            <CheckBox Content="CheckBox"/>
+            <CheckBox Content="CheckBox" HorizontalAlignment="Left" Width="505"/>
+        </StackPanel>
+        <StackPanel Margin="667,0,0,10" HorizontalAlignment="Left" Width="115" Height="110" VerticalAlignment="Bottom">
+
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,0,0,18"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Button" Height="42"/>
+            <Button Content="Button" Height="42"/>
+        </StackPanel>
+    </Grid>
+</Window>

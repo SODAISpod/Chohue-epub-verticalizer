@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0010: 新增遺漏的案例
+dotnet_diagnostic.IDE0010.severity = none
