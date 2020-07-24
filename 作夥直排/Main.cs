@@ -104,12 +104,12 @@ namespace ChoHoeBV
             {
                 ToTraditionValue_Cmd.Text = "<";
 
-                ChoHoe.Properties.Settings.Default.ToTriditional = ToTradictional = false;
+                ChoHoe.Properties.Settings.Default.ToTriditional = ToTradictional = true;
             }
             else
             {
                 ToTraditionValue_Cmd.Text = ">";
-                ChoHoe.Properties.Settings.Default.ToTriditional = ToTradictional = true;
+                ChoHoe.Properties.Settings.Default.ToTriditional = ToTradictional = false;
             }
             ChoHoe.Properties.Settings.Default.Save();
         }
@@ -123,13 +123,13 @@ namespace ChoHoeBV
             if (Batch_ToTraditionValue_Cmd.Text == ">")
             {
                 Batch_ToTraditionValue_Cmd.Text = "<";
-                BatchToTradictional = false;
+                BatchToTradictional = true;
 
             }
             else
             {
                 Batch_ToTraditionValue_Cmd.Text = ">";
-                BatchToTradictional = true;
+                BatchToTradictional = false;
             }
         }
 
