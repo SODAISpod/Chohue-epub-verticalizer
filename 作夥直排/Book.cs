@@ -776,9 +776,24 @@ namespace ChoHoeBV
 
 
         }
+        //prevent writing invalid filename
+        private string InvalidFileNameReplacement(string FileName)
+        {
+            Dictionary<string, string> pairs = new Dictionary<string, string>() {
+
+                {"<"," " },{">"," "},{":","："},{"\""," "},{"\\"," "},{"//"," "},{"|"," "},{"?"," "},{"*"," "}
+
+            };
+            foreach (KeyValuePair<string,string> keyword in pairs )
+            {
+               
+               FileName =FileName.Replace(keyword.Key, keyword.Value);
+            }
+            return FileName;
+        }
         private void ZipUp(bool convertMobi)
         {
-
+            title = InvalidFileNameReplacement(title);
             string filenameEPUB = title + ".epub";
 
             string outputPath = $@"output\{filenameEPUB}";
