@@ -84,23 +84,19 @@ namespace ChoHoeBV
         {
             try
             {
-
-                string metadata = $"<dc:title>{Path.GetFileNameWithoutExtension(_originalFilePath)}</dc:title> \n";
-
-                string metadataXml = Path.GetRandomFileName() + ".xml";
-                System.IO.File.WriteAllText($@"temp/{metadataXml}", metadata);
-                string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
-                string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }"" --epub-metadata ""temp/{metadataXml}""", namer };
+                
+                string namer = System.IO.Path.GetRandomFileName().Replace(".", "");                        
+                string[] argu = { $@"""{ _originalFilePath }"" ""temp /{namer}.epub"" --epub-version 3", namer };
 
 
-                extProcess(extMethod.pandocWithReload, argu);
+                ExtensionProcess(ExtensionMethod.calibreTxtToEpub, argu);
 
 
             }
             catch (Exception e)
             {
                 Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
-                MessageBox.Show(".txt 文字檔需要使用 Pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
+                MessageBox.Show("將txt轉換為epub時發生錯誤!");
                 throw;
             }
 
@@ -434,7 +430,7 @@ namespace ChoHoeBV
 
                     string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""", namer };
 
-                    extProcess(extMethod.pandocWithReload, argu);
+                    ExtensionProcess(ExtensionMethod.pandocWithReload, argu);
                     return;
                 }
                 catch (Exception e)
@@ -866,35 +862,36 @@ namespace ChoHoeBV
 
                     string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
                     string[] argu = { $@"""{ outputPath}"" ""{ outputfilename }.mobi"" --mobi-file-type=both" };
-                    extProcess(extMethod.calibre, argu);
+                    ExtensionProcess(ExtensionMethod.calibre, argu);
                 }
                 else
                 {
                     string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
                     string[] argu = { $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" " };
-                    extProcess(extMethod.kindle, argu);
+                    ExtensionProcess(ExtensionMethod.kindleGen, argu);
 
                 }
             }
 
         }
 
-        private void extProcess(extMethod method, string[] argum)
+        private void ExtensionProcess(ExtensionMethod method, string[] argum)
         {
-            string filename = "";
+            string ExtensionPath = "";
 
             switch (method)
             {
-                case extMethod.calibre:
-                    filename = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + "ebook-convert.exe";
+                case ExtensionMethod.calibreTxtToEpub:
+                case ExtensionMethod.calibre:
+                    ExtensionPath = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + "ebook-convert.exe";
                     break;
-                case extMethod.kindle:
-                    filename = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + "kindlegen.exe";
+                case ExtensionMethod.kindleGen:
+                    ExtensionPath = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + "kindlegen.exe";
                     break;
-                case extMethod.pandoc:
-                case extMethod.pandocWithReload:
+                case ExtensionMethod.pandoc:
+                case ExtensionMethod.pandocWithReload:
 
-                    filename = ChoHoe.Properties.Settings.Default.PandocPath + "\\" + "pandoc.exe";
+                    ExtensionPath = ChoHoe.Properties.Settings.Default.PandocPath + "\\" + "pandoc.exe";
                     break;
 
             }
@@ -911,7 +908,7 @@ namespace ChoHoeBV
                     System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
                     PINFO.Arguments = argum[0];
                     p.StartInfo = PINFO;
-                    p.StartInfo.FileName = filename;
+                    p.StartInfo.FileName = ExtensionPath;
                     p.StartInfo.UseShellExecute = false;
                     p.StartInfo.RedirectStandardOutput = false;
                     p.StartInfo.CreateNoWindow = false;
@@ -923,16 +920,18 @@ namespace ChoHoeBV
 
                     switch (method)
                     {
-                        case extMethod.calibre:
+                        case ExtensionMethod.calibreTxtToEpub:
                             break;
-                        case extMethod.kindle:
+                        case ExtensionMethod.calibre:
+                            break;
+                        case ExtensionMethod.kindleGen:
                             if (result == 2)
                             {
                                 MessageBox.Show("kindlegen發生錯誤，無法輸出mobi檔");
 
                             }
                             break;
-                        case extMethod.pandoc:
+                        case ExtensionMethod.pandoc:
                             if (result == 0)
                             {
 
@@ -962,7 +961,7 @@ namespace ChoHoeBV
                             //97  PandocCouldNotFindDataFileError
                             //99  PandocResourceNotFound
                             break;
-                        case extMethod.pandocWithReload:
+                        case ExtensionMethod.pandocWithReload:
                             Load($@"temp\{argum[1]}.epub");
                             break;
 
@@ -981,10 +980,11 @@ namespace ChoHoeBV
 
 
         }
-        enum extMethod
+        enum ExtensionMethod
         {
             calibre,
-            kindle,
+            calibreTxtToEpub,
+            kindleGen,
             pandoc,
             pandocWithReload
         }
