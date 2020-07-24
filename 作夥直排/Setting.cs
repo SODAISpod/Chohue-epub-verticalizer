@@ -47,9 +47,7 @@ namespace ChoHoe
         }
         private bool CheckCalibrePathIsValid()
         {
-            string ExeName = "ebook-convert.exe";
-            string CalibrePath = ChoHoe.Properties.Settings.Default.CalibrePath;
-            if (!File.Exists(CalibrePath + "\\" + ExeName))
+            if (!ExtensionChecker.calibreStatus)
             {
                 CalibrePathValidResult.Text = "路徑無效!";
                 return false;
@@ -76,9 +74,8 @@ namespace ChoHoe
 
         private bool CheckKindlegenPathIsValid()
         {
-            string ExeName = "kindlegen.exe";
-            string KindlegenPath = ChoHoe.Properties.Settings.Default.KindlegenPath;
-            if (!File.Exists(KindlegenPath + "\\" + ExeName))
+
+            if (!ExtensionChecker.kindleGenStatus)
             {
                 KindlegenPathValidResult.Text = "路徑無效!";
                 return false;
@@ -137,9 +134,7 @@ namespace ChoHoe
 
         private bool CheckPandocPathIsValid()
         {
-            string ExeName = "pandoc.exe";
-            string PandocPath = ChoHoe.Properties.Settings.Default.PandocPath;
-            if (!File.Exists(PandocPath + "\\" + ExeName))
+            if (!ExtensionChecker.pandocStatus)
             {
                 PandocPathValidResult.Text = "路徑無效!";
                 return false;

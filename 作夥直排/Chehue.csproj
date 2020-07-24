@@ -234,6 +234,7 @@
     </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="CssStyle.cs" />
+    <Compile Include="ExtensionChecker.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -86,7 +86,7 @@ namespace ChoHoeBV
             {
                 
                 string namer = System.IO.Path.GetRandomFileName().Replace(".", "");                        
-                string[] argu = { $@"""{ _originalFilePath }"" ""temp /{namer}.epub"" --epub-version 3", namer };
+                string[] argu = { $@"""{ _originalFilePath }"" ""temp/{namer}.epub"" --epub-version 3 --no-default-epub-cover", namer };
 
 
                 ExtensionProcess(ExtensionMethod.calibreTxtToEpub, argu);
@@ -884,14 +884,29 @@ namespace ChoHoeBV
                 case ExtensionMethod.calibreTxtToEpub:
                 case ExtensionMethod.calibre:
                     ExtensionPath = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + "ebook-convert.exe";
+                    if (!ExtensionChecker.calibreStatus)
+                    {
+                        MessageBox.Show("需要使用 calibre 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
+                        return;
+                    }
                     break;
                 case ExtensionMethod.kindleGen:
                     ExtensionPath = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + "kindlegen.exe";
+                    if (!ExtensionChecker.kindleGenStatus)
+                    {
+                        MessageBox.Show("需要使用 kindlegen 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
+                        return;
+                    }
                     break;
                 case ExtensionMethod.pandoc:
                 case ExtensionMethod.pandocWithReload:
 
                     ExtensionPath = ChoHoe.Properties.Settings.Default.PandocPath + "\\" + "pandoc.exe";
+                    if (!ExtensionChecker.pandocStatus)
+                    {
+                        MessageBox.Show("需要使用 pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
+                        return;
+                    }
                     break;
 
             }
@@ -921,6 +936,7 @@ namespace ChoHoeBV
                     switch (method)
                     {
                         case ExtensionMethod.calibreTxtToEpub:
+                            Load($@"temp\{argum[1]}.epub");
                             break;
                         case ExtensionMethod.calibre:
                             break;

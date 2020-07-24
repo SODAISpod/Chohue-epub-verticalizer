@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="CalibrePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Program Files (x86)\Calibre2</Value>
+      <Value Profile="(Default)">C:\Program Files\Calibre2</Value>
     </Setting>
     <Setting Name="ChineseConvert" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
