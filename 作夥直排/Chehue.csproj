@@ -233,6 +233,7 @@
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="Book.cs" />
+    <Compile Include="BookEnum.cs" />
     <Compile Include="CssStyle.cs" />
     <Compile Include="ExtensionChecker.cs" />
     <Compile Include="Main.cs">

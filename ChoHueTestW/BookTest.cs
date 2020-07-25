@@ -45,7 +45,8 @@ namespace ChoHueTestW
         public void Load30Book()
         {
             var bk = new Book();
-            bk.Load(book30);
+           bk.Load(book30);
+            
            
         }
         [TestMethod]

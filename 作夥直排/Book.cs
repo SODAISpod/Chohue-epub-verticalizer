@@ -36,7 +36,7 @@ namespace ChoHoeBV
 
 
         private
-             string title = "", author = "";
+             string title = "", author = "",filename="";
         string _uncompressedPath = "",
                _containerXML = "",
                    _opfPath = "",
@@ -49,38 +49,38 @@ namespace ChoHoeBV
 
 
 
-        public void Load(string _path)
+        public LoadResult Load(string _path)
         {
             _originalFilePath = _path;
+            filename = Path.GetFileNameWithoutExtension(_path);
             imgpath = new Dictionary<string, List<string>>();
             string Fileformat = System.IO.Path.GetExtension(_path);
 
             if (string.Compare(Fileformat, ".epub", true) == 0)
             {
-                LoadAsEpub(_path);
+               return LoadAsEpub(_path);
             }
             else if (string.Compare(Fileformat, ".txt", true) == 0)
             {
-                LoadAsTxt();
+               return LoadAsTxt();
             }
-            else
-            {
-
-            }
-
-
+            return LoadResult.success;
 
         }
-        private void LoadAsEpub(string _path)
+        private LoadResult LoadAsEpub(string _path)
         {
 
             PathEditor();
             Uncompressing(_path, _uncompressedPath);
             Mimetype();
             Container(_containerXML);
-            OpfReader();
+            if (OpfReader() == OpfReadResult.epunNeedPandocFor2to3)
+            {
+                return LoadResult.fail;
+            }
+            return LoadResult.success;
         }
-        private void LoadAsTxt()
+        private LoadResult LoadAsTxt()
         {
             try
             {
@@ -90,13 +90,14 @@ namespace ChoHoeBV
 
 
                 ExtensionProcess(ExtensionMethod.calibreTxtToEpub, argu);
-
+                return LoadResult.success;
 
             }
             catch (Exception e)
             {
                 Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
                 MessageBox.Show("將txt轉換為epub時發生錯誤!");
+                return LoadResult.fail;
                 throw;
             }
 
@@ -395,7 +396,7 @@ namespace ChoHoeBV
                 }
             }
         }
-        private void OpfReader()
+        private OpfReadResult OpfReader()
         {
 
             XmlDocument XDOC = new XmlDocument();
@@ -430,13 +431,19 @@ namespace ChoHoeBV
 
                     string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""", namer };
 
-                    ExtensionProcess(ExtensionMethod.pandocWithReload, argu);
-                    return;
+                    if (ExtensionProcess(ExtensionMethod.pandocWithReload, argu)==ExtensionResult.fail)
+                    {
+                        return OpfReadResult.epunNeedPandocFor2to3;
+                    }                    
+
+                    return OpfReadResult.finishDueToEpub3LoadingTakeover;
+                    
                 }
                 catch (Exception e)
                 {
                     Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
                     MessageBox.Show("EPUB 2.0 的檔案需要使用 Pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
+                    return OpfReadResult.epunNeedPandocFor2to3;
                     throw;
                 }
 
@@ -556,7 +563,7 @@ namespace ChoHoeBV
                         // XDOC.Save(_oebpsPath + g_opfpath);
                     }
                 }
-
+                return OpfReadResult.success;
             }
             catch (Exception e)
             {
@@ -875,7 +882,7 @@ namespace ChoHoeBV
 
         }
 
-        private void ExtensionProcess(ExtensionMethod method, string[] argum)
+        private ExtensionResult ExtensionProcess(ExtensionMethod method, string[] argum)
         {
             string ExtensionPath = "";
 
@@ -886,16 +893,16 @@ namespace ChoHoeBV
                     ExtensionPath = ChoHoe.Properties.Settings.Default.CalibrePath + "\\" + "ebook-convert.exe";
                     if (!ExtensionChecker.calibreStatus)
                     {
-                        MessageBox.Show("需要使用 calibre 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
-                        return;
+                        MessageBox.Show($"需要使用 calibre 以進行轉檔，請至『設定』指定 Pandoc 的路徑。({title})");
+                        return ExtensionResult.fail;
                     }
                     break;
                 case ExtensionMethod.kindleGen:
                     ExtensionPath = ChoHoe.Properties.Settings.Default.KindlegenPath + "\\" + "kindlegen.exe";
                     if (!ExtensionChecker.kindleGenStatus)
                     {
-                        MessageBox.Show("需要使用 kindlegen 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
-                        return;
+                        MessageBox.Show($"需要使用 kindlegen 以進行轉檔，請至『設定』指定 Pandoc 的路徑。({title})");
+                        return ExtensionResult.fail;
                     }
                     break;
                 case ExtensionMethod.pandoc:
@@ -904,8 +911,8 @@ namespace ChoHoeBV
                     ExtensionPath = ChoHoe.Properties.Settings.Default.PandocPath + "\\" + "pandoc.exe";
                     if (!ExtensionChecker.pandocStatus)
                     {
-                        MessageBox.Show("需要使用 pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
-                        return;
+                        MessageBox.Show($"需要使用 pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。({filename})");
+                        return ExtensionResult.fail;
                     }
                     break;
 
@@ -937,20 +944,22 @@ namespace ChoHoeBV
                     {
                         case ExtensionMethod.calibreTxtToEpub:
                             Load($@"temp\{argum[1]}.epub");
+                            
                             break;
                         case ExtensionMethod.calibre:
+                            
                             break;
                         case ExtensionMethod.kindleGen:
                             if (result == 2)
                             {
                                 MessageBox.Show("kindlegen發生錯誤，無法輸出mobi檔");
-
+                                return ExtensionResult.fail;
                             }
                             break;
                         case ExtensionMethod.pandoc:
                             if (result == 0)
                             {
-
+                                return ExtensionResult.success;
                             }
 
                             //3   PandocFailOnWarningError
@@ -982,10 +991,12 @@ namespace ChoHoeBV
                             break;
 
                     }
+                    return ExtensionResult.finish;
                 }
                 catch (Exception e)
                 {
                     Logger.logger.Error($"輸出{argum.ToString()}時出現錯誤:{e.Source},{e.Message}");
+                    return ExtensionResult.fail;
                     throw;
                 }
 
@@ -996,14 +1007,7 @@ namespace ChoHoeBV
 
 
         }
-        enum ExtensionMethod
-        {
-            calibre,
-            calibreTxtToEpub,
-            kindleGen,
-            pandoc,
-            pandocWithReload
-        }
+        
         public string GetAuthor()
         {
             return author;

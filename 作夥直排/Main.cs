@@ -350,7 +350,8 @@ namespace ChoHoeBV
         private void Load_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
             string path = (string)e.Argument;
-            abook.Load(path);
+            if (abook.Load(path)!=LoadResult.success){ 
+            }
         }
         private void Load_RunWorker_Completed(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -377,14 +378,13 @@ namespace ChoHoeBV
             foreach (string name in paths.FileNames)
             {
                 Book abooks = new Book();
-                abooks.Load(name);
-
-                //  Batch_grid.Rows.Add(new object[] { abooks.GetTitle() });
-
-                string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
-                rows.Add(row1);
-                // BatchGridView.Rows.Add(row1);
-                batchBookList.Add(abooks);
+                if (abooks.Load(name)!=LoadResult.fail)
+                {
+                    string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
+                    rows.Add(row1);                   
+                    batchBookList.Add(abooks);
+                } 
+                                                
             }
         }
         private void Load_Batch_RunWorker_Completed(object sender, RunWorkerCompletedEventArgs e)
