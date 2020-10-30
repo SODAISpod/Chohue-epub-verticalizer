@@ -240,7 +240,11 @@ namespace ChoHoe
                
                 char[] delimiterChars2 = { ':' };
                 string[] tempStyle = item.Split(delimiterChars2,StringSplitOptions.RemoveEmptyEntries);
-                Style.Add(tempStyle[0], tempStyle[1]);
+                if (tempsplited.Length==2)
+                {
+                    Style.Add(tempStyle[0], tempStyle[1]);
+                }
+                
 
             }
             return true;

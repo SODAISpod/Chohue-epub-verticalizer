@@ -868,7 +868,7 @@ namespace ChoHoeBV
                 {
 
                     string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
-                    string[] argu = { $@"""{ outputPath}"" ""{ outputfilename }.mobi"" --mobi-file-type=both" };
+                    string[] argu = { $@"""{ outputPath}"" ""{"output\\"}{ outputfilename }.mobi"" --mobi-file-type=both" };
                     ExtensionProcess(ExtensionMethod.calibre, argu);
                 }
                 else
