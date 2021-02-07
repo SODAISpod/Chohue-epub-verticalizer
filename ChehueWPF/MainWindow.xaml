@@ -3,38 +3,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="ChehueWPF.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:controlzex="urn:controlzex" x:Class="ChehueWPF.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="751.5" Width="804">
     <Grid HorizontalAlignment="Left" Margin="10,479,0,11" Width="784">
         <ListBox  Style="{StaticResource MaterialDesignFilterChipAccentOutlineListBox}" SelectionChanged="ListBox_SelectionChanged" Margin="10,10,272,163">
-            <ListBoxItem>
-                轉換成.mobi
-            </ListBoxItem>
-            <ListBoxItem IsSelected="True">
-                將插圖替換
-            </ListBoxItem>
-            <ListBoxItem IsEnabled="False">
-                嵌入字體
-            </ListBoxItem>
+            <ListBoxItem Content="轉換成.mobi"/>
+            <ListBoxItem IsSelected="True" Content="將插圖替換"/>
+            <ListBoxItem IsEnabled="False" Content="嵌入字體"/>
 
         </ListBox>
-        <ListBox  Style="{StaticResource MaterialDesignFilterChipAccentOutlineListBox}" SelectionChanged="ListBox_SelectionChanged" Margin="10,68,272,109">
-            <ListBoxItem>
-                正體簡體轉換
+        <ListBox  Style="{StaticResource MaterialDesignFilterChipAccentOutlineListBox}" SelectionChanged="ListBox_SelectionChanged" Margin="10,68,272,109" >
+            <ListBoxItem Content="正體簡體轉換" IsTabStop="False"/>
+            <ListBoxItem IsTabStop="False" >
+                <ToggleButton   Style="{StaticResource MaterialDesignActionToggleButton}"  ToolTip="MaterialDesignActionLightToggleButton"  Content="正">
+                    <materialDesign:ToggleButtonAssist.OnContent>簡</materialDesign:ToggleButtonAssist.OnContent>
+                </ToggleButton>
             </ListBoxItem>
-            <ToggleButton   Style="{StaticResource MaterialDesignActionToggleButton}"  ToolTip="MaterialDesignActionLightToggleButton">
-                <materialDesign:ToggleButtonAssist.OnContent>簡</materialDesign:ToggleButtonAssist.OnContent> 正
-            </ToggleButton>
+            
 
 
         </ListBox>
         <ListBox  Style="{StaticResource MaterialDesignFilterChipAccentOutlineListBox}" SelectionChanged="ListBox_SelectionChanged" Margin="10,127,272,50">
-            <ListBoxItem>
-                指定翻頁方向
-            </ListBoxItem>
-            <ToggleButton   Style="{StaticResource MaterialDesignActionToggleButton}"  ToolTip="MaterialDesignActionLightToggleButton">
-                <materialDesign:ToggleButtonAssist.OnContent>LTR</materialDesign:ToggleButtonAssist.OnContent> RTL
+            <ListBoxItem Content="指定翻頁方向"/>
+            <ToggleButton   Style="{StaticResource MaterialDesignActionToggleButton}"  ToolTip="MaterialDesignActionLightToggleButton" Content="RTL">
+                <materialDesign:ToggleButtonAssist.OnContent>LTR</materialDesign:ToggleButtonAssist.OnContent>
             </ToggleButton>
 
 
