@@ -257,6 +257,8 @@ namespace ChoHoe
             Style["-webkit-writing-mode"] = "vertical-rl";
             Style["-epub-writing-mode"] = "vertical-rl";
             
+            Style["margin"] = "1%";
+
         }
         public string GetStyleText()
         {
