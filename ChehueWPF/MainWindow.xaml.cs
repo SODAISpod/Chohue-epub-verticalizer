@@ -37,24 +37,24 @@ namespace ChehueWPF
         }
     }
 
-    public class LockableToggleButton : ListBoxItem
-    {
-        protected override void OnToggle()
-        {
-            if (!LockToggle)
-            {
-                base.OnToggle();
-            }
-        }
+    //public class LockableToggleButton : ListBoxItem
+    //{
+    //    protected override void OnToggle()
+    //    {
+    //        if (!LockToggle)
+    //        {
+    //            base.OnToggle();
+    //        }
+    //    }
 
-        public bool LockToggle
-        {
-            get { return (bool)GetValue(LockToggleProperty); }
-            set { SetValue(LockToggleProperty, value); }
-        }
+    //    public bool LockToggle
+    //    {
+    //        get { return (bool)GetValue(LockToggleProperty); }
+    //        set { SetValue(LockToggleProperty, value); }
+    //    }
 
-        // Using a DependencyProperty as the backing store for LockToggle.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty LockToggleProperty =
-            DependencyProperty.Register("LockToggle", typeof(bool), typeof(LockableToggleButton), new UIPropertyMetadata(false));
-    }
+    //    // Using a DependencyProperty as the backing store for LockToggle.  This enables animation, styling, binding, etc...
+    //    public static readonly DependencyProperty LockToggleProperty =
+    //        DependencyProperty.Register("LockToggle", typeof(bool), typeof(LockableToggleButton), new UIPropertyMetadata(false));
+    //}
 }

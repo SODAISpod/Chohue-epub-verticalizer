@@ -47,6 +47,7 @@ namespace ChoHoe
         }
         private bool CheckCalibrePathIsValid()
         {
+            ExtensionChecker.CheckAll();
             if (!ExtensionChecker.calibreStatus)
             {
                 CalibrePathValidResult.Text = "路徑無效!";
@@ -74,7 +75,7 @@ namespace ChoHoe
 
         private bool CheckKindlegenPathIsValid()
         {
-
+            ExtensionChecker.CheckAll();
             if (!ExtensionChecker.kindleGenStatus)
             {
                 KindlegenPathValidResult.Text = "路徑無效!";
@@ -134,6 +135,8 @@ namespace ChoHoe
 
         private bool CheckPandocPathIsValid()
         {
+
+            ExtensionChecker.CheckAll();
             if (!ExtensionChecker.pandocStatus)
             {
                 PandocPathValidResult.Text = "路徑無效!";
