@@ -32,6 +32,7 @@ namespace ChoHoeBV
 
         List<string> css = new List<string>(), xHtml = new List<string>();
         Dictionary<string, List<string>> imgpath = new Dictionary<string, List<string>>();
+        bool isRemoveCss=false;
 
 
 
@@ -111,6 +112,10 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.Save();
             Load(path);
 
+        }
+        public void IsRemoveCss(bool removeCss)
+        {
+            isRemoveCss = removeCss;
         }
         public string PathEditor()
         {
@@ -648,9 +653,14 @@ namespace ChoHoeBV
                         }
                         if (bodynode.Name == "body")
                         {
-                            foreach (HtmlNode item in bodynode.ChildNodes)
+                            foreach (HtmlNode body_child_Node in bodynode.ChildNodes)
                             {
-                                RecursivelyReplaceText(item, ToTraidional, DoTransfer);
+                                RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer);
+                                if (isRemoveCss)
+                                {
+                                    RemoveHtmlStyle(body_child_Node);
+                                }
+                                 
                             }
                         }
 
@@ -675,6 +685,27 @@ namespace ChoHoeBV
             doc.Save(sw, System.Text.Encoding.UTF8);
 
             sw.Close();
+        }
+        private void RemoveHtmlStyle(HtmlNode subBodyNode)
+        {
+             
+            foreach (HtmlNode childInnerNode in subBodyNode.ChildNodes)
+            {
+                foreach (var attribute in childInnerNode.Attributes )
+                {
+                    if (attribute.Name=="style")
+                    {
+                        //attribute.Value = "";
+                        attribute.Remove();
+                        break;
+                    }
+
+                }
+                if (childInnerNode.ChildNodes.Count!=0)
+                {
+                    RemoveHtmlStyle(childInnerNode);
+                }
+            }
         }
         private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer)
         {

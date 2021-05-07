@@ -39,7 +39,7 @@ namespace ChoHoeBV
             Logger.logger.Info("🦄//////////////////🦄 - App Started - 🦄///////////////////////🦄");
 
             const string Caption = "預設會強制指定為由右而左，直排小說的翻頁方向。";
-            toolTip.SetToolTip(chkbModifyPageDirection, Caption);
+            toolTip.SetToolTip(cbModifyPageDirection, Caption);
             SetInitialValue();
 
             //呼叫語言func
@@ -56,13 +56,13 @@ namespace ChoHoeBV
 
         private void SetInitialValue()
         {
-            chkbToChinese.Checked = ChoHoe.Properties.Settings.Default.ChineseConvert;
-            chkbModifyPageDirection.Checked = ChoHoe.Properties.Settings.Default.IfChangePageDirection;
+            cbToChinese.Checked = ChoHoe.Properties.Settings.Default.ChineseConvert;
+            cbModifyPageDirection.Checked = ChoHoe.Properties.Settings.Default.IfChangePageDirection;
             rdoPageRTL.Checked = ChoHoe.Properties.Settings.Default.PageDirection;
             rdoPageLTR.Checked = !ChoHoe.Properties.Settings.Default.PageDirection;
-            chkbReplacePicture.Checked = ChoHoe.Properties.Settings.Default.ReplaceImg;
-            chkbConvertMobi.Checked = ChoHoe.Properties.Settings.Default.ConvertMobi;
-            chkbEmbdedFont.Checked = ChoHoe.Properties.Settings.Default.EmbedFont;
+            cbReplacePicture.Checked = ChoHoe.Properties.Settings.Default.ReplaceImg;
+            cbConvertMobi.Checked = ChoHoe.Properties.Settings.Default.ConvertMobi;
+            cbEmbdedFont.Checked = ChoHoe.Properties.Settings.Default.EmbedFont;
             btnToTraditionValue.Text = ChoHoe.Properties.Settings.Default.ToTriditional ? ">" : "<";
             ToTradictional = ChoHoe.Properties.Settings.Default.ToTriditional;
 
@@ -194,7 +194,7 @@ namespace ChoHoeBV
 
             btnConvert.Enabled = false;
 
-            bwConvert.RunWorkerAsync(argument: chkbModifyPageDirection.Checked);
+            bwConvert.RunWorkerAsync(argument: cbModifyPageDirection.Checked);
 
 
         }
@@ -288,8 +288,9 @@ namespace ChoHoeBV
 
             Logger.logger.Info("開始轉檔");
 
+            Tuple<bool, bool> variables =  new Tuple<bool, bool> ( cbModifyPageDirection.Checked, cbRemoveCss.Checked );
 
-            bwConvertBatch.RunWorkerAsync(argument: chkbModifyPageDirection.Checked);
+            bwConvertBatch.RunWorkerAsync(argument: variables);
         }
 
         private void rdoPageRTL_CheckedChanged(object sender, EventArgs e)
@@ -310,9 +311,9 @@ namespace ChoHoeBV
             }
         }
 
-        private void chkbToChinese_CheckChanged(object sender, EventArgs e)
+        private void cbToChinese_CheckChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.ChineseConvert = chkbToChinese.Checked;
+            ChoHoe.Properties.Settings.Default.ChineseConvert = cbToChinese.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
@@ -321,27 +322,27 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbModifyPageDirection_CheckedChanged(object sender, EventArgs e)
+        private void cbModifyPageDirection_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.IfChangePageDirection = chkbModifyPageDirection.Checked;
+            ChoHoe.Properties.Settings.Default.IfChangePageDirection = cbModifyPageDirection.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbReplacePicture_CheckedChanged(object sender, EventArgs e)
+        private void cbReplacePicture_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.ReplaceImg = chkbReplacePicture.Checked;
+            ChoHoe.Properties.Settings.Default.ReplaceImg = cbReplacePicture.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbConvertMobi_CheckedChanged(object sender, EventArgs e)
+        private void cbConvertMobi_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.ConvertMobi = chkbConvertMobi.Checked;
+            ChoHoe.Properties.Settings.Default.ConvertMobi = cbConvertMobi.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbEmbdedFont_CheckedChanged(object sender, EventArgs e)
+        private void cbEmbdedFont_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.EmbedFont = chkbEmbdedFont.Checked;
+            ChoHoe.Properties.Settings.Default.EmbedFont = cbEmbdedFont.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
@@ -408,11 +409,11 @@ namespace ChoHoeBV
 
             if (Modifypage)
             {
-                abook.Convert(chkbToChinese.Checked, ToTradictional, rdoPageRTL.Checked, chkbConvertMobi.Checked, chkbEmbdedFont.Checked, chkbReplacePicture.Checked, txtAuthor.Text, txtTittle.Text);
+                abook.Convert(cbToChinese.Checked, ToTradictional, rdoPageRTL.Checked, cbConvertMobi.Checked, cbEmbdedFont.Checked, cbReplacePicture.Checked, txtAuthor.Text, txtTittle.Text);
             }
             else
             {
-                abook.Convert(chkbToChinese.Checked, ToTradictional, true, chkbConvertMobi.Checked, chkbEmbdedFont.Checked, chkbReplacePicture.Checked, txtAuthor.Text, txtTittle.Text);
+                abook.Convert(cbToChinese.Checked, ToTradictional, true, cbConvertMobi.Checked, cbEmbdedFont.Checked, cbReplacePicture.Checked, txtAuthor.Text, txtTittle.Text);
             }
             e.Cancel = true;
             return;
@@ -433,17 +434,23 @@ namespace ChoHoeBV
 
         private void Convert_Batch_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
-            bool Modifypage = (bool)e.Argument;
 
+            Tuple<bool, bool> para = (Tuple<bool, bool>)e.Argument;
+            bool Modifypage = para.Item1;
+            bool RemoveCss = para.Item2;
+
+
+            
             foreach (Book item in batchBookList)
             {
+                item.IsRemoveCss(RemoveCss);
                 if (Modifypage)
                 {
-                    item.Convert(chkbChineseBatch.Checked, BatchToTradictional, rdoPageRTLBatch.Checked, chkbConvertMobiBatch.Checked, chkbEmbdedFontBatch.Checked, chkbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle());
+                    item.Convert(cbChineseBatch.Checked, BatchToTradictional, rdoPageRTLBatch.Checked, cbConvertMobiBatch.Checked, cbEmbdedFontBatch.Checked, cbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle());
                 }
                 else
                 {
-                    item.Convert(chkbChineseBatch.Checked, BatchToTradictional, true, chkbConvertMobiBatch.Checked, chkbEmbdedFontBatch.Checked, chkbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle());
+                    item.Convert(cbChineseBatch.Checked, BatchToTradictional, true, cbConvertMobiBatch.Checked, cbEmbdedFontBatch.Checked, cbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle());
                 }
             }
             e.Cancel = true;
@@ -539,34 +546,34 @@ namespace ChoHoeBV
 
         }
 
-        private void chkbChineseBatch_CheckedChanged(object sender, EventArgs e)
+        private void cbChineseBatch_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.Batch_ChineseConvert = chkbChineseBatch.Checked;
+            ChoHoe.Properties.Settings.Default.Batch_ChineseConvert = cbChineseBatch.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbModifyPageDirectionBatch_CheckedChanged(object sender, EventArgs e)
+        private void cbModifyPageDirectionBatch_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.Batch_IfChangePageDirection = chkbModifyPageDirectionBatch.Checked;
+            ChoHoe.Properties.Settings.Default.Batch_IfChangePageDirection = cbModifyPageDirectionBatch.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbConvertMobiBatch_CheckedChanged(object sender, EventArgs e)
+        private void cbConvertMobiBatch_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.Batch_ConvertMobi = chkbConvertMobiBatch.Checked;
+            ChoHoe.Properties.Settings.Default.Batch_ConvertMobi = cbConvertMobiBatch.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbReplacePictureBatch_CheckedChanged(object sender, EventArgs e)
+        private void cbReplacePictureBatch_CheckedChanged(object sender, EventArgs e)
         {
-            ChoHoe.Properties.Settings.Default.Batch_ReplaceImg = chkbReplacePictureBatch.Checked;
+            ChoHoe.Properties.Settings.Default.Batch_ReplaceImg = cbReplacePictureBatch.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void chkbEmbdedFontBatch_CheckedChanged(object sender, EventArgs e)
+        private void cbEmbdedFontBatch_CheckedChanged(object sender, EventArgs e)
         {
             ChoHoe.Properties.Settings.Default.Batch_EmbedFont
-                = chkbEmbdedFontBatch.Checked;
+                = cbEmbdedFontBatch.Checked;
             ChoHoe.Properties.Settings.Default.Save();
         }
 
@@ -609,6 +616,12 @@ namespace ChoHoeBV
 
         }
 
+        private void cbRemoveCss_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.Batch_RemoveCss
+                = cbRemoveCss.Checked;
+            ChoHoe.Properties.Settings.Default.Save();
+        }
     }
 
 }

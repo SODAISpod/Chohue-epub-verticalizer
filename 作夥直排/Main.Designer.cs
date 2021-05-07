@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.TabPageSingle = new MetroFramework.Controls.MetroTabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -41,12 +41,13 @@
             this.btnCustomizeCssToggle = new MetroFramework.Controls.MetroButton();
             this.btnLocalizationCustomize = new MetroFramework.Controls.MetroButton();
             this.btnCustomizeCss = new MetroFramework.Controls.MetroButton();
-            this.chkbEmbdedFont = new MetroFramework.Controls.MetroCheckBox();
+            this.samePage = new MetroFramework.Controls.MetroCheckBox();
+            this.cbEmbdedFont = new MetroFramework.Controls.MetroCheckBox();
             this.btnConvert = new MetroFramework.Controls.MetroButton();
-            this.chkbReplacePicture = new MetroFramework.Controls.MetroCheckBox();
-            this.chkbModifyPageDirection = new MetroFramework.Controls.MetroCheckBox();
-            this.chkbConvertMobi = new MetroFramework.Controls.MetroCheckBox();
-            this.chkbToChinese = new MetroFramework.Controls.MetroCheckBox();
+            this.cbReplacePicture = new MetroFramework.Controls.MetroCheckBox();
+            this.cbModifyPageDirection = new MetroFramework.Controls.MetroCheckBox();
+            this.cbConvertMobi = new MetroFramework.Controls.MetroCheckBox();
+            this.cbToChinese = new MetroFramework.Controls.MetroCheckBox();
             this.btnLoad = new MetroFramework.Controls.MetroButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,18 +65,19 @@
             this.btnToTraditionValue = new MetroFramework.Controls.MetroButton();
             this.CT_Label = new MetroFramework.Controls.MetroLabel();
             this.TabPageBatch = new MetroFramework.Controls.MetroTabPage();
+            this.cbRemoveCss = new MetroFramework.Controls.MetroCheckBox();
             this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.BatchGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.chkbReplacePictureBatch = new MetroFramework.Controls.MetroCheckBox();
-            this.chkbEmbdedFontBatch = new MetroFramework.Controls.MetroCheckBox();
+            this.cbReplacePictureBatch = new MetroFramework.Controls.MetroCheckBox();
+            this.cbEmbdedFontBatch = new MetroFramework.Controls.MetroCheckBox();
             this.btnConvertBatch = new MetroFramework.Controls.MetroButton();
-            this.chkbModifyPageDirectionBatch = new MetroFramework.Controls.MetroCheckBox();
+            this.cbModifyPageDirectionBatch = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rdoPageRTLBatch = new MetroFramework.Controls.MetroRadioButton();
             this.rdoPageLTRBatch = new MetroFramework.Controls.MetroRadioButton();
-            this.chkbConvertMobiBatch = new MetroFramework.Controls.MetroCheckBox();
-            this.chkbChineseBatch = new MetroFramework.Controls.MetroCheckBox();
+            this.cbConvertMobiBatch = new MetroFramework.Controls.MetroCheckBox();
+            this.cbChineseBatch = new MetroFramework.Controls.MetroCheckBox();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.ST_Label_Batch = new MetroFramework.Controls.MetroLabel();
             this.btnToTraditionValueBatch = new MetroFramework.Controls.MetroButton();
@@ -89,7 +91,6 @@
             this.btnSetting = new MetroFramework.Controls.MetroButton();
             this.btnAbout = new MetroFramework.Controls.MetroButton();
             this.RunningLogo = new System.Windows.Forms.PictureBox();
-            this.samePage = new MetroFramework.Controls.MetroCheckBox();
             this.TabControl1.SuspendLayout();
             this.TabPageSingle.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -112,20 +113,20 @@
             this.TabControl1.FontSize = MetroFramework.MetroTabControlSize.Tall;
             resources.ApplyResources(this.TabControl1, "TabControl1");
             this.TabControl1.Name = "TabControl1";
-            this.TabControl1.SelectedIndex = 0;
+            this.TabControl1.SelectedIndex = 1;
             this.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl1.UseSelectable = true;
             // 
-            // TabPage_Single
+            // TabPageSingle
             // 
             this.TabPageSingle.Controls.Add(this.groupBox6);
             this.TabPageSingle.Controls.Add(this.samePage);
-            this.TabPageSingle.Controls.Add(this.chkbEmbdedFont);
+            this.TabPageSingle.Controls.Add(this.cbEmbdedFont);
             this.TabPageSingle.Controls.Add(this.btnConvert);
-            this.TabPageSingle.Controls.Add(this.chkbReplacePicture);
-            this.TabPageSingle.Controls.Add(this.chkbModifyPageDirection);
-            this.TabPageSingle.Controls.Add(this.chkbConvertMobi);
-            this.TabPageSingle.Controls.Add(this.chkbToChinese);
+            this.TabPageSingle.Controls.Add(this.cbReplacePicture);
+            this.TabPageSingle.Controls.Add(this.cbModifyPageDirection);
+            this.TabPageSingle.Controls.Add(this.cbConvertMobi);
+            this.TabPageSingle.Controls.Add(this.cbToChinese);
             this.TabPageSingle.Controls.Add(this.btnLoad);
             this.TabPageSingle.Controls.Add(this.groupBox3);
             this.TabPageSingle.Controls.Add(this.groupBox4);
@@ -133,8 +134,8 @@
             this.TabPageSingle.HorizontalScrollbarBarColor = true;
             this.TabPageSingle.HorizontalScrollbarHighlightOnWheel = false;
             this.TabPageSingle.HorizontalScrollbarSize = 2;
-            resources.ApplyResources(this.TabPageSingle, "TabPage_Single");
-            this.TabPageSingle.Name = "TabPage_Single";
+            resources.ApplyResources(this.TabPageSingle, "TabPageSingle");
+            this.TabPageSingle.Name = "TabPageSingle";
             this.TabPageSingle.VerticalScrollbarBarColor = true;
             this.TabPageSingle.VerticalScrollbarHighlightOnWheel = false;
             this.TabPageSingle.VerticalScrollbarSize = 3;
@@ -151,89 +152,97 @@
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
-            // IfCustomizeLocalizationWord_cmd
+            // btnLocalizationCustomizeToggle
             // 
-            resources.ApplyResources(this.btnLocalizationCustomizeToggle, "IfCustomizeLocalizationWord_cmd");
-            this.btnLocalizationCustomizeToggle.Name = "IfCustomizeLocalizationWord_cmd";
+            resources.ApplyResources(this.btnLocalizationCustomizeToggle, "btnLocalizationCustomizeToggle");
+            this.btnLocalizationCustomizeToggle.Name = "btnLocalizationCustomizeToggle";
             this.btnLocalizationCustomizeToggle.UseSelectable = true;
             // 
-            // IfCustomizeCss_cmd
+            // btnCustomizeCssToggle
             // 
-            resources.ApplyResources(this.btnCustomizeCssToggle, "IfCustomizeCss_cmd");
-            this.btnCustomizeCssToggle.Name = "IfCustomizeCss_cmd";
+            resources.ApplyResources(this.btnCustomizeCssToggle, "btnCustomizeCssToggle");
+            this.btnCustomizeCssToggle.Name = "btnCustomizeCssToggle";
             this.btnCustomizeCssToggle.UseSelectable = true;
             // 
-            // SetCustomizeLocalizationWord_cmd
+            // btnLocalizationCustomize
             // 
-            resources.ApplyResources(this.btnLocalizationCustomize, "SetCustomizeLocalizationWord_cmd");
-            this.btnLocalizationCustomize.Name = "SetCustomizeLocalizationWord_cmd";
+            resources.ApplyResources(this.btnLocalizationCustomize, "btnLocalizationCustomize");
+            this.btnLocalizationCustomize.Name = "btnLocalizationCustomize";
             this.btnLocalizationCustomize.UseSelectable = true;
             this.btnLocalizationCustomize.Click += new System.EventHandler(this.SetCustomizeLocalizationWord_cmd_Click);
             // 
-            // SetCustomizeCss_cmd
+            // btnCustomizeCss
             // 
-            resources.ApplyResources(this.btnCustomizeCss, "SetCustomizeCss_cmd");
-            this.btnCustomizeCss.Name = "SetCustomizeCss_cmd";
+            resources.ApplyResources(this.btnCustomizeCss, "btnCustomizeCss");
+            this.btnCustomizeCss.Name = "btnCustomizeCss";
             this.btnCustomizeCss.UseSelectable = true;
             // 
-            // IfEmbdedFont_Chkbox
+            // samePage
             // 
-            resources.ApplyResources(this.chkbEmbdedFont, "IfEmbdedFont_Chkbox");
-            this.chkbEmbdedFont.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbEmbdedFont.Name = "IfEmbdedFont_Chkbox";
-            this.chkbEmbdedFont.UseSelectable = true;
-            this.chkbEmbdedFont.CheckedChanged += new System.EventHandler(this.chkbEmbdedFont_CheckedChanged);
+            resources.ApplyResources(this.samePage, "samePage");
+            this.samePage.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.samePage.Name = "samePage";
+            this.samePage.UseSelectable = true;
+            this.samePage.CheckedChanged += new System.EventHandler(this.cbEmbdedFont_CheckedChanged);
             // 
-            // Convert_Btn
+            // cbEmbdedFont
+            // 
+            resources.ApplyResources(this.cbEmbdedFont, "cbEmbdedFont");
+            this.cbEmbdedFont.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbEmbdedFont.Name = "cbEmbdedFont";
+            this.cbEmbdedFont.UseSelectable = true;
+            this.cbEmbdedFont.CheckedChanged += new System.EventHandler(this.cbEmbdedFont_CheckedChanged);
+            // 
+            // btnConvert
             // 
             this.btnConvert.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnConvert.FontSize = MetroFramework.MetroButtonSize.Tall;
-            resources.ApplyResources(this.btnConvert, "Convert_Btn");
-            this.btnConvert.Name = "Convert_Btn";
+            resources.ApplyResources(this.btnConvert, "btnConvert");
+            this.btnConvert.Name = "btnConvert";
             this.btnConvert.Style = MetroFramework.MetroColorStyle.Lime;
             this.btnConvert.UseSelectable = true;
             this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
-            // IfReplacePicture_Chkbox
+            // cbReplacePicture
             // 
-            resources.ApplyResources(this.chkbReplacePicture, "IfReplacePicture_Chkbox");
-            this.chkbReplacePicture.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbReplacePicture.Name = "IfReplacePicture_Chkbox";
-            this.chkbReplacePicture.UseSelectable = true;
-            this.chkbReplacePicture.CheckedChanged += new System.EventHandler(this.chkbReplacePicture_CheckedChanged);
+            resources.ApplyResources(this.cbReplacePicture, "cbReplacePicture");
+            this.cbReplacePicture.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbReplacePicture.Name = "cbReplacePicture";
+            this.cbReplacePicture.UseSelectable = true;
+            this.cbReplacePicture.CheckedChanged += new System.EventHandler(this.cbReplacePicture_CheckedChanged);
             // 
-            // IfDoModifyPageDirection_Chkbox
+            // cbModifyPageDirection
             // 
-            resources.ApplyResources(this.chkbModifyPageDirection, "IfDoModifyPageDirection_Chkbox");
-            this.chkbModifyPageDirection.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbModifyPageDirection.Name = "IfDoModifyPageDirection_Chkbox";
-            this.chkbModifyPageDirection.UseSelectable = true;
-            this.chkbModifyPageDirection.CheckedChanged += new System.EventHandler(this.chkbModifyPageDirection_CheckedChanged);
+            resources.ApplyResources(this.cbModifyPageDirection, "cbModifyPageDirection");
+            this.cbModifyPageDirection.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbModifyPageDirection.Name = "cbModifyPageDirection";
+            this.cbModifyPageDirection.UseSelectable = true;
+            this.cbModifyPageDirection.CheckedChanged += new System.EventHandler(this.cbModifyPageDirection_CheckedChanged);
             // 
-            // IfConvertMobi_Chkbox
+            // cbConvertMobi
             // 
-            resources.ApplyResources(this.chkbConvertMobi, "IfConvertMobi_Chkbox");
-            this.chkbConvertMobi.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbConvertMobi.Name = "IfConvertMobi_Chkbox";
-            this.chkbConvertMobi.UseSelectable = true;
-            this.chkbConvertMobi.CheckedChanged += new System.EventHandler(this.chkbConvertMobi_CheckedChanged);
+            resources.ApplyResources(this.cbConvertMobi, "cbConvertMobi");
+            this.cbConvertMobi.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbConvertMobi.Name = "cbConvertMobi";
+            this.cbConvertMobi.UseSelectable = true;
+            this.cbConvertMobi.CheckedChanged += new System.EventHandler(this.cbConvertMobi_CheckedChanged);
             // 
-            // IfDoToChineseChkbox
+            // cbToChinese
             // 
-            resources.ApplyResources(this.chkbToChinese, "IfDoToChineseChkbox");
-            this.chkbToChinese.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbToChinese.Name = "IfDoToChineseChkbox";
-            this.chkbToChinese.UseSelectable = true;
-            this.chkbToChinese.CheckedChanged += new System.EventHandler(this.chkbToChinese_CheckChanged);
+            resources.ApplyResources(this.cbToChinese, "cbToChinese");
+            this.cbToChinese.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbToChinese.Name = "cbToChinese";
+            this.cbToChinese.UseSelectable = true;
+            this.cbToChinese.CheckedChanged += new System.EventHandler(this.cbToChinese_CheckChanged);
             // 
-            // Load_cmd
+            // btnLoad
             // 
             this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnLoad.CausesValidation = false;
             this.btnLoad.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLoad.ForeColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.btnLoad, "Load_cmd");
-            this.btnLoad.Name = "Load_cmd";
+            resources.ApplyResources(this.btnLoad, "btnLoad");
+            this.btnLoad.Name = "btnLoad";
             this.btnLoad.Style = MetroFramework.MetroColorStyle.Lime;
             this.btnLoad.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnLoad.UseSelectable = true;
@@ -255,19 +264,19 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // PageRTL_Radio
+            // rdoPageRTL
             // 
-            resources.ApplyResources(this.rdoPageRTL, "PageRTL_Radio");
+            resources.ApplyResources(this.rdoPageRTL, "rdoPageRTL");
             this.rdoPageRTL.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rdoPageRTL.Name = "PageRTL_Radio";
+            this.rdoPageRTL.Name = "rdoPageRTL";
             this.rdoPageRTL.UseSelectable = true;
             this.rdoPageRTL.CheckedChanged += new System.EventHandler(this.rdoPageRTL_CheckedChanged);
             // 
-            // PageLTR_Radio
+            // rdoPageLTR
             // 
-            resources.ApplyResources(this.rdoPageLTR, "PageLTR_Radio");
+            resources.ApplyResources(this.rdoPageLTR, "rdoPageLTR");
             this.rdoPageLTR.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rdoPageLTR.Name = "PageLTR_Radio";
+            this.rdoPageLTR.Name = "rdoPageLTR";
             this.rdoPageLTR.UseSelectable = true;
             this.rdoPageLTR.CheckedChanged += new System.EventHandler(this.rdoPageLTR_CheckedChanged);
             // 
@@ -288,26 +297,26 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // Notice_Title_Can_Edit
+            // lblHintTitleEditable
             // 
-            resources.ApplyResources(this.lblHintTitleEditable, "Notice_Title_Can_Edit");
+            resources.ApplyResources(this.lblHintTitleEditable, "lblHintTitleEditable");
             this.lblHintTitleEditable.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblHintTitleEditable.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblHintTitleEditable.Name = "Notice_Title_Can_Edit";
+            this.lblHintTitleEditable.Name = "lblHintTitleEditable";
             // 
-            // Author_Label
+            // lblAuthor
             // 
-            resources.ApplyResources(this.lblAuthor, "Author_Label");
+            resources.ApplyResources(this.lblAuthor, "lblAuthor");
             this.lblAuthor.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblAuthor.Name = "Author_Label";
+            this.lblAuthor.Name = "lblAuthor";
             // 
-            // Book_Tittle_Lebel
+            // lblTittle
             // 
-            resources.ApplyResources(this.lblTittle, "Book_Tittle_Lebel");
+            resources.ApplyResources(this.lblTittle, "lblTittle");
             this.lblTittle.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblTittle.Name = "Book_Tittle_Lebel";
+            this.lblTittle.Name = "lblTittle";
             // 
-            // Author_Imported_TextBox
+            // txtAuthor
             // 
             // 
             // 
@@ -324,9 +333,9 @@
             this.txtAuthor.CustomButton.UseSelectable = true;
             this.txtAuthor.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible")));
             this.txtAuthor.Lines = new string[0];
-            resources.ApplyResources(this.txtAuthor, "Author_Imported_TextBox");
+            resources.ApplyResources(this.txtAuthor, "txtAuthor");
             this.txtAuthor.MaxLength = 32767;
-            this.txtAuthor.Name = "Author_Imported_TextBox";
+            this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.PasswordChar = '\0';
             this.txtAuthor.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtAuthor.SelectedText = "";
@@ -338,7 +347,7 @@
             this.txtAuthor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAuthor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // Title_Imported_TextBox
+            // txtTittle
             // 
             // 
             // 
@@ -355,9 +364,9 @@
             this.txtTittle.CustomButton.UseSelectable = true;
             this.txtTittle.CustomButton.Visible = ((bool)(resources.GetObject("resource.Visible1")));
             this.txtTittle.Lines = new string[0];
-            resources.ApplyResources(this.txtTittle, "Title_Imported_TextBox");
+            resources.ApplyResources(this.txtTittle, "txtTittle");
             this.txtTittle.MaxLength = 32767;
-            this.txtTittle.Name = "Title_Imported_TextBox";
+            this.txtTittle.Name = "txtTittle";
             this.txtTittle.PasswordChar = '\0';
             this.txtTittle.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTittle.SelectedText = "";
@@ -385,10 +394,10 @@
             this.ST_Label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.ST_Label.Name = "ST_Label";
             // 
-            // ToTraditionValue_Cmd
+            // btnToTraditionValue
             // 
-            resources.ApplyResources(this.btnToTraditionValue, "ToTraditionValue_Cmd");
-            this.btnToTraditionValue.Name = "ToTraditionValue_Cmd";
+            resources.ApplyResources(this.btnToTraditionValue, "btnToTraditionValue");
+            this.btnToTraditionValue.Name = "btnToTraditionValue";
             this.btnToTraditionValue.UseSelectable = true;
             this.btnToTraditionValue.Click += new System.EventHandler(this.btnToTraditionValue_Click);
             // 
@@ -398,36 +407,45 @@
             this.CT_Label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.CT_Label.Name = "CT_Label";
             // 
-            // TabPage_Batch
+            // TabPageBatch
             // 
+            this.TabPageBatch.Controls.Add(this.cbRemoveCss);
             this.TabPageBatch.Controls.Add(this.btnDelete);
             this.TabPageBatch.Controls.Add(this.BatchGridView);
             this.TabPageBatch.Controls.Add(this.label2);
-            this.TabPageBatch.Controls.Add(this.chkbReplacePictureBatch);
-            this.TabPageBatch.Controls.Add(this.chkbEmbdedFontBatch);
+            this.TabPageBatch.Controls.Add(this.cbReplacePictureBatch);
+            this.TabPageBatch.Controls.Add(this.cbEmbdedFontBatch);
             this.TabPageBatch.Controls.Add(this.btnConvertBatch);
-            this.TabPageBatch.Controls.Add(this.chkbModifyPageDirectionBatch);
+            this.TabPageBatch.Controls.Add(this.cbModifyPageDirectionBatch);
             this.TabPageBatch.Controls.Add(this.groupBox5);
-            this.TabPageBatch.Controls.Add(this.chkbConvertMobiBatch);
-            this.TabPageBatch.Controls.Add(this.chkbChineseBatch);
+            this.TabPageBatch.Controls.Add(this.cbConvertMobiBatch);
+            this.TabPageBatch.Controls.Add(this.cbChineseBatch);
             this.TabPageBatch.Controls.Add(this.GroupBox2);
             this.TabPageBatch.Controls.Add(this.gvBatch);
             this.TabPageBatch.Controls.Add(this.btnLoadBatch);
             this.TabPageBatch.HorizontalScrollbarBarColor = true;
             this.TabPageBatch.HorizontalScrollbarHighlightOnWheel = false;
             this.TabPageBatch.HorizontalScrollbarSize = 2;
-            resources.ApplyResources(this.TabPageBatch, "TabPage_Batch");
-            this.TabPageBatch.Name = "TabPage_Batch";
+            resources.ApplyResources(this.TabPageBatch, "TabPageBatch");
+            this.TabPageBatch.Name = "TabPageBatch";
             this.TabPageBatch.VerticalScrollbarBarColor = true;
             this.TabPageBatch.VerticalScrollbarHighlightOnWheel = false;
             this.TabPageBatch.VerticalScrollbarSize = 3;
             // 
-            // bookdelete_cmd
+            // cbRemoveCss
+            // 
+            resources.ApplyResources(this.cbRemoveCss, "cbRemoveCss");
+            this.cbRemoveCss.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbRemoveCss.Name = "cbRemoveCss";
+            this.cbRemoveCss.UseSelectable = true;
+            this.cbRemoveCss.CheckedChanged += new System.EventHandler(this.cbRemoveCss_CheckedChanged);
+            // 
+            // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Tomato;
             this.btnDelete.BackgroundImage = global::ChoHoe.Properties.Resources.baseline_close_white_18dp;
-            resources.ApplyResources(this.btnDelete, "bookdelete_cmd");
-            this.btnDelete.Name = "bookdelete_cmd";
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Name = "btnDelete";
             this.btnDelete.UseSelectable = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -446,36 +464,36 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // Batch_IfReplacePicture_Chkbox
+            // cbReplacePictureBatch
             // 
-            resources.ApplyResources(this.chkbReplacePictureBatch, "Batch_IfReplacePicture_Chkbox");
-            this.chkbReplacePictureBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbReplacePictureBatch.Name = "Batch_IfReplacePicture_Chkbox";
-            this.chkbReplacePictureBatch.UseSelectable = true;
-            this.chkbReplacePictureBatch.CheckedChanged += new System.EventHandler(this.chkbReplacePictureBatch_CheckedChanged);
+            resources.ApplyResources(this.cbReplacePictureBatch, "cbReplacePictureBatch");
+            this.cbReplacePictureBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbReplacePictureBatch.Name = "cbReplacePictureBatch";
+            this.cbReplacePictureBatch.UseSelectable = true;
+            this.cbReplacePictureBatch.CheckedChanged += new System.EventHandler(this.cbReplacePictureBatch_CheckedChanged);
             // 
-            // Batch_IfEmbdedFont_Chkbox
+            // cbEmbdedFontBatch
             // 
-            resources.ApplyResources(this.chkbEmbdedFontBatch, "Batch_IfEmbdedFont_Chkbox");
-            this.chkbEmbdedFontBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbEmbdedFontBatch.Name = "Batch_IfEmbdedFont_Chkbox";
-            this.chkbEmbdedFontBatch.UseSelectable = true;
-            this.chkbEmbdedFontBatch.CheckedChanged += new System.EventHandler(this.chkbEmbdedFontBatch_CheckedChanged);
+            resources.ApplyResources(this.cbEmbdedFontBatch, "cbEmbdedFontBatch");
+            this.cbEmbdedFontBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbEmbdedFontBatch.Name = "cbEmbdedFontBatch";
+            this.cbEmbdedFontBatch.UseSelectable = true;
+            this.cbEmbdedFontBatch.CheckedChanged += new System.EventHandler(this.cbEmbdedFontBatch_CheckedChanged);
             // 
-            // Convert_Batch
+            // btnConvertBatch
             // 
-            resources.ApplyResources(this.btnConvertBatch, "Convert_Batch");
-            this.btnConvertBatch.Name = "Convert_Batch";
+            resources.ApplyResources(this.btnConvertBatch, "btnConvertBatch");
+            this.btnConvertBatch.Name = "btnConvertBatch";
             this.btnConvertBatch.UseSelectable = true;
             this.btnConvertBatch.Click += new System.EventHandler(this.btnConvertBatch_Click);
             // 
-            // Batch_IfDoModifyPageDirection_Chkbox
+            // cbModifyPageDirectionBatch
             // 
-            resources.ApplyResources(this.chkbModifyPageDirectionBatch, "Batch_IfDoModifyPageDirection_Chkbox");
-            this.chkbModifyPageDirectionBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbModifyPageDirectionBatch.Name = "Batch_IfDoModifyPageDirection_Chkbox";
-            this.chkbModifyPageDirectionBatch.UseSelectable = true;
-            this.chkbModifyPageDirectionBatch.CheckedChanged += new System.EventHandler(this.chkbModifyPageDirectionBatch_CheckedChanged);
+            resources.ApplyResources(this.cbModifyPageDirectionBatch, "cbModifyPageDirectionBatch");
+            this.cbModifyPageDirectionBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbModifyPageDirectionBatch.Name = "cbModifyPageDirectionBatch";
+            this.cbModifyPageDirectionBatch.UseSelectable = true;
+            this.cbModifyPageDirectionBatch.CheckedChanged += new System.EventHandler(this.cbModifyPageDirectionBatch_CheckedChanged);
             // 
             // groupBox5
             // 
@@ -486,37 +504,37 @@
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
-            // Batch_PageRTL_Radio
+            // rdoPageRTLBatch
             // 
-            resources.ApplyResources(this.rdoPageRTLBatch, "Batch_PageRTL_Radio");
+            resources.ApplyResources(this.rdoPageRTLBatch, "rdoPageRTLBatch");
             this.rdoPageRTLBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rdoPageRTLBatch.Name = "Batch_PageRTL_Radio";
+            this.rdoPageRTLBatch.Name = "rdoPageRTLBatch";
             this.rdoPageRTLBatch.UseSelectable = true;
             this.rdoPageRTLBatch.CheckedChanged += new System.EventHandler(this.rdoPageRTLBatch_CheckedChanged);
             // 
-            // Batch_PageLTR_Radio
+            // rdoPageLTRBatch
             // 
-            resources.ApplyResources(this.rdoPageLTRBatch, "Batch_PageLTR_Radio");
+            resources.ApplyResources(this.rdoPageLTRBatch, "rdoPageLTRBatch");
             this.rdoPageLTRBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rdoPageLTRBatch.Name = "Batch_PageLTR_Radio";
+            this.rdoPageLTRBatch.Name = "rdoPageLTRBatch";
             this.rdoPageLTRBatch.UseSelectable = true;
             this.rdoPageLTRBatch.CheckedChanged += new System.EventHandler(this.rdoPageLTRBatch_CheckedChanged);
             // 
-            // Batch_IfConvertMobi_Chkbox
+            // cbConvertMobiBatch
             // 
-            resources.ApplyResources(this.chkbConvertMobiBatch, "Batch_IfConvertMobi_Chkbox");
-            this.chkbConvertMobiBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbConvertMobiBatch.Name = "Batch_IfConvertMobi_Chkbox";
-            this.chkbConvertMobiBatch.UseSelectable = true;
-            this.chkbConvertMobiBatch.CheckedChanged += new System.EventHandler(this.chkbConvertMobiBatch_CheckedChanged);
+            resources.ApplyResources(this.cbConvertMobiBatch, "cbConvertMobiBatch");
+            this.cbConvertMobiBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbConvertMobiBatch.Name = "cbConvertMobiBatch";
+            this.cbConvertMobiBatch.UseSelectable = true;
+            this.cbConvertMobiBatch.CheckedChanged += new System.EventHandler(this.cbConvertMobiBatch_CheckedChanged);
             // 
-            // Batch_IfDoToChineseChkbox
+            // cbChineseBatch
             // 
-            resources.ApplyResources(this.chkbChineseBatch, "Batch_IfDoToChineseChkbox");
-            this.chkbChineseBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.chkbChineseBatch.Name = "Batch_IfDoToChineseChkbox";
-            this.chkbChineseBatch.UseSelectable = true;
-            this.chkbChineseBatch.CheckedChanged += new System.EventHandler(this.chkbChineseBatch_CheckedChanged);
+            resources.ApplyResources(this.cbChineseBatch, "cbChineseBatch");
+            this.cbChineseBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.cbChineseBatch.Name = "cbChineseBatch";
+            this.cbChineseBatch.UseSelectable = true;
+            this.cbChineseBatch.CheckedChanged += new System.EventHandler(this.cbChineseBatch_CheckedChanged);
             // 
             // GroupBox2
             // 
@@ -534,10 +552,10 @@
             this.ST_Label_Batch.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.ST_Label_Batch.Name = "ST_Label_Batch";
             // 
-            // Batch_ToTraditionValue_Cmd
+            // btnToTraditionValueBatch
             // 
-            resources.ApplyResources(this.btnToTraditionValueBatch, "Batch_ToTraditionValue_Cmd");
-            this.btnToTraditionValueBatch.Name = "Batch_ToTraditionValue_Cmd";
+            resources.ApplyResources(this.btnToTraditionValueBatch, "btnToTraditionValueBatch");
+            this.btnToTraditionValueBatch.Name = "btnToTraditionValueBatch";
             this.btnToTraditionValueBatch.UseSelectable = true;
             this.btnToTraditionValueBatch.Click += new System.EventHandler(this.btnToTraditionValueBatch_Click);
             // 
@@ -547,48 +565,48 @@
             this.CT_Label_Batch.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.CT_Label_Batch.Name = "CT_Label_Batch";
             // 
-            // Batch_grid
+            // gvBatch
             // 
             this.gvBatch.AllowUserToResizeRows = false;
             this.gvBatch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gvBatch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvBatch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gvBatch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvBatch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvBatch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gvBatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvBatch.ColumnHeadersVisible = false;
             this.gvBatch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
             this.gvBatch.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvBatch.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvBatch.DefaultCellStyle = dataGridViewCellStyle7;
             this.gvBatch.EnableHeadersVisualStyles = false;
-            resources.ApplyResources(this.gvBatch, "Batch_grid");
+            resources.ApplyResources(this.gvBatch, "gvBatch");
             this.gvBatch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gvBatch.Name = "Batch_grid";
+            this.gvBatch.Name = "gvBatch";
             this.gvBatch.ReadOnly = true;
             this.gvBatch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvBatch.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvBatch.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gvBatch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gvBatch.RowTemplate.Height = 24;
             this.gvBatch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -598,17 +616,17 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // Load_Batch_cmd
+            // btnLoadBatch
             // 
-            resources.ApplyResources(this.btnLoadBatch, "Load_Batch_cmd");
-            this.btnLoadBatch.Name = "Load_Batch_cmd";
+            resources.ApplyResources(this.btnLoadBatch, "btnLoadBatch");
+            this.btnLoadBatch.Name = "btnLoadBatch";
             this.btnLoadBatch.UseSelectable = true;
             this.btnLoadBatch.Click += new System.EventHandler(this.btnLoadBatch_Click);
             // 
@@ -617,45 +635,37 @@
             this.metroStyleManager1.Owner = this;
             this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Green;
             // 
-            // inprogressBar
+            // InprogressBar
             // 
-            resources.ApplyResources(this.InprogressBar, "inprogressBar");
-            this.InprogressBar.Name = "inprogressBar";
+            resources.ApplyResources(this.InprogressBar, "InprogressBar");
+            this.InprogressBar.Name = "InprogressBar";
             // 
-            // StatusLabel
+            // lblStatus
             // 
-            resources.ApplyResources(this.lblStatus, "StatusLabel");
-            this.lblStatus.Name = "StatusLabel";
+            resources.ApplyResources(this.lblStatus, "lblStatus");
+            this.lblStatus.Name = "lblStatus";
             // 
-            // SettingCmd
+            // btnSetting
             // 
-            resources.ApplyResources(this.btnSetting, "SettingCmd");
-            this.btnSetting.Name = "SettingCmd";
+            resources.ApplyResources(this.btnSetting, "btnSetting");
+            this.btnSetting.Name = "btnSetting";
             this.btnSetting.UseSelectable = true;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
-            // about_cmd
+            // btnAbout
             // 
             this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAbout.BackgroundImage = global::ChoHoe.Properties.Resources.outline_info_black_36dp;
-            resources.ApplyResources(this.btnAbout, "about_cmd");
-            this.btnAbout.Name = "about_cmd";
+            resources.ApplyResources(this.btnAbout, "btnAbout");
+            this.btnAbout.Name = "btnAbout";
             this.btnAbout.UseSelectable = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // runningLogo
+            // RunningLogo
             // 
-            resources.ApplyResources(this.RunningLogo, "runningLogo");
-            this.RunningLogo.Name = "runningLogo";
+            resources.ApplyResources(this.RunningLogo, "RunningLogo");
+            this.RunningLogo.Name = "RunningLogo";
             this.RunningLogo.TabStop = false;
-            // 
-            // samePage
-            // 
-            resources.ApplyResources(this.samePage, "samePage");
-            this.samePage.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.samePage.Name = "samePage";
-            this.samePage.UseSelectable = true;
-            this.samePage.CheckedChanged += new System.EventHandler(this.chkbEmbdedFont_CheckedChanged);
             // 
             // Form1
             // 
@@ -700,8 +710,8 @@
         #endregion
         internal MetroFramework.Controls.MetroTabPage TabPageSingle;
         internal MetroFramework.Controls.MetroButton btnConvert;
-        internal MetroFramework.Controls.MetroCheckBox chkbConvertMobi;
-        internal MetroFramework.Controls.MetroCheckBox chkbToChinese;
+        internal MetroFramework.Controls.MetroCheckBox cbConvertMobi;
+        internal MetroFramework.Controls.MetroCheckBox cbToChinese;
         internal MetroFramework.Controls.MetroButton btnLoad;
         internal MetroFramework.Controls.MetroTextBox txtTittle;
         internal System.Windows.Forms.GroupBox GroupBox1;
@@ -712,24 +722,24 @@
         internal MetroFramework.Controls.MetroLabel lblAuthor;
         internal MetroFramework.Controls.MetroTabPage TabPageBatch;
         internal MetroFramework.Controls.MetroButton btnConvertBatch;
-        internal MetroFramework.Controls.MetroCheckBox chkbConvertMobiBatch;
-        internal MetroFramework.Controls.MetroCheckBox chkbChineseBatch;
+        internal MetroFramework.Controls.MetroCheckBox cbConvertMobiBatch;
+        internal MetroFramework.Controls.MetroCheckBox cbChineseBatch;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal MetroFramework.Controls.MetroLabel ST_Label_Batch;
         internal MetroFramework.Controls.MetroButton btnToTraditionValueBatch;
         internal MetroFramework.Controls.MetroLabel CT_Label_Batch;
         internal MetroFramework.Controls.MetroGrid gvBatch;
         internal MetroFramework.Controls.MetroButton btnLoadBatch;
-        private MetroFramework.Controls.MetroCheckBox chkbModifyPageDirection;
+        private MetroFramework.Controls.MetroCheckBox cbModifyPageDirection;
         private MetroFramework.Controls.MetroRadioButton rdoPageLTR;
         private MetroFramework.Controls.MetroRadioButton rdoPageRTL;
         internal System.Windows.Forms.GroupBox groupBox3;
         internal System.Windows.Forms.GroupBox groupBox4;
-        private MetroFramework.Controls.MetroCheckBox chkbModifyPageDirectionBatch;
+        private MetroFramework.Controls.MetroCheckBox cbModifyPageDirectionBatch;
         internal System.Windows.Forms.GroupBox groupBox5;
         private MetroFramework.Controls.MetroRadioButton rdoPageRTLBatch;
         private MetroFramework.Controls.MetroRadioButton rdoPageLTRBatch;
-        private MetroFramework.Controls.MetroCheckBox chkbEmbdedFont;
+        private MetroFramework.Controls.MetroCheckBox cbEmbdedFont;
         internal MetroFramework.Controls.MetroLabel ST_Label;
         public MetroFramework.Components.MetroStyleManager metroStyleManager1;
         public MetroFramework.Controls.MetroLabel lblHintTitleEditable;
@@ -737,9 +747,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private MetroFramework.Controls.MetroCheckBox chkbEmbdedFontBatch;
-        private MetroFramework.Controls.MetroCheckBox chkbReplacePictureBatch;
-        private MetroFramework.Controls.MetroCheckBox chkbReplacePicture;
+        private MetroFramework.Controls.MetroCheckBox cbEmbdedFontBatch;
+        private MetroFramework.Controls.MetroCheckBox cbReplacePictureBatch;
+        private MetroFramework.Controls.MetroCheckBox cbReplacePicture;
         private System.Windows.Forms.GroupBox groupBox6;
         private MetroFramework.Controls.MetroButton btnLocalizationCustomizeToggle;
         private MetroFramework.Controls.MetroButton btnCustomizeCssToggle;
@@ -754,6 +764,7 @@
         private MetroFramework.Controls.MetroButton btnDelete;
         private System.Windows.Forms.PictureBox RunningLogo;
         private MetroFramework.Controls.MetroCheckBox samePage;
+        private MetroFramework.Controls.MetroCheckBox cbRemoveCss;
     }
 }
 
