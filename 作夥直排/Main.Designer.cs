@@ -73,6 +73,7 @@
             this.btnConvertBatch = new MetroFramework.Controls.MetroButton();
             this.cbModifyPageDirectionBatch = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.RunningLogo = new System.Windows.Forms.PictureBox();
             this.rdoPageRTLBatch = new MetroFramework.Controls.MetroRadioButton();
             this.rdoPageLTRBatch = new MetroFramework.Controls.MetroRadioButton();
             this.cbConvertMobiBatch = new MetroFramework.Controls.MetroCheckBox();
@@ -89,7 +90,6 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnSetting = new MetroFramework.Controls.MetroButton();
             this.btnAbout = new MetroFramework.Controls.MetroButton();
-            this.RunningLogo = new System.Windows.Forms.PictureBox();
             this.TabControl1.SuspendLayout();
             this.TabPageSingle.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -99,10 +99,10 @@
             this.TabPageBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RunningLogo)).BeginInit();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RunningLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // TabControl1
@@ -455,6 +455,7 @@
             resources.ApplyResources(this.BatchGridView, "BatchGridView");
             this.BatchGridView.Name = "BatchGridView";
             this.BatchGridView.RowTemplate.Height = 24;
+            this.BatchGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.BatchGridView_CellValueChanged);
             this.BatchGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DataGridView1_RowsRemoved);
             // 
             // cbReplacePictureBatch
@@ -497,6 +498,12 @@
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            // 
+            // RunningLogo
+            // 
+            resources.ApplyResources(this.RunningLogo, "RunningLogo");
+            this.RunningLogo.Name = "RunningLogo";
+            this.RunningLogo.TabStop = false;
             // 
             // rdoPageRTLBatch
             // 
@@ -655,12 +662,6 @@
             this.btnAbout.UseSelectable = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // RunningLogo
-            // 
-            resources.ApplyResources(this.RunningLogo, "RunningLogo");
-            this.RunningLogo.Name = "RunningLogo";
-            this.RunningLogo.TabStop = false;
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -690,11 +691,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RunningLogo)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBatch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RunningLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

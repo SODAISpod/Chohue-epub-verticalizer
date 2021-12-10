@@ -1047,6 +1047,14 @@ namespace ChoHoeBV
         {
             return title;
         }
+        public void SetTitle(string setTitle)
+        {
+            title = setTitle;
+        }
+        public void SetAuthor(string setAuthor)
+        {
+            author = setAuthor;
+        }
 
     }
 
