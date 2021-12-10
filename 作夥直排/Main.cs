@@ -28,7 +28,7 @@ namespace ChoHoeBV
         bool ToTradictional = true;
         bool BatchToTradictional = true;
         private readonly AboutBox1 about = new AboutBox1();
-        private readonly Setting settingForm = new Setting();
+        
 
         ToolTip toolTip = new ToolTip();
 
@@ -482,7 +482,7 @@ namespace ChoHoeBV
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-
+            Setting settingForm = new Setting();
 
             settingForm.Show();
         }
@@ -555,6 +555,7 @@ namespace ChoHoeBV
             Logger.logger.Info($"min: {min}");
             
             range = max - min+1;
+            //Check if the last empty one selected.
             if (min+range == BatchGridView.RowCount)
             {
                 range--;
