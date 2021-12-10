@@ -27,7 +27,7 @@ namespace ChoHoeBV
 
         bool ToTradictional = true;
         bool BatchToTradictional = true;
-        private readonly AboutBox1 about = new AboutBox1();
+     
 
 
         ToolTip toolTip = new ToolTip();
@@ -514,6 +514,7 @@ namespace ChoHoeBV
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
+            AboutBox1 about = new AboutBox1();
             about.Show();
 
 
@@ -698,6 +699,10 @@ namespace ChoHoeBV
 
         private void BatchGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            if (batchBookList.Count<= e.RowIndex)
+            {
+                return;
+            }
             int index = e.RowIndex;
             batchBookList[index].SetAuthor(BatchGridView.Rows[index].Cells[1].Value.ToString());
             batchBookList[index].SetTitle(BatchGridView.Rows[index].Cells[0].Value.ToString());
