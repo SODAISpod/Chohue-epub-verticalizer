@@ -34,7 +34,7 @@ namespace ChoHoe
 
                 if (result == System.Windows.Forms.DialogResult.Yes)//
                 {
-                    System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/?utm_source=Chehue&utm_medium=PopNotify");
+                    System.Diagnostics.Process.Start("https://kiicho.cc/Chohue?utm_source=Chehue&utm_medium=InApp&utm_campaign=UpdateNotification");
                     
                 }
                 return true;

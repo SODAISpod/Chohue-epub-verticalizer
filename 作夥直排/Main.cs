@@ -242,7 +242,7 @@ namespace ChoHoeBV
                 Import_File.Title = "請選擇一個電子書檔案";
                 Import_File.Multiselect = true;
 
-
+                
                 if (Import_File.ShowDialog() != System.Windows.Forms.DialogResult.OK)
                 {
 
@@ -251,7 +251,8 @@ namespace ChoHoeBV
 
 
                 }
-
+                
+                
                 RunningLogo.Visible = true;
 
                 InprogressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -382,7 +383,10 @@ namespace ChoHoeBV
                 if (abooks.Load(name)!=LoadResult.fail)
                 {
                     string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
-                    rows.Add(row1);                   
+                   
+                    rows.Add(row1);      
+                    
+                    //batchBookList.Clear();
                     batchBookList.Add(abooks);
                 } 
                                                 
@@ -391,10 +395,7 @@ namespace ChoHoeBV
         private void Load_Batch_RunWorker_Completed(object sender, RunWorkerCompletedEventArgs e)
         {
 
-            foreach (string[] row in rows)
-            {
-                BatchGridView.Rows.Add(row);
-            }
+            BatchGridViewClearThenAdd();
             // Title_Imported_TextBox.Text = debugstring;
 
             runningUi("讀取完畢。", false);
@@ -425,7 +426,7 @@ namespace ChoHoeBV
             txtTittle.Text = "";
             btnConvert.Enabled = false;
 
-
+            rows.Clear();
             runningUi("轉檔完畢。",false);
             ClearDirectory("temp");
         }
@@ -462,8 +463,7 @@ namespace ChoHoeBV
 
 
 
-            batchBookList.Clear();
-            BatchGridView.Rows.Clear();
+            AllClear();
             
             runningUi("轉檔完畢。", false);
             ClearDirectory("temp");
@@ -487,7 +487,7 @@ namespace ChoHoeBV
             settingForm.Show();
         }
 
-        private void Batch_grid_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+           private void Batch_grid_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
 
 
@@ -520,30 +520,63 @@ namespace ChoHoeBV
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-           
-            foreach (DataGridViewRow item in BatchGridView.SelectedRows)
+            Logger.logger.Info($"Deleting selected boooks, Total rows: {BatchGridView.RowCount}, Selected rows count: {BatchGridView.SelectedRows.Count}");
+            
+            //list
+            int min = -1;
+            int max = -1;
+            int range = 0;
+            bool single = false;
+            //find the selected range
+            if (BatchGridView.SelectedRows.Count ==0)
             {
-                if (batchBookList.Count!=0)
-                {
-
-                batchBookList.RemoveAt(item.Index);
-                }
-                else
-                {
-                    return;
-                }
+                return;
 
             }
-            foreach (DataGridViewRow item in BatchGridView.SelectedRows)
+            if (BatchGridView.RowCount-1==BatchGridView.SelectedRows[0].Index&& BatchGridView.SelectedRows.Count==1)
             {
-                if (BatchGridView.Rows.Count!=0)
+                return;
+            }
+            foreach (DataGridViewRow item in BatchGridView.SelectedRows){
+                if (min==-1)
                 {
-                BatchGridView.Rows.RemoveAt(item.Index);
-
+                    min = item.Index;
+                }else if (item.Index <min)
+                {
+                    min=item.Index;
                 }
-
+                if (max==-1)
+                {
+                    max = item.Index;
+                }else if(item.Index>max){
+                    max= item.Index;
+                }
+            }
+            Logger.logger.Info($"min: {min}");
+            
+            range = max - min+1;
+            if (min+range == BatchGridView.RowCount)
+            {
+                range--;
             }
 
+
+
+            if (batchBookList.Count != 0&& BatchGridView.Rows.Count != 0&& rows.Count != 0)
+            {
+
+                batchBookList.RemoveRange(min, range);
+                for (int i = 0; i < range; i++)
+                {
+                    BatchGridView.Rows.RemoveAt(min);
+                }
+                rows.RemoveRange(min, range);
+            }
+            else
+            {
+                return;
+            }
+            
         }
 
         private void cbChineseBatch_CheckedChanged(object sender, EventArgs e)
@@ -621,6 +654,39 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.Batch_RemoveCss
                 = cbRemoveCss.Checked;
             ChoHoe.Properties.Settings.Default.Save();
+        }
+        /// <summary>
+        /// Clear the BatchGridView Before Add.
+        /// </summary>
+        private void BatchGridViewClearThenAdd()
+        {
+            BatchGridView.Rows.Clear();
+            foreach (string[] row in rows)
+            {
+                
+                BatchGridView.Rows.Add(row);
+            }
+        }
+        /// <summary>
+        /// Add rows into BatchGridView
+        /// </summary>
+        private void BatchGridViewAdd()
+        {
+            foreach (string[] row in rows)
+            {
+                
+                BatchGridView.Rows.Add(row);
+            }
+        }
+        /// <summary>
+        /// Clear everything loaded
+        /// BatchGridView.Rows, list <book>, Rows.
+        /// </summary>
+        private void AllClear()
+        {
+            rows.Clear();
+            batchBookList.Clear();
+            BatchGridView.Rows.Clear();
         }
     }
 
