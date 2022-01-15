@@ -157,6 +157,7 @@ namespace ChoHoeBV
                 Logger.logger.Error($"Uncompress fail:{e.ToString()}");
 
                 Console.WriteLine(e.ToString());
+                throw;
             }
 
 
