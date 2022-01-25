@@ -381,7 +381,7 @@ namespace ChoHoeBV
             foreach (string name in paths.FileNames)
             {
                 Book abooks = new Book();
-                if (abooks.Load(name) != LoadResult.fail)
+                if (abooks.Load(name) == LoadResult.success)
                 {
                     string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
 

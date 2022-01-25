@@ -75,7 +75,12 @@ namespace ChoHoeBV
             Uncompressing(_path, _uncompressedPath);
             Mimetype();
             Container(_containerXML);
-            if (OpfReader() == OpfReadResult.epunNeedPandocFor2to3)
+            OpfReadResult result = OpfReader();
+            if (result == OpfReadResult.pandocConvertError)
+            {
+                Logger.logger.Fatal($"Pandoc filed to process: {_originalFilePath}");
+            }
+            if (result == OpfReadResult.epunNeedPandocFor2to3 || result == OpfReadResult.pandocConvertError )
             {
                 return LoadResult.fail;
             }
@@ -437,12 +442,19 @@ namespace ChoHoeBV
 
                     string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""", namer };
 
-                    if (ExtensionProcess(ExtensionMethod.pandocWithReload, argu)==ExtensionResult.fail)
+
+                    ExtensionResult result = ExtensionProcess(ExtensionMethod.pandocWithReload, argu);
+
+                    if (result==ExtensionResult.fail)
                     {
                         return OpfReadResult.epunNeedPandocFor2to3;
+                    }
+                    else if (result==ExtensionResult.failWithPandocErrors)
+                    {
+                        return OpfReadResult.pandocConvertError;
                     }                    
 
-                    return OpfReadResult.finishDueToEpub3LoadingTakeover;
+                    return OpfReadResult.finishDueToEpub3LoadingTookover;
                     
                 }
                 catch (Exception e)
@@ -993,6 +1005,10 @@ namespace ChoHoeBV
                             {
                                 return ExtensionResult.success;
                             }
+                            else
+                            {
+                                return ExtensionResult.failWithPandocErrors;
+                            }
 
                             //3   PandocFailOnWarningError
                             //4   PandocAppError
@@ -1019,7 +1035,15 @@ namespace ChoHoeBV
                             //99  PandocResourceNotFound
                             break;
                         case ExtensionMethod.pandocWithReload:
-                            Load($@"temp\{argum[1]}.epub");
+                            if (result != 0)
+                            {
+                                return ExtensionResult.failWithPandocErrors;
+                            }
+                            else
+                            {
+
+                                Load($@"temp\{argum[1]}.epub");
+                            }
                             break;
 
                     }
