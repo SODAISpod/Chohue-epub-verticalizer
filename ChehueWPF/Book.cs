@@ -9,21 +9,18 @@ using System.Drawing;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Web.UI;
-using System.Web;
-using System.Web.UI.WebControls;
 using HtmlAgilityPack;
 using System.Xml;
 using ChoHoe;
-using ChoHoeBV;
 using Ionic.Zlib;
-using MetroFramework;
 using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter;
 using System.ComponentModel;
-using System.Windows.Forms;
+using ChoHoe;
 using System.Diagnostics;
+using System.Windows;
+using System.Web;
 
-namespace ChoHoeBV
+namespace ChoHoe
 {
     public class Book
     {
@@ -109,6 +106,7 @@ namespace ChoHoeBV
         {
             //For unit test uses.
             ChoHoe.Properties.Settings.Default.PandocPath = pandoc;
+                   
             ChoHoe.Properties.Settings.Default.Save();
             Load(path);
 
@@ -157,6 +155,7 @@ namespace ChoHoeBV
                 Logger.logger.Error($"Uncompress fail:{e.ToString()}");
 
                 Console.WriteLine(e.ToString());
+                throw;
             }
 
 
@@ -344,6 +343,7 @@ namespace ChoHoeBV
                     Logger.logger.Info($"Replace gif: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image gif = ChoHoe.Properties.Resources.Replacement_Image;
+                    
                     using (MemoryStream ms = new MemoryStream())
                     {
                         gif.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
@@ -585,7 +585,7 @@ namespace ChoHoeBV
         {
             this.author = author;
             this.title = title;
-            Logger.logger.Info($"CSS Editing ");
+            Logger.logger.Info($"Editing C");
 
             foreach (string path in css)
             {
@@ -602,7 +602,7 @@ namespace ChoHoeBV
             OpfWriter(pageDirection, replacePicture, title, author);
             ZipUp(convertMobi);
             return true;
-
+           
         }
 
         private void HtmlEdit(string path, bool DoTransfer, bool ToTraidional)
@@ -638,7 +638,7 @@ namespace ChoHoeBV
                             {
                                 if (item.Name == "link")
                                 {
-                                    if (item.Attributes["rel"].Value == "stylesheet" && item.Attributes["type"].Value == "text/css")
+                                    if (item.Attributes["rel"].Value == "stylesheet") //&& item.Attributes["type"].Value == "text/css"
                                     {
                                         hasCSSStylesheet = true;
                                     }
@@ -938,7 +938,7 @@ namespace ChoHoeBV
                     break;
                 case ExtensionMethod.pandoc:
                 case ExtensionMethod.pandocWithReload:
-
+                    
                     ExtensionPath = ChoHoe.Properties.Settings.Default.PandocPath + "\\" + "pandoc.exe";
                     if (!ExtensionChecker.pandocStatus)
                     {
@@ -1046,6 +1046,14 @@ namespace ChoHoeBV
         public string GetTitle()
         {
             return title;
+        }
+        public void SetTitle(string setTitle)
+        {
+            title = setTitle;
+        }
+        public void SetAuthor(string setAuthor)
+        {
+            author = setAuthor;
         }
 
     }

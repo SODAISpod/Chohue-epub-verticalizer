@@ -32,9 +32,14 @@ namespace ChoHoeBV
 
         ToolTip toolTip = new ToolTip();
 
+        
         public Form1()
         {
             InitializeComponent();
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += new UnhandledExceptionEventHandler(ChExceptionHandler);
+
+
             btnConvert.Enabled = false;
             Logger.logger.Info("🦄//////////////////🦄 - App Started - 🦄///////////////////////🦄");
 
@@ -51,6 +56,12 @@ namespace ChoHoeBV
             NewVersionCheck versionCheck = new NewVersionCheck();
             _ = versionCheck.HasnewAsync();
 
+
+        }
+        static void ChExceptionHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            Exception e = (Exception)args.ExceptionObject;
+            Logger.logger.Error(e, "Error:");
 
         }
 

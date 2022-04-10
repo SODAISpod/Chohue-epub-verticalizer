@@ -586,7 +586,7 @@ namespace ChoHoeBV
         {
             this.author = author;
             this.title = title;
-            Logger.logger.Info($"CSS Editing ");
+            Logger.logger.Info($"Editing C");
 
             foreach (string path in css)
             {
@@ -603,7 +603,7 @@ namespace ChoHoeBV
             OpfWriter(pageDirection, replacePicture, title, author);
             ZipUp(convertMobi);
             return true;
-
+           
         }
 
         private void HtmlEdit(string path, bool DoTransfer, bool ToTraidional)
@@ -639,7 +639,7 @@ namespace ChoHoeBV
                             {
                                 if (item.Name == "link")
                                 {
-                                    if (item.Attributes["rel"].Value == "stylesheet" && item.Attributes["type"].Value == "text/css")
+                                    if (item.Attributes["rel"].Value == "stylesheet") //&& item.Attributes["type"].Value == "text/css"
                                     {
                                         hasCSSStylesheet = true;
                                     }
