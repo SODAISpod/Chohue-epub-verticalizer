@@ -5,45 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChehueWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="543.667" Width="800"
-        xmlns:ui="http://schemas.modernwpf.com/2019" 
-        ui:WindowHelper.UseModernWindowStyle="True">
-
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="145*"/>
-            <ColumnDefinition Width="53*"/>
-        </Grid.ColumnDefinitions>
-        <ui:SimpleStackPanel Margin="12" Spacing="24" Grid.ColumnSpan="2">
-            <TextBlock Text="書名：無職轉生" Style="{StaticResource HeaderTextBlockStyle}" />
-
-            <DataGrid Margin="0,-19,215,-303" SelectionChanged="DataGrid_SelectionChanged">
-                <DataGrid.Resources>
-                    <c:Book x:Key="books"/>
-                </DataGrid.Resources>    
+        Title="MainWindow" Height="543.667" Width="800">
+    <StackPanel Orientation="Horizontal" Margin="8,0,0,0">
+        <Border BorderBrush="Black" BorderThickness="1" Width="541" Height="513" CornerRadius="15,15,15,15">
+            <DataGrid ItemsSource="{Binding Source=tests}" Margin="0,-1,0,0" Padding="0,17,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="書名" Binding="{Binding ff}" />
+                </DataGrid.Columns>    
             </DataGrid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Width="233" Height="514" Margin="7,0,0,0" CornerRadius="15,15,15,15"/>
+    </StackPanel>
 
-                <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalAlignment="Right" Width="196" Height="396" VerticalAlignment="Top" Margin="0,-43,0,0"  >
-                <Grid Width="{Binding RelativeSource={RelativeSource FindAncestor, 
-    AncestorType={x:Type ListBox}},Path=ActualWidth}" Height="396">
+    <!--xmlns:ui="http://schemas.modernwpf.com/2019" 
+        ui:WindowHelper.UseModernWindowStyle="True"-->
 
-                    <Label Content="中文轉換" Height="396" VerticalAlignment="Bottom"/>
-                    <ui:ToggleSwitch Margin="10,24,0,340"></ui:ToggleSwitch>
-                    <ToggleButton Content="轉換成正體中文" Margin="60,56,10,309" HorizontalAlignment="Stretch"/>
-                    <Label Content="翻頁方向" Margin="0,92,0,278"/>
-                    <ui:ToggleSwitch Margin="10,118,0,246"/>
-                    <ToggleButton Content="由右往左翻" Margin="60,150,10,215" HorizontalAlignment="Stretch"/>
-                    <Label Content="匯出.mobi檔" Margin="0,186,0,184"/>
-                    <ui:ToggleSwitch Margin="10,217,0,147"/>
-                    <Label Content="替換插圖" Margin="0,255,0,115"/>
-                    <ui:ToggleSwitch Margin="10,286,0,78"/>
-                    <Label Content="移除CSS" Margin="0,323,0,47"/>
-                    <ui:ToggleSwitch Margin="10,349,0,15"/>
 
-                </Grid>
 
-            </ScrollViewer>
 
-        </ui:SimpleStackPanel>
-    </Grid>
+
 </Window>

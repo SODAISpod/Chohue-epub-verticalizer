@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ChoHoeBV
 {
-
+    
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         private readonly BackgroundWorker bw = new BackgroundWorker();
@@ -144,7 +144,7 @@ namespace ChoHoeBV
             using (OpenFileDialog Import_File = new OpenFileDialog())
             {
 
-                Import_File.Filter = "EPUB檔案|*.epub|TXT檔案|*.txt"; ;
+                Import_File.Filter = "EPUB、TXT檔案|*.epub;*.txt"; ;
                 Import_File.Title = "請選擇一個電子書檔案";
                 if (Import_File.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -238,7 +238,7 @@ namespace ChoHoeBV
             using (OpenFileDialog Import_File = new OpenFileDialog())
             {
 
-                Import_File.Filter = "EPUB檔案|*.epub|TXT檔案|*.txt";
+                Import_File.Filter = "EPUB、TXT 檔案|*.epub;*.txt|EPUB 檔案|*.epub|TXT 檔案|*.txt";
                 Import_File.Title = "請選擇一個電子書檔案";
                 Import_File.Multiselect = true;
 

@@ -23,7 +23,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace ChoHoeBV
+namespace ChoHoe
 {
     public class Book
     {

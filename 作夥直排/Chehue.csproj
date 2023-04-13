@@ -151,6 +151,7 @@
     </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>J:\development\DotNetZipLib-DevKit-v1.9.zip\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
