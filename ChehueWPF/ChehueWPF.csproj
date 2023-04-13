@@ -54,13 +54,23 @@
       <HintPath>..\packages\ModernWpfUI.0.9.4\lib\net462\ModernWpf.Controls.dll</HintPath>
     </Reference>
     <Reference Include="netstandard" />
+<<<<<<< HEAD
     <Reference Include="NLog">
       <HintPath>..\..\..\Downloads\Release (2)\Release\NLog.dll</HintPath>
+=======
+    <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.5.1.1\lib\net46\NLog.dll</HintPath>
+>>>>>>> dev
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+<<<<<<< HEAD
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+=======
+    <Reference Include="System.IO.Compression" />
+>>>>>>> dev
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -124,7 +134,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\Replacement_Image.bmp" />
+=======
+    <ProjectReference Include="..\作夥直排\Chehue.csproj">
+      <Project>{16268030-1DF7-48FD-BA3D-D0CE9DBF5F15}</Project>
+      <Name>Chehue</Name>
+    </ProjectReference>
+>>>>>>> dev
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChoHoeBV;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,17 +22,36 @@ namespace ChoHoe
     /// </summary>
     public partial class MainWindow : Window
     {
+<<<<<<< HEAD
         
         
         public MainWindow()
         {
             InitializeComponent();
             
+=======
+        Book theBook = new Book();
+        List<Book> books = new List<Book>();
+        List<test> tests= new List<test>();
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            test fd= new test();
+            tests.Add(fd);
+            test qw2= new test();
+            tests.Add(qw2);
+>>>>>>> dev
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+        class test
+        {
+            string ff = "11";
+            string ff2 = "22";
         }
     }
 }

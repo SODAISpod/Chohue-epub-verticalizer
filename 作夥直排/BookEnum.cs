@@ -19,8 +19,9 @@ using System.Threading.Tasks;
         {
             success,
             fail,
-            finishDueToEpub3LoadingTakeover,
-            epunNeedPandocFor2to3
+            finishDueToEpub3LoadingTookover,
+            epunNeedPandocFor2to3,
+            pandocConvertError
         }
     public enum LoadResult
         {
@@ -31,7 +32,8 @@ using System.Threading.Tasks;
     {
         success,
         fail,
-        finish
+        finish,
+        failWithPandocErrors
 
     }
     

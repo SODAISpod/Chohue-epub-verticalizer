@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChoHoe"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="MainWindow" Height="680" Width="800"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True">
@@ -46,9 +47,27 @@
                     <ui:ToggleSwitch Margin="10,351,0,0" VerticalAlignment="Top"/>
                     <Button Content="開啟" Margin="10,422,0,0" VerticalAlignment="Top" Width="69"/>
                     <Button Content="轉檔" Margin="84,422,0,0" VerticalAlignment="Top" Width="69"/>
+=======
+        Title="MainWindow" Height="543.667" Width="800">
+    <StackPanel Orientation="Horizontal" Margin="8,0,0,0">
+        <Border BorderBrush="Black" BorderThickness="1" Width="541" Height="513" CornerRadius="15,15,15,15">
+            <DataGrid ItemsSource="{Binding Source=tests}" Margin="0,-1,0,0" Padding="0,17,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="書名" Binding="{Binding ff}" />
+                </DataGrid.Columns>    
+            </DataGrid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Width="233" Height="514" Margin="7,0,0,0" CornerRadius="15,15,15,15"/>
+    </StackPanel>
 
-                </Grid>
+    <!--xmlns:ui="http://schemas.modernwpf.com/2019" 
+        ui:WindowHelper.UseModernWindowStyle="True"-->
 
+
+>>>>>>> dev
+
+
+<<<<<<< HEAD
             </ScrollViewer>
         </Border>
 
@@ -56,4 +75,7 @@
 
     </Grid>
 
+=======
+
+>>>>>>> dev
 </Window>

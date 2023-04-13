@@ -75,7 +75,12 @@ namespace ChoHoeBV
             Uncompressing(_path, _uncompressedPath);
             Mimetype();
             Container(_containerXML);
-            if (OpfReader() == OpfReadResult.epunNeedPandocFor2to3)
+            OpfReadResult result = OpfReader();
+            if (result == OpfReadResult.pandocConvertError)
+            {
+                Logger.logger.Fatal($"Pandoc filed to process: {_originalFilePath}");
+            }
+            if (result == OpfReadResult.epunNeedPandocFor2to3 || result == OpfReadResult.pandocConvertError )
             {
                 return LoadResult.fail;
             }
@@ -437,12 +442,19 @@ namespace ChoHoeBV
 
                     string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""", namer };
 
-                    if (ExtensionProcess(ExtensionMethod.pandocWithReload, argu)==ExtensionResult.fail)
+
+                    ExtensionResult result = ExtensionProcess(ExtensionMethod.pandocWithReload, argu);
+
+                    if (result==ExtensionResult.fail)
                     {
                         return OpfReadResult.epunNeedPandocFor2to3;
+                    }
+                    else if (result==ExtensionResult.failWithPandocErrors)
+                    {
+                        return OpfReadResult.pandocConvertError;
                     }                    
 
-                    return OpfReadResult.finishDueToEpub3LoadingTakeover;
+                    return OpfReadResult.finishDueToEpub3LoadingTookover;
                     
                 }
                 catch (Exception e)
@@ -656,7 +668,7 @@ namespace ChoHoeBV
                         {
                             foreach (HtmlNode body_child_Node in bodynode.ChildNodes)
                             {
-                                RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer);
+                                RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer,false);
                                 if (isRemoveCss)
                                 {
                                     RemoveHtmlStyle(body_child_Node);
@@ -708,8 +720,18 @@ namespace ChoHoeBV
                 }
             }
         }
-        private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer)
+        /// <summary>
+        /// toTradition: 翻成繁體, replacePunctuation: 取代橫式標點符號成直式
+        ///
+        /// </summary>
+        /// <param name="innernode"></param>
+        /// <param name="toTraditional">翻成繁體</param>
+        /// <param name="doTransfer">是否要進行轉檔，其他選項必須先滿足轉檔為是</param>
+        /// <param name="replacePunctuation">取代橫式標點符號成直式</param>
+        private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer,bool replacePunctuation)
         {
+          
+
             foreach (HtmlNode childinnenode in innernode.ChildNodes)
             {
 
@@ -736,11 +758,38 @@ namespace ChoHoeBV
                 }
                 else
                 {
-                    RecursivelyReplaceText(childinnenode, toTraditional, doTransfer);
+                    RecursivelyReplaceText(childinnenode, toTraditional, doTransfer,replacePunctuation);
                 }
             }
 
         }
+        /// <summary>
+        /// 取代字串中的符號至直排符號
+        /// </summary>
+        /// <param name="rawString"></param>
+        /// <returns></returns>
+        //private string PunctuationReplacement(string rawString)
+        //{
+
+        //    StringBuilder sb=new StringBuilder(rawString);
+        //    sb.Replace("「","﹁");
+        //    sb.Replace("“", "﹁"); //中式左括號
+        //    sb.Replace("”", "﹁"); //中式右括號
+        //    sb.Replace("『", "﹃");
+        //    sb.Replace("‘", "﹃"); //中式左括號
+        //    sb.Replace("’", "﹄"); //中式右括號
+        //    sb.Replace("』", "﹄");
+        //    sb.Replace("」", "﹂");
+        //    sb.Replace("（", "﹂");
+        //    sb.Replace("）", "﹂");
+        //    sb.Replace("）", "﹂");
+
+
+
+
+
+        //}
+
         private string EscapeCharacterReplacement(string replacement)
         {
             //if (fuck.Substring(fuck.IndexOf("&") - 1, 1)!= "\\")
@@ -906,7 +955,7 @@ namespace ChoHoeBV
                 else
                 {//todo compress option -c2 -donotaddsource
                     string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
-                    string[] argu = { $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" " };
+                    string[] argu = { $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" -c1 -dont_append_source" };
                     ExtensionProcess(ExtensionMethod.kindleGen, argu);
 
                 }
@@ -993,6 +1042,10 @@ namespace ChoHoeBV
                             {
                                 return ExtensionResult.success;
                             }
+                            else
+                            {
+                                return ExtensionResult.failWithPandocErrors;
+                            }
 
                             //3   PandocFailOnWarningError
                             //4   PandocAppError
@@ -1019,7 +1072,15 @@ namespace ChoHoeBV
                             //99  PandocResourceNotFound
                             break;
                         case ExtensionMethod.pandocWithReload:
-                            Load($@"temp\{argum[1]}.epub");
+                            if (result != 0)
+                            {
+                                return ExtensionResult.failWithPandocErrors;
+                            }
+                            else
+                            {
+
+                                Load($@"temp\{argum[1]}.epub");
+                            }
                             break;
 
                     }
