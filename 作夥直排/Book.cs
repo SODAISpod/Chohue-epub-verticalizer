@@ -47,7 +47,7 @@ namespace ChoHoeBV
         List<string> gif = new List<string>();
         List<string> png = new List<string>();
         List<string> jpeg = new List<string>();
-
+        private bool replacePunctuation=false;
 
 
         public LoadResult Load(string _path)
@@ -594,11 +594,12 @@ namespace ChoHoeBV
 
         }
 
-        public bool Convert(bool DoChineseTransfer, bool ToTradictional, bool pageDirection, bool convertMobi, bool fontEmbed, bool replacePicture, string author, string title)
+        public bool Convert(bool DoChineseTransfer, bool ToTradictional, bool pageDirection, bool convertMobi, bool fontEmbed, bool replacePicture, string author, string title,bool toReplacePunctuation)
         {
             this.author = author;
             this.title = title;
             Logger.logger.Info($"Editing C");
+            replacePunctuation = toReplacePunctuation;
 
             foreach (string path in css)
             {
@@ -668,7 +669,7 @@ namespace ChoHoeBV
                         {
                             foreach (HtmlNode body_child_Node in bodynode.ChildNodes)
                             {
-                                RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer,false);
+                                RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer);
                                 if (isRemoveCss)
                                 {
                                     RemoveHtmlStyle(body_child_Node);
@@ -728,7 +729,7 @@ namespace ChoHoeBV
         /// <param name="toTraditional">翻成繁體</param>
         /// <param name="doTransfer">是否要進行轉檔，其他選項必須先滿足轉檔為是</param>
         /// <param name="replacePunctuation">取代橫式標點符號成直式</param>
-        private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer,bool replacePunctuation)
+        private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer)
         {
           
 
@@ -754,11 +755,16 @@ namespace ChoHoeBV
                         }
                     }
                     childinnenode.InnerHtml = EscapeCharacterReplacement(childinnenode.InnerHtml);
+                    if (replacePunctuation)
+                    {
+
+                        childinnenode.InnerHtml = PunctuationReplacement(childinnenode.InnerHtml);//取代標點
+                    }
 
                 }
                 else
                 {
-                    RecursivelyReplaceText(childinnenode, toTraditional, doTransfer,replacePunctuation);
+                    RecursivelyReplaceText(childinnenode, toTraditional, doTransfer);
                 }
             }
 
@@ -768,27 +774,29 @@ namespace ChoHoeBV
         /// </summary>
         /// <param name="rawString"></param>
         /// <returns></returns>
-        //private string PunctuationReplacement(string rawString)
-        //{
+        private string PunctuationReplacement(string rawString)
+        {
 
-        //    StringBuilder sb=new StringBuilder(rawString);
-        //    sb.Replace("「","﹁");
-        //    sb.Replace("“", "﹁"); //中式左括號
-        //    sb.Replace("”", "﹁"); //中式右括號
-        //    sb.Replace("『", "﹃");
-        //    sb.Replace("‘", "﹃"); //中式左括號
-        //    sb.Replace("’", "﹄"); //中式右括號
-        //    sb.Replace("』", "﹄");
-        //    sb.Replace("」", "﹂");
-        //    sb.Replace("（", "﹂");
-        //    sb.Replace("）", "﹂");
-        //    sb.Replace("）", "﹂");
-
-
-
+            StringBuilder sb = new StringBuilder(rawString);
+            sb.Replace("「", "﹁");//橫式左引號
+            sb.Replace("“", "﹁"); //中式左引號
+            sb.Replace("”", "﹂"); //中式右引號
+            sb.Replace("『", "﹃");//內部左引號
+            sb.Replace("‘", "﹃"); //中式左引號
+            sb.Replace("’", "﹄"); //中式右引號
+            sb.Replace("』", "﹄");//內部右引號
+            sb.Replace("」", "﹂");//橫式右引號
+            sb.Replace("（", "︵");//橫式右括號
+            sb.Replace("）", "︶");//橫式左括號
+            sb.Replace("\uFE10", "\uFF0C");//逗號，
+            
 
 
-        //}
+            return sb.ToString();
+
+
+
+        }
 
         private string EscapeCharacterReplacement(string replacement)
         {
