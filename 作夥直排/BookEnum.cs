@@ -23,10 +23,14 @@ using System.Threading.Tasks;
             epunNeedPandocFor2to3,
             pandocConvertError
         }
+    /// <summary>
+    /// 載入書本時候回傳的狀態值。
+    /// </summary>
     public enum LoadResult
         {
             success,
-            fail
+            fail,
+            failPandocReturnError2to3
         }
     enum ExtensionResult
     {

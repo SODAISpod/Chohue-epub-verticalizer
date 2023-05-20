@@ -73,9 +73,29 @@ namespace ChoHoe.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap auto_stories_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("auto_stories_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_close_white_18dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_close_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap css_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("css_FILL0_wght200_GRAD200_opsz24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -90,11 +110,61 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap file_open_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("file_open_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("folder_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap font_download_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("font_download_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 R0lGODlhzQLLA+YAAPPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4eDg4N/f397e3t3d3dzc3Nvb29ra2tnZ2djY2NfX19bW1tXV1dTU1NPT09LS0tHR0dDQ0M/Pz87Ozs3NzczMzMvLy8rKysnJycjIyMfHx8bGxsXFxcTExMPDw8LCwsHBwcDAwL+/v76+vr29vby8vLu7u7q6urm5ubi4uLe3t7a2trW1tbS0tLOzs7KysrGxsbCwsK+vr66urq2traysrKurq6qqqqmpqaioqKenp6ampqWlpaSkpKOjo6KioqGhoaCgoJ+fn56enp2dnZycnJubm5qampmZmZOTk4uLi4ODg3t7e3Nzc////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
         internal static string GifReplacement {
             get {
                 return ResourceManager.GetString("GifReplacement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap image_not_supported_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("image_not_supported_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap info_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("info_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -114,6 +184,26 @@ namespace ChoHoe.Properties {
             get {
                 object obj = ResourceManager.GetObject("kiichoicon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap mop_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("mop_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap move_down_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("move_down_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -142,6 +232,26 @@ namespace ChoHoe.Properties {
         internal static System.Drawing.Bitmap Replacement_Image {
             get {
                 object obj = ResourceManager.GetObject("Replacement_Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_suggest_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("settings_suggest_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap translate_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("translate_FILL0_wght200_GRAD200_opsz24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

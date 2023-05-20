@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Octokit;
-
+using Microsoft.Toolkit.Uwp.Notifications;
 namespace ChoHoe
 {
     public class NewVersionCheck
@@ -30,13 +30,43 @@ namespace ChoHoe
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
 
-                result = MessageBox.Show(info, title, buttons,MessageBoxIcon.Information);
+                //ChoHoe.Properties.Resources.AboutBoxBanner
+                new ToastContentBuilder()
+                .AddArgument("action", "open")
+                .AddArgument("version", latest.TagName)
+                .AddText($"🍄 發現新的版本！{latest.TagName} 已發布！")
+                .AddText($"{latest.Name}；請問要前往下載嗎？")
 
-                if (result == System.Windows.Forms.DialogResult.Yes)//
-                {
-                    System.Diagnostics.Process.Start("https://kiicho.cc/Chohue?utm_source=Chehue&utm_medium=InApp&utm_campaign=UpdateNotification");
+                .AddHeroImage(new Uri("https://picsum.photos/360/202?image=883"))
+
+
+                .AddButton(new ToastButton()
+                    .SetContent("開啟")
+                    .AddArgument("action", "open")
+                    .SetBackgroundActivation())
+                 .AddButton(new ToastButton()
+                    .SetContent("關閉")
+                    .AddArgument("action", "close")
+                    .SetBackgroundActivation())
+                  .AddButton(new ToastButton()
+                    .SetContent("略過這個版本")
+                    .AddArgument("action", "ignoreThisOne")
+                    .SetBackgroundActivation())
+
+                .Show();
+
+
+
+
+
+
+                //result = MessageBox.Show(info, title, buttons,MessageBoxIcon.Information);
+
+                //if (result == System.Windows.Forms.DialogResult.Yes)//
+                //{
+                //    System.Diagnostics.Process.Start("http://kiicho.cc/Chohue?utm_source=Chehue&utm_medium=InApp&utm_campaign=UpdateNotification");
                     
-                }
+                //}
                 return true;
             }
             return false;
@@ -57,9 +87,23 @@ namespace ChoHoe
         {
             Version thisversion = Assembly.GetEntryAssembly().GetName().Version;
             Version newVersion =new Version(latestVersion);
-          
+            string ignore = ChoHoe.Properties.Settings.Default.IgnoreVersion;
+            
             if (thisversion.CompareTo(newVersion)<=0)
             {
+                if (ignore != "")
+                {
+                    Version ignoredVersion = new Version(ignore);
+                    if(ignoredVersion.CompareTo(newVersion)<0) 
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
                 return true;
             }
             else

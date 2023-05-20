@@ -274,5 +274,17 @@ namespace ChoHoe.Properties {
                 this["Batch_ReplaceTwPunctuation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string IgnoreVersion {
+            get {
+                return ((string)(this["IgnoreVersion"]));
+            }
+            set {
+                this["IgnoreVersion"] = value;
+            }
+        }
     }
 }

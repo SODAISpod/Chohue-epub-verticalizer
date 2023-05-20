@@ -2,3 +2,123 @@
 
 # IDE0010: 新增遺漏的案例
 dotnet_diagnostic.IDE0010.severity = none
+
+[*.cs]
+#### 命名樣式 ####
+
+# 命名規則
+
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
+dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+# 符號規格
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers = 
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.non_field_members.required_modifiers = 
+
+# 命名樣式
+
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.required_suffix = 
+dotnet_naming_style.begins_with_i.word_separator = 
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+csharp_using_directive_placement = outside_namespace:silent
+csharp_style_conditional_delegate_call = true:suggestion
+csharp_style_var_for_built_in_types = false:silent
+csharp_style_var_when_type_is_apparent = false:silent
+csharp_style_var_elsewhere = false:silent
+csharp_prefer_static_local_function = true:suggestion
+csharp_style_prefer_readonly_struct = true:suggestion
+csharp_style_prefer_readonly_struct_member = true:suggestion
+csharp_style_allow_embedded_statements_on_same_line_experimental = true:silent
+
+[*.vb]
+#### 命名樣式 ####
+
+# 命名規則
+
+dotnet_naming_rule.interface_should_be_以_i_開頭.severity = suggestion
+dotnet_naming_rule.interface_should_be_以_i_開頭.symbols = interface
+dotnet_naming_rule.interface_should_be_以_i_開頭.style = 以_i_開頭
+
+dotnet_naming_rule.型別_should_be_pascal_命名法的大小寫.severity = suggestion
+dotnet_naming_rule.型別_should_be_pascal_命名法的大小寫.symbols = 型別
+dotnet_naming_rule.型別_should_be_pascal_命名法的大小寫.style = pascal_命名法的大小寫
+
+dotnet_naming_rule.非欄位成員_should_be_pascal_命名法的大小寫.severity = suggestion
+dotnet_naming_rule.非欄位成員_should_be_pascal_命名法的大小寫.symbols = 非欄位成員
+dotnet_naming_rule.非欄位成員_should_be_pascal_命名法的大小寫.style = pascal_命名法的大小寫
+
+# 符號規格
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.型別.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.型別.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.型別.required_modifiers = 
+
+dotnet_naming_symbols.非欄位成員.applicable_kinds = property, event, method
+dotnet_naming_symbols.非欄位成員.applicable_accessibilities = public, friend, private, protected, protected_friend, private_protected
+dotnet_naming_symbols.非欄位成員.required_modifiers = 
+
+# 命名樣式
+
+dotnet_naming_style.以_i_開頭.required_prefix = I
+dotnet_naming_style.以_i_開頭.required_suffix = 
+dotnet_naming_style.以_i_開頭.word_separator = 
+dotnet_naming_style.以_i_開頭.capitalization = pascal_case
+
+dotnet_naming_style.pascal_命名法的大小寫.required_prefix = 
+dotnet_naming_style.pascal_命名法的大小寫.required_suffix = 
+dotnet_naming_style.pascal_命名法的大小寫.word_separator = 
+dotnet_naming_style.pascal_命名法的大小寫.capitalization = pascal_case
+
+dotnet_naming_style.pascal_命名法的大小寫.required_prefix = 
+dotnet_naming_style.pascal_命名法的大小寫.required_suffix = 
+dotnet_naming_style.pascal_命名法的大小寫.word_separator = 
+dotnet_naming_style.pascal_命名法的大小寫.capitalization = pascal_case
+
+[*.{cs,vb}]
+end_of_line = crlf
+dotnet_style_qualification_for_field = false:silent
+dotnet_style_qualification_for_property = false:silent
+dotnet_style_qualification_for_method = false:silent
+dotnet_style_qualification_for_event = false:silent
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+dotnet_code_quality_unused_parameters = all:suggestion
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
+dotnet_style_allow_multiple_blank_lines_experimental = true:silent
+dotnet_style_allow_statement_immediately_after_block_experimental = true:silent

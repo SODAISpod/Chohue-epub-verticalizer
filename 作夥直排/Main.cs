@@ -1,9 +1,13 @@
 ﻿using ChoHoe;
+using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Windows.Foundation.Collections;
 
 namespace ChoHoeBV
 {
@@ -39,7 +43,7 @@ namespace ChoHoeBV
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += new UnhandledExceptionEventHandler(ChExceptionHandler);
 
-
+            
             //btnConvert.Enabled = false;
             Logger.logger.Info("🦄//////////////////🦄 - App Started - 🦄///////////////////////🦄");
 
@@ -57,6 +61,35 @@ namespace ChoHoeBV
             _ = versionCheck.HasnewAsync();
 
 
+
+            // Listen to notification activation
+            ToastNotificationManagerCompat.OnActivated += toastArgs =>
+            {
+                // Obtain the arguments from the notification
+                ToastArguments args = ToastArguments.Parse(toastArgs.Argument);
+
+                // Obtain any user input (text boxes, menu selections) from the notification
+                //ValueSet userInput = toastArgs.UserInput;
+                switch (args["action"])
+                {
+                    case "open":
+                        System.Diagnostics.Process.Start("https://kiicho.cc/Chohue?utm_source=Chehue&utm_medium=InApp&utm_campaign=UpdateNotification");
+                        break;
+                    case "ignoreThisOne":
+                        ChoHoe.Properties.Settings.Default.IgnoreVersion = args["version"];
+                        ChoHoe.Properties.Settings.Default.Save();
+                        break;
+
+                }
+                
+                //MessageBox.Show(toastArgs.Argument);
+
+                // Need to dispatch to UI thread if performing UI operations
+                
+            };
+
+
+
         }
         static void ChExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
@@ -67,6 +100,13 @@ namespace ChoHoeBV
 
         private void SetInitialValue()
         {
+            //metroframwork無法在裡面塞image
+            //cbChineseBatch.Image = ChoHoe.Properties.Resources.translate_FILL0_wght200_GRAD200_opsz24;
+            //cbChineseBatch.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnConvertBatch.Image = Image.FromFile("C:\\Users\\\\Downloads\\translate_FILL0_wght200_GRAD200_opsz24.png");
+            //btnConvertBatch.ImageAlign = ContentAlignment.MiddleLeft;
+            
+
             //cbToChinese.Checked = ChoHoe.Properties.Settings.Default.ChineseConvert;
             cbChineseBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ChineseConvert;
             cbModifyPageDirectionBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_IfChangePageDirection;
@@ -81,16 +121,16 @@ namespace ChoHoeBV
             //ToTradictional = ChoHoe.Properties.Settings.Default.ToTriditional;
             cbRemoveCss.Checked = ChoHoe.Properties.Settings.Default.Batch_RemoveCss;
             cbReplaceTWpunctuation.Checked = ChoHoe.Properties.Settings.Default.Batch_ReplaceTwPunctuation;
-
+            tipOpenFolder.SetToolTip(btnOpenFolder, "開啟輸出資料夾");
+            tipOpenFolder.SetToolTip(btnDelete, "移除書本");
+            
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;
-            bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Load_RunWorker_Completed);
-            bw.DoWork += new DoWorkEventHandler(Load_Backgroundworker_DoWork);
 
 
 
-            bwConvert.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Convert_RunWorker_Completed);
-            bwConvert.DoWork += new DoWorkEventHandler(Convert_Backgroundworker_DoWork);
+
+
             bwConvert.WorkerSupportsCancellation = true;
 
             bwConvertBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Convert_Batch_RunWorker_Completed);
@@ -115,22 +155,6 @@ namespace ChoHoeBV
 
         }
 
-        private void btnToTraditionValue_Click(object sender, EventArgs e)
-        {
-
-            //if (btnToTraditionValue.Text == ">")
-            //{
-            //    btnToTraditionValue.Text = "<";
-
-            //    ChoHoe.Properties.Settings.Default.ToTriditional = ToTradictional = true;
-            //}
-            //else
-            //{
-            //    btnToTraditionValue.Text = ">";
-            //    ChoHoe.Properties.Settings.Default.ToTriditional = ToTradictional = false;
-            //}
-            //ChoHoe.Properties.Settings.Default.Save();
-        }
 
 
 
@@ -197,23 +221,7 @@ namespace ChoHoeBV
         {
 
         }
-        private void btnConvert_Click(object sender, EventArgs e)
-        {
 
-            //btnConvert.Enabled = false;
-            //runningUi("轉檔中...", true);
-
-
-            ////Logger.logger.Trace($"{}");
-
-            //Logger.logger.Info("開始轉檔");
-
-            //btnConvert.Enabled = false;
-
-            //bwConvert.RunWorkerAsync(argument: cbModifyPageDirection.Checked);
-
-
-        }
 
 
         private void ClearDirectory(string path)
@@ -310,84 +318,16 @@ namespace ChoHoeBV
             bwConvertBatch.RunWorkerAsync(argument: variables);
         }
 
-        private void rdoPageRTL_CheckedChanged(object sender, EventArgs e)
-        {
-            //if (rdoPageRTL.Checked)
-            //{
-            //    ChoHoe.Properties.Settings.Default.PageDirection = rdoPageRTL.Checked;
-            //    ChoHoe.Properties.Settings.Default.Save();
-            //}
-        }
-
-        private void rdoPageLTR_CheckedChanged(object sender, EventArgs e)
-        {
-            //if (rdoPageLTR.Checked)
-            //{
-            //    ChoHoe.Properties.Settings.Default.PageDirection = rdoPageLTR.Checked;
-            //    ChoHoe.Properties.Settings.Default.Save();
-            //}
-        }
-
-        private void cbToChinese_CheckChanged(object sender, EventArgs e)
-        {
-            //ChoHoe.Properties.Settings.Default.ChineseConvert = cbToChinese.Checked;
-            //ChoHoe.Properties.Settings.Default.Save();
-        }
+       
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             ChoHoe.Properties.Settings.Default.Save();
         }
 
-        private void cbModifyPageDirection_CheckedChanged(object sender, EventArgs e)
-        {
-            //ChoHoe.Properties.Settings.Default.IfChangePageDirection = cbModifyPageDirection.Checked;
-            //ChoHoe.Properties.Settings.Default.Save();
-        }
-
-        private void cbReplacePicture_CheckedChanged(object sender, EventArgs e)
-        {
-            //ChoHoe.Properties.Settings.Default.ReplaceImg = cbReplacePicture.Checked;
-            //ChoHoe.Properties.Settings.Default.Save();
-        }
-
-        private void cbConvertMobi_CheckedChanged(object sender, EventArgs e)
-        {
-        //    ChoHoe.Properties.Settings.Default.ConvertMobi = cbConvertMobi.Checked;
-        //    ChoHoe.Properties.Settings.Default.Save();
-        }
-
-        private void cbEmbdedFont_CheckedChanged(object sender, EventArgs e)
-        {
-            //ChoHoe.Properties.Settings.Default.EmbedFont = cbEmbdedFont.Checked;
-            //ChoHoe.Properties.Settings.Default.Save();
-        }
 
 
-
-        private void Load_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            //string path = (string)e.Argument;
-            //if (abook.Load(path) != LoadResult.success)
-            //{
-            //}
-        }
-        private void Load_RunWorker_Completed(object sender, RunWorkerCompletedEventArgs e)
-        {
-            //txtAuthor.Text = abook.GetAuthor();
-            //txtTittle.Text = abook.GetTitle();
-            //btnConvert.Enabled = true;
-            //int index = ChoHoe.Properties.Settings.Default.DebugBookIndex;
-            ////  string debugstring = $"偵錯用書本 編號 #{index}";
-            //ChoHoe.Properties.Settings.Default.DebugBookIndex = ++index;
-            //ChoHoe.Properties.Settings.Default.Save();
-
-            //// Title_Imported_TextBox.Text = debugstring;
-
-            //runningUi("讀取完畢。", false);
-            //InprogressBar.MarqueeAnimationSpeed = 0;
-            //InprogressBar.Value = 0;
-        }
+        
 
         private void Load_Batch_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -402,28 +342,36 @@ namespace ChoHoeBV
 
 
                 }));
-                if (abooks.Load(name) == LoadResult.success)
+
+                switch (abooks.Load(name))
                 {
-                    string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
+                    case LoadResult.success:
+                        string[] row1 = new string[] { abooks.GetTitle(), abooks.GetAuthor() };
 
-                    rows.Add(row1);
+                        rows.Add(row1);
 
-                    //batchBookList.Clear();
-                    batchBookList.Add(abooks);
-                    this.Invoke(new MethodInvoker(delegate {
-                        runningUi($"成功", true);
+                        //batchBookList.Clear();
+                        batchBookList.Add(abooks);
+                        this.Invoke(new MethodInvoker(delegate {
+                            runningUi($"成功{System.Environment.NewLine}{Logger.GetErrorMessage()}", true);
 
 
-                    }));
+                        }));
+                        break;
+                    case LoadResult.fail:
+                        this.Invoke(new MethodInvoker(delegate {
+                            runningUi($"失敗:{System.Environment.NewLine}{Logger.GetErrorMessage()}", true);
+
+
+                        }));
+                        break;
+                    case LoadResult.failPandocReturnError2to3:
+                        this.Invoke(new MethodInvoker(delegate {
+                            runningUi($"Pandoc在轉換EPUB版本2至3時發生錯誤", true);}));
+                        break;
+
                 }
-                else
-                {
-                    this.Invoke(new MethodInvoker(delegate {
-                        runningUi($"失敗", true);
 
-
-                    }));
-                }
 
             }
         }
@@ -438,34 +386,19 @@ namespace ChoHoeBV
             btnConvertBatch.Enabled = true;
             BatchGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            new ToastContentBuilder()
+           .AddArgument("action", "viewConversation")
+           .AddArgument("conversationId", "9813")
+           .AddText("載入完成！")
+           .AddText("隨時可以開始轉檔！")
+
+           .Show();
+
         }
 
-        private void Convert_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            //bool Modifypage = (bool)e.Argument;
+    
 
-            //if (Modifypage)
-            //{
-            //    abook.Convert(cbToChinese.Checked, ToTradictional, rdoPageRTL.Checked, cbConvertMobi.Checked, cbEmbdedFont.Checked, cbReplacePicture.Checked, txtAuthor.Text, txtTittle.Text);
-            //}
-            //else
-            //{
-            //    abook.Convert(cbToChinese.Checked, ToTradictional, true, cbConvertMobi.Checked, cbEmbdedFont.Checked, cbReplacePicture.Checked, txtAuthor.Text, txtTittle.Text);
-            //}
-            //e.Cancel = true;
-            //return;
-        }
 
-        private void Convert_RunWorker_Completed(object sender, RunWorkerCompletedEventArgs e)
-        {
-            //txtAuthor.Text = "";
-            //txtTittle.Text = "";
-            //btnConvert.Enabled = false;
-
-            //rows.Clear();
-            //runningUi("轉檔完畢。", false);
-            //ClearDirectory("temp");
-        }
 
 
 
@@ -508,7 +441,14 @@ namespace ChoHoeBV
 
             runningUi("轉檔完畢。", false);
             ClearDirectory("temp");
+            BatchGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            new ToastContentBuilder()
+                   .AddArgument("action", "viewConversation")
+                   .AddArgument("conversationId", "9813")
+                   .AddText("轉檔完成！")
+                   
+                   .Show();
 
         }
 
@@ -754,6 +694,26 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.Batch_ReplaceTwPunctuation
                                     = cbReplaceTWpunctuation.Checked;
             ChoHoe.Properties.Settings.Default.Save();
+        }
+
+        private void btnOpenFolder_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists("output"))
+            {
+                Process.Start("output");
+
+            }
+            else
+            {
+
+                new ToastContentBuilder()
+                    .AddArgument("action", "viewConversation")
+                    .AddArgument("conversationId", "9813")
+                    .AddText("輸出資料夾還沒建立！")
+                    .AddText("試著進行一次轉檔看看！")
+                    .Show();
+
+            }
         }
     }
 }

@@ -1015,20 +1015,33 @@ namespace ChoHoeBV
                     //argum[0]=arguments for processes.
                     //argum[1]=reloading filename
 
+                    StringBuilder output = new StringBuilder();
 
                     System.Diagnostics.ProcessStartInfo PINFO = new System.Diagnostics.ProcessStartInfo();
                     PINFO.Arguments = argum[0];
                     p.StartInfo = PINFO;
                     p.StartInfo.FileName = ExtensionPath;
                     p.StartInfo.UseShellExecute = false;
-                    p.StartInfo.RedirectStandardOutput = false;
-                    p.StartInfo.CreateNoWindow = false;
+                    p.StartInfo.RedirectStandardOutput = true;
+                    p.StartInfo.CreateNoWindow = true;
+                    p.StartInfo.StandardOutputEncoding = System.Text.Encoding.UTF8;
                     p.Start();
+                    output.AppendLine($"Process method: {method.ToString()}");
+                    while (!p.StandardOutput.EndOfStream)
+                    {
+                        
+                         output.AppendLine(p.StandardOutput.ReadLine());
+                        
+                    }
+
                     p.WaitForExit();
                     int result = p.ExitCode;
+
+                    output.AppendLine(System.Environment.NewLine);
+                    Logger.logger.Debug(output.ToString());
                     p.Close();
 
-
+                    Logger.ProcessErrorMessage(output.ToString());
                     switch (method)
                     {
                         case ExtensionMethod.calibreTxtToEpub:
@@ -1052,7 +1065,10 @@ namespace ChoHoeBV
                             }
                             else
                             {
+                                
+                                
                                 return ExtensionResult.failWithPandocErrors;
+
                             }
 
                             //3   PandocFailOnWarningError

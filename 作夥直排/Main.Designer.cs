@@ -57,12 +57,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbReplaceTWpunctuation = new MetroFramework.Controls.MetroCheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOpenFolder = new MetroFramework.Controls.MetroButton();
+            this.tipOpenFolder = new MetroFramework.Components.MetroToolTip();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunningLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // cbRemoveCss
@@ -222,6 +238,8 @@
             // 
             // btnSetting
             // 
+            this.btnSetting.BackColor = System.Drawing.Color.White;
+            this.btnSetting.BackgroundImage = global::ChoHoe.Properties.Resources.settings_suggest_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.btnSetting, "btnSetting");
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.UseSelectable = true;
@@ -229,8 +247,8 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAbout.BackgroundImage = global::ChoHoe.Properties.Resources.outline_info_black_36dp;
+            this.btnAbout.BackColor = System.Drawing.Color.White;
+            this.btnAbout.BackgroundImage = global::ChoHoe.Properties.Resources.info_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.btnAbout, "btnAbout");
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.UseSelectable = true;
@@ -269,11 +287,83 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // btnOpenFolder
+            // 
+            this.btnOpenFolder.BackgroundImage = global::ChoHoe.Properties.Resources.folder_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.btnOpenFolder, "btnOpenFolder");
+            this.btnOpenFolder.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnOpenFolder.Name = "btnOpenFolder";
+            this.btnOpenFolder.UseSelectable = true;
+            this.btnOpenFolder.Click += new System.EventHandler(this.btnOpenFolder_Click);
+            // 
+            // tipOpenFolder
+            // 
+            this.tipOpenFolder.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tipOpenFolder.StyleManager = null;
+            this.tipOpenFolder.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ChoHoe.Properties.Resources.translate_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ChoHoe.Properties.Resources.auto_stories_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ChoHoe.Properties.Resources.move_down_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ChoHoe.Properties.Resources.image_not_supported_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::ChoHoe.Properties.Resources.font_download_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::ChoHoe.Properties.Resources.css_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::ChoHoe.Properties.Resources.mop_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnConvertBatch;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnOpenFolder);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RunningLogo);
             this.Controls.Add(this.label1);
@@ -308,6 +398,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RunningLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +438,15 @@
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroCheckBox cbReplaceTWpunctuation;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroButton btnOpenFolder;
+        private MetroFramework.Components.MetroToolTip tipOpenFolder;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

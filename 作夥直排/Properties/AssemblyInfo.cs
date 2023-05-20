@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 變更這些屬性的值即可修改組件的相關
 // 資訊。
 [assembly: AssemblyTitle("做伙直排")]
-[assembly: AssemblyDescription("做伙直排提供將書本直排還有簡體轉換等的多項服務。")]
+[assembly: AssemblyDescription("這是一款電子書直排軟體，可以在直排轉換之後匯出epub、mobi。還可以針對不同的需求去除插圖或是移除css style之類的資料，還能快速地在正體簡體之間切換。")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("做伙直排")]
@@ -34,3 +34,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: AssemblyInformationalVersion("0.0.0.0")]
