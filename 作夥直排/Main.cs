@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using Windows.Foundation.Collections;
 
@@ -126,7 +127,8 @@ namespace ChoHoeBV
             
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;
-
+            lbVersion.Text= $"{Assembly.GetEntryAssembly().GetName().Version.ToString()}";
+            
 
 
 

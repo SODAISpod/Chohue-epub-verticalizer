@@ -66,6 +66,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lbVersion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -351,11 +352,17 @@
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             // 
+            // lbVersion
+            // 
+            resources.ApplyResources(this.lbVersion, "lbVersion");
+            this.lbVersion.Name = "lbVersion";
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnConvertBatch;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbVersion);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -447,6 +454,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lbVersion;
     }
 }
 
