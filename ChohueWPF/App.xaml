@@ -1,14 +1,14 @@
-﻿<Application x:Class="ChoHoe.App"
+﻿<Application x:Class="ChohueWPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ChoHoe"
-             StartupUri="MainWindow.xaml"
-             xmlns:ui="http://schemas.modernwpf.com/2019">
+             xmlns:local="clr-namespace:ChohueWPF"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ui:ThemeResources />
-                <ui:XamlControlsResources />
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{FA64D8E8-A823-45FE-A3E1-A15C5E36B3C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChehueWPF", "ChehueWPF\ChehueWPF.csproj", "{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChohueWPF", "ChohueWPF\ChohueWPF.csproj", "{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,34 +55,23 @@ Global
 		{FA64D8E8-A823-45FE-A3E1-A15C5E36B3C0}.Release|Any CPU.ActiveCfg = Release
 		{FA64D8E8-A823-45FE-A3E1-A15C5E36B3C0}.Release|x64.ActiveCfg = Release
 		{FA64D8E8-A823-45FE-A3E1-A15C5E36B3C0}.Release|x86.ActiveCfg = Release
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Debug|x64.Build.0 = Debug|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Debug|x86.Build.0 = Debug|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Release|x64.ActiveCfg = Release|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Release|x64.Build.0 = Release|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Release|x86.ActiveCfg = Release|Any CPU
-		{BEFD9BF1-B2E5-4474-A58F-8B6AD8C104F9}.Release|x86.Build.0 = Release|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Debug|x64.Build.0 = Debug|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Debug|x86.Build.0 = Debug|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Release|x64.ActiveCfg = Release|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Release|x64.Build.0 = Release|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Release|x86.ActiveCfg = Release|Any CPU
+		{423EA3E0-56FA-4500-BE10-BDB3EDB838D9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C09995B-4276-4A43-9E8A-43488C432331}
-	EndGlobalSection
-	GlobalSection(AutomaticVersions) = postSolution
-		UpdateAssemblyVersion.Debug|Any CPU = True
-		UpdateAssemblyFileVersion.Debug|Any CPU = True
-		UpdateAssemblyInfoVersion.Debug|Any CPU = True
-		ShouldCreateLogs.Debug|Any CPU = True
-		AssemblyVersionSettings.Debug|Any CPU = None.None.None.None
-		AssemblyFileVersionSettings.Debug|Any CPU = None.None.None.None
-		AssemblyInfoVersionSettings.Debug|Any CPU = None.None.None.None
-		UpdatePackageVersion.Debug|Any CPU = False
-		AssemblyInfoVersionType.Debug|Any CPU = SettingsVersion
-		InheritWinAppVersionFrom.Debug|Any CPU = None
 	EndGlobalSection
 EndGlobal
