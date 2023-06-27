@@ -30,41 +30,54 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mobi_manual = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.OutputMobiUsingKindlegen = new System.Windows.Forms.RadioButton();
             this.OutputMobiUsingCalibre = new System.Windows.Forms.RadioButton();
             this.KindlegenPathValidResult = new System.Windows.Forms.Label();
-            this.linkLBKindlegenPathCheck = new System.Windows.Forms.LinkLabel();
             this.LinkLBKinflegenPath = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.CalibrePathValidResult = new System.Windows.Forms.Label();
-            this.linkLBCalibrePathCheck = new System.Windows.Forms.LinkLabel();
             this.LinkLBCalibrePath = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.PandocPathValidResult = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linklbPacdoc = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
-            this.epub_manual = new System.Windows.Forms.LinkLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.mobi_manual);
+            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.metroButton4);
+            this.groupBox1.Controls.Add(this.metroButton2);
+            this.groupBox1.Controls.Add(this.metroButton1);
             this.groupBox1.Controls.Add(this.OutputMobiUsingKindlegen);
             this.groupBox1.Controls.Add(this.OutputMobiUsingCalibre);
             this.groupBox1.Controls.Add(this.KindlegenPathValidResult);
-            this.groupBox1.Controls.Add(this.linkLBKindlegenPathCheck);
             this.groupBox1.Controls.Add(this.LinkLBKinflegenPath);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.CalibrePathValidResult);
-            this.groupBox1.Controls.Add(this.linkLBCalibrePathCheck);
             this.groupBox1.Controls.Add(this.LinkLBCalibrePath);
             this.groupBox1.Controls.Add(this.label1);
             resources.ApplyResources(this.groupBox1, "groupBox1");
@@ -72,12 +85,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // mobi_manual
+            // pictureBox1
             // 
-            resources.ApplyResources(this.mobi_manual, "mobi_manual");
-            this.mobi_manual.Name = "mobi_manual";
-            this.mobi_manual.TabStop = true;
-            this.mobi_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Mobi_manual_LinkClicked);
+            this.pictureBox1.Image = global::ChoHoe.Properties.Resources.help_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // metroButton4
+            // 
+            resources.ApplyResources(this.metroButton4, "metroButton4");
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
+            // 
+            // metroButton2
+            // 
+            resources.ApplyResources(this.metroButton2, "metroButton2");
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton1
+            // 
+            resources.ApplyResources(this.metroButton1, "metroButton1");
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // OutputMobiUsingKindlegen
             // 
@@ -101,13 +135,6 @@
             this.KindlegenPathValidResult.ForeColor = System.Drawing.Color.Red;
             this.KindlegenPathValidResult.Name = "KindlegenPathValidResult";
             // 
-            // linkLBKindlegenPathCheck
-            // 
-            resources.ApplyResources(this.linkLBKindlegenPathCheck, "linkLBKindlegenPathCheck");
-            this.linkLBKindlegenPathCheck.Name = "linkLBKindlegenPathCheck";
-            this.linkLBKindlegenPathCheck.TabStop = true;
-            this.linkLBKindlegenPathCheck.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
-            // 
             // LinkLBKinflegenPath
             // 
             resources.ApplyResources(this.LinkLBKinflegenPath, "LinkLBKinflegenPath");
@@ -125,13 +152,6 @@
             resources.ApplyResources(this.CalibrePathValidResult, "CalibrePathValidResult");
             this.CalibrePathValidResult.ForeColor = System.Drawing.Color.Red;
             this.CalibrePathValidResult.Name = "CalibrePathValidResult";
-            // 
-            // linkLBCalibrePathCheck
-            // 
-            resources.ApplyResources(this.linkLBCalibrePathCheck, "linkLBCalibrePathCheck");
-            this.linkLBCalibrePathCheck.Name = "linkLBCalibrePathCheck";
-            this.linkLBCalibrePathCheck.TabStop = true;
-            this.linkLBCalibrePathCheck.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLBCalibrePathCheck_LinkClicked);
             // 
             // LinkLBCalibrePath
             // 
@@ -160,27 +180,50 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.epub_manual);
+            this.groupBox3.Controls.Add(this.pictureBox2);
+            this.groupBox3.Controls.Add(this.pictureBox8);
+            this.groupBox3.Controls.Add(this.metroButton5);
+            this.groupBox3.Controls.Add(this.metroButton3);
             this.groupBox3.Controls.Add(this.PandocPathValidResult);
-            this.groupBox3.Controls.Add(this.linkLabel2);
             this.groupBox3.Controls.Add(this.linklbPacdoc);
             this.groupBox3.Controls.Add(this.label3);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::ChoHoe.Properties.Resources.help_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
+            // metroButton5
+            // 
+            resources.ApplyResources(this.metroButton5, "metroButton5");
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            // 
+            // metroButton3
+            // 
+            resources.ApplyResources(this.metroButton3, "metroButton3");
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
             // PandocPathValidResult
             // 
             resources.ApplyResources(this.PandocPathValidResult, "PandocPathValidResult");
             this.PandocPathValidResult.ForeColor = System.Drawing.Color.Red;
             this.PandocPathValidResult.Name = "PandocPathValidResult";
-            // 
-            // linkLabel2
-            // 
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linklbPacdoc
             // 
@@ -194,12 +237,19 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // epub_manual
+            // pictureBox3
             // 
-            resources.ApplyResources(this.epub_manual, "epub_manual");
-            this.epub_manual.Name = "epub_manual";
-            this.epub_manual.TabStop = true;
-            this.epub_manual.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Epub_manual_LinkClicked);
+            this.pictureBox3.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
             // 
             // Setting
             // 
@@ -209,12 +259,18 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Setting";
+            this.Resizable = false;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,7 +278,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel linkLBCalibrePathCheck;
         private System.Windows.Forms.LinkLabel LinkLBCalibrePath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label CalibrePathValidResult;
@@ -230,16 +285,22 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label PandocPathValidResult;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linklbPacdoc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label KindlegenPathValidResult;
-        private System.Windows.Forms.LinkLabel linkLBKindlegenPathCheck;
         private System.Windows.Forms.LinkLabel LinkLBKinflegenPath;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton OutputMobiUsingKindlegen;
         private System.Windows.Forms.RadioButton OutputMobiUsingCalibre;
-        private System.Windows.Forms.LinkLabel mobi_manual;
-        private System.Windows.Forms.LinkLabel epub_manual;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton metroButton5;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

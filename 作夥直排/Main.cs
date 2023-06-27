@@ -91,6 +91,9 @@ namespace ChoHoeBV
 
 
 
+
+
+
         }
         static void ChExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
@@ -146,8 +149,11 @@ namespace ChoHoeBV
             bwBatch.DoWork += new DoWorkEventHandler(Load_Batch_Backgroundworker_DoWork);
             bwBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Load_Batch_RunWorker_Completed);
 
-
-
+            // Pluging config
+            ChoHoe.Properties.Settings.Default.PandocPath = "Resources";// PandocPath.SelectedPath;
+            ChoHoe.Properties.Settings.Default.Save();
+            ChoHoe.Properties.Settings.Default.KindlegenPath = "Resources";// KinglegenPath.SelectedPath;
+            ChoHoe.Properties.Settings.Default.Save();
 
 
         }

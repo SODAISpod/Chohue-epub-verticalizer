@@ -151,6 +151,16 @@ namespace ChoHoe.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap help_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("help_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap image_not_supported_FILL0_wght200_GRAD200_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("image_not_supported_FILL0_wght200_GRAD200_opsz24", resourceCulture);
@@ -188,6 +198,16 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] kindlegen {
+            get {
+                object obj = ResourceManager.GetObject("kindlegen", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
         internal static System.Drawing.Bitmap mop_FILL0_wght200_GRAD200_opsz24 {
@@ -218,6 +238,16 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] pandoc {
+            get {
+                object obj = ResourceManager.GetObject("pandoc", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 iVBORw0KGgoAAAANSUhEUgAAAs0AAAPLCAIAAAArAyN/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAMrGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8i [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
         internal static string PngReplacement {
@@ -232,6 +262,16 @@ namespace ChoHoe.Properties {
         internal static System.Drawing.Bitmap Replacement_Image {
             get {
                 object obj = ResourceManager.GetObject("Replacement_Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap search_check_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("search_check_FILL0_wght200_GRAD200_opsz24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -140,7 +140,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ChineseConverter">
-      <HintPath>..\..\..\Downloads\Release (2)\Release\ChineseConverter.dll</HintPath>
+      <HintPath>..\packages\ChineseConverter.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>D:\development\DotNetZipLib-DevKit-v1.9.zip\Ionic.Zip.dll</HintPath>
@@ -200,6 +200,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
     </Compile>
+    <None Include="Resources\search_check_FILL0_wght200_GRAD200_opsz24.png" />
+    <None Include="Resources\help_FILL0_wght200_GRAD200_opsz24.png" />
+    <None Include="Resources\kindlegen.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CustomToolNamespace>plugins</CustomToolNamespace>
+    </None>
+    <None Include="Resources\pandoc.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CustomToolNamespace>plugins</CustomToolNamespace>
+    </None>
     <None Include="Resources\settings_suggest_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\file_open_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\mop_FILL0_wght200_GRAD200_opsz24.png" />

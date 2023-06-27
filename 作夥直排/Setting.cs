@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ChoHoe
 {
-    public partial class Setting : Form
+    public partial class Setting : MetroFramework.Forms.MetroForm
     {
         public Setting()
         {
@@ -91,7 +91,7 @@ namespace ChoHoe
             if (KinglegenPath.ShowDialog() == DialogResult.OK)
             {
                 LinkLBKinflegenPath.Text = KinglegenPath.SelectedPath;
-                ChoHoe.Properties.Settings.Default.KindlegenPath = KinglegenPath.SelectedPath;
+                ChoHoe.Properties.Settings.Default.KindlegenPath =  KinglegenPath.SelectedPath;
                 ChoHoe.Properties.Settings.Default.Save();
                 CheckKindlegenPathIsValid();
 
@@ -152,7 +152,7 @@ namespace ChoHoe
             if (PandocPath.ShowDialog() == DialogResult.OK)
             {
                 linklbPacdoc.Text = PandocPath.SelectedPath;
-                ChoHoe.Properties.Settings.Default.PandocPath = PandocPath.SelectedPath;
+                ChoHoe.Properties.Settings.Default.PandocPath =  PandocPath.SelectedPath;
                 ChoHoe.Properties.Settings.Default.Save();
                 CheckPandocPathIsValid();
 
@@ -165,6 +165,31 @@ namespace ChoHoe
         }
 
         private void Epub_manual_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/sidebar/manual.php?utm_source=Chehue&utm_medium=InApp&utm_campaign=InSetting_Plugin_epub&utm_content=manual_install_plugin#v-pills-install");
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            CheckCalibrePathIsValid();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            CheckKindlegenPathIsValid();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            CheckPandocPathIsValid();
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/sidebar/manual.php?utm_source=Chehue&utm_medium=InApp&utm_campaign=InSetting_Plugin_mobi&utm_content=manual_install_plugin#v-pills-install");
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/sidebar/manual.php?utm_source=Chehue&utm_medium=InApp&utm_campaign=InSetting_Plugin_epub&utm_content=manual_install_plugin#v-pills-install");
         }
