@@ -13,7 +13,8 @@
 ## 功能介紹
 * ### 圖片替換
     * 把在公共場合不方便打開的圖片給替換掉，不管什麼樣書都可以盡情的閱讀。
-    * 
+    * ![replacement](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/894a77ef-5ab6-4d06-8947-57f0ec21c4de)
+
 * ### 指定翻頁方向
     * 懶人翻頁的利器
 * ### 正簡體轉換
