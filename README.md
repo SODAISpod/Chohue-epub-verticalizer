@@ -1,9 +1,13 @@
+
+[For English](#chohue-epub-verticalizer)
 # 做伙直排 Chohue Epub Verticalizer
 
-![image](https://github.com/SODAIS69/Chohue-EpubVerticalizationer/blob/master/githubbanner.png?raw=true)
+
+![工作區域 1](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/996ce05a-ab4c-4839-b783-e94d8823566f)
 
 ## 做伙直排是一款電子書直排程式，可以簡易的輸出 EPUB 或是 MOBI 的格式。
-![promo](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/9c09c922-0171-4d80-8ab1-bf68492e8e0e)
+
+![promo](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/806f05b3-a94a-4e2a-8a3b-e18251506d1e)
 
  
 ## 這裡是官方網站
@@ -28,6 +32,6 @@
     * 把標點符號替換成台灣慣用的標點符號
     * ![替換台式標點](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/36b010f4-c5e4-494b-a8c1-14a03485dc35)
 
-
-    
-    🦌💨💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦
+# Chohue Epub Verticalizer  
+Chohue Epub Veritcalizer is a tool helping users turning epubs from western horizontal written book into traditional Chinese/Japanese vertical style. You can also changing the direction of paging, replacing embarrassment picture in book, clearing original CSS style, convert to mobi and also eupb 2.0 to 3.0 (some of functions rely on external plug-in’s support).   
+🦌💨💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦💦
