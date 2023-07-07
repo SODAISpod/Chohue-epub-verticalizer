@@ -87,26 +87,29 @@
             resources.ApplyResources(this.cbRemoveCss, "cbRemoveCss");
             this.cbRemoveCss.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbRemoveCss.Name = "cbRemoveCss";
+            this.tipOpenFolder.SetToolTip(this.cbRemoveCss, resources.GetString("cbRemoveCss.ToolTip"));
             this.cbRemoveCss.UseSelectable = true;
             this.cbRemoveCss.CheckedChanged += new System.EventHandler(this.cbRemoveCss_CheckedChanged);
             // 
             // btnDelete
             // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.BackColor = System.Drawing.Color.Tomato;
             this.btnDelete.BackgroundImage = global::ChoHoe.Properties.Resources.baseline_close_white_18dp;
-            resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.Name = "btnDelete";
+            this.tipOpenFolder.SetToolTip(this.btnDelete, resources.GetString("btnDelete.ToolTip"));
             this.btnDelete.UseSelectable = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // BatchGridView
             // 
+            resources.ApplyResources(this.BatchGridView, "BatchGridView");
             this.BatchGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BatchGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BatchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.BatchGridView, "BatchGridView");
             this.BatchGridView.Name = "BatchGridView";
             this.BatchGridView.RowTemplate.Height = 24;
+            this.tipOpenFolder.SetToolTip(this.BatchGridView, resources.GetString("BatchGridView.ToolTip"));
             this.BatchGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.BatchGridView_CellValueChanged);
             this.BatchGridView.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DataGridView1_RowsRemoved);
             // 
@@ -115,6 +118,7 @@
             resources.ApplyResources(this.cbReplacePictureBatch, "cbReplacePictureBatch");
             this.cbReplacePictureBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbReplacePictureBatch.Name = "cbReplacePictureBatch";
+            this.tipOpenFolder.SetToolTip(this.cbReplacePictureBatch, resources.GetString("cbReplacePictureBatch.ToolTip"));
             this.cbReplacePictureBatch.UseSelectable = true;
             this.cbReplacePictureBatch.CheckedChanged += new System.EventHandler(this.cbReplacePictureBatch_CheckedChanged);
             // 
@@ -123,6 +127,7 @@
             resources.ApplyResources(this.cbEmbdedFontBatch, "cbEmbdedFontBatch");
             this.cbEmbdedFontBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbEmbdedFontBatch.Name = "cbEmbdedFontBatch";
+            this.tipOpenFolder.SetToolTip(this.cbEmbdedFontBatch, resources.GetString("cbEmbdedFontBatch.ToolTip"));
             this.cbEmbdedFontBatch.UseSelectable = true;
             this.cbEmbdedFontBatch.CheckedChanged += new System.EventHandler(this.cbEmbdedFontBatch_CheckedChanged);
             // 
@@ -131,6 +136,7 @@
             resources.ApplyResources(this.btnConvertBatch, "btnConvertBatch");
             this.btnConvertBatch.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnConvertBatch.Name = "btnConvertBatch";
+            this.tipOpenFolder.SetToolTip(this.btnConvertBatch, resources.GetString("btnConvertBatch.ToolTip"));
             this.btnConvertBatch.UseSelectable = true;
             this.btnConvertBatch.Click += new System.EventHandler(this.btnConvertBatch_Click);
             // 
@@ -139,23 +145,26 @@
             resources.ApplyResources(this.cbModifyPageDirectionBatch, "cbModifyPageDirectionBatch");
             this.cbModifyPageDirectionBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbModifyPageDirectionBatch.Name = "cbModifyPageDirectionBatch";
+            this.tipOpenFolder.SetToolTip(this.cbModifyPageDirectionBatch, resources.GetString("cbModifyPageDirectionBatch.ToolTip"));
             this.cbModifyPageDirectionBatch.UseSelectable = true;
             this.cbModifyPageDirectionBatch.CheckedChanged += new System.EventHandler(this.cbModifyPageDirectionBatch_CheckedChanged);
             // 
             // groupBox5
             // 
+            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox5.Controls.Add(this.rdoPageRTLBatch);
             this.groupBox5.Controls.Add(this.rdoPageLTRBatch);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.groupBox5, resources.GetString("groupBox5.ToolTip"));
             // 
             // rdoPageRTLBatch
             // 
             resources.ApplyResources(this.rdoPageRTLBatch, "rdoPageRTLBatch");
             this.rdoPageRTLBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.rdoPageRTLBatch.Name = "rdoPageRTLBatch";
+            this.tipOpenFolder.SetToolTip(this.rdoPageRTLBatch, resources.GetString("rdoPageRTLBatch.ToolTip"));
             this.rdoPageRTLBatch.UseSelectable = true;
             this.rdoPageRTLBatch.CheckedChanged += new System.EventHandler(this.rdoPageRTLBatch_CheckedChanged);
             // 
@@ -164,6 +173,7 @@
             resources.ApplyResources(this.rdoPageLTRBatch, "rdoPageLTRBatch");
             this.rdoPageLTRBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.rdoPageLTRBatch.Name = "rdoPageLTRBatch";
+            this.tipOpenFolder.SetToolTip(this.rdoPageLTRBatch, resources.GetString("rdoPageLTRBatch.ToolTip"));
             this.rdoPageLTRBatch.UseSelectable = true;
             this.rdoPageLTRBatch.CheckedChanged += new System.EventHandler(this.rdoPageLTRBatch_CheckedChanged);
             // 
@@ -172,6 +182,7 @@
             resources.ApplyResources(this.cbConvertMobiBatch, "cbConvertMobiBatch");
             this.cbConvertMobiBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbConvertMobiBatch.Name = "cbConvertMobiBatch";
+            this.tipOpenFolder.SetToolTip(this.cbConvertMobiBatch, resources.GetString("cbConvertMobiBatch.ToolTip"));
             this.cbConvertMobiBatch.UseSelectable = true;
             this.cbConvertMobiBatch.CheckedChanged += new System.EventHandler(this.cbConvertMobiBatch_CheckedChanged);
             // 
@@ -180,30 +191,34 @@
             resources.ApplyResources(this.cbChineseBatch, "cbChineseBatch");
             this.cbChineseBatch.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbChineseBatch.Name = "cbChineseBatch";
+            this.tipOpenFolder.SetToolTip(this.cbChineseBatch, resources.GetString("cbChineseBatch.ToolTip"));
             this.cbChineseBatch.UseSelectable = true;
             this.cbChineseBatch.CheckedChanged += new System.EventHandler(this.cbChineseBatch_CheckedChanged);
             // 
             // GroupBox2
             // 
+            resources.ApplyResources(this.GroupBox2, "GroupBox2");
             this.GroupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GroupBox2.Controls.Add(this.ST_Label_Batch);
             this.GroupBox2.Controls.Add(this.btnToTraditionValueBatch);
             this.GroupBox2.Controls.Add(this.CT_Label_Batch);
-            resources.ApplyResources(this.GroupBox2, "GroupBox2");
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.GroupBox2, resources.GetString("GroupBox2.ToolTip"));
             // 
             // ST_Label_Batch
             // 
             resources.ApplyResources(this.ST_Label_Batch, "ST_Label_Batch");
             this.ST_Label_Batch.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.ST_Label_Batch.Name = "ST_Label_Batch";
+            this.tipOpenFolder.SetToolTip(this.ST_Label_Batch, resources.GetString("ST_Label_Batch.ToolTip"));
             // 
             // btnToTraditionValueBatch
             // 
-            this.btnToTraditionValueBatch.FontSize = MetroFramework.MetroButtonSize.Tall;
             resources.ApplyResources(this.btnToTraditionValueBatch, "btnToTraditionValueBatch");
+            this.btnToTraditionValueBatch.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnToTraditionValueBatch.Name = "btnToTraditionValueBatch";
+            this.tipOpenFolder.SetToolTip(this.btnToTraditionValueBatch, resources.GetString("btnToTraditionValueBatch.ToolTip"));
             this.btnToTraditionValueBatch.UseSelectable = true;
             this.btnToTraditionValueBatch.Click += new System.EventHandler(this.btnToTraditionValueBatch_Click);
             // 
@@ -212,13 +227,15 @@
             resources.ApplyResources(this.CT_Label_Batch, "CT_Label_Batch");
             this.CT_Label_Batch.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.CT_Label_Batch.Name = "CT_Label_Batch";
+            this.tipOpenFolder.SetToolTip(this.CT_Label_Batch, resources.GetString("CT_Label_Batch.ToolTip"));
             // 
             // btnLoadBatch
             // 
-            this.btnLoadBatch.FontSize = MetroFramework.MetroButtonSize.Tall;
             resources.ApplyResources(this.btnLoadBatch, "btnLoadBatch");
+            this.btnLoadBatch.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLoadBatch.Name = "btnLoadBatch";
             this.btnLoadBatch.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tipOpenFolder.SetToolTip(this.btnLoadBatch, resources.GetString("btnLoadBatch.ToolTip"));
             this.btnLoadBatch.UseSelectable = true;
             this.btnLoadBatch.Click += new System.EventHandler(this.btnLoadBatch_Click);
             // 
@@ -231,27 +248,31 @@
             // 
             resources.ApplyResources(this.InprogressBar, "InprogressBar");
             this.InprogressBar.Name = "InprogressBar";
+            this.tipOpenFolder.SetToolTip(this.InprogressBar, resources.GetString("InprogressBar.ToolTip"));
             // 
             // lblStatus
             // 
             resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.Name = "lblStatus";
+            this.tipOpenFolder.SetToolTip(this.lblStatus, resources.GetString("lblStatus.ToolTip"));
             // 
             // btnSetting
             // 
+            resources.ApplyResources(this.btnSetting, "btnSetting");
             this.btnSetting.BackColor = System.Drawing.Color.White;
             this.btnSetting.BackgroundImage = global::ChoHoe.Properties.Resources.settings_suggest_FILL0_wght200_GRAD200_opsz24;
-            resources.ApplyResources(this.btnSetting, "btnSetting");
             this.btnSetting.Name = "btnSetting";
+            this.tipOpenFolder.SetToolTip(this.btnSetting, resources.GetString("btnSetting.ToolTip"));
             this.btnSetting.UseSelectable = true;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnAbout
             // 
+            resources.ApplyResources(this.btnAbout, "btnAbout");
             this.btnAbout.BackColor = System.Drawing.Color.White;
             this.btnAbout.BackgroundImage = global::ChoHoe.Properties.Resources.info_FILL0_wght200_GRAD200_opsz24;
-            resources.ApplyResources(this.btnAbout, "btnAbout");
             this.btnAbout.Name = "btnAbout";
+            this.tipOpenFolder.SetToolTip(this.btnAbout, resources.GetString("btnAbout.ToolTip"));
             this.btnAbout.UseSelectable = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
@@ -260,25 +281,29 @@
             resources.ApplyResources(this.RunningLogo, "RunningLogo");
             this.RunningLogo.Name = "RunningLogo";
             this.RunningLogo.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.RunningLogo, resources.GetString("RunningLogo.ToolTip"));
             // 
             // tbLogWindow
             // 
+            resources.ApplyResources(this.tbLogWindow, "tbLogWindow");
             this.tbLogWindow.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tbLogWindow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.tbLogWindow, "tbLogWindow");
             this.tbLogWindow.Name = "tbLogWindow";
             this.tbLogWindow.ReadOnly = true;
+            this.tipOpenFolder.SetToolTip(this.tbLogWindow, resources.GetString("tbLogWindow.ToolTip"));
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            this.tipOpenFolder.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // cbReplaceTWpunctuation
             // 
             resources.ApplyResources(this.cbReplaceTWpunctuation, "cbReplaceTWpunctuation");
             this.cbReplaceTWpunctuation.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.cbReplaceTWpunctuation.Name = "cbReplaceTWpunctuation";
+            this.tipOpenFolder.SetToolTip(this.cbReplaceTWpunctuation, resources.GetString("cbReplaceTWpunctuation.ToolTip"));
             this.cbReplaceTWpunctuation.UseSelectable = true;
             this.cbReplaceTWpunctuation.CheckedChanged += new System.EventHandler(this.cbReplaceTWpunctuation_CheckedChanged);
             // 
@@ -287,13 +312,15 @@
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
             // 
             // btnOpenFolder
             // 
-            this.btnOpenFolder.BackgroundImage = global::ChoHoe.Properties.Resources.folder_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.btnOpenFolder, "btnOpenFolder");
+            this.btnOpenFolder.BackgroundImage = global::ChoHoe.Properties.Resources.folder_FILL0_wght200_GRAD200_opsz24;
             this.btnOpenFolder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOpenFolder.Name = "btnOpenFolder";
+            this.tipOpenFolder.SetToolTip(this.btnOpenFolder, resources.GetString("btnOpenFolder.ToolTip"));
             this.btnOpenFolder.UseSelectable = true;
             this.btnOpenFolder.Click += new System.EventHandler(this.btnOpenFolder_Click);
             // 
@@ -305,57 +332,65 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ChoHoe.Properties.Resources.translate_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::ChoHoe.Properties.Resources.translate_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox2, resources.GetString("pictureBox2.ToolTip"));
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::ChoHoe.Properties.Resources.auto_stories_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::ChoHoe.Properties.Resources.auto_stories_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ChoHoe.Properties.Resources.move_down_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Image = global::ChoHoe.Properties.Resources.move_down_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::ChoHoe.Properties.Resources.image_not_supported_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Image = global::ChoHoe.Properties.Resources.image_not_supported_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox5, resources.GetString("pictureBox5.ToolTip"));
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::ChoHoe.Properties.Resources.font_download_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Image = global::ChoHoe.Properties.Resources.font_download_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox6, resources.GetString("pictureBox6.ToolTip"));
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::ChoHoe.Properties.Resources.css_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Image = global::ChoHoe.Properties.Resources.css_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox7, resources.GetString("pictureBox7.ToolTip"));
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::ChoHoe.Properties.Resources.mop_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Image = global::ChoHoe.Properties.Resources.mop_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
+            this.tipOpenFolder.SetToolTip(this.pictureBox8, resources.GetString("pictureBox8.ToolTip"));
             // 
             // lbVersion
             // 
             resources.ApplyResources(this.lbVersion, "lbVersion");
             this.lbVersion.Name = "lbVersion";
+            this.tipOpenFolder.SetToolTip(this.lbVersion, resources.GetString("lbVersion.ToolTip"));
             // 
             // Form1
             // 
@@ -395,6 +430,7 @@
             this.Name = "Form1";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.White;
+            this.tipOpenFolder.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).EndInit();

@@ -203,7 +203,6 @@
     <None Include="Resources\search_check_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\help_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\kindlegen.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <CustomToolNamespace>plugins</CustomToolNamespace>
     </None>
     <None Include="Resources\pandoc.exe">
@@ -236,6 +235,9 @@
     <None Include="Resources\escapecharacter.txt.txt" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.hsb.resx">
       <DependentUpon>Main.cs</DependentUpon>

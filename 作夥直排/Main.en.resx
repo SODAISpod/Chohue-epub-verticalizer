@@ -118,580 +118,149 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 15</value>
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.Name" xml:space="preserve">
-    <value>ST_Label_Batch</value>
-  </data>
-  <data name="&gt;&gt;rdoPageRTLBatch.Name" xml:space="preserve">
-    <value>rdoPageRTLBatch</value>
-  </data>
-  <data name="tbLogWindow.Text" xml:space="preserve">
-    <value>安安！</value>
-  </data>
-  <data name="&gt;&gt;tbLogWindow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroStyleManager1.Name" xml:space="preserve">
-    <value>metroStyleManager1</value>
-  </data>
-  <data name="tbLogWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 218</value>
-  </data>
-  <data name="cbReplacePictureBatch.Text" xml:space="preserve">
-    <value>將插圖替換</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cbConvertMobiBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>885, 781</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 32</value>
-  </data>
-  <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 23</value>
-  </data>
-  <data name="ST_Label_Batch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;cbReplacePictureBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnToTraditionValueBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnLoadBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnLoadBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="btnConvertBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="tbLogWindow.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbReplacePictureBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
-    <value>btnAbout</value>
-  </data>
-  <data name="&gt;&gt;cbReplaceTWpunctuation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnLoadBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 621</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tbLogWindow.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;cbModifyPageDirectionBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="tbLogWindow.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="cbReplacePictureBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cbEmbdedFontBatch.Text" xml:space="preserve">
-    <value>嵌入字體</value>
-  </data>
-  <data name="&gt;&gt;cbConvertMobiBatch.Name" xml:space="preserve">
-    <value>cbConvertMobiBatch</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.Name" xml:space="preserve">
-    <value>CT_Label_Batch</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="btnConvertBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 114</value>
-  </data>
-  <data name="lblStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbConvertMobiBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
-    <value>pictureBox6</value>
-  </data>
-  <data name="&gt;&gt;rdoPageLTRBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="RunningLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 313</value>
-  </data>
-  <data name="cbEmbdedFontBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 25</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;lbVersion.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="pictureBox7.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;cbRemoveCss.Name" xml:space="preserve">
-    <value>cbRemoveCss</value>
-  </data>
-  <data name="btnSetting.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="cbChineseBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbEmbdedFontBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cbReplacePictureBatch.Name" xml:space="preserve">
-    <value>cbReplacePictureBatch</value>
-  </data>
-  <data name="btnAbout.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnConvertBatch.Name" xml:space="preserve">
-    <value>btnConvertBatch</value>
-  </data>
-  <data name="&gt;&gt;cbReplacePictureBatch.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="cbModifyPageDirectionBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;cbReplacePictureBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="pictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GroupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;cbModifyPageDirectionBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cbReplacePictureBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 491</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbReplaceTWpunctuation.Name" xml:space="preserve">
-    <value>cbReplaceTWpunctuation</value>
-  </data>
-  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 95</value>
-  </data>
-  <data name="ST_Label_Batch.Text" xml:space="preserve">
-    <value>簡體</value>
-  </data>
-  <data name="btnSetting.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
   <data name="cbRemoveCss.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 25</value>
+    <value>189, 25</value>
   </data>
-  <data name="&gt;&gt;btnConvertBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cbEmbdedFontBatch.Name" xml:space="preserve">
-    <value>cbEmbdedFontBatch</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;btnConvertBatch.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="InprogressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cbModifyPageDirectionBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnConvertBatch.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnToTraditionValueBatch.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="cbConvertMobiBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>976, 816</value>
+  <data name="cbRemoveCss.Text" xml:space="preserve">
+    <value>Remove built-in CSS</value>
   </data>
   <data name="cbReplacePictureBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
+    <value>150, 25</value>
   </data>
-  <data name="lblStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 722</value>
+  <data name="cbReplacePictureBatch.Text" xml:space="preserve">
+    <value>Replace images</value>
   </data>
-  <data name="cbEmbdedFontBatch.ToolTip" xml:space="preserve">
-    <value />
+  <data name="cbEmbdedFontBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 25</value>
   </data>
-  <data name="pictureBox5.ToolTip" xml:space="preserve">
-    <value />
+  <data name="cbEmbdedFontBatch.Text" xml:space="preserve">
+    <value>embedded font</value>
   </data>
-  <data name="btnConvertBatch.ToolTip" xml:space="preserve">
-    <value />
+  <data name="btnConvertBatch.Text" xml:space="preserve">
+    <value>Forge</value>
   </data>
-  <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 480</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="CT_Label_Batch.Text" xml:space="preserve">
-    <value>正體</value>
-  </data>
-  <data name="BatchGridView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbConvertMobiBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 25</value>
-  </data>
-  <data name="&gt;&gt;cbRemoveCss.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;cbChineseBatch.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="RunningLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 164</value>
-  </data>
-  <data name="lbVersion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 790</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>訊息</value>
-  </data>
-  <data name="&gt;&gt;cbModifyPageDirectionBatch.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="RunningLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cbRemoveCss.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnOpenFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;btnOpenFolder.Name" xml:space="preserve">
-    <value>btnOpenFolder</value>
-  </data>
-  <data name="&gt;&gt;btnSetting.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.Name" xml:space="preserve">
-    <value>lblStatus</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
+  <data name="cbModifyPageDirectionBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 25</value>
   </data>
   <data name="cbModifyPageDirectionBatch.Text" xml:space="preserve">
-    <value>指定翻頁方向</value>
+    <value>Paging direction</value>
   </data>
-  <data name="BatchGridView.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
+  <data name="rdoPageRTLBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 25</value>
   </data>
-  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 490</value>
+  <data name="rdoPageRTLBatch.Text" xml:space="preserve">
+    <value>RTL</value>
   </data>
-  <data name="&gt;&gt;btnSetting.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="rdoPageLTRBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 25</value>
   </data>
-  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="rdoPageLTRBatch.Text" xml:space="preserve">
+    <value>LTR</value>
   </data>
-  <data name="cbReplaceTWpunctuation.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="btnLoadBatch.Text" xml:space="preserve">
-    <value>開啟</value>
-  </data>
-  <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="cbChineseBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 96</value>
-  </data>
-  <data name="cbReplaceTWpunctuation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 584</value>
-  </data>
-  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="InprogressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="lbVersion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
-  </data>
-  <data name="cbChineseBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;btnOpenFolder.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbVersion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnToTraditionValueBatch.Text" xml:space="preserve">
-    <value>&gt;</value>
-  </data>
-  <data name="rdoPageRTLBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 11</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="cbRemoveCss.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="rdoPageRTLBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cbChineseBatch.Name" xml:space="preserve">
-    <value>cbChineseBatch</value>
-  </data>
-  <data name="lbVersion.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnLoadBatch.Name" xml:space="preserve">
-    <value>btnLoadBatch</value>
-  </data>
-  <data name="InprogressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 722</value>
-  </data>
-  <data name="BatchGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;InprogressBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="RunningLogo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lbVersion.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;rdoPageRTLBatch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbLogWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 498</value>
-  </data>
-  <data name="lbVersion.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;cbRemoveCss.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="rdoPageRTLBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="CT_Label_Batch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnConvertBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>823, 621</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnDelete.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="btnToTraditionValueBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnAbout.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="ST_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 37</value>
-  </data>
-  <data name="GroupBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="groupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;cbEmbdedFontBatch.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 15</value>
-  </data>
-  <data name="lblStatus.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.Name" xml:space="preserve">
-    <value>pictureBox7</value>
-  </data>
-  <data name="&gt;&gt;cbConvertMobiBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>21, 75, 21, 26</value>
-  </data>
-  <data name="&gt;&gt;btnLoadBatch.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;btnConvertBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;btnSetting.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="tbLogWindow.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="cbChineseBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="cbModifyPageDirectionBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 232</value>
-  </data>
-  <data name="cbReplaceTWpunctuation.Text" xml:space="preserve">
-    <value>替換成台式標點符號</value>
+  <data name="cbConvertMobiBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
   </data>
   <data name="cbConvertMobiBatch.Text" xml:space="preserve">
-    <value>轉換成 .mobi</value>
+    <value>Export .mobi</value>
   </data>
-  <data name="&gt;&gt;rdoPageRTLBatch.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+  <data name="cbChineseBatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 25</value>
   </data>
-  <data name="&gt;&gt;InprogressBar.ZOrder" xml:space="preserve">
-    <value>24</value>
+  <data name="cbChineseBatch.Text" xml:space="preserve">
+    <value>Traditional and Simplified Chinese</value>
   </data>
-  <data name="rdoPageLTRBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 91</value>
+  <data name="ST_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 37</value>
   </data>
-  <data name="&gt;&gt;InprogressBar.Name" xml:space="preserve">
-    <value>InprogressBar</value>
+  <data name="ST_Label_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 25</value>
   </data>
-  <data name="cbReplaceTWpunctuation.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ST_Label_Batch.Text" xml:space="preserve">
+    <value>Simplified</value>
   </data>
-  <data name="cbModifyPageDirectionBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="CT_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 37</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="CT_Label_Batch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 25</value>
   </data>
-  <data name="pictureBox8.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="CT_Label_Batch.Text" xml:space="preserve">
+    <value>Traditional</value>
   </data>
-  <data name="cbReplaceTWpunctuation.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btnLoadBatch.Text" xml:space="preserve">
+    <value>Open</value>
   </data>
-  <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 15</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 816</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
   <data name="RunningLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3323,251 +2892,17 @@
         AAEAAAgEABkFBAAh+QQFNgCMACwAAAAAAQABAAAIBAAZBQQAOw==
 </value>
   </data>
-  <data name="&gt;&gt;BatchGridView.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
   </data>
-  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 525</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Message</value>
   </data>
-  <data name="&gt;&gt;btnToTraditionValueBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="cbReplaceTWpunctuation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 25</value>
   </data>
-  <data name="&gt;&gt;cbEmbdedFontBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="rdoPageLTRBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblStatus.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbEmbdedFontBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 524</value>
-  </data>
-  <data name="&gt;&gt;BatchGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="groupBox5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnLoadBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;RunningLogo.Name" xml:space="preserve">
-    <value>RunningLogo</value>
-  </data>
-  <data name="&gt;&gt;rdoPageLTRBatch.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="pictureBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="rdoPageRTLBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BatchGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 380</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbLogWindow.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="pictureBox8.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rdoPageRTLBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbLogWindow.Name" xml:space="preserve">
-    <value>tbLogWindow</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;BatchGridView.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
-    <value>pictureBox5</value>
-  </data>
-  <data name="&gt;&gt;cbEmbdedFontBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbRemoveCss.Text" xml:space="preserve">
-    <value>移除預設的 CSS</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CT_Label_Batch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="RunningLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;cbReplaceTWpunctuation.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 186</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="btnConvertBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="RunningLogo.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="InprogressBar.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbChineseBatch.Text" xml:space="preserve">
-    <value>正體簡體轉換</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RunningLogo.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;tbLogWindow.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="cbReplacePictureBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="rdoPageLTRBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="ST_Label_Batch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="rdoPageLTRBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
+  <data name="cbReplaceTWpunctuation.Text" xml:space="preserve">
+    <value>Replace to TW style punctuation</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -8080,364 +7415,4 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="InprogressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 15</value>
-  </data>
-  <data name="cbChineseBatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnAbout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="btnSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>723, 781</value>
-  </data>
-  <data name="&gt;&gt;cbModifyPageDirectionBatch.Name" xml:space="preserve">
-    <value>cbModifyPageDirectionBatch</value>
-  </data>
-  <data name="&gt;&gt;tipOpenFolder.Type" xml:space="preserve">
-    <value>MetroFramework.Components.MetroToolTip, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="pictureBox6.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnAbout.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 232</value>
-  </data>
-  <data name="&gt;&gt;tipOpenFolder.Name" xml:space="preserve">
-    <value>tipOpenFolder</value>
-  </data>
-  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="groupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;btnSetting.Name" xml:space="preserve">
-    <value>btnSetting</value>
-  </data>
-  <data name="pictureBox7.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnOpenFolder.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.Parent" xml:space="preserve">
-    <value>GroupBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnOpenFolder.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 460</value>
-  </data>
-  <data name="btnDelete.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 97</value>
-  </data>
-  <data name="lblStatus.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cbConvertMobiBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 459</value>
-  </data>
-  <data name="btnOpenFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>804, 782</value>
-  </data>
-  <data name="GroupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;metroStyleManager1.Type" xml:space="preserve">
-    <value>MetroFramework.Components.MetroStyleManager, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="rdoPageLTRBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="cbModifyPageDirectionBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="lblStatus.Text" xml:space="preserve">
-    <value>安安!</value>
-  </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 265</value>
-  </data>
-  <data name="rdoPageRTLBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 25</value>
-  </data>
-  <data name="&gt;&gt;rdoPageLTRBatch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbChineseBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="rdoPageRTLBatch.Text" xml:space="preserve">
-    <value>由右往左翻</value>
-  </data>
-  <data name="&gt;&gt;cbRemoveCss.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>做伙直排</value>
-  </data>
-  <data name="&gt;&gt;btnLoadBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="CT_Label_Batch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbModifyPageDirectionBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 583</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btnSetting.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="btnToTraditionValueBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="btnToTraditionValueBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 24</value>
-  </data>
-  <data name="cbChineseBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
-  </data>
-  <data name="pictureBox4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;rdoPageRTLBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 19</value>
-  </data>
-  <data name="CT_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 37</value>
-  </data>
-  <data name="&gt;&gt;btnOpenFolder.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="lbVersion.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;lblStatus.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CT_Label_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="btnLoadBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 114</value>
-  </data>
-  <data name="ST_Label_Batch.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnLoadBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbReplaceTWpunctuation.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="BatchGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 97</value>
-  </data>
-  <data name="cbRemoveCss.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;cbConvertMobiBatch.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="cbConvertMobiBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;InprogressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;btnToTraditionValueBatch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cbRemoveCss.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 553</value>
-  </data>
-  <data name="&gt;&gt;btnOpenFolder.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 129</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
-    <value>pictureBox8</value>
-  </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>614, 97</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="rdoPageLTRBatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="cbEmbdedFontBatch.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnToTraditionValueBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 50</value>
-  </data>
-  <data name="&gt;&gt;cbConvertMobiBatch.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="rdoPageLTRBatch.Text" xml:space="preserve">
-    <value>由左往右翻</value>
-  </data>
-  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 553</value>
-  </data>
-  <data name="RunningLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;btnToTraditionValueBatch.Name" xml:space="preserve">
-    <value>btnToTraditionValueBatch</value>
-  </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="&gt;&gt;lbVersion.Name" xml:space="preserve">
-    <value>lbVersion</value>
-  </data>
-  <data name="ST_Label_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
-  </data>
-  <data name="btnConvertBatch.Text" xml:space="preserve">
-    <value>製作</value>
-  </data>
-  <data name="&gt;&gt;rdoPageLTRBatch.Name" xml:space="preserve">
-    <value>rdoPageLTRBatch</value>
-  </data>
-  <data name="pictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;cbChineseBatch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RunningLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbReplaceTWpunctuation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 25</value>
-  </data>
-  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 30</value>
-  </data>
-  <data name="&gt;&gt;BatchGridView.Name" xml:space="preserve">
-    <value>BatchGridView</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="CT_Label_Batch.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;RunningLogo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cbEmbdedFontBatch.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;ST_Label_Batch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="tipOpenFolder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>183, 3</value>
-  </metadata>
-  <metadata name="metroStyleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>
