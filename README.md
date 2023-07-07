@@ -8,6 +8,7 @@
 ## 做伙直排是一款電子書直排程式，可以簡易的輸出 EPUB 或是 MOBI 的格式。
 
 ![promo](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/806f05b3-a94a-4e2a-8a3b-e18251506d1e)
+![image](https://github.com/SODAISpod/Chohue-epub-verticalizer/assets/6829907/a47cd36b-f1ef-4839-8c94-129ce5109af2)
 
  
 ## 這裡是官方網站
