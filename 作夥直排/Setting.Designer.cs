@@ -55,8 +55,11 @@
             this.linklbPacdoc = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.tgUseBuiltin = new MetroFramework.Controls.MetroToggle();
+            this.pb_ReplaceIMG = new System.Windows.Forms.PictureBox();
+            this.lbReplaceIMG = new MetroFramework.Controls.MetroLabel();
+            this.btnLoadIMG = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,7 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ReplaceIMG)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -258,24 +261,45 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.pictureBox5);
-            this.groupBox4.Controls.Add(this.linkLabel2);
+            this.groupBox4.Controls.Add(this.btnLoadIMG);
+            this.groupBox4.Controls.Add(this.lbReplaceIMG);
+            this.groupBox4.Controls.Add(this.metroLabel1);
+            this.groupBox4.Controls.Add(this.tgUseBuiltin);
+            this.groupBox4.Controls.Add(this.pb_ReplaceIMG);
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // linkLabel2
+            // metroLabel1
             // 
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.TabStop = true;
+            resources.ApplyResources(this.metroLabel1, "metroLabel1");
+            this.metroLabel1.Name = "metroLabel1";
             // 
-            // pictureBox5
+            // tgUseBuiltin
             // 
-            this.pictureBox5.Image = global::ChoHoe.Properties.Resources.Replacement_Image;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
+            resources.ApplyResources(this.tgUseBuiltin, "tgUseBuiltin");
+            this.tgUseBuiltin.Name = "tgUseBuiltin";
+            this.tgUseBuiltin.UseSelectable = true;
+            this.tgUseBuiltin.CheckedChanged += new System.EventHandler(this.tgUseBuiltin_CheckedChanged);
+            // 
+            // pb_ReplaceIMG
+            // 
+            this.pb_ReplaceIMG.Image = global::ChoHoe.Properties.Resources.Replacement_Image;
+            resources.ApplyResources(this.pb_ReplaceIMG, "pb_ReplaceIMG");
+            this.pb_ReplaceIMG.Name = "pb_ReplaceIMG";
+            this.pb_ReplaceIMG.TabStop = false;
+            // 
+            // lbReplaceIMG
+            // 
+            resources.ApplyResources(this.lbReplaceIMG, "lbReplaceIMG");
+            this.lbReplaceIMG.Name = "lbReplaceIMG";
+            // 
+            // btnLoadIMG
+            // 
+            resources.ApplyResources(this.btnLoadIMG, "btnLoadIMG");
+            this.btnLoadIMG.Name = "btnLoadIMG";
+            this.btnLoadIMG.UseSelectable = true;
+            this.btnLoadIMG.Click += new System.EventHandler(this.btnLoadIMG_Click);
             // 
             // Setting
             // 
@@ -300,7 +324,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ReplaceIMG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,7 +357,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pb_ReplaceIMG;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroToggle tgUseBuiltin;
+        private MetroFramework.Controls.MetroButton btnLoadIMG;
+        private MetroFramework.Controls.MetroLabel lbReplaceIMG;
     }
 }

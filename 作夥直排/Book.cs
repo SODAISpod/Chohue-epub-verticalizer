@@ -352,6 +352,28 @@ namespace ChoHoeBV
         }
         private void ImgReplace()
         {
+            byte[] data;
+            bool flag=false;
+            try
+            {
+                System.Drawing.Image check = System.Drawing.Image.FromFile(ChoHoe.Properties.Settings.Default.Setting_CustomizedIMGPath);
+            }
+            catch (Exception)
+            {
+                DoLog.logger.Error("Can't load replacement img");
+                flag = true;
+            }
+            System.Drawing.Image pic;
+            if (flag||ChoHoe.Properties.Settings.Default.Setting_UseBuiltinIMG)
+            {
+
+                pic = ChoHoe.Properties.Resources.Replacement_Image;
+            }
+            else
+            {
+                pic = System.Drawing.Image.FromFile(ChoHoe.Properties.Settings.Default.Setting_CustomizedIMGPath);
+            }
+
             if (imgpath["gif"].Count != 0)
             {
 
@@ -361,11 +383,9 @@ namespace ChoHoeBV
 
                 {
                     DoLog.logger.Info($"Replace gif: {path} ");
-                    byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
-                    System.Drawing.Image gif = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        gif.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+                        pic.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
                         data = ms.ToArray();
                     }
                     using (var imageFile = new FileStream(path, FileMode.Create))
@@ -382,11 +402,9 @@ namespace ChoHoeBV
                 foreach (string path in imgpath["jpeg"])
                 {
                     DoLog.logger.Info($"Replace jpg: {path} ");
-                    byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
-                    System.Drawing.Image jpg = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        jpg.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        pic.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                         data = ms.ToArray();
                     }
                     using (var imageFile = new FileStream(path, FileMode.Create))
@@ -404,11 +422,9 @@ namespace ChoHoeBV
                 foreach (string path in imgpath["png"])
                 {
                     DoLog.logger.Info($"Replace png: {path} ");
-                    byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
-                    System.Drawing.Image png = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        png.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        pic.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                         data = ms.ToArray();
                     }
                     using (var imageFile = new FileStream(path, FileMode.Create))

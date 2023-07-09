@@ -358,5 +358,29 @@ namespace ChoHoe.Properties {
                 this["Batch_AddCustomizeCSS"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Setting_UseBuiltinIMG {
+            get {
+                return ((bool)(this["Setting_UseBuiltinIMG"]));
+            }
+            set {
+                this["Setting_UseBuiltinIMG"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Setting_CustomizedIMGPath {
+            get {
+                return ((string)(this["Setting_CustomizedIMGPath"]));
+            }
+            set {
+                this["Setting_CustomizedIMGPath"] = value;
+            }
+        }
     }
 }

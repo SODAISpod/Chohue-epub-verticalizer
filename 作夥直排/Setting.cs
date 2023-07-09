@@ -31,6 +31,10 @@ namespace ChoHoe
             linklbPacdoc.Text = ChoHoe.Properties.Settings.Default.PandocPath;
             LinkLBCalibrePath.Text = ChoHoe.Properties.Settings.Default.CalibrePath;
             LinkLBKinflegenPath.Text = ChoHoe.Properties.Settings.Default.KindlegenPath;
+
+            tgUseBuiltin.Checked = ChoHoe.Properties.Settings.Default.Setting_UseBuiltinIMG;
+            ReloadImg();
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -192,6 +196,51 @@ namespace ChoHoe
         private void metroButton5_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://kiicho.cc/Chohue/sidebar/manual.php?utm_source=Chehue&utm_medium=InApp&utm_campaign=InSetting_Plugin_epub&utm_content=manual_install_plugin#v-pills-install");
+        }
+
+        private void tgUseBuiltin_CheckedChanged(object sender, EventArgs e)
+        {
+
+            ChoHoe.Properties.Settings.Default.Setting_UseBuiltinIMG = tgUseBuiltin.Checked;
+            ChoHoe.Properties.Settings.Default.Save();
+            ReloadImg();
+
+
+        }
+
+        private void btnLoadIMG_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;*.bmp;";
+            if (openFile.ShowDialog()==DialogResult.OK)
+            {
+                string path=openFile.FileName;
+
+                ChoHoe.Properties.Settings.Default.Setting_CustomizedIMGPath = path;
+                ChoHoe.Properties.Settings.Default.Save();
+                ReloadImg();
+
+            }
+        }
+        private void ReloadImg()
+        {
+            lbReplaceIMG.Text = Path.GetFileName(ChoHoe.Properties.Settings.Default.Setting_CustomizedIMGPath);
+            try
+            {
+                if (!tgUseBuiltin.Checked)
+                {
+                    pb_ReplaceIMG.Load(ChoHoe.Properties.Settings.Default.Setting_CustomizedIMGPath);
+                }
+                else
+                {
+                    pb_ReplaceIMG.Image = ChoHoe.Properties.Resources.Replacement_Image;
+                }
+            }
+            catch (Exception)
+            {
+
+                DoLog.logger.Error("Can't load replacement img");
+            }
         }
     }
 }
