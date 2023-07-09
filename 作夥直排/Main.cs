@@ -125,7 +125,7 @@ namespace ChoHoeBV
             tipOpenFolder.SetToolTip(btnOpenFolder, "開啟輸出資料夾");
             tipOpenFolder.SetToolTip(btnDelete, "移除書本");
             tipOpenFolder.SetToolTip(cbRemoveCss, "移除HTML檔案元素中的attribute裡的style");
-            tipOpenFolder.SetToolTip(cbRemoveCss, "清空stylesheet中的CSS");
+            tipOpenFolder.SetToolTip(cbRemoveStylesheet, "清空stylesheet中的CSS");
                 
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;

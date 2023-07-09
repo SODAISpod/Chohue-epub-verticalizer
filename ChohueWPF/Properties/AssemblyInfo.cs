@@ -51,7 +51,7 @@ using System.Windows;
 // 您可以指定所有的值，也可以使用 '*' 將組建和修訂編號
 // 設為預設，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.12.0")]
-[assembly: AssemblyFileVersion("1.0.12.0")]
+[assembly: AssemblyVersion("1.0.13.0")]
+[assembly: AssemblyFileVersion("1.0.13.0")]
 
-[assembly: AssemblyInformationalVersion("0.0.12.0")]
+[assembly: AssemblyInformationalVersion("0.0.13.0")]
