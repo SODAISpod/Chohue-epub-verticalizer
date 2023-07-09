@@ -177,15 +177,22 @@
     </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="BookEnum.cs" />
-    <Compile Include="CssStyle.cs" />
+    <Compile Include="CssParser.cs" />
+    <Compile Include="LagecyCssStyle.cs" />
     <Compile Include="ExtensionChecker.cs" />
+    <Compile Include="FillCustomizeCSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FillCustomizeCSS.Designer.cs">
+      <DependentUpon>FillCustomizeCSS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logger.cs" />
+    <Compile Include="DoLog.cs" />
     <Compile Include="NewVersionCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +207,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
     </Compile>
+    <None Include="Resources\format_align_justify_FILL0_wght200_GRAD200_opsz24.png" />
+    <None Include="Resources\kepubify-windows-64bit.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\COPYRIGHT.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\search_check_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\help_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\kindlegen.exe">
@@ -235,6 +249,12 @@
     <None Include="Resources\escapecharacter.txt.txt" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillCustomizeCSS.resx">
+      <DependentUpon>FillCustomizeCSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.ceb.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.en.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -314,7 +334,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ExCSS">
-      <Version>3.0.0</Version>
+      <Version>4.2.1</Version>
     </PackageReference>
     <PackageReference Include="GitHubUpdate">
       <Version>1.2.0</Version>
@@ -378,7 +398,7 @@
       <Version>11.0.1</Version>
     </PackageReference>
     <PackageReference Include="NLog">
-      <Version>4.6.5</Version>
+      <Version>5.2.2</Version>
     </PackageReference>
     <PackageReference Include="NLog.Config">
       <Version>4.6.5</Version>

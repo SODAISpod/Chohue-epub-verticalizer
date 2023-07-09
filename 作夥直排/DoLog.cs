@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using NLog;
 namespace ChoHoe
 {
-    static class Logger
+    static class DoLog
     {
         public static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         static string ErrorMessage = "";
-        static Logger()
+        static DoLog()
         {
 
 
@@ -24,6 +24,6 @@ namespace ChoHoe
         {
             return ErrorMessage;
         }
-      
+
     }
 }

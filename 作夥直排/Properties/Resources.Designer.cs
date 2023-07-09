@@ -91,6 +91,16 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] COPYRIGHT {
+            get {
+                object obj = ResourceManager.GetObject("COPYRIGHT", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
         internal static System.Drawing.Bitmap css_FILL0_wght200_GRAD200_opsz24 {
@@ -140,6 +150,16 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap format_align_justify_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("format_align_justify_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 R0lGODlhzQLLA+YAAPPz8/Ly8vHx8fDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4eDg4N/f397e3t3d3dzc3Nvb29ra2tnZ2djY2NfX19bW1tXV1dTU1NPT09LS0tHR0dDQ0M/Pz87Ozs3NzczMzMvLy8rKysnJycjIyMfHx8bGxsXFxcTExMPDw8LCwsHBwcDAwL+/v76+vr29vby8vLu7u7q6urm5ubi4uLe3t7a2trW1tbS0tLOzs7KysrGxsbCwsK+vr66urq2traysrKurq6qqqqmpqaioqKenp6ampqWlpaSkpKOjo6KioqGhoaCgoJ+fn56enp2dnZycnJubm5qampmZmZOTk4uLi4ODg3t7e3Nzc////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
         internal static string GifReplacement {
@@ -184,6 +204,16 @@ namespace ChoHoe.Properties {
         internal static string JpegReplacement {
             get {
                 return ResourceManager.GetString("JpegReplacement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] kepubify_windows_64bit {
+            get {
+                object obj = ResourceManager.GetObject("kepubify_windows_64bit", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

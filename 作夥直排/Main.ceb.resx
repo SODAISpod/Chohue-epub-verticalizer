@@ -117,13 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cbRemoveCss.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 25</value>
-  </data>
-  <data name="cbRemoveCss.Text" xml:space="preserve">
-    <value>Remove built-in CSS</value>
-  </data>
   <data name="cbRemoveCss.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -133,53 +126,20 @@
   <data name="BatchGridView.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="cbReplacePictureBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 25</value>
-  </data>
-  <data name="cbReplacePictureBatch.Text" xml:space="preserve">
-    <value>Replace images</value>
-  </data>
   <data name="cbReplacePictureBatch.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="cbEmbdedFontBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 25</value>
-  </data>
-  <data name="cbEmbdedFontBatch.Text" xml:space="preserve">
-    <value>Embedded font</value>
   </data>
   <data name="cbEmbdedFontBatch.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="btnConvertBatch.Text" xml:space="preserve">
-    <value>Forge</value>
-  </data>
   <data name="btnConvertBatch.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="cbModifyPageDirectionBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 25</value>
-  </data>
-  <data name="cbModifyPageDirectionBatch.Text" xml:space="preserve">
-    <value>Paging direction</value>
   </data>
   <data name="cbModifyPageDirectionBatch.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="rdoPageRTLBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 25</value>
-  </data>
-  <data name="rdoPageRTLBatch.Text" xml:space="preserve">
-    <value>RTL</value>
-  </data>
   <data name="rdoPageRTLBatch.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="rdoPageLTRBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 25</value>
-  </data>
-  <data name="rdoPageLTRBatch.Text" xml:space="preserve">
-    <value>LTR</value>
   </data>
   <data name="rdoPageLTRBatch.ToolTip" xml:space="preserve">
     <value />
@@ -187,32 +147,11 @@
   <data name="groupBox5.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="cbConvertMobiBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 25</value>
-  </data>
-  <data name="cbConvertMobiBatch.Text" xml:space="preserve">
-    <value>Export .mobi</value>
-  </data>
   <data name="cbConvertMobiBatch.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="cbChineseBatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 25</value>
-  </data>
-  <data name="cbChineseBatch.Text" xml:space="preserve">
-    <value>Traditional and Simplified Chinese</value>
-  </data>
   <data name="cbChineseBatch.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="ST_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 37</value>
-  </data>
-  <data name="ST_Label_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 25</value>
-  </data>
-  <data name="ST_Label_Batch.Text" xml:space="preserve">
-    <value>Simplified</value>
   </data>
   <data name="ST_Label_Batch.ToolTip" xml:space="preserve">
     <value />
@@ -220,29 +159,14 @@
   <data name="btnToTraditionValueBatch.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="CT_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 37</value>
-  </data>
-  <data name="CT_Label_Batch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 25</value>
-  </data>
-  <data name="CT_Label_Batch.Text" xml:space="preserve">
-    <value>Traditional</value>
-  </data>
   <data name="CT_Label_Batch.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="GroupBox2.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="btnLoadBatch.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
   <data name="btnLoadBatch.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 816</value>
   </data>
   <data name="lbVersion.ToolTip" xml:space="preserve">
     <value />
@@ -271,6 +195,7 @@
   <data name="btnOpenFolder.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAADu9JREFUeF7t
@@ -2976,12 +2901,6 @@
   <data name="RunningLogo.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 15</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Message</value>
-  </data>
   <data name="label1.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -2993,12 +2912,6 @@
   </data>
   <data name="btnSetting.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="cbReplaceTWpunctuation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 25</value>
-  </data>
-  <data name="cbReplaceTWpunctuation.Text" xml:space="preserve">
-    <value>Replace to TW style punctuation</value>
   </data>
   <data name="cbReplaceTWpunctuation.ToolTip" xml:space="preserve">
     <value />

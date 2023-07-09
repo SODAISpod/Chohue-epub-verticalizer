@@ -13,8 +13,9 @@ using System.Threading.Tasks;
             calibreTxtToEpub,
             kindleGen,
             pandoc,
-            pandocWithReload
-        }
+            pandocWithReload,
+            kepubify
+    }
         enum OpfReadResult
         {
             success,

@@ -22,6 +22,7 @@ using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Diagnostics;
+using NLog;
 
 namespace ChoHoeBV
 {
@@ -36,8 +37,8 @@ namespace ChoHoeBV
 
 
 
-        private
-             string title = "", author = "",filename="";
+        private string
+             filename ="";
         string _uncompressedPath = "",
                _containerXML = "",
                    _opfPath = "",
@@ -47,8 +48,20 @@ namespace ChoHoeBV
         List<string> gif = new List<string>();
         List<string> png = new List<string>();
         List<string> jpeg = new List<string>();
-        private bool replacePunctuation=false;
 
+        public string title = "", author = "";
+        public bool replacePunctuation { get; set; } = false;
+        
+        public bool ConvertChinese { get; set; } = false;
+        public bool ToTriditional { get; set; } = false;
+        public bool pageDirection { get; set; } = false;
+        public bool convertMobi { get; set; } = false;
+        public bool convertKepub { get; set; } = false;
+        public bool fontEmbed { get; set; } = false;
+        public bool replacePicture { get; set; } = false;
+        public bool clearStylesheet { get; set; }=false;    
+        public bool DONOTVerticalize { get; set; }=false;
+        public bool AddCustomisedCSS { get; set; } = false;
 
         public LoadResult Load(string _path)
         {
@@ -78,7 +91,7 @@ namespace ChoHoeBV
             OpfReadResult result = OpfReader();
             if (result == OpfReadResult.pandocConvertError)
             {
-                Logger.logger.Fatal($"Pandoc filed to process: {_originalFilePath}");
+                ChoHoe.DoLog.logger.Fatal($"Pandoc filed to process: {_originalFilePath}");
             }
             if (result == OpfReadResult.epunNeedPandocFor2to3 || result == OpfReadResult.pandocConvertError )
             {
@@ -101,7 +114,7 @@ namespace ChoHoeBV
             }
             catch (Exception e)
             {
-                Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
+                DoLog.logger.Fatal($"{e.StackTrace},{e.Message}");
                 MessageBox.Show("將txt轉換為epub時發生錯誤!");
                 return LoadResult.fail;
                 throw;
@@ -127,20 +140,20 @@ namespace ChoHoeBV
 
 
             string directoryName = System.IO.Path.GetRandomFileName().Replace(".", "");
-            Logger.logger.Info($"GetRandomFileName:{directoryName}");
+            DoLog.logger.Info($"GetRandomFileName:{directoryName}");
             _uncompressedPath = $@"temp\{directoryName}\";
 
-            Logger.logger.Info($"Uncompressed Path:{_uncompressedPath}");
+            DoLog.logger.Info($"Uncompressed Path:{_uncompressedPath}");
             // _oebpsPath = _uncompressedPath + "OEBPS" + @"\";
             _containerXML = _uncompressedPath + @"\META-INF\container.xml";
 
-            Logger.logger.Info($"Container.xml Path:{_containerXML}");
+            DoLog.logger.Info($"Container.xml Path:{_containerXML}");
             Console.WriteLine("解壓縮の路徑:" + _uncompressedPath);
             return _uncompressedPath;
         }
         private void Uncompressing(string path, string _uncompresslocation)
         {
-            Logger.logger.Info($"Uncompressing");
+            DoLog.logger.Info($"Uncompressing");
             //  ClearDirectory(unzipDirectory);
             try
             {
@@ -159,7 +172,7 @@ namespace ChoHoeBV
             {
 
 
-                Logger.logger.Error($"Uncompress fail:{e.ToString()}");
+                DoLog.logger.Error($"Uncompress fail:{e.ToString()}");
 
                 Console.WriteLine(e.ToString());
                 throw;
@@ -169,21 +182,21 @@ namespace ChoHoeBV
         }
         private void Mimetype()
         {
-            Logger.logger.Info($"Delete Mimetype: {_uncompressedPath + "\\mimetype"}");
+            DoLog.logger.Info($"Delete Mimetype: {_uncompressedPath + "\\mimetype"}");
             try
             {
                 File.Delete(_uncompressedPath + "\\mimetype");
             }
             catch (Exception)
             {
-                Logger.logger.Error($"No such Mimetype file at: {_uncompressedPath + "\\mimetype"}");
+                DoLog.logger.Error($"No such Mimetype file at: {_uncompressedPath + "\\mimetype"}");
                 throw;
             }
 
         }
         private string Container(string _containerpath)
         {
-            Logger.logger.Info($"Read Container: {_containerpath}");
+            DoLog.logger.Info($"Read Container: {_containerpath}");
             try
             {
                 XmlDocument xdoc = new XmlDocument();
@@ -214,7 +227,7 @@ namespace ChoHoeBV
             }
             catch (Exception e)
             {
-                Logger.logger.Error($"{e.ToString()}");
+                DoLog.logger.Error($"{e.ToString()}");
                 throw;
             }
 
@@ -223,19 +236,19 @@ namespace ChoHoeBV
         private void OpfWriter(bool PageDirection, bool Img, string Title, string Author)
         {
 
-            Logger.logger.Info($"Writing to opf");
+            DoLog.logger.Info($"Writing to opf");
 
             {
                 string PageDirectionString = PageDirection ? "rtl" : "ltr";
-                Logger.logger.Debug($"PageDirection : {PageDirectionString}");
+                DoLog.logger.Debug($"PageDirection : {PageDirectionString}");
                 if (Img)
                 {
-                    Logger.logger.Trace($"True set to replace image in book.");
+                    DoLog.logger.Trace($"True set to replace image in book.");
                     ImgReplace();
                 }
                 else
                 {
-                    Logger.logger.Trace($"False set to replace image in book.");
+                    DoLog.logger.Trace($"False set to replace image in book.");
                 }
                 XmlDocument XDOC = new XmlDocument();
                 string _opfrootpath = _uncompressedPath + _opfPath;
@@ -321,16 +334,16 @@ namespace ChoHoeBV
                 }
                 catch (Exception e)
                 {
-                    Logger.logger.Error($"Error while writing to opf: {_opfrootpath} \n ");
+                    DoLog.logger.Error($"Error while writing to opf: {_opfrootpath} \n ");
                     if (e.Source != null)
-                        Logger.logger.Error($"{e.Source}:{e.Message} ");
+                        DoLog.logger.Error($"{e.Source}:{e.Message} ");
 
                     throw;
                 }
                 XmlWriterSettings writerSettings = new XmlWriterSettings();
                 writerSettings.Encoding = new UTF8Encoding(false);
                 writerSettings.Indent = true;
-                Logger.logger.Trace($"Save to Opf: {_opfrootpath} \n ");
+                DoLog.logger.Trace($"Save to Opf: {_opfrootpath} \n ");
                 XmlWriter xmlWriter = XmlWriter.Create(_opfrootpath, writerSettings);
                 XDOC.Save(xmlWriter);
                 xmlWriter.Flush();
@@ -347,7 +360,7 @@ namespace ChoHoeBV
 
 
                 {
-                    Logger.logger.Info($"Replace gif: {path} ");
+                    DoLog.logger.Info($"Replace gif: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image gif = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
@@ -368,7 +381,7 @@ namespace ChoHoeBV
             {
                 foreach (string path in imgpath["jpeg"])
                 {
-                    Logger.logger.Info($"Replace jpg: {path} ");
+                    DoLog.logger.Info($"Replace jpg: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image jpg = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
@@ -390,7 +403,7 @@ namespace ChoHoeBV
             {
                 foreach (string path in imgpath["png"])
                 {
-                    Logger.logger.Info($"Replace png: {path} ");
+                    DoLog.logger.Info($"Replace png: {path} ");
                     byte[] data; //= System.Convert.FromBase64String(作夥直排.Properties.Resources.JpegReplacement);
                     System.Drawing.Image png = ChoHoe.Properties.Resources.Replacement_Image;
                     using (MemoryStream ms = new MemoryStream())
@@ -414,7 +427,7 @@ namespace ChoHoeBV
             string _opfrootpath = _uncompressedPath + _opfPath;
 
             _opfrootpath = _opfrootpath.Replace(@"/", @"\");
-            Logger.logger.Info($"Opf read: {_opfrootpath} ");
+            DoLog.logger.Info($"Opf read: {_opfrootpath} ");
             XDOC.Load(_opfrootpath);
             _OEBPSPath = _opfrootpath.Substring(0, _opfrootpath.LastIndexOf(@"\")) + @"\";
             XmlNode root = XDOC.DocumentElement;
@@ -424,7 +437,7 @@ namespace ChoHoeBV
             imgpath.Add("jpeg", jpeg);
 
 
-            Logger.logger.Trace($"epub version : {root.Attributes["version"].Value} ");
+            DoLog.logger.Trace($"epub version : {root.Attributes["version"].Value} ");
             if (root.Attributes["version"].Value == "3.0")
             {
 
@@ -434,7 +447,7 @@ namespace ChoHoeBV
             {
 
 
-                Logger.logger.Trace($"epub版本為2，進行轉換 ");
+                DoLog.logger.Trace($"epub版本為2，進行轉換 ");
                 //     EpubVersion = Convert.ToInt32( root.Attributes["version"].Value);
                 try
                 {
@@ -459,7 +472,7 @@ namespace ChoHoeBV
                 }
                 catch (Exception e)
                 {
-                    Logger.logger.Fatal($"{e.StackTrace},{e.Message}");
+                    DoLog.logger.Fatal($"{e.StackTrace},{e.Message}");
                     MessageBox.Show("EPUB 2.0 的檔案需要使用 Pandoc 以進行轉檔，請至『設定』指定 Pandoc 的路徑。");
                     return OpfReadResult.epunNeedPandocFor2to3;
                     throw;
@@ -585,9 +598,9 @@ namespace ChoHoeBV
             }
             catch (Exception e)
             {
-                Logger.logger.Error($"Error while reading Opf ");
+                DoLog.logger.Error($"Error while reading Opf ");
                 if (e.Source != null)
-                    Logger.logger.Error($"{e.Source}:{e.Message}");
+                    DoLog.logger.Error($"{e.Source}:{e.Message}");
                 Console.WriteLine("{0}", e.Source);
                 throw;
             }
@@ -598,25 +611,48 @@ namespace ChoHoeBV
         {
             this.author = author;
             this.title = title;
-            Logger.logger.Info($"Editing C");
+            DoLog.logger.Info($"Editing C");
             replacePunctuation = toReplacePunctuation;
 
             foreach (string path in css)
             {
-                Logger.logger.Trace($"invoked CSSEdit({path},{fontEmbed})");
+                DoLog.logger.Trace($"invoked CSSEdit({path},{fontEmbed})");
                 CSSEdit(path, fontEmbed);
 
             }
-            Logger.logger.Info($"Html Editing ");
+            DoLog.logger.Info($"Html Editing ");
             foreach (string path in xHtml)
             {
-                Logger.logger.Trace($"invoked HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
+                DoLog.logger.Trace($"invoked HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
                 HtmlEdit(path, DoChineseTransfer, ToTradictional);
             }
             OpfWriter(pageDirection, replacePicture, title, author);
             ZipUp(convertMobi);
             return true;
            
+        }
+        public bool Convert()
+        {
+            this.author = author;
+            this.title = title;
+            DoLog.logger.Info($"Editing C");
+            //replacePunctuation = toReplacePunctuation;
+
+            foreach (string path in css)
+            {
+                DoLog.logger.Trace($"invoked CSSEdit({path},{fontEmbed})");
+                CSSEdit(path, fontEmbed);
+
+            }
+            DoLog.logger.Info($"Html Editing ");
+            foreach (string path in xHtml)
+            {
+                DoLog.logger.Trace($"invoked HtmlEdit({path},{ConvertChinese},{ToTriditional})");
+                HtmlEdit(path, ConvertChinese, ToTriditional);
+            }
+            OpfWriter(pageDirection, replacePicture, title, author);
+            ZipUp(convertMobi);
+            return true;
         }
 
         private void HtmlEdit(string path, bool DoTransfer, bool ToTraidional)
@@ -738,7 +774,7 @@ namespace ChoHoeBV
 
                 if (childinnenode.ChildNodes.Count == 0)
                 {
-                    //Logger.logger.Debug($"To translate Xpath { childinnenode.XPath}");
+                    //DoLog.logger.Debug($"To translate Xpath { childinnenode.XPath}");
                     string tempinnertext = childinnenode.InnerHtml;
 
                     // tempinnertext = HttpUtility.HtmlDecode(tempinnertext);
@@ -822,37 +858,68 @@ namespace ChoHoeBV
             StreamReader sr = new StreamReader(fst);
 
             List<string> _cssstrings = new List<string>();
-            Logger.logger.Info($"Read .css from stream");
-            while (sr.EndOfStream != true)
+            DoLog.logger.Info($"Read .css from stream");
+            if (!clearStylesheet)
             {
-                _cssstrings.Add(sr.ReadLine());
+                while (sr.EndOfStream != true)
+                {
+                    _cssstrings.Add(sr.ReadLine());
+                }
             }
+
+            
+            fst.Position = 0;
+            //sr.DiscardBufferedData();
+            //string fullCss = sr.ReadToEnd();
             fst.Close();
-            Logger.logger.Debug($"Create file :{path}");
+
+            
+
+
+
+
+            DoLog.logger.Debug($"Create file :{path}");
             FileStream rst = new FileStream(path, FileMode.Create);
             StreamWriter sw = new StreamWriter(rst);
             Regex reBody = new Regex(@"[bB][oO][dD][yY][\s]*[{]");
             Regex reHtml = new Regex(@"[Hh][Tt][Mm][Ll][\s]*[{]");
-            Logger.logger.Info($"Define CssStyle ");
-            Logger.logger.Info($"Replace \"body\" ");
-            CssStyle css = new CssStyle(_cssstrings, reBody, "body");
+            DoLog.logger.Info($"Define CssStyle ");
+            DoLog.logger.Info($"Replace \"body\" ");
+            LagecyCssStyle css = new LagecyCssStyle(_cssstrings, reBody, "body");
             // _cssstrings = css.Replace();
-            css.Replace();
-            Logger.logger.Debug($"Replace \"html\" ");
-            css.NewReplacement(reHtml, "html");
-            css.Replace();
-            _cssstrings = css.GetCss();
+            if (!DONOTVerticalize)
+            {
+                css.Replace(true);
+                DoLog.logger.Debug($"Replace \"html\" ");
+                css.NewReplacement(reHtml, "html");
+                css.Replace(true);
+            }
+            
+     
+
+
+            CssParser cssParser = new CssParser(css.GetFullCss());
+            if (AddCustomisedCSS)
+            {
+                cssParser.AppendCSS(ChoHoe.Properties.Settings.Default.CustomizedCSS);
+
+            }
+            
+
 
             //以下待修整
-             
+
 
 
 
             sw.AutoFlush = true;
-            foreach (string item in _cssstrings)
-            {
-                sw.WriteLine(item);
-            }
+
+            sw.Write(cssParser.GetCSS());
+
+            //foreach (string item in _cssstrings)
+            //{
+            //    sw.WriteLine(item);
+            //}
 
 
 
@@ -952,6 +1019,7 @@ namespace ChoHoeBV
 
             if (convertMobi == true)
             {
+               
 
                 if (ChoHoe.Properties.Settings.Default.UseCalibre)
                 {
@@ -967,6 +1035,12 @@ namespace ChoHoeBV
                     ExtensionProcess(ExtensionMethod.kindleGen, argu);
 
                 }
+            }
+            if (convertKepub)
+            {
+                string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
+                string[] argu = { $@"""{outputPath}"" --output ""output\{outputfilename}.kepub.epub"" " };
+                ExtensionProcess(ExtensionMethod.kepubify, argu);
             }
 
         }
@@ -1004,6 +1078,16 @@ namespace ChoHoeBV
                         return ExtensionResult.fail;
                     }
                     break;
+                case ExtensionMethod.kepubify:
+
+                    ExtensionPath = $"{ChoHoe.Properties.Settings.Default.kepubifyPath}\\kepubify-windows-64bit.exe";
+                    if (!ExtensionChecker.kepubfyStatus)
+                    {
+                        MessageBox.Show($"需要使用 kepubify 以進行轉檔，請至『設定』指定 kepubify 的路徑。({filename})");
+                        return ExtensionResult.fail;
+                    }
+                    break;
+                   
 
             }
 
@@ -1038,10 +1122,10 @@ namespace ChoHoeBV
                     int result = p.ExitCode;
 
                     output.AppendLine(System.Environment.NewLine);
-                    Logger.logger.Debug(output.ToString());
+                    ChoHoe.DoLog.logger.Debug(output.ToString());
                     p.Close();
 
-                    Logger.ProcessErrorMessage(output.ToString());
+                    DoLog.ProcessErrorMessage(output.ToString());
                     switch (method)
                     {
                         case ExtensionMethod.calibreTxtToEpub:
@@ -1065,8 +1149,8 @@ namespace ChoHoeBV
                             }
                             else
                             {
-                                
-                                
+
+                                ChoHoe.DoLog.logger.Fatal($"Pandoc returned Error with:{result}");
                                 return ExtensionResult.failWithPandocErrors;
 
                             }
@@ -1112,7 +1196,7 @@ namespace ChoHoeBV
                 }
                 catch (Exception e)
                 {
-                    Logger.logger.Error($"輸出{argum.ToString()}時出現錯誤:{e.Source},{e.Message}");
+                    DoLog.logger.Error($"輸出{argum.ToString()}時出現錯誤:{e.Source},{e.Message}");
                     return ExtensionResult.fail;
                     throw;
                 }

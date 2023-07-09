@@ -286,5 +286,77 @@ namespace ChoHoe.Properties {
                 this["IgnoreVersion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomizedCSS {
+            get {
+                return ((string)(this["CustomizedCSS"]));
+            }
+            set {
+                this["CustomizedCSS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\")]
+        public string kepubifyPath {
+            get {
+                return ((string)(this["kepubifyPath"]));
+            }
+            set {
+                this["kepubifyPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_ConvertKepub {
+            get {
+                return ((bool)(this["Batch_ConvertKepub"]));
+            }
+            set {
+                this["Batch_ConvertKepub"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_DONOTVerticalize {
+            get {
+                return ((bool)(this["Batch_DONOTVerticalize"]));
+            }
+            set {
+                this["Batch_DONOTVerticalize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_RemoveStylesheet {
+            get {
+                return ((bool)(this["Batch_RemoveStylesheet"]));
+            }
+            set {
+                this["Batch_RemoveStylesheet"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_AddCustomizeCSS {
+            get {
+                return ((bool)(this["Batch_AddCustomizeCSS"]));
+            }
+            set {
+                this["Batch_AddCustomizeCSS"] = value;
+            }
+        }
     }
 }

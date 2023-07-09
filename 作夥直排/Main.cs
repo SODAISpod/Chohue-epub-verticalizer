@@ -46,8 +46,7 @@ namespace ChoHoeBV
 
             
             //btnConvert.Enabled = false;
-            Logger.logger.Info("🦄//////////////////🦄 - App Started - 🦄///////////////////////🦄");
-
+            DoLog.logger.Info("🦄//////////////////🦄 - App Started - 🦄///////////////////////🦄");
             const string Caption = "預設會強制指定為由右而左，直排小說的翻頁方向。";
             //toolTip.SetToolTip(cbModifyPageDirection, Caption);
             SetInitialValue();
@@ -55,7 +54,7 @@ namespace ChoHoeBV
             //呼叫語言func
 
 
-            this.StyleManager = metroStyleManager1;
+            this.StyleManager = tipRemoveCSS;
 
 
             NewVersionCheck versionCheck = new NewVersionCheck();
@@ -98,36 +97,36 @@ namespace ChoHoeBV
         static void ChExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             Exception e = (Exception)args.ExceptionObject;
-            Logger.logger.Error(e, "Error:");
+            DoLog.logger.Error(e, "Error:");
 
         }
 
         private void SetInitialValue()
         {
-            //metroframwork無法在裡面塞image
-            //cbChineseBatch.Image = ChoHoe.Properties.Resources.translate_FILL0_wght200_GRAD200_opsz24;
-            //cbChineseBatch.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnConvertBatch.Image = Image.FromFile("C:\\Users\\\\Downloads\\translate_FILL0_wght200_GRAD200_opsz24.png");
-            //btnConvertBatch.ImageAlign = ContentAlignment.MiddleLeft;
-            
 
-            //cbToChinese.Checked = ChoHoe.Properties.Settings.Default.ChineseConvert;
+            //載入選項記憶
             cbChineseBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ChineseConvert;
             cbModifyPageDirectionBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_IfChangePageDirection;
             //rdoPageRTL.Checked = ChoHoe.Properties.Settings.Default.PageDirection;
             //rdoPageLTR.Checked = !ChoHoe.Properties.Settings.Default.PageDirection;
             cbReplacePictureBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ReplaceImg;
-
+            cbDONOTVerticalize.Checked = ChoHoe.Properties.Settings.Default.Batch_DONOTVerticalize;
             cbConvertMobiBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ConvertMobi;
 
             cbEmbdedFontBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_EmbedFont;
             btnToTraditionValueBatch.Text = ChoHoe.Properties.Settings.Default.Batch_ToTriditional ? ">" : "<";
             //ToTradictional = ChoHoe.Properties.Settings.Default.ToTriditional;
             cbRemoveCss.Checked = ChoHoe.Properties.Settings.Default.Batch_RemoveCss;
+            cbRemoveStylesheet.Checked = ChoHoe.Properties.Settings.Default.Batch_RemoveStylesheet;
+            cbAddCustomizeCSS.Checked = ChoHoe.Properties.Settings.Default.Batch_AddCustomizeCSS;
             cbReplaceTWpunctuation.Checked = ChoHoe.Properties.Settings.Default.Batch_ReplaceTwPunctuation;
+            cbConvertKepub.Checked = ChoHoe.Properties.Settings.Default.Batch_ConvertKepub;
+
             tipOpenFolder.SetToolTip(btnOpenFolder, "開啟輸出資料夾");
             tipOpenFolder.SetToolTip(btnDelete, "移除書本");
-            
+            tipOpenFolder.SetToolTip(cbRemoveCss, "移除HTML檔案元素中的attribute裡的style");
+            tipOpenFolder.SetToolTip(cbRemoveCss, "清空stylesheet中的CSS");
+                
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;
             lbVersion.Text= $"{Assembly.GetEntryAssembly().GetName().Version.ToString()}";
@@ -137,15 +136,10 @@ namespace ChoHoeBV
 
 
             bwConvert.WorkerSupportsCancellation = true;
-
             bwConvertBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Convert_Batch_RunWorker_Completed);
             bwConvertBatch.DoWork += new DoWorkEventHandler(Convert_Batch_Backgroundworker_DoWork);
             btnConvertBatch.Enabled = false;
             bwConvertBatch.WorkerSupportsCancellation = true;
-
-
-
-
             bwBatch.DoWork += new DoWorkEventHandler(Load_Batch_Backgroundworker_DoWork);
             bwBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Load_Batch_RunWorker_Completed);
 
@@ -153,6 +147,8 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.PandocPath = "Resources";// PandocPath.SelectedPath;
             ChoHoe.Properties.Settings.Default.Save();
             ChoHoe.Properties.Settings.Default.KindlegenPath = "Resources";// KinglegenPath.SelectedPath;
+            ChoHoe.Properties.Settings.Default.Save();
+            ChoHoe.Properties.Settings.Default.kepubifyPath = "Resources";// KinglegenPath.SelectedPath;
             ChoHoe.Properties.Settings.Default.Save();
 
 
@@ -186,8 +182,8 @@ namespace ChoHoeBV
         private void btnLoad_Click(object sender, EventArgs e)
         {
             //btnConvert.Enabled = false;
-            Logger.logger.Info(System.Environment.NewLine + $"///////////////Open File///////////////" + System.Environment.NewLine + "////////////////////////////////");
-            Logger.logger.Info("開啟檔案");
+            DoLog.logger.Info(System.Environment.NewLine + $"///////////////Open File///////////////" + System.Environment.NewLine + "////////////////////////////////");
+            DoLog.logger.Info("開啟檔案");
 
             using (OpenFileDialog Import_File = new OpenFileDialog())
             {
@@ -204,9 +200,9 @@ namespace ChoHoeBV
                     InprogressBar.MarqueeAnimationSpeed = 30;
 
                     abook = new Book();
-                    Logger.logger.Info($"{Import_File.SafeFileName}");
+                    DoLog.logger.Info($"{Import_File.SafeFileName}");
 
-                    Logger.logger.Info("開始讀取檔案");
+                    DoLog.logger.Info("開始讀取檔案");
 
                     bw.RunWorkerAsync(argument: Import_File.FileName);
                     //abook.Load(Import_File.FileName);
@@ -319,7 +315,7 @@ namespace ChoHoeBV
 
             //Logger.logger.Trace($"{}");
 
-            Logger.logger.Info("開始轉檔");
+            DoLog.logger.Info("開始轉檔");
 
             Tuple<bool, bool> variables = new Tuple<bool, bool>(cbModifyPageDirectionBatch.Checked, cbRemoveCss.Checked);
 
@@ -361,14 +357,14 @@ namespace ChoHoeBV
                         //batchBookList.Clear();
                         batchBookList.Add(abooks);
                         this.Invoke(new MethodInvoker(delegate {
-                            runningUi($"成功{System.Environment.NewLine}{Logger.GetErrorMessage()}", true);
+                            runningUi($"成功{System.Environment.NewLine}{DoLog.GetErrorMessage()}", true);
 
 
                         }));
                         break;
                     case LoadResult.fail:
                         this.Invoke(new MethodInvoker(delegate {
-                            runningUi($"失敗:{System.Environment.NewLine}{Logger.GetErrorMessage()}", true);
+                            runningUi($"失敗:{System.Environment.NewLine}{DoLog.GetErrorMessage()}", true);
 
 
                         }));
@@ -427,14 +423,34 @@ namespace ChoHoeBV
 
                 }));
                 item.IsRemoveCss(RemoveCss);
+                item.convertKepub = cbConvertKepub.Checked;
+                item.replacePunctuation = cbReplaceTWpunctuation.Checked;
+                item.ConvertChinese = cbChineseBatch.Checked;
+                item.ToTriditional = BatchToTradictional;
+                item.convertMobi=cbConvertMobiBatch.Checked;
+                item.fontEmbed=cbEmbdedFontBatch.Checked;
+                item.clearStylesheet = cbRemoveStylesheet.Checked;
+                item.replacePicture=cbReplacePictureBatch.Checked;
+                item.DONOTVerticalize=cbDONOTVerticalize.Checked;  
+                item.AddCustomisedCSS=cbAddCustomizeCSS.Checked;
+
                 if (Modifypage)
                 {
-                    item.Convert(cbChineseBatch.Checked, BatchToTradictional, rdoPageRTLBatch.Checked, cbConvertMobiBatch.Checked, cbEmbdedFontBatch.Checked, cbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle(),cbReplaceTWpunctuation.Checked);
+                    item.pageDirection=rdoPageLTRBatch.Checked;
                 }
                 else
                 {
-                    item.Convert(cbChineseBatch.Checked, BatchToTradictional, true, cbConvertMobiBatch.Checked, cbEmbdedFontBatch.Checked, cbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle(), cbReplaceTWpunctuation.Checked);
+                    item.pageDirection = false;
                 }
+                item.Convert();
+                //if (Modifypage)
+                //{
+                //    item.Convert(cbChineseBatch.Checked, BatchToTradictional, rdoPageRTLBatch.Checked, cbConvertMobiBatch.Checked, cbEmbdedFontBatch.Checked, cbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle(),cbReplaceTWpunctuation.Checked);
+                //}
+                //else
+                //{
+                //    item.Convert(cbChineseBatch.Checked, BatchToTradictional, true, cbConvertMobiBatch.Checked, cbEmbdedFontBatch.Checked, cbReplacePictureBatch.Checked, item.GetAuthor(), item.GetTitle(), cbReplaceTWpunctuation.Checked);
+                //}
             }
             e.Cancel = true;
             return;
@@ -510,7 +526,7 @@ namespace ChoHoeBV
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Logger.logger.Info($"Deleting selected boooks, Total rows: {BatchGridView.RowCount}, Selected rows count: {BatchGridView.SelectedRows.Count}");
+            DoLog.logger.Info($"Deleting selected boooks, Total rows: {BatchGridView.RowCount}, Selected rows count: {BatchGridView.SelectedRows.Count}");
 
             //list
             int min = -1;
@@ -546,7 +562,7 @@ namespace ChoHoeBV
                     max = item.Index;
                 }
             }
-            Logger.logger.Info($"min: {min}");
+            DoLog.logger.Info($"min: {min}");
 
             range = max - min + 1;
             //Check if the last empty one selected.
@@ -722,6 +738,43 @@ namespace ChoHoeBV
                     .Show();
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FillCustomizeCSS fillCustomizeCSS = new FillCustomizeCSS();
+            fillCustomizeCSS.Show();
+        }
+
+        private void cbConvertKepub_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.Batch_ConvertKepub = cbConvertKepub.Checked;
+            ChoHoe.Properties.Settings.Default.Save();
+        }
+
+        private void cbDONOTVerticalize_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.Batch_DONOTVerticalize = cbDONOTVerticalize.Checked;
+                                   
+            ChoHoe.Properties.Settings.Default.Save();
+        }
+
+        private void cbRemoveStylesheet_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.Batch_RemoveStylesheet= cbRemoveStylesheet.Checked;
+
+            ChoHoe.Properties.Settings.Default.Save();
+        }
+
+        private void cbAddCustomizeCSS_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.Batch_AddCustomizeCSS= cbAddCustomizeCSS.Checked;
+
+            ChoHoe.Properties.Settings.Default.Save();
+        }
+        public void OutputLog(string message)
+        {
+            tbLogWindow.AppendText(message);
         }
     }
 }

@@ -68,5 +68,23 @@
     <Setting Name="IgnoreVersion" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="CustomizedCSS" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="kepubifyPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\</Value>
+    </Setting>
+    <Setting Name="Batch_ConvertKepub" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Batch_DONOTVerticalize" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Batch_RemoveStylesheet" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Batch_AddCustomizeCSS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

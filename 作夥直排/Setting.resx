@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 18</value>
+  </data>
+  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 24</value>
+  </data>
+  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
   <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
     <value>pictureBox4</value>
   </data>
@@ -129,6 +147,21 @@
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 99</value>
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 24</value>
+  </data>
+  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
   <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
     <value>pictureBox3</value>
   </data>
@@ -140,183 +173,6 @@
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.Name" xml:space="preserve">
-    <value>metroButton4</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;metroButton2.Name" xml:space="preserve">
-    <value>metroButton2</value>
-  </data>
-  <data name="&gt;&gt;metroButton2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;metroButton2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.Name" xml:space="preserve">
-    <value>metroButton1</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingKindlegen.Name" xml:space="preserve">
-    <value>OutputMobiUsingKindlegen</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingKindlegen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingKindlegen.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingKindlegen.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingCalibre.Name" xml:space="preserve">
-    <value>OutputMobiUsingCalibre</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingCalibre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingCalibre.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;OutputMobiUsingCalibre.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;KindlegenPathValidResult.Name" xml:space="preserve">
-    <value>KindlegenPathValidResult</value>
-  </data>
-  <data name="&gt;&gt;KindlegenPathValidResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;KindlegenPathValidResult.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;KindlegenPathValidResult.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;LinkLBKinflegenPath.Name" xml:space="preserve">
-    <value>LinkLBKinflegenPath</value>
-  </data>
-  <data name="&gt;&gt;LinkLBKinflegenPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LinkLBKinflegenPath.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;LinkLBKinflegenPath.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;CalibrePathValidResult.Name" xml:space="preserve">
-    <value>CalibrePathValidResult</value>
-  </data>
-  <data name="&gt;&gt;CalibrePathValidResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CalibrePathValidResult.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;CalibrePathValidResult.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;LinkLBCalibrePath.Name" xml:space="preserve">
-    <value>LinkLBCalibrePath</value>
-  </data>
-  <data name="&gt;&gt;LinkLBCalibrePath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LinkLBCalibrePath.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;LinkLBCalibrePath.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 100</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 194</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>輸出mobi檔</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -370,7 +226,7 @@
     <value>3</value>
   </data>
   <data name="metroButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 96</value>
+    <value>182, 98</value>
   </data>
   <data name="metroButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -394,7 +250,7 @@
     <value>4</value>
   </data>
   <data name="metroButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 19</value>
+    <value>183, 18</value>
   </data>
   <data name="metroButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -645,41 +501,35 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 100</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>325, 194</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 407</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>輸出mobi檔</value>
   </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 100</value>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>輸出路徑</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -714,119 +564,35 @@
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 407</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
-    <value>pictureBox8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.Name" xml:space="preserve">
-    <value>metroButton5</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.Name" xml:space="preserve">
-    <value>metroButton3</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PandocPathValidResult.Name" xml:space="preserve">
-    <value>PandocPathValidResult</value>
-  </data>
-  <data name="&gt;&gt;PandocPathValidResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PandocPathValidResult.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;PandocPathValidResult.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;linklbPacdoc.Name" xml:space="preserve">
-    <value>linklbPacdoc</value>
-  </data>
-  <data name="&gt;&gt;linklbPacdoc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linklbPacdoc.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;linklbPacdoc.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 301</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>325, 100</value>
   </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>讀取 Epub 2.0</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>輸出路徑</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 10</value>
+    <value>155, 11</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 24</value>
@@ -901,7 +667,7 @@
     <value>2</value>
   </data>
   <data name="metroButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 10</value>
+    <value>182, 11</value>
   </data>
   <data name="metroButton3.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -1014,59 +780,113 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 301</value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 97</value>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>325, 100</value>
   </data>
-  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
-  </data>
-  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>讀取 Epub 2.0</value>
   </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 19</value>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 24</value>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 37</value>
+  </data>
+  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 239</value>
+  </data>
+  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
+  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
+    <value>pictureBox5</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
+    <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="linkLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 27.75pt, style=Bold</value>
+  </data>
+  <data name="linkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 147</value>
+  </data>
+  <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 47</value>
+  </data>
+  <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>Coming Soon</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Name" xml:space="preserve">
+    <value>linkLabel2</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 100</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>536, 301</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>更換替換圖片</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1075,7 +895,7 @@
     <value>7, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>352, 583</value>
+    <value>903, 583</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 9pt</value>

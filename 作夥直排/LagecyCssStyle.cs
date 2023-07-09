@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChoHoe
 {
-    class CssStyle
+    class LagecyCssStyle
     {
 
         private List<string> _RawCss;
@@ -20,7 +20,7 @@ namespace ChoHoe
         private string _selectorName = "";
 
 
-        public CssStyle(List<string> Raw, Regex regex,string selectorn)
+        public LagecyCssStyle(List<string> Raw, Regex regex,string selectorn)
         {
             if (Raw.Count==0)
             {
@@ -30,11 +30,15 @@ namespace ChoHoe
             _selectorName = selectorn;
             _RawCss= Raw;
             _regex = regex;
-            Logger.logger.Info($"FindRawStyle()");
+            DoLog.logger.Info($"FindRawStyle()");
             FindRawStyle();
-            Logger.logger.Info($"ProcessRawStyle()");
+            DoLog.logger.Info($"ProcessRawStyle()");
             ProcessRawStyle();
             
+        }
+        public LagecyCssStyle(List<string> Raw,CssStyles styles) 
+        {
+        
         }
 
         public void NewReplacement(Regex regex,string selectorn)
@@ -85,7 +89,7 @@ namespace ChoHoe
                             {
                                 Scope["EndRow"] = i;
                                 Scope["EndPosition"] = _RawCss[i].IndexOf("}")-1;
-                                Logger.logger.Info($"起始結尾同行");
+                                DoLog.logger.Info($"起始結尾同行");
                             }
                         }
 
@@ -102,7 +106,7 @@ namespace ChoHoe
                             {
                                 Scope["EndRow"] = i;
                                 Scope["EndPosition"] = _RawCss[i].IndexOf("}");
-                                Logger.logger.Info($"起始結尾不同行");
+                                DoLog.logger.Info($"起始結尾不同行");
                             }
 
                         }
@@ -124,7 +128,7 @@ namespace ChoHoe
 
             }
 
-            Logger.logger.Debug($"scope:{Scope["StartRow"]},{Scope["StartPosition"]},{Scope["EndRow"]},{Scope["EndPosition"]}");
+            DoLog.logger.Debug($"scope:{Scope["StartRow"]},{Scope["StartPosition"]},{Scope["EndRow"]},{Scope["EndPosition"]}");
 
             if (Scope["StartRow"] != -1 && Scope["EndRow"] != -1)
             {
@@ -171,9 +175,13 @@ namespace ChoHoe
             
 
         }
-        public void Replace()
+        public void Replace(bool DoVerticalReplace)
         {
-            SetWritingMode();
+            if (DoVerticalReplace)
+            {
+                SetWritingMode();
+
+            }
             string teststring = GetStyleText();
 
             int insertPosition = Scope["EndRow"] + 1;
@@ -186,8 +194,8 @@ namespace ChoHoe
                 _RawCss.Insert(insertPosition, WriteBackSelector);
 
 
-                Logger.logger.Info($"無此selector");
-                Logger.logger.Info($"Intert to :{insertPosition}");
+                DoLog.logger.Info($"無此selector");
+                DoLog.logger.Info($"Intert to :{insertPosition}");
                
             }
             else if(Scope["EndRow"] != -1)
@@ -203,14 +211,14 @@ namespace ChoHoe
                 }
 
 
-                Logger.logger.Info($"Intert to :{insertPosition}");
-                Logger.logger.Info($"Remove range : From {Scope["StartRow"]} remove counts {removeCount}");
+                DoLog.logger.Info($"Intert to :{insertPosition}");
+                DoLog.logger.Info($"Remove range : From {Scope["StartRow"]} remove counts {removeCount}");
 
             }
             else
             {
-                Logger.logger.Error($"Scope有誤");
-                Logger.logger.Error($"scope:{Scope["StartRow"]},{Scope["StartPosition"]},{Scope["EndRow"]},{Scope["EndPosition"]}");
+                DoLog.logger.Error($"Scope有誤");
+                DoLog.logger.Error($"scope:{Scope["StartRow"]},{Scope["StartPosition"]},{Scope["EndRow"]},{Scope["EndPosition"]}");
 
             }
           
@@ -230,7 +238,7 @@ namespace ChoHoe
             Style.Clear();
             _RawStyles=_RawStyles.Replace(" ", "");
 
-            Logger.logger.Info($"Raw Style:{_RawStyles}");
+            DoLog.logger.Info($"Raw Style:{_RawStyles}");
 
             char[] delimiterChars = { ';'};
             string[] tempsplited = _RawStyles.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
@@ -251,7 +259,7 @@ namespace ChoHoe
         }
        public void SetWritingMode()
         {
-            Logger.logger.Info($"SetWritingMode()");
+            DoLog.logger.Info($"SetWritingMode()");
 
             Style["writing-mode"] = "vertical-rl";
             Style["-webkit-writing-mode"] = "vertical-rl";
@@ -262,14 +270,14 @@ namespace ChoHoe
         }
         public string GetStyleText()
         {
-            Logger.logger.Info($"GetStyleText()");
+            DoLog.logger.Info($"GetStyleText()");
             string styleToSend = "";
             foreach (KeyValuePair<string,string> item in Style)
             {
                 styleToSend += item.Key + ": " + item.Value+";" + System.Environment.NewLine;
 
             }
-            Logger.logger.Info(System.Environment.NewLine + $"style returning:" + System.Environment.NewLine+ $"{styleToSend}");
+            DoLog.logger.Info(System.Environment.NewLine + $"style returning:" + System.Environment.NewLine+ $"{styleToSend}");
             return styleToSend;
 
         }
@@ -277,8 +285,33 @@ namespace ChoHoe
         public  List<string> GetCss()
         {
 
-            Logger.logger.Info($"return List<string> GetCss()");
+            DoLog.logger.Info($"return List<string> GetCss()");
             return _RawCss;
+        }
+        public string GetFullCss()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (string item in _RawCss)
+            {
+                sb.AppendLine(item);
+            }
+            return sb.ToString();
+        }
+    }
+
+    class CssStyles
+    {
+        string _Selector="";
+        Dictionary<string,string> _style= new Dictionary<string, string>();
+        CssStyles(string Selector)
+        {
+            _Selector = Selector;
+
+        }
+        void AddStyle(string style,string value) 
+        {
+            _style.Add(style, value);
+        
         }
     }
 }
