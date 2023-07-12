@@ -1,0 +1,99 @@
+==========
+References
+==========
+ChohueWPF
+System.Windows
+ChohueWPF.Properties
+System.CodeDom.Compiler
+System.Diagnostics
+System.Runtime.CompilerServices
+System.Resources
+System.Globalization
+System.Diagnostics.CodeAnalysis
+System.ComponentModel
+System.Configuration
+System.Windows.Markup
+System
+System.Collections.Generic
+System.Data
+System.Linq
+System.Threading.Tasks
+System.Text
+System.Windows.Controls
+System.Windows.Data
+System.Windows.Documents
+System.Windows.Input
+System.Windows.Media
+System.Windows.Media.Imaging
+System.Windows.Navigation
+System.Windows.Shapes
+System.Reflection
+System.Runtime.InteropServices
+System.Windows.Automation
+System.Windows.Controls.Primitives
+System.Windows.Ink
+System.Windows.Media.Animation
+System.Windows.Media.Effects
+System.Windows.Media.Media3D
+System.Windows.Media.TextFormatting
+System.Windows.Shell
+Wpf.Ui
+Wpf.Ui.Common
+Wpf.Ui.Controls
+Wpf.Ui.Controls.Navigation
+Wpf.Ui.Converters
+Wpf.Ui.Markup
+Wpf.Ui.ValidationRules
+project.all
+
+===============
+DownloadedFiles
+===============
+project.all.json
+system.configuration.json
+
+==============
+ProjectResults
+==============
+----------------------
+Showing results for: C:\Users\ouo\source\repos\chohue\code\ChohueEpubVerticalizationer\ChohueWPF\ChohueWPF.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net7.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\ouo\source\repos\chohue\code\ChohueEpubVerticalizationer\ChohueWPF\ChohueWPF.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net7.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+
+===========
+BuildErrors
+===========
+
+

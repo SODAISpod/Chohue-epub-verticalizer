@@ -50,6 +50,9 @@ namespace ChoHoeBV
         List<string> jpeg = new List<string>();
 
         public string title = "", author = "";
+        /// <summary>
+        /// 
+        /// </summary>
         public bool replacePunctuation { get; set; } = false;
         
         public bool ConvertChinese { get; set; } = false;
