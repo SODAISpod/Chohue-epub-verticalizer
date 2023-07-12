@@ -242,7 +242,7 @@ namespace ChoHoeBV
             DoLog.logger.Info($"Writing to opf");
 
             {
-                string PageDirectionString = PageDirection ? "rtl" : "ltr";
+                string PageDirectionString = PageDirection ? "ltr" : "rtl";
                 DoLog.logger.Debug($"PageDirection : {PageDirectionString}");
                 if (Img)
                 {
