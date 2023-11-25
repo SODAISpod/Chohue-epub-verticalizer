@@ -137,7 +137,7 @@
     <value>Embedded font</value>
   </data>
   <data name="btnConvertBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>855, 713</value>
+    <value>874, 760</value>
   </data>
   <data name="btnConvertBatch.Text" xml:space="preserve">
     <value>Forge</value>
@@ -187,6 +187,9 @@
   <data name="btnToTraditionValueBatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 22</value>
   </data>
+  <data name="btnToTraditionValueBatch.Text" xml:space="preserve">
+    <value>👉🏼</value>
+  </data>
   <data name="CT_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 35</value>
   </data>
@@ -200,13 +203,13 @@
     <value>294, 95</value>
   </data>
   <data name="btnLoadBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>722, 713</value>
+    <value>741, 760</value>
   </data>
   <data name="btnLoadBatch.Text" xml:space="preserve">
     <value>Open</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1043, 865</value>
+    <value>1043, 916</value>
   </data>
   <data name="cbRemoveStylesheet.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 25</value>
@@ -239,7 +242,7 @@
     <value>Also export those format</value>
   </data>
   <data name="btnOpenFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>827, 824</value>
+    <value>846, 871</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2953,16 +2956,22 @@
     <value>Greetings！</value>
   </data>
   <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>908, 823</value>
+    <value>927, 870</value>
   </data>
   <data name="btnSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 823</value>
+    <value>765, 870</value>
   </data>
   <data name="cbDONOTVerticalize.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 25</value>
   </data>
   <data name="cbDONOTVerticalize.Text" xml:space="preserve">
     <value>Don't verticalize</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.Text" xml:space="preserve">
+    <value>讀取 html 前先解碼</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbTurncateTitle.AutoSize" type="System.Boolean, mscorlib">

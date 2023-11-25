@@ -1,4 +1,4 @@
-﻿namespace ChoHoeBV
+﻿namespace ChoHoe
 {
     partial class AboutBox1
     {

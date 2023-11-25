@@ -364,5 +364,15 @@ namespace ChoHoe.Properties {
                 return ResourceManager.GetString("VerticalStyle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 工作區域_1__5_ {
+            get {
+                object obj = ResourceManager.GetObject("工作區域_1__5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

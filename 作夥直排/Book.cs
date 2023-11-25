@@ -15,7 +15,7 @@ using System.Web.UI.WebControls;
 using HtmlAgilityPack;
 using System.Xml;
 using ChoHoe;
-using ChoHoeBV;
+using ChoHoe;
 using Ionic.Zlib;
 using MetroFramework;
 using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter;
@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using NLog;
 
-namespace ChoHoeBV
+namespace ChoHoe
 {
     public class Book
     {
@@ -66,6 +66,7 @@ namespace ChoHoeBV
         public bool DONOTVerticalize { get; set; }=false;
         public bool AddCustomisedCSS { get; set; } = false;
         public bool turncateTitle { get; set; } = false;
+        public bool decodeHTMLBeforeParse { get; set; } = false;
 
         public LoadResult Load(string _path)
         {
@@ -627,7 +628,7 @@ namespace ChoHoeBV
             }
 
         }
-
+        [Obsolete("Deprecated")]
         public bool Convert(bool DoChineseTransfer, bool ToTradictional, bool pageDirection, bool convertMobi, bool fontEmbed, bool replacePicture, string author, string title,bool toReplacePunctuation)
         {
             this.author = author;
@@ -652,13 +653,14 @@ namespace ChoHoeBV
             return true;
            
         }
+        
         public bool Convert()
         {
             this.author = author;
             this.title = title;
             if (turncateTitle)
             {
-                 TitleTurncator();
+                 TurncateTitle();
 
             }
             DoLog.logger.Info($"Editing C");
@@ -690,7 +692,12 @@ namespace ChoHoeBV
             StreamReader sr = new StreamReader(xhtmlloder);
 
             string source = sr.ReadToEnd();
-            source = HttpUtility.HtmlDecode(source);
+            if (decodeHTMLBeforeParse)
+            {
+
+                source = HttpUtility.HtmlDecode(source);
+
+            }
             sr.Close();
             xhtmlloder.Close();
 
@@ -698,11 +705,11 @@ namespace ChoHoeBV
 
 
             var doc = new HtmlAgilityPack.HtmlDocument();
-            // doc.OptionOutputAsXml = true;
+            
             bool hasCSSStylesheet = false;
             doc.OptionWriteEmptyNodes = true;
-            //doc.OptionOutputOptimizeAttributeValues=true;
-            doc.LoadHtml(HttpUtility.HtmlDecode(source));
+            doc.OptionOutputOriginalCase = true;
+            doc.LoadHtml(source);
             foreach (HtmlNode node in doc.DocumentNode.ChildNodes)
             {
                 if (node.Name == "html")
@@ -760,6 +767,7 @@ namespace ChoHoeBV
             FileStream sw = new FileStream(path, FileMode.Create);
             //  doc.DocumentNode.InnerHtml=  HttpUtility.HtmlEncode(doc.ParsedText);
             doc.Save(sw, System.Text.Encoding.UTF8);
+            
 
             sw.Close();
         }
@@ -1235,7 +1243,7 @@ namespace ChoHoeBV
 
 
         }
-        public void TitleTurncator()
+        public void TurncateTitle()
         {
             string _title=GetTitle();
             int length = _title.Length;

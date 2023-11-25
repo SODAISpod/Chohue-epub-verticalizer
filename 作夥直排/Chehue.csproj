@@ -213,6 +213,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
     </Compile>
+    <None Include="Resources\工作區域 1 %285%29.png" />
+    <None Include="Resources\火車司機 %284%29.png" />
     <None Include="Resources\rocket_launch_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\cut_FILL0_wght200_GRAD200_opsz24.png" />
     <None Include="Resources\format_align_justify_FILL0_wght200_GRAD200_opsz24.png" />

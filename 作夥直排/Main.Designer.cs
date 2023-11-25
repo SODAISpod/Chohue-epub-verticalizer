@@ -1,4 +1,4 @@
-﻿namespace ChoHoeBV
+﻿namespace ChoHoe
 {
     partial class Form1
     {
@@ -77,9 +77,12 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.cbTurncateTitle = new MetroFramework.Controls.MetroCheckBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.Btn_debugOptions = new MetroFramework.Controls.MetroButton();
             this.Pb_debugOptions = new System.Windows.Forms.PictureBox();
+            this.cbDecodeHtmlBeforeParsing = new MetroFramework.Controls.MetroCheckBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -98,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_debugOptions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // cbRemoveCss
@@ -168,6 +172,7 @@
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // rdoPageRTLBatch
             // 
@@ -457,17 +462,12 @@
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             // 
-            // metroToolTip1
-            // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroToolTip1.StyleManager = null;
-            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // Btn_debugOptions
             // 
             resources.ApplyResources(this.Btn_debugOptions, "Btn_debugOptions");
             this.Btn_debugOptions.Name = "Btn_debugOptions";
             this.Btn_debugOptions.UseSelectable = true;
+            this.Btn_debugOptions.Click += new System.EventHandler(this.Btn_debugOptions_Click);
             // 
             // Pb_debugOptions
             // 
@@ -475,6 +475,27 @@
             resources.ApplyResources(this.Pb_debugOptions, "Pb_debugOptions");
             this.Pb_debugOptions.Name = "Pb_debugOptions";
             this.Pb_debugOptions.TabStop = false;
+            // 
+            // cbDecodeHtmlBeforeParsing
+            // 
+            this.cbDecodeHtmlBeforeParsing.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            resources.ApplyResources(this.cbDecodeHtmlBeforeParsing, "cbDecodeHtmlBeforeParsing");
+            this.cbDecodeHtmlBeforeParsing.Name = "cbDecodeHtmlBeforeParsing";
+            this.cbDecodeHtmlBeforeParsing.UseSelectable = true;
+            this.cbDecodeHtmlBeforeParsing.CheckedChanged += new System.EventHandler(this.cbDecodeHtmlBeforeParsing_CheckedChanged);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::ChoHoe.Properties.Resources.cut_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox11, "pictureBox11");
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.TabStop = false;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // Form1
             // 
@@ -486,6 +507,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbVersion);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -505,6 +527,7 @@
             this.Controls.Add(this.btnConvertBatch);
             this.Controls.Add(this.btnLoadBatch);
             this.Controls.Add(this.cbDONOTVerticalize);
+            this.Controls.Add(this.cbDecodeHtmlBeforeParsing);
             this.Controls.Add(this.cbTurncateTitle);
             this.Controls.Add(this.cbReplaceTWpunctuation);
             this.Controls.Add(this.groupBox5);
@@ -544,6 +567,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_debugOptions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,6 +624,9 @@
         private MetroFramework.Controls.MetroCheckBox cbTurncateTitle;
         private MetroFramework.Controls.MetroButton Btn_debugOptions;
         private System.Windows.Forms.PictureBox Pb_debugOptions;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private MetroFramework.Controls.MetroCheckBox cbDecodeHtmlBeforeParsing;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

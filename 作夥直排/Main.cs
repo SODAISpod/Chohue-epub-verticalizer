@@ -11,7 +11,7 @@ using System.Resources;
 using System.Windows.Forms;
 using Windows.Foundation.Collections;
 
-namespace ChoHoeBV
+namespace ChoHoe
 {
     
     public partial class Form1 : MetroFramework.Forms.MetroForm
@@ -102,7 +102,7 @@ namespace ChoHoeBV
 
         }
 
-        private void SetInitialValue()
+        public void SetInitialValue()
         {
 
             //Debug Options
@@ -116,26 +116,39 @@ namespace ChoHoeBV
             cbModifyPageDirectionBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_IfChangePageDirection;
             //rdoPageRTL.Checked = ChoHoe.Properties.Settings.Default.PageDirection;
             //rdoPageLTR.Checked = !ChoHoe.Properties.Settings.Default.PageDirection;
+            if (ChoHoe.Properties.Settings.Default.Batch_PageDirection)//ltr true
+            {
+                rdoPageLTRBatch.Checked = true;
+            }
+            else
+            {
+                rdoPageRTLBatch.Checked = true;
+            }
             cbReplacePictureBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ReplaceImg;
             cbDONOTVerticalize.Checked = ChoHoe.Properties.Settings.Default.Batch_DONOTVerticalize;
             cbConvertMobiBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ConvertMobi;
 
             cbEmbdedFontBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_EmbedFont;
-            btnToTraditionValueBatch.Text = ChoHoe.Properties.Settings.Default.Batch_ToTriditional ? ">" : "<";
+            btnToTraditionValueBatch.Text = ChoHoe.Properties.Settings.Default.Batch_ToTriditional ? "👈🏼" : "👉🏼";
             //ToTradictional = ChoHoe.Properties.Settings.Default.ToTriditional;
             cbRemoveCss.Checked = ChoHoe.Properties.Settings.Default.Batch_RemoveCss;
             cbRemoveStylesheet.Checked = ChoHoe.Properties.Settings.Default.Batch_RemoveStylesheet;
             cbAddCustomizeCSS.Checked = ChoHoe.Properties.Settings.Default.Batch_AddCustomizeCSS;
             cbReplaceTWpunctuation.Checked = ChoHoe.Properties.Settings.Default.Batch_ReplaceTwPunctuation;
             cbConvertKepub.Checked = ChoHoe.Properties.Settings.Default.Batch_ConvertKepub;
+            cbDONOTVerticalize.Checked = ChoHoe.Properties.Settings.Default.Batch_DONOTVerticalize;
+            cbDecodeHtmlBeforeParsing.Checked = ChoHoe.Properties.Settings.Default.DecodeHtmlBeforeParsing;
+            cbTurncateTitle.Checked = ChoHoe.Properties.Settings.Default.Batch_TurncateTitle;
 
             
 
-            tipOpenFolder.SetToolTip(btnOpenFolder, "開啟輸出資料夾");
-            tipOpenFolder.SetToolTip(btnDelete, "移除書本");
-            tipOpenFolder.SetToolTip(cbRemoveCss, "移除HTML檔案元素中的attribute裡的style");
-            tipOpenFolder.SetToolTip(cbRemoveStylesheet, "把寫在CSS stylesheet檔案裡的style清空");
-                
+            toolTip1.SetToolTip(btnOpenFolder, "開啟輸出資料夾");
+            toolTip1.SetToolTip(btnDelete, "移除書本");
+            toolTip1.SetToolTip(cbRemoveCss, "移除HTML檔案元素中的attribute裡的style");
+            toolTip1.SetToolTip(cbRemoveStylesheet, "把寫在CSS stylesheet檔案裡的style清空");
+           // tipOpenFolder.SetToolTip(cbDecodeHtmlBeforeParsing, "檔案內文使用 BOM 格式儲存使用");
+            toolTip1.SetToolTip(cbDecodeHtmlBeforeParsing, "檔案內文使用 BOM 格式儲存使用");
+
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;
             lbVersion.Text= $"{Assembly.GetEntryAssembly().GetName().Version.ToString()}";
@@ -176,15 +189,15 @@ namespace ChoHoeBV
         private void btnToTraditionValueBatch_Click(object sender, EventArgs e)
         {
 
-            if (btnToTraditionValueBatch.Text == ">")
+            if (btnToTraditionValueBatch.Text == "👉🏼")
             {
-                btnToTraditionValueBatch.Text = "<";
+                btnToTraditionValueBatch.Text = "👈🏼";
                 BatchToTradictional = true;
 
             }
             else
             {
-                btnToTraditionValueBatch.Text = ">";
+                btnToTraditionValueBatch.Text = "👉🏼";
                 BatchToTradictional = false;
             }
         }
@@ -447,6 +460,9 @@ namespace ChoHoeBV
                 item.DONOTVerticalize=cbDONOTVerticalize.Checked;  
                 item.AddCustomisedCSS=cbAddCustomizeCSS.Checked;
                 item.turncateTitle=cbTurncateTitle.Checked;
+                item.decodeHTMLBeforeParse=cbDecodeHtmlBeforeParsing.Checked;
+                
+                    
                 if (Modifypage)
                 {
                     item.pageDirection=rdoPageLTRBatch.Checked;
@@ -636,22 +652,26 @@ namespace ChoHoeBV
 
         private void rdoPageRTLBatch_CheckedChanged(object sender, EventArgs e)
         {
+            rdoPageSwitch();
+        }
+        private void rdoPageSwitch()
+        {
             if (rdoPageRTLBatch.Checked)
             {
-                ChoHoe.Properties.Settings.Default.Batch_PageDirection = rdoPageRTLBatch.Checked;
-                ChoHoe.Properties.Settings.Default.Save();
+                ChoHoe.Properties.Settings.Default.Batch_PageDirection = false;
+                
             }
+            else
+            {
+                ChoHoe.Properties.Settings.Default.Batch_PageDirection = true;
+            }
+            ChoHoe.Properties.Settings.Default.Save();
         }
-
 
 
         private void rdoPageLTRBatch_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdoPageLTRBatch.Checked)
-            {
-                ChoHoe.Properties.Settings.Default.Batch_PageDirection = rdoPageLTRBatch.Checked;
-                ChoHoe.Properties.Settings.Default.Save();
-            }
+            rdoPageSwitch();
         }
         private void runningUi(string message, bool enabled)
         {
@@ -795,6 +815,24 @@ namespace ChoHoeBV
             ChoHoe.Properties.Settings.Default.Batch_TurncateTitle
                                     = cbTurncateTitle.Checked;
             ChoHoe.Properties.Settings.Default.Save();
+        }
+
+        private void cbDecodeHtmlBeforeParsing_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.DecodeHtmlBeforeParsing
+                                    = cbDecodeHtmlBeforeParsing.Checked;
+            ChoHoe.Properties.Settings.Default.Save();
+        }
+
+        private void Btn_debugOptions_Click(object sender, EventArgs e)
+        {
+            DebugOptions debugOptions = new DebugOptions();
+            debugOptions.Show(this);
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
     public enum WorkerProgress

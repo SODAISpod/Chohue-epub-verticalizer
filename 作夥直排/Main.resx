@@ -126,13 +126,13 @@
     <value>17, 20</value>
   </data>
   <data name="cbRemoveCss.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 25</value>
+    <value>243, 25</value>
   </data>
   <data name="cbRemoveCss.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="cbRemoveCss.Text" xml:space="preserve">
-    <value>移除html元素中的的 CSS</value>
+    <value>移除 html 元素中的的 CSS</value>
   </data>
   <data name="&gt;&gt;cbRemoveCss.Name" xml:space="preserve">
     <value>cbRemoveCss</value>
@@ -169,7 +169,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>31</value>
   </data>
   <data name="BatchGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 97</value>
@@ -193,7 +193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BatchGridView.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>34</value>
   </data>
   <data name="cbReplacePictureBatch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -220,7 +220,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbReplacePictureBatch.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="cbEmbdedFontBatch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -250,13 +250,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbEmbdedFontBatch.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="btnConvertBatch.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="btnConvertBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>823, 713</value>
+    <value>823, 743</value>
   </data>
   <data name="btnConvertBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -280,7 +280,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnConvertBatch.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="cbModifyPageDirectionBatch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -310,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbModifyPageDirectionBatch.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>35</value>
   </data>
   <data name="rdoPageRTLBatch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -397,7 +397,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="cbConvertMobiBatch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -457,7 +457,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbChineseBatch.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>37</value>
   </data>
   <data name="ST_Label_Batch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -565,10 +565,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>36</value>
   </data>
   <data name="btnLoadBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>690, 713</value>
+    <value>690, 743</value>
   </data>
   <data name="btnLoadBatch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -592,7 +592,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLoadBatch.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <metadata name="tipRemoveCSS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -601,7 +601,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>110</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
@@ -610,7 +610,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>976, 869</value>
+    <value>976, 897</value>
   </data>
   <data name="Btn_debugOptions.Location" type="System.Drawing.Point, System.Drawing">
     <value>689, 65</value>
@@ -646,13 +646,13 @@
     <value>17, 51</value>
   </data>
   <data name="cbRemoveStylesheet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 25</value>
+    <value>185, 25</value>
   </data>
   <data name="cbRemoveStylesheet.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="cbRemoveStylesheet.Text" xml:space="preserve">
-    <value>移除stylesheet CSS</value>
+    <value>移除 stylesheet CSS</value>
   </data>
   <data name="&gt;&gt;cbRemoveStylesheet.Name" xml:space="preserve">
     <value>cbRemoveStylesheet</value>
@@ -721,7 +721,7 @@
     <value>689, 523</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 120</value>
+    <value>273, 120</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -849,6 +849,33 @@
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="pictureBox11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>662, 708</value>
+  </data>
+  <data name="pictureBox11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 24</value>
+  </data>
+  <data name="pictureBox11.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox11.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.Name" xml:space="preserve">
+    <value>pictureBox11</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="pictureBox10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -874,7 +901,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox10.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -901,7 +928,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -928,7 +955,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="pictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -955,7 +982,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="pictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -982,7 +1009,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1009,7 +1036,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Pb_debugOptions.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1039,7 +1066,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Pb_debugOptions.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="pictureBox9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1066,7 +1093,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox9.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>663, 128</value>
@@ -1090,13 +1117,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btnOpenFolder.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
   <data name="btnOpenFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>804, 823</value>
+    <value>804, 853</value>
   </data>
   <data name="btnOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1114,7 +1141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnOpenFolder.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1207,7 +1234,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="RunningLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3867,7 +3894,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RunningLogo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3894,7 +3921,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="tbLogWindow.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 498</value>
@@ -3924,13 +3951,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbLogWindow.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="btnAbout.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
   <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>885, 822</value>
+    <value>885, 852</value>
   </data>
   <data name="btnAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 23</value>
@@ -3948,13 +3975,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAbout.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="btnSetting.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
   <data name="btnSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>723, 822</value>
+    <value>723, 852</value>
   </data>
   <data name="btnSetting.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -3972,7 +3999,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSetting.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="cbDONOTVerticalize.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3999,7 +4026,28 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbDONOTVerticalize.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>689, 710</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;cbDecodeHtmlBeforeParsing.Name" xml:space="preserve">
+    <value>cbDecodeHtmlBeforeParsing</value>
+  </data>
+  <data name="&gt;&gt;cbDecodeHtmlBeforeParsing.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;cbDecodeHtmlBeforeParsing.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbDecodeHtmlBeforeParsing.ZOrder" xml:space="preserve">
+    <value>25</value>
   </data>
   <data name="cbTurncateTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>690, 680</value>
@@ -4009,6 +4057,9 @@
   </data>
   <data name="cbTurncateTitle.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
+  </data>
+  <data name="cbTurncateTitle.Text" xml:space="preserve">
+    <value>截短標題</value>
   </data>
   <data name="&gt;&gt;cbTurncateTitle.Name" xml:space="preserve">
     <value>cbTurncateTitle</value>
@@ -4020,7 +4071,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbTurncateTitle.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="cbReplaceTWpunctuation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4047,7 +4098,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbReplaceTWpunctuation.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="lblStatus.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4077,7 +4128,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="InprogressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4101,7 +4152,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InprogressBar.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -8647,6 +8698,12 @@
   <data name="&gt;&gt;metroToolTip1.Type" xml:space="preserve">
     <value>MetroFramework.Components.MetroToolTip, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
   </data>
@@ -8658,5 +8715,8 @@
   </metadata>
   <metadata name="metroToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>278, 17</value>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>408, 17</value>
   </metadata>
 </root>
