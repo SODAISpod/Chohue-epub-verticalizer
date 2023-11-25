@@ -111,6 +111,16 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap cut_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("cut_FILL0_wght200_GRAD200_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 test|fuck,gg|a 的當地語系化字串。
         /// </summary>
         internal static string escapecharacter_txt {
@@ -292,6 +302,16 @@ namespace ChoHoe.Properties {
         internal static System.Drawing.Bitmap Replacement_Image {
             get {
                 object obj = ResourceManager.GetObject("Replacement_Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap rocket_launch_FILL0_wght200_GRAD200_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("rocket_launch_FILL0_wght200_GRAD200_opsz24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

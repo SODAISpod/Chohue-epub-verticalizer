@@ -382,5 +382,17 @@ namespace ChoHoe.Properties {
                 this["Setting_CustomizedIMGPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Batch_TurncateTitle {
+            get {
+                return ((bool)(this["Batch_TurncateTitle"]));
+            }
+            set {
+                this["Batch_TurncateTitle"] = value;
+            }
+        }
     }
 }

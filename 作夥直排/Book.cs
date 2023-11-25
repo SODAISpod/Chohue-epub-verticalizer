@@ -65,6 +65,7 @@ namespace ChoHoeBV
         public bool clearStylesheet { get; set; }=false;    
         public bool DONOTVerticalize { get; set; }=false;
         public bool AddCustomisedCSS { get; set; } = false;
+        public bool turncateTitle { get; set; } = false;
 
         public LoadResult Load(string _path)
         {
@@ -214,6 +215,7 @@ namespace ChoHoeBV
                             if (childnode.Name == "rootfile")
                             {
                                 _opfPath = childnode.Attributes["full-path"].Value;
+                                return "0";
                                 //return _uncompressedPath + @"/" + childnode.Attributes["full-path"].Value;
                                 //if (Batch_or_not == 1)
                                 //{
@@ -465,7 +467,7 @@ namespace ChoHoeBV
             else //if (root.Attributes["version"].Value != "3.2")//事實上3.2也會寫成3.0
             {
 
-
+                
                 DoLog.logger.Trace($"epub版本為2，進行轉換 ");
                 //     EpubVersion = Convert.ToInt32( root.Attributes["version"].Value);
                 try
@@ -654,6 +656,11 @@ namespace ChoHoeBV
         {
             this.author = author;
             this.title = title;
+            if (turncateTitle)
+            {
+                 TitleTurncator();
+
+            }
             DoLog.logger.Info($"Editing C");
             //replacePunctuation = toReplacePunctuation;
 
@@ -694,7 +701,8 @@ namespace ChoHoeBV
             // doc.OptionOutputAsXml = true;
             bool hasCSSStylesheet = false;
             doc.OptionWriteEmptyNodes = true;
-            doc.LoadHtml(source);
+            //doc.OptionOutputOptimizeAttributeValues=true;
+            doc.LoadHtml(HttpUtility.HtmlDecode(source));
             foreach (HtmlNode node in doc.DocumentNode.ChildNodes)
             {
                 if (node.Name == "html")
@@ -1226,6 +1234,17 @@ namespace ChoHoeBV
 
 
 
+        }
+        public void TitleTurncator()
+        {
+            string _title=GetTitle();
+            int length = _title.Length;
+            if (length > 18)
+            {
+                _title=$"{_title.Substring(0,9)}…{_title.Substring(length-8,8)}";
+
+            }
+            SetTitle( _title );
         }
         
         public string GetAuthor()

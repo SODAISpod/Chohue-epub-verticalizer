@@ -117,49 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="cant_find_opf" xml:space="preserve">
-    <value>opf file not fund</value>
-  </data>
-  <data name="Checking_mimetype" xml:space="preserve">
-    <value>正在檢查mimetype</value>
-  </data>
-  <data name="Start_to_load_cnatainer" xml:space="preserve">
-    <value>開始讀取Container</value>
-  </data>
-  <data name="Load_successful" xml:space="preserve">
-    <value>讀取成功</value>
-  </data>
-  <data name="String11" xml:space="preserve">
-    <value>無法讀取在地化語言檔</value>
-  </data>
-  <data name="String12" xml:space="preserve">
-    <value>語言檔讀取失敗</value>
-  </data>
-  <data name="String13" xml:space="preserve">
-    <value>Faile to load local file.</value>
-  </data>
-  <data name="String14" xml:space="preserve">
-    <value>zh_TW.txt讀取失敗</value>
-  </data>
-  <data name="String4" xml:space="preserve">
-    <value>讀取完畢，OPF位於:</value>
-  </data>
-  <data name="String5" xml:space="preserve">
-    <value>EPUB版本不符</value>
-  </data>
-  <data name="String6" xml:space="preserve">
-    <value>目前僅支援EPUB 3.0", "EPUB版本錯誤</value>
-  </data>
-  <data name="String7" xml:space="preserve">
-    <value>正在生成:</value>
-  </data>
-  <data name="String8" xml:space="preserve">
-    <value>完成</value>
-  </data>
-  <data name="String9" xml:space="preserve">
-    <value>語言檔</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value>EPUB檔案|*.epub</value>
-  </data>
 </root>

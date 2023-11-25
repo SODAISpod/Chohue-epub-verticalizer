@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Resources;
 using System.Windows.Forms;
 using Windows.Foundation.Collections;
 
@@ -18,7 +19,7 @@ namespace ChoHoeBV
         private readonly BackgroundWorker bw = new BackgroundWorker();
         private readonly BackgroundWorker bwBatch = new BackgroundWorker();
         private readonly BackgroundWorker bwConvert = new BackgroundWorker();
-        private readonly BackgroundWorker bwConvertBatch = new BackgroundWorker();
+        public readonly BackgroundWorker bwConvertBatch = new BackgroundWorker();
 
 
 
@@ -104,6 +105,12 @@ namespace ChoHoeBV
         private void SetInitialValue()
         {
 
+            //Debug Options
+#if DEBUG
+            Pb_debugOptions.Visible = true;
+            Btn_debugOptions.Visible = true;
+#endif
+
             //載入選項記憶
             cbChineseBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_ChineseConvert;
             cbModifyPageDirectionBatch.Checked = ChoHoe.Properties.Settings.Default.Batch_IfChangePageDirection;
@@ -122,6 +129,8 @@ namespace ChoHoeBV
             cbReplaceTWpunctuation.Checked = ChoHoe.Properties.Settings.Default.Batch_ReplaceTwPunctuation;
             cbConvertKepub.Checked = ChoHoe.Properties.Settings.Default.Batch_ConvertKepub;
 
+            
+
             tipOpenFolder.SetToolTip(btnOpenFolder, "開啟輸出資料夾");
             tipOpenFolder.SetToolTip(btnDelete, "移除書本");
             tipOpenFolder.SetToolTip(cbRemoveCss, "移除HTML檔案元素中的attribute裡的style");
@@ -138,6 +147,7 @@ namespace ChoHoeBV
             bwConvert.WorkerSupportsCancellation = true;
             bwConvertBatch.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Convert_Batch_RunWorker_Completed);
             bwConvertBatch.DoWork += new DoWorkEventHandler(Convert_Batch_Backgroundworker_DoWork);
+            bwConvertBatch.ProgressChanged += Convert_Batch_Backgroundworker_ProgressChanged;
             btnConvertBatch.Enabled = false;
             bwConvertBatch.WorkerSupportsCancellation = true;
             bwBatch.DoWork += new DoWorkEventHandler(Load_Batch_Backgroundworker_DoWork);
@@ -404,7 +414,10 @@ namespace ChoHoeBV
 
 
 
-
+        private void Convert_Batch_Backgroundworker_ProgressChanged(object sender,ProgressChangedEventArgs e)
+        {
+            
+        }
 
         private void Convert_Batch_Backgroundworker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -414,7 +427,7 @@ namespace ChoHoeBV
             bool RemoveCss = para.Item2;
 
   
-
+            
             foreach (Book item in batchBookList)
             {
                 this.Invoke(new MethodInvoker(delegate {
@@ -433,7 +446,7 @@ namespace ChoHoeBV
                 item.replacePicture=cbReplacePictureBatch.Checked;
                 item.DONOTVerticalize=cbDONOTVerticalize.Checked;  
                 item.AddCustomisedCSS=cbAddCustomizeCSS.Checked;
-
+                item.turncateTitle=cbTurncateTitle.Checked;
                 if (Modifypage)
                 {
                     item.pageDirection=rdoPageLTRBatch.Checked;
@@ -776,5 +789,16 @@ namespace ChoHoeBV
         {
             tbLogWindow.AppendText(message);
         }
+
+        private void cbTurncateTitle_CheckedChanged(object sender, EventArgs e)
+        {
+            ChoHoe.Properties.Settings.Default.Batch_TurncateTitle
+                                    = cbTurncateTitle.Checked;
+            ChoHoe.Properties.Settings.Default.Save();
+        }
+    }
+    public enum WorkerProgress
+    {
+        log
     }
 }

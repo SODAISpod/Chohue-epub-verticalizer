@@ -242,5 +242,10 @@ namespace ChoHoe
                 DoLog.logger.Error("Can't load replacement img");
             }
         }
+
+        private void Setting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

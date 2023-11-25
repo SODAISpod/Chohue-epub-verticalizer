@@ -71,11 +71,15 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cbAddCustomizeCSS = new MetroFramework.Controls.MetroCheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbRemoveStylesheet = new MetroFramework.Controls.MetroCheckBox();
             this.cbDONOTVerticalize = new MetroFramework.Controls.MetroCheckBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.cbTurncateTitle = new MetroFramework.Controls.MetroCheckBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.Btn_debugOptions = new MetroFramework.Controls.MetroButton();
+            this.Pb_debugOptions = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -92,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb_debugOptions)).BeginInit();
             this.SuspendLayout();
             // 
             // cbRemoveCss
@@ -403,12 +409,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // metroToolTip1
-            // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroToolTip1.StyleManager = null;
-            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbRemoveStylesheet);
@@ -442,20 +442,57 @@
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             // 
+            // cbTurncateTitle
+            // 
+            this.cbTurncateTitle.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            resources.ApplyResources(this.cbTurncateTitle, "cbTurncateTitle");
+            this.cbTurncateTitle.Name = "cbTurncateTitle";
+            this.cbTurncateTitle.UseSelectable = true;
+            this.cbTurncateTitle.CheckedChanged += new System.EventHandler(this.cbTurncateTitle_CheckedChanged);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::ChoHoe.Properties.Resources.cut_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.pictureBox10, "pictureBox10");
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.TabStop = false;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // Btn_debugOptions
+            // 
+            resources.ApplyResources(this.Btn_debugOptions, "Btn_debugOptions");
+            this.Btn_debugOptions.Name = "Btn_debugOptions";
+            this.Btn_debugOptions.UseSelectable = true;
+            // 
+            // Pb_debugOptions
+            // 
+            this.Pb_debugOptions.Image = global::ChoHoe.Properties.Resources.rocket_launch_FILL0_wght200_GRAD200_opsz24;
+            resources.ApplyResources(this.Pb_debugOptions, "Pb_debugOptions");
+            this.Pb_debugOptions.Name = "Pb_debugOptions";
+            this.Pb_debugOptions.TabStop = false;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnConvertBatch;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Btn_debugOptions);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbVersion);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Pb_debugOptions);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnOpenFolder);
@@ -468,6 +505,7 @@
             this.Controls.Add(this.btnConvertBatch);
             this.Controls.Add(this.btnLoadBatch);
             this.Controls.Add(this.cbDONOTVerticalize);
+            this.Controls.Add(this.cbTurncateTitle);
             this.Controls.Add(this.cbReplaceTWpunctuation);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.lblStatus);
@@ -504,6 +542,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pb_debugOptions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,6 +596,10 @@
         private MetroFramework.Controls.MetroCheckBox cbRemoveStylesheet;
         private System.Windows.Forms.PictureBox pictureBox9;
         private MetroFramework.Controls.MetroCheckBox cbDONOTVerticalize;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private MetroFramework.Controls.MetroCheckBox cbTurncateTitle;
+        private MetroFramework.Controls.MetroButton Btn_debugOptions;
+        private System.Windows.Forms.PictureBox Pb_debugOptions;
     }
 }
 

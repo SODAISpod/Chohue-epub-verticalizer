@@ -55,11 +55,11 @@
             this.linklbPacdoc = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnLoadIMG = new MetroFramework.Controls.MetroButton();
+            this.lbReplaceIMG = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tgUseBuiltin = new MetroFramework.Controls.MetroToggle();
             this.pb_ReplaceIMG = new System.Windows.Forms.PictureBox();
-            this.lbReplaceIMG = new MetroFramework.Controls.MetroLabel();
-            this.btnLoadIMG = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -74,6 +74,7 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -88,29 +89,28 @@
             this.groupBox1.Controls.Add(this.CalibrePathValidResult);
             this.groupBox1.Controls.Add(this.LinkLBCalibrePath);
             this.groupBox1.Controls.Add(this.label1);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ChoHoe.Properties.Resources.help_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::ChoHoe.Properties.Resources.help_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -189,8 +189,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.linkLabel1);
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.linkLabel1);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -202,6 +202,7 @@
             // 
             // groupBox3
             // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.Controls.Add(this.pictureBox8);
             this.groupBox3.Controls.Add(this.metroButton5);
@@ -209,21 +210,20 @@
             this.groupBox3.Controls.Add(this.PandocPathValidResult);
             this.groupBox3.Controls.Add(this.linklbPacdoc);
             this.groupBox3.Controls.Add(this.label3);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::ChoHoe.Properties.Resources.search_check_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::ChoHoe.Properties.Resources.help_FILL0_wght200_GRAD200_opsz24;
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Image = global::ChoHoe.Properties.Resources.help_FILL0_wght200_GRAD200_opsz24;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             // 
@@ -261,14 +261,26 @@
             // 
             // groupBox4
             // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Controls.Add(this.btnLoadIMG);
             this.groupBox4.Controls.Add(this.lbReplaceIMG);
             this.groupBox4.Controls.Add(this.metroLabel1);
             this.groupBox4.Controls.Add(this.tgUseBuiltin);
             this.groupBox4.Controls.Add(this.pb_ReplaceIMG);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
+            // 
+            // btnLoadIMG
+            // 
+            resources.ApplyResources(this.btnLoadIMG, "btnLoadIMG");
+            this.btnLoadIMG.Name = "btnLoadIMG";
+            this.btnLoadIMG.UseSelectable = true;
+            this.btnLoadIMG.Click += new System.EventHandler(this.btnLoadIMG_Click);
+            // 
+            // lbReplaceIMG
+            // 
+            resources.ApplyResources(this.lbReplaceIMG, "lbReplaceIMG");
+            this.lbReplaceIMG.Name = "lbReplaceIMG";
             // 
             // metroLabel1
             // 
@@ -284,22 +296,10 @@
             // 
             // pb_ReplaceIMG
             // 
-            this.pb_ReplaceIMG.Image = global::ChoHoe.Properties.Resources.Replacement_Image;
             resources.ApplyResources(this.pb_ReplaceIMG, "pb_ReplaceIMG");
+            this.pb_ReplaceIMG.Image = global::ChoHoe.Properties.Resources.Replacement_Image;
             this.pb_ReplaceIMG.Name = "pb_ReplaceIMG";
             this.pb_ReplaceIMG.TabStop = false;
-            // 
-            // lbReplaceIMG
-            // 
-            resources.ApplyResources(this.lbReplaceIMG, "lbReplaceIMG");
-            this.lbReplaceIMG.Name = "lbReplaceIMG";
-            // 
-            // btnLoadIMG
-            // 
-            resources.ApplyResources(this.btnLoadIMG, "btnLoadIMG");
-            this.btnLoadIMG.Name = "btnLoadIMG";
-            this.btnLoadIMG.UseSelectable = true;
-            this.btnLoadIMG.Click += new System.EventHandler(this.btnLoadIMG_Click);
             // 
             // Setting
             // 
@@ -311,6 +311,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Setting";
             this.Resizable = false;
+            this.Load += new System.EventHandler(this.Setting_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
