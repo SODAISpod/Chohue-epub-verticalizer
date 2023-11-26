@@ -33,12 +33,12 @@ namespace ChoHoe
 
         List<string> css = new List<string>(), xHtml = new List<string>();
         Dictionary<string, List<string>> imgpath = new Dictionary<string, List<string>>();
-        bool isRemoveCss=false;
+        bool isRemoveCss = false;
 
 
 
         private string
-             filename ="";
+             filename = "";
         string _uncompressedPath = "",
                _containerXML = "",
                    _opfPath = "",
@@ -54,7 +54,7 @@ namespace ChoHoe
         /// 
         /// </summary>
         public bool replacePunctuation { get; set; } = false;
-        
+
         public bool ConvertChinese { get; set; } = false;
         public bool ToTriditional { get; set; } = false;
         public bool pageDirection { get; set; } = false;
@@ -62,8 +62,8 @@ namespace ChoHoe
         public bool convertKepub { get; set; } = false;
         public bool fontEmbed { get; set; } = false;
         public bool replacePicture { get; set; } = false;
-        public bool clearStylesheet { get; set; }=false;    
-        public bool DONOTVerticalize { get; set; }=false;
+        public bool clearStylesheet { get; set; } = false;
+        public bool DONOTVerticalize { get; set; } = false;
         public bool AddCustomisedCSS { get; set; } = false;
         public bool turncateTitle { get; set; } = false;
         public bool decodeHTMLBeforeParse { get; set; } = false;
@@ -77,11 +77,11 @@ namespace ChoHoe
 
             if (string.Compare(Fileformat, ".epub", true) == 0)
             {
-               return LoadAsEpub(_path);
+                return LoadAsEpub(_path);
             }
             else if (string.Compare(Fileformat, ".txt", true) == 0)
             {
-               return LoadAsTxt();
+                return LoadAsTxt();
             }
             return LoadResult.success;
 
@@ -98,7 +98,7 @@ namespace ChoHoe
             {
                 ChoHoe.DoLog.logger.Fatal($"Pandoc filed to process: {_originalFilePath}");
             }
-            if (result == OpfReadResult.epunNeedPandocFor2to3 || result == OpfReadResult.pandocConvertError )
+            if (result == OpfReadResult.epunNeedPandocFor2to3 || result == OpfReadResult.pandocConvertError)
             {
                 return LoadResult.fail;
             }
@@ -108,9 +108,9 @@ namespace ChoHoe
         {
             try
             {
-                
-                string namer = System.IO.Path.GetRandomFileName().Replace(".", "");                        
-                string[] argu = { $@"""{ _originalFilePath }"" ""temp/{namer}.epub"" --epub-version 3 --no-default-epub-cover", namer };
+
+                string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
+                string[] argu = { $@"""{_originalFilePath}"" ""temp/{namer}.epub"" --epub-version 3 --no-default-epub-cover", namer };
 
 
                 ExtensionProcess(ExtensionMethod.calibreTxtToEpub, argu);
@@ -359,7 +359,7 @@ namespace ChoHoe
         private void ImgReplace()
         {
             byte[] data;
-            bool flag=false;
+            bool flag = false;
             try
             {
                 System.Drawing.Image check = System.Drawing.Image.FromFile(ChoHoe.Properties.Settings.Default.Setting_CustomizedIMGPath);
@@ -370,7 +370,7 @@ namespace ChoHoe
                 flag = true;
             }
             System.Drawing.Image pic;
-            if (flag||ChoHoe.Properties.Settings.Default.Setting_UseBuiltinIMG)
+            if (flag || ChoHoe.Properties.Settings.Default.Setting_UseBuiltinIMG)
             {
 
                 pic = ChoHoe.Properties.Resources.Replacement_Image;
@@ -468,29 +468,29 @@ namespace ChoHoe
             else //if (root.Attributes["version"].Value != "3.2")//事實上3.2也會寫成3.0
             {
 
-                
+
                 DoLog.logger.Trace($"epub版本為2，進行轉換 ");
                 //     EpubVersion = Convert.ToInt32( root.Attributes["version"].Value);
                 try
                 {
                     string namer = System.IO.Path.GetRandomFileName().Replace(".", "");
 
-                    string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{ _originalFilePath }""", namer };
+                    string[] argu = { $@"-o ""temp/{namer}.epub"" -t  epub3 ""{_originalFilePath}""", namer };
 
 
                     ExtensionResult result = ExtensionProcess(ExtensionMethod.pandocWithReload, argu);
 
-                    if (result==ExtensionResult.fail)
+                    if (result == ExtensionResult.fail)
                     {
                         return OpfReadResult.epunNeedPandocFor2to3;
                     }
-                    else if (result==ExtensionResult.failWithPandocErrors)
+                    else if (result == ExtensionResult.failWithPandocErrors)
                     {
                         return OpfReadResult.pandocConvertError;
-                    }                    
+                    }
 
                     return OpfReadResult.finishDueToEpub3LoadingTookover;
-                    
+
                 }
                 catch (Exception e)
                 {
@@ -629,7 +629,7 @@ namespace ChoHoe
 
         }
         [Obsolete("Deprecated")]
-        public bool Convert(bool DoChineseTransfer, bool ToTradictional, bool pageDirection, bool convertMobi, bool fontEmbed, bool replacePicture, string author, string title,bool toReplacePunctuation)
+        public bool Convert(bool DoChineseTransfer, bool ToTradictional, bool pageDirection, bool convertMobi, bool fontEmbed, bool replacePicture, string author, string title, bool toReplacePunctuation)
         {
             this.author = author;
             this.title = title;
@@ -646,21 +646,21 @@ namespace ChoHoe
             foreach (string path in xHtml)
             {
                 DoLog.logger.Trace($"invoked HtmlEdit({path},{DoChineseTransfer},{ToTradictional})");
-                HtmlEdit(path, DoChineseTransfer, ToTradictional);
+                EditHTML(path, DoChineseTransfer, ToTradictional);
             }
             OpfWriter(pageDirection, replacePicture, title, author);
             ZipUp(convertMobi);
             return true;
-           
+
         }
-        
+
         public bool Convert()
         {
             this.author = author;
             this.title = title;
             if (turncateTitle)
             {
-                 TurncateTitle();
+                TurncateTitle();
 
             }
             DoLog.logger.Info($"Editing C");
@@ -676,20 +676,22 @@ namespace ChoHoe
             foreach (string path in xHtml)
             {
                 DoLog.logger.Trace($"invoked HtmlEdit({path},{ConvertChinese},{ToTriditional})");
-                HtmlEdit(path, ConvertChinese, ToTriditional);
+                EditHTML(path, ConvertChinese, ToTriditional);
             }
             OpfWriter(pageDirection, replacePicture, title, author);
             ZipUp(convertMobi);
             return true;
         }
 
-        private void HtmlEdit(string path, bool DoTransfer, bool ToTraidional)
+        private void EditHTML(string path, bool DoTransfer, bool ToTraidional)
         {
+
 
             // string fullpath = @"temp\unzipping\" + OpfBasedPath + @"\" + url;
             FileStream xhtmlloder = new FileStream(path, FileMode.Open, FileAccess.Read);
 
             StreamReader sr = new StreamReader(xhtmlloder);
+            bool hasCSSStylesheet = false;
 
             string source = sr.ReadToEnd();
             if (decodeHTMLBeforeParse)
@@ -698,98 +700,155 @@ namespace ChoHoe
                 source = HttpUtility.HtmlDecode(source);
 
             }
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(source);
+
+
+            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+            {
+                if (node.Name == "head")
+                {
+                    foreach (XmlNode linkNode in node.ChildNodes)
+                    {
+                        if (linkNode.Name == "link")
+                        {
+                            if (linkNode.Attributes["rel"].Value == "stylesheet")
+                            {
+                                hasCSSStylesheet = true;
+                            }
+                        }
+                    }
+                    if (hasCSSStylesheet == false)
+                    {
+                        XmlNode verticalStyle = doc.CreateElement("style");
+                        verticalStyle.InnerXml = ChoHoe.Properties.Resources.VerticalStyle;
+                        node.AppendChild(verticalStyle);
+
+                    }
+                }
+                if (node.Name == "body")
+                {
+                    foreach (XmlNode bodyNode in node.ChildNodes)
+                    {
+                        RecursivelyReplaceText(bodyNode, ToTraidional, DoTransfer);
+                        if (isRemoveCss)
+                        {
+                            RemoveHtmlStyle(bodyNode);
+                        }
+
+
+                    }
+
+                }
+
+
+            }
+
+
+
+
             sr.Close();
             xhtmlloder.Close();
 
 
 
 
-            var doc = new HtmlAgilityPack.HtmlDocument();
-            
-            bool hasCSSStylesheet = false;
-            doc.OptionWriteEmptyNodes = true;
-            doc.OptionOutputOriginalCase = true;
-            doc.LoadHtml(source);
-            foreach (HtmlNode node in doc.DocumentNode.ChildNodes)
-            {
-                if (node.Name == "html")
-                {
-                    foreach (HtmlNode bodynode in node.ChildNodes)
-                    {
-                        if (bodynode.Name == "head")
-                        {
-                            foreach (HtmlNode item in bodynode.ChildNodes)
-                            {
-                                if (item.Name == "link")
-                                {
-                                    if (item.Attributes["rel"].Value == "stylesheet") //&& item.Attributes["type"].Value == "text/css"
-                                    {
-                                        hasCSSStylesheet = true;
-                                    }
-                                }
-                            }
-                            if (hasCSSStylesheet == false)
-                            {
-                                HtmlNode verticalstyle = doc.CreateElement("style");
-                                verticalstyle.InnerHtml = ChoHoe.Properties.Resources.VerticalStyle;
-                                bodynode.AppendChild(verticalstyle);
-                            }
-                        }
-                        if (bodynode.Name == "body")
-                        {
-                            foreach (HtmlNode body_child_Node in bodynode.ChildNodes)
-                            {
-                                RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer);
-                                if (isRemoveCss)
-                                {
-                                    RemoveHtmlStyle(body_child_Node);
-                                }
-                                 
-                            }
-                        }
+            //var HAPdoc = new HtmlAgilityPack.HtmlDocument();
 
-                    }
-                }
+            //HAPdoc.OptionWriteEmptyNodes = true;
+            //HAPdoc.OptionOutputOriginalCase = true;
+            //HAPdoc.LoadHtml(source);
 
-                //if (ToTradictional == true)
-                //{
-                //    after = ChineseConverter.Convert(before, ChineseConversionDirection.SimplifiedToTraditional);
-                //}
-                //else
-                //{
-                //    after = ChineseConverter.Convert(before, ChineseConversionDirection.TraditionalToSimplified);
-                //}
-                //node.ParentNode.ReplaceChild(HtmlTextNode.CreateNode(after), node);
-                //node.InnerText.Replace(node.InnerText,after);
+            ////檢查 CSSStylesheet in xhtml doc & insert
+            //foreach (HtmlNode node in HAPdoc.DocumentNode.ChildNodes)
+            //{
+            //    if (node.Name == "html")
+            //    {
+            //        foreach (HtmlNode bodynode in node.ChildNodes)
+            //        {
+            //            if (bodynode.Name == "head")
+            //            {
+            //                foreach (HtmlNode item in bodynode.ChildNodes)
+            //                {
+            //                    if (item.Name == "link")
+            //                    {
+            //                        if (item.Attributes["rel"].Value == "stylesheet") //&& item.Attributes["type"].Value == "text/css"
+            //                        {
+            //                            hasCSSStylesheet = true;
+            //                        }
+            //                    }
+            //                }
+            //                if (hasCSSStylesheet == false)
+            //                {
+            //                    HtmlNode verticalstyle = HAPdoc.CreateElement("style");
+            //                    verticalstyle.InnerHtml = ChoHoe.Properties.Resources.VerticalStyle;
+            //                    bodynode.AppendChild(verticalstyle);
+            //                }
+            //            }
+            //            if (bodynode.Name == "body")
+            //            {
+            //                foreach (HtmlNode body_child_Node in bodynode.ChildNodes)
+            //                {
+            //                    // TC SC convert
+            //                   // RecursivelyReplaceText(body_child_Node, ToTraidional, DoTransfer);
+            //                    if (isRemoveCss)
+            //                    {
+            //                        //Remove in 
+            //                        //RemoveHtmlStyle(body_child_Node);
+            //                    }
 
-            }
+            //                }
+            //            }
+
+            //        }
+            //    }
+
+            //if (ToTradictional == true)
+            //{
+            //    after = ChineseConverter.Convert(before, ChineseConversionDirection.SimplifiedToTraditional);
+            //}
+            //else
+            //{
+            //    after = ChineseConverter.Convert(before, ChineseConversionDirection.TraditionalToSimplified);
+            //}
+            //node.ParentNode.ReplaceChild(HtmlTextNode.CreateNode(after), node);
+            //node.InnerText.Replace(node.InnerText,after);
+
+            // }
             //  Console.WriteLine(doc.DocumentNode.InnerHtml);
             FileStream sw = new FileStream(path, FileMode.Create);
             //  doc.DocumentNode.InnerHtml=  HttpUtility.HtmlEncode(doc.ParsedText);
-            doc.Save(sw, System.Text.Encoding.UTF8);
-            
+            //HAPdoc.Save(sw, System.Text.Encoding.UTF8);
+            doc.Save(sw);
+
 
             sw.Close();
         }
-        private void RemoveHtmlStyle(HtmlNode subBodyNode)
+        private void RemoveHtmlStyle(XmlNode subBodyNode)
         {
-             
-            foreach (HtmlNode childInnerNode in subBodyNode.ChildNodes)
-            {
-                foreach (var attribute in childInnerNode.Attributes )
-                {
-                    if (attribute.Name=="style")
-                    {
-                        //attribute.Value = "";
-                        attribute.Remove();
-                        break;
-                    }
 
-                }
-                if (childInnerNode.ChildNodes.Count!=0)
+            foreach (XmlNode childInnerNode in subBodyNode.ChildNodes)
+            {
+                if (childInnerNode.Attributes != null)
                 {
-                    RemoveHtmlStyle(childInnerNode);
+                    foreach (XmlAttribute attribute in childInnerNode.Attributes)
+                    {
+                        if (attribute.Name == "style")
+                        {
+                            //attribute.Value = "";
+                            attribute.RemoveAll();
+                            //attribute.Remove();
+                            break;
+                        }
+
+                    }
+                    if (childInnerNode.ChildNodes.Count != 0)
+                    {
+                        RemoveHtmlStyle(childInnerNode);
+                    }
                 }
+
             }
         }
         /// <summary>
@@ -800,17 +859,17 @@ namespace ChoHoe
         /// <param name="toTraditional">翻成繁體</param>
         /// <param name="doTransfer">是否要進行轉檔，其他選項必須先滿足轉檔為是</param>
         /// <param name="replacePunctuation">取代橫式標點符號成直式</param>
-        private void RecursivelyReplaceText(HtmlNode innernode, bool toTraditional, bool doTransfer)
+        private void RecursivelyReplaceText(XmlNode innernode, bool toTraditional, bool doTransfer)
         {
-          
 
-            foreach (HtmlNode childinnenode in innernode.ChildNodes)
+
+            foreach (XmlNode childinnenode in innernode.ChildNodes)
             {
 
                 if (childinnenode.ChildNodes.Count == 0)
                 {
                     //DoLog.logger.Debug($"To translate Xpath { childinnenode.XPath}");
-                    string tempinnertext = childinnenode.InnerHtml;
+                    string tempinnertext = childinnenode.InnerText;
 
                     // tempinnertext = HttpUtility.HtmlDecode(tempinnertext);
 
@@ -818,18 +877,18 @@ namespace ChoHoe
                     {
                         if (toTraditional)
                         {
-                            childinnenode.InnerHtml = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.SimplifiedToTraditional);
+                            childinnenode.InnerText = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.SimplifiedToTraditional);
                         }
                         else
                         {
-                            childinnenode.InnerHtml = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.TraditionalToSimplified);
+                            childinnenode.InnerText = ChineseConverter.Convert(tempinnertext, ChineseConversionDirection.TraditionalToSimplified);
                         }
                     }
-                    childinnenode.InnerHtml = EscapeCharacterReplacement(childinnenode.InnerHtml);
+                    childinnenode.InnerText = EscapeCharacterReplacement(childinnenode.InnerText);
                     if (replacePunctuation)
                     {
 
-                        childinnenode.InnerHtml = PunctuationReplacement(childinnenode.InnerHtml);//取代標點
+                        childinnenode.InnerText = PunctuationReplacement(childinnenode.InnerText);//取代標點
                     }
 
                 }
@@ -860,7 +919,7 @@ namespace ChoHoe
             sb.Replace("（", "︵");//橫式右括號
             sb.Replace("）", "︶");//橫式左括號
             sb.Replace("\uFE10", "\uFF0C");//逗號，
-            
+
 
 
             return sb.ToString();
@@ -871,14 +930,6 @@ namespace ChoHoe
 
         private string EscapeCharacterReplacement(string replacement)
         {
-            //if (fuck.Substring(fuck.IndexOf("&") - 1, 1)!= "\\")
-            //{
-            //    fuck.Remove(fuck.IndexOf("&"), 1);
-            //    fuck.Insert(fuck.IndexOf("&"), "&amp;");
-            //}
-
-            // Dictionary<string, string> MyDictionary = ChoHoe.Properties.Resources.escapecharacter_txt.Split(',').ToDictionary(x => x.Split('|')[0], x => x.Split('|')[1]);
-
 
             return HttpUtility.HtmlEncode(replacement);
 
@@ -902,13 +953,13 @@ namespace ChoHoe
                 }
             }
 
-            
+
             fst.Position = 0;
             //sr.DiscardBufferedData();
             //string fullCss = sr.ReadToEnd();
             fst.Close();
 
-            
+
 
 
 
@@ -929,8 +980,8 @@ namespace ChoHoe
                 css.NewReplacement(reHtml, "html");
                 css.Replace(true);
             }
-            
-     
+
+
 
 
             CssParser cssParser = new CssParser(css.GetFullCss());
@@ -939,31 +990,12 @@ namespace ChoHoe
                 cssParser.AppendCSS(ChoHoe.Properties.Settings.Default.CustomizedCSS);
 
             }
-            
-
-
-            //以下待修整
-
 
 
 
             sw.AutoFlush = true;
 
             sw.Write(cssParser.GetCSS());
-
-            //foreach (string item in _cssstrings)
-            //{
-            //    sw.WriteLine(item);
-            //}
-
-
-
-
-
-            //if (htmlStart == -1 | CssSource.IndexOf("html{") == -1)//判定是否皆為true, | <--OR
-            //{
-
-
 
             rst.Flush();
             rst.Close();
@@ -978,10 +1010,10 @@ namespace ChoHoe
                 {"<"," " },{">"," "},{":","："},{"\""," "},{"\\"," "},{"//"," "},{"|"," "},{"?"," "},{"*"," "}
 
             };
-            foreach (KeyValuePair<string,string> keyword in pairs )
+            foreach (KeyValuePair<string, string> keyword in pairs)
             {
-               
-               FileName =FileName.Replace(keyword.Key, keyword.Value);
+
+                FileName = FileName.Replace(keyword.Key, keyword.Value);
             }
             return FileName;
         }
@@ -1010,12 +1042,12 @@ namespace ChoHoe
             {
                 int indexx = 1;
                 outputPath = $@"output\{title} ({indexx}) .epub";
-                outputTittle = $"{ title }  ({indexx}).epub";
+                outputTittle = $"{title}  ({indexx}).epub";
                 while (System.IO.File.Exists(outputPath))
                 {
                     indexx += 1;
                     outputPath = $@"output\{title} ({indexx}) .epub";
-                    outputTittle = $"{ title }  ({indexx}).epub";
+                    outputTittle = $"{title}  ({indexx}).epub";
 
                 }
                 // zip.Save( outputPath);
@@ -1054,19 +1086,19 @@ namespace ChoHoe
 
             if (convertMobi == true)
             {
-               
+
 
                 if (ChoHoe.Properties.Settings.Default.UseCalibre)
                 {
 
                     string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
-                    string[] argu = { $@"""{ outputPath}"" ""{"output\\"}{ outputfilename }.mobi""  --mobi-file-type=both " };
+                    string[] argu = { $@"""{outputPath}"" ""{"output\\"}{outputfilename}.mobi""  --mobi-file-type=both " };
                     ExtensionProcess(ExtensionMethod.calibre, argu);
                 }
                 else
                 {//todo compress option -c2 -donotaddsource
                     string outputfilename = Path.GetFileNameWithoutExtension(outputPath);
-                    string[] argu = { $@"""{ outputPath}"" -o ""{ outputfilename }.mobi"" -c1 -dont_append_source" };
+                    string[] argu = { $@"""{outputPath}"" -o ""{outputfilename}.mobi"" -c1 -dont_append_source" };
                     ExtensionProcess(ExtensionMethod.kindleGen, argu);
 
                 }
@@ -1122,7 +1154,7 @@ namespace ChoHoe
                         return ExtensionResult.fail;
                     }
                     break;
-                   
+
 
             }
 
@@ -1148,9 +1180,9 @@ namespace ChoHoe
                     output.AppendLine($"Process method: {method.ToString()}");
                     while (!p.StandardOutput.EndOfStream)
                     {
-                        
-                         output.AppendLine(p.StandardOutput.ReadLine());
-                        
+
+                        output.AppendLine(p.StandardOutput.ReadLine());
+
                     }
 
                     p.WaitForExit();
@@ -1165,10 +1197,10 @@ namespace ChoHoe
                     {
                         case ExtensionMethod.calibreTxtToEpub:
                             Load($@"temp\{argum[1]}.epub");
-                            
+
                             break;
                         case ExtensionMethod.calibre:
-                            
+
                             break;
                         case ExtensionMethod.kindleGen:
                             if (result == 2)
@@ -1245,16 +1277,16 @@ namespace ChoHoe
         }
         public void TurncateTitle()
         {
-            string _title=GetTitle();
+            string _title = GetTitle();
             int length = _title.Length;
             if (length > 18)
             {
-                _title=$"{_title.Substring(0,9)}…{_title.Substring(length-8,8)}";
+                _title = $"{_title.Substring(0, 9)}…{_title.Substring(length - 8, 8)}";
 
             }
-            SetTitle( _title );
+            SetTitle(_title);
         }
-        
+
         public string GetAuthor()
         {
             return author;
