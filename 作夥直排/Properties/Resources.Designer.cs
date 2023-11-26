@@ -91,6 +91,16 @@ namespace ChoHoe.Properties {
         }
         
         /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap change_circle_FILL0_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("change_circle_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查詢類型 System.Byte[] 的當地語系化資源。
         /// </summary>
         internal static byte[] COPYRIGHT {

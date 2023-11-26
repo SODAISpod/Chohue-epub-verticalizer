@@ -109,6 +109,7 @@ namespace ChoHoe
 #if DEBUG
             Pb_debugOptions.Visible = true;
             Btn_debugOptions.Visible = true;
+            debugpictureBox12.Visible=true;
 #endif
 
             //載入選項記憶

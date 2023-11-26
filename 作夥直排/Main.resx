@@ -4032,10 +4032,13 @@
     <value>689, 710</value>
   </data>
   <data name="cbDecodeHtmlBeforeParsing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
+    <value>260, 24</value>
   </data>
   <data name="cbDecodeHtmlBeforeParsing.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.Text" xml:space="preserve">
+    <value>讀取 html 前先解碼</value>
   </data>
   <data name="&gt;&gt;cbDecodeHtmlBeforeParsing.Name" xml:space="preserve">
     <value>cbDecodeHtmlBeforeParsing</value>
@@ -4153,6 +4156,33 @@
   </data>
   <data name="&gt;&gt;InprogressBar.ZOrder" xml:space="preserve">
     <value>33</value>
+  </data>
+  <data name="debugpictureBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, -156</value>
+  </data>
+  <data name="debugpictureBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 405</value>
+  </data>
+  <data name="debugpictureBox12.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="debugpictureBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="debugpictureBox12.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;debugpictureBox12.Name" xml:space="preserve">
+    <value>debugpictureBox12</value>
+  </data>
+  <data name="&gt;&gt;debugpictureBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;debugpictureBox12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;debugpictureBox12.ZOrder" xml:space="preserve">
+    <value>38</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>

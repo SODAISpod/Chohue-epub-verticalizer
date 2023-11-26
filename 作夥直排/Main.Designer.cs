@@ -83,6 +83,7 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.debugpictureBox12 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BatchGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -102,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_debugOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.debugpictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // cbRemoveCss
@@ -486,7 +488,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::ChoHoe.Properties.Resources.cut_FILL0_wght200_GRAD200_opsz24;
+            this.pictureBox11.Image = global::ChoHoe.Properties.Resources.change_circle_FILL0_wght400_GRAD0_opsz24;
             resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
@@ -496,6 +498,13 @@
             this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // debugpictureBox12
+            // 
+            this.debugpictureBox12.Image = global::ChoHoe.Properties.Resources.工作區域_1__5_;
+            resources.ApplyResources(this.debugpictureBox12, "debugpictureBox12");
+            this.debugpictureBox12.Name = "debugpictureBox12";
+            this.debugpictureBox12.TabStop = false;
             // 
             // Form1
             // 
@@ -540,6 +549,7 @@
             this.Controls.Add(this.cbModifyPageDirectionBatch);
             this.Controls.Add(this.GroupBox2);
             this.Controls.Add(this.cbChineseBatch);
+            this.Controls.Add(this.debugpictureBox12);
             this.Name = "Form1";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.White;
@@ -568,6 +578,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_debugOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.debugpictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,6 +638,7 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private MetroFramework.Controls.MetroCheckBox cbDecodeHtmlBeforeParsing;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox debugpictureBox12;
     }
 }
 

@@ -124,11 +124,47 @@
   <data name="cbRemoveCss.Text" xml:space="preserve">
     <value>Remove styles in HTML element</value>
   </data>
+  <data name="cbRemoveCss.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbRemoveCss.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbRemoveCss.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDelete.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDelete.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDelete.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BatchGridView.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BatchGridView.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BatchGridView.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="cbReplacePictureBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 25</value>
   </data>
   <data name="cbReplacePictureBatch.Text" xml:space="preserve">
     <value>Replace images</value>
+  </data>
+  <data name="cbReplacePictureBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbReplacePictureBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbReplacePictureBatch.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="cbEmbdedFontBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 25</value>
@@ -136,11 +172,29 @@
   <data name="cbEmbdedFontBatch.Text" xml:space="preserve">
     <value>Embedded font</value>
   </data>
+  <data name="cbEmbdedFontBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbEmbdedFontBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbEmbdedFontBatch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnConvertBatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>874, 760</value>
   </data>
   <data name="btnConvertBatch.Text" xml:space="preserve">
     <value>Forge</value>
+  </data>
+  <data name="btnConvertBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConvertBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConvertBatch.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="cbModifyPageDirectionBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 25</value>
@@ -148,11 +202,29 @@
   <data name="cbModifyPageDirectionBatch.Text" xml:space="preserve">
     <value>Paging direction</value>
   </data>
+  <data name="cbModifyPageDirectionBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbModifyPageDirectionBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbModifyPageDirectionBatch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="rdoPageRTLBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 25</value>
   </data>
   <data name="rdoPageRTLBatch.Text" xml:space="preserve">
     <value>RTL</value>
+  </data>
+  <data name="rdoPageRTLBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdoPageRTLBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdoPageRTLBatch.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="rdoPageLTRBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 25</value>
@@ -160,8 +232,26 @@
   <data name="rdoPageLTRBatch.Text" xml:space="preserve">
     <value>LTR</value>
   </data>
+  <data name="rdoPageLTRBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdoPageLTRBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdoPageLTRBatch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>294, 93</value>
+  </data>
+  <data name="groupBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox5.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="cbConvertMobiBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 25</value>
@@ -169,11 +259,29 @@
   <data name="cbConvertMobiBatch.Text" xml:space="preserve">
     <value>Export .mobi</value>
   </data>
+  <data name="cbConvertMobiBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbConvertMobiBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbConvertMobiBatch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="cbChineseBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>294, 25</value>
   </data>
   <data name="cbChineseBatch.Text" xml:space="preserve">
     <value>Traditional and Simplified Chinese</value>
+  </data>
+  <data name="cbChineseBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbChineseBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbChineseBatch.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="ST_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>184, 35</value>
@@ -184,11 +292,29 @@
   <data name="ST_Label_Batch.Text" xml:space="preserve">
     <value>Simplified</value>
   </data>
+  <data name="ST_Label_Batch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ST_Label_Batch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ST_Label_Batch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnToTraditionValueBatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 22</value>
   </data>
   <data name="btnToTraditionValueBatch.Text" xml:space="preserve">
     <value>👉🏼</value>
+  </data>
+  <data name="btnToTraditionValueBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnToTraditionValueBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnToTraditionValueBatch.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="CT_Label_Batch.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 35</value>
@@ -199,8 +325,26 @@
   <data name="CT_Label_Batch.Text" xml:space="preserve">
     <value>Traditional</value>
   </data>
+  <data name="CT_Label_Batch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CT_Label_Batch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CT_Label_Batch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>294, 95</value>
+  </data>
+  <data name="GroupBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox2.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="btnLoadBatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>741, 760</value>
@@ -208,14 +352,41 @@
   <data name="btnLoadBatch.Text" xml:space="preserve">
     <value>Open</value>
   </data>
+  <data name="btnLoadBatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnLoadBatch.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnLoadBatch.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1043, 916</value>
+  </data>
+  <data name="Btn_debugOptions.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Btn_debugOptions.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Btn_debugOptions.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="cbRemoveStylesheet.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 25</value>
   </data>
   <data name="cbRemoveStylesheet.Text" xml:space="preserve">
     <value>Remove CSS in stylesheet</value>
+  </data>
+  <data name="cbRemoveStylesheet.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbRemoveStylesheet.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbRemoveStylesheet.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 84</value>
@@ -226,14 +397,50 @@
   <data name="button1.Text" xml:space="preserve">
     <value>Customize</value>
   </data>
+  <data name="button1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="cbAddCustomizeCSS.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 25</value>
   </data>
   <data name="cbAddCustomizeCSS.Text" xml:space="preserve">
     <value>Add customize CSS</value>
   </data>
+  <data name="cbAddCustomizeCSS.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbAddCustomizeCSS.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbAddCustomizeCSS.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 120</value>
+  </data>
+  <data name="groupBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox3.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbConvertKepub.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbConvertKepub.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbConvertKepub.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 60</value>
@@ -241,8 +448,134 @@
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Also export those format</value>
   </data>
+  <data name="groupBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbVersion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbVersion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbVersion.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox11.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox11.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox10.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox10.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox7.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox7.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox6.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox6.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox5.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Pb_debugOptions.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Pb_debugOptions.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Pb_debugOptions.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox2.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnOpenFolder.Location" type="System.Drawing.Point, System.Drawing">
     <value>846, 871</value>
+  </data>
+  <data name="btnOpenFolder.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenFolder.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnOpenFolder.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -315,6 +648,15 @@
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>230, 15</value>
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="RunningLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2946,20 +3288,65 @@
         AAEAAAgEABkFBAAh+QQFNgCMACwAAAAAAQABAAAIBAAZBQQAOw==
 </value>
   </data>
+  <data name="RunningLogo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RunningLogo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RunningLogo.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 15</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Message</value>
   </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="tbLogWindow.Text" xml:space="preserve">
     <value>Greetings！</value>
+  </data>
+  <data name="tbLogWindow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbLogWindow.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbLogWindow.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="btnAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>927, 870</value>
   </data>
+  <data name="btnAbout.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAbout.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAbout.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnSetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>765, 870</value>
+  </data>
+  <data name="btnSetting.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="cbDONOTVerticalize.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 25</value>
@@ -2967,11 +3354,29 @@
   <data name="cbDONOTVerticalize.Text" xml:space="preserve">
     <value>Don't verticalize</value>
   </data>
+  <data name="cbDONOTVerticalize.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbDONOTVerticalize.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbDONOTVerticalize.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="cbDecodeHtmlBeforeParsing.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 24</value>
   </data>
   <data name="cbDecodeHtmlBeforeParsing.Text" xml:space="preserve">
     <value>讀取 html 前先解碼</value>
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbDecodeHtmlBeforeParsing.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbTurncateTitle.AutoSize" type="System.Boolean, mscorlib">
@@ -2983,11 +3388,47 @@
   <data name="cbTurncateTitle.Text" xml:space="preserve">
     <value>Truncate title</value>
   </data>
+  <data name="cbTurncateTitle.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbTurncateTitle.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbTurncateTitle.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
   <data name="cbReplaceTWpunctuation.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 25</value>
   </data>
   <data name="cbReplaceTWpunctuation.Text" xml:space="preserve">
     <value>Replace to TW style punctuation</value>
+  </data>
+  <data name="cbReplaceTWpunctuation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbReplaceTWpunctuation.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbReplaceTWpunctuation.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStatus.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStatus.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStatus.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InprogressBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InprogressBar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InprogressBar.ToolTip2" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7502,5 +7943,14 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Chohue verticalizer</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip2" xml:space="preserve">
+    <value />
   </data>
 </root>
