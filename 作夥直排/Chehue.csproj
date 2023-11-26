@@ -129,8 +129,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Resources\kiichoicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -213,6 +212,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
     </Compile>
+    <None Include="Resources\change_circle_FILL0_wght400_GRAD0_opsz24.png" />
     <None Include="Resources\工作區域 1 %285%29.png" />
     <None Include="Resources\火車司機 %284%29.png" />
     <None Include="Resources\rocket_launch_FILL0_wght200_GRAD200_opsz24.png" />
