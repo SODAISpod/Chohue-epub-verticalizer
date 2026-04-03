@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChohueCmd", "ChohueCmd\Choh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chohue.Core", "Chohue.Core\Chohue.Core.csproj", "{A72B1E71-2D3E-424D-BA88-F2045CD3B007}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chohue.ViewModels", "Chohue.ViewModels\Chohue.ViewModels.csproj", "{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,18 @@ Global
 		{A72B1E71-2D3E-424D-BA88-F2045CD3B007}.Release|x64.Build.0 = Release|Any CPU
 		{A72B1E71-2D3E-424D-BA88-F2045CD3B007}.Release|x86.ActiveCfg = Release|Any CPU
 		{A72B1E71-2D3E-424D-BA88-F2045CD3B007}.Release|x86.Build.0 = Release|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Debug|x64.Build.0 = Debug|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Debug|x86.Build.0 = Debug|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Release|x64.ActiveCfg = Release|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Release|x64.Build.0 = Release|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Release|x86.ActiveCfg = Release|Any CPU
+		{FFB44DE9-F8C1-4EA4-BCD0-19213BC7491A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
