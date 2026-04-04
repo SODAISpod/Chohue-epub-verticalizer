@@ -85,10 +85,12 @@ public class ZipEpubPacker : IEpubPacker
             }
 
             // Step 2: Add all other files with normal compression
-            using var zip = new ZipFile(outputPath);
-            zip.CompressionLevel = Ionic.Zlib.CompressionLevel.Default;
+            using var zip = new Ionic.Zip.ZipFile(exportPathAndName);
+            zip.CompressionLevel = Ionic.Zlib.CompressionLevel.None;
             zip.EmitTimesInWindowsFormatWhenSaving = false;
             zip.UseZip64WhenSaving = Zip64Option.Never;
+            zip.AlternateEncodingUsage = ZipOption.Always;
+            zip.AlternateEncoding = System.Text.Encoding.UTF8;
             zip.AddDirectory(sourceDir);
             zip.Save();
         }
