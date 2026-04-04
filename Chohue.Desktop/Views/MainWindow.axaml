@@ -1,0 +1,174 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Chohue.ViewModels.ViewModels;assembly=Chohue.ViewModels"
+        xmlns:res="clr-namespace:Chohue.Desktop.Resources"
+        x:DataType="vm:MainViewModel"
+        mc:Ignorable="d"
+        x:Class="Chohue.Desktop.Views.MainWindow"
+        Title="{x:Static res:Strings.AppTitle}"
+        Width="860" Height="620"
+        MinWidth="720" MinHeight="500">
+
+    <DockPanel>
+
+        <!-- ── Top menu bar ── -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="{x:Static res:Strings.MenuOpen}"
+                      Command="{Binding AddBooksCommand}"
+                      CommandParameter="{x:Null}" />
+            <MenuItem Header="{x:Static res:Strings.MenuSettings}"
+                      Click="OnSettingsClick" />
+            <MenuItem Header="{x:Static res:Strings.MenuAbout}"
+                      Click="OnAboutClick" />
+        </Menu>
+
+        <!-- ── Status bar (bottom) ── -->
+        <Border DockPanel.Dock="Bottom"
+                BorderThickness="0,1,0,0"
+                Padding="8,4">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Grid.Column="0"
+                           Text="{Binding StatusMessage}"
+                           VerticalAlignment="Center"
+                           TextTrimming="CharacterEllipsis" />
+                <ProgressBar Grid.Column="1"
+                             Width="120" Height="6"
+                             Margin="8,0,0,0"
+                             Minimum="0"
+                             Maximum="{Binding ProgressMax}"
+                             Value="{Binding Progress}"
+                             IsVisible="{Binding IsProcessing}" />
+            </Grid>
+        </Border>
+
+        <!-- ── Main content ── -->
+        <Grid ColumnDefinitions="*,Auto" Margin="8">
+
+            <!-- Left: book list + toolbar -->
+            <Grid Grid.Column="0" RowDefinitions="Auto,*,Auto">
+
+                <!-- Toolbar -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="4" Margin="0,0,0,6">
+                    <Button Content="{x:Static res:Strings.BtnOpen}"
+                            Click="OnOpenFilesClick" />
+                    <Button Content="{x:Static res:Strings.BtnDelete}"
+                            Command="{Binding RemoveSelectedCommand}" />
+                    <Button Content="{x:Static res:Strings.BtnClearAll}"
+                            Command="{Binding ClearAllCommand}" />
+                    <Button Content="{x:Static res:Strings.BtnOpenOutputFolder}"
+                            Command="{Binding OpenOutputFolderCommand}" />
+                </StackPanel>
+
+                <!-- Book list (drag-drop target) -->
+                <Panel Grid.Row="1">
+                    <!-- Empty-state hint -->
+                    <TextBlock Text="{x:Static res:Strings.DragDropHint}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Opacity="0.4"
+                               IsVisible="{Binding !Books.Count}" />
+
+                    <DataGrid ItemsSource="{Binding Books}"
+                              SelectedItem="{Binding SelectedBook}"
+                              AutoGenerateColumns="False"
+                              CanUserResizeColumns="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{x:Static res:Strings.ColTitle}"
+                                               Binding="{Binding Manifest.Title}"
+                                               Width="*" />
+                            <DataGridTextColumn Header="{x:Static res:Strings.ColStatus}"
+                                               Binding="{Binding Status}"
+                                               Width="100" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Panel>
+
+                <!-- Convert button -->
+                <Button Grid.Row="2"
+                        Content="{x:Static res:Strings.BtnConvert}"
+                        Command="{Binding ConvertAllCommand}"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,6,0,0"
+                        Padding="0,8" />
+            </Grid>
+
+            <!-- Right: options panel -->
+            <ScrollViewer Grid.Column="1" Width="220" Margin="8,0,0,0">
+                <StackPanel Spacing="8">
+
+                    <!-- Verticalize -->
+                    <CheckBox Content="{x:Static res:Strings.ChkDoNotVerticalize}"
+                              IsChecked="{Binding Options.DoNotVerticalize}" />
+
+                    <!-- CSS group -->
+                    <HeaderedContentControl Header="{x:Static res:Strings.GroupCss}">
+                        <StackPanel Spacing="4" Margin="4">
+                            <CheckBox Content="{x:Static res:Strings.ChkRemoveInlineStyles}"
+                                      IsChecked="{Binding Options.RemoveInlineStyles}" />
+                            <CheckBox Content="{x:Static res:Strings.ChkRemoveStylesheet}"
+                                      IsChecked="{Binding Options.ClearStylesheet}" />
+                            <StackPanel Orientation="Horizontal" Spacing="4">
+                                <CheckBox Content="{x:Static res:Strings.ChkAddCustomCss}"
+                                          IsChecked="{Binding Options.AddCustomCss}" />
+                                <Button Content="{x:Static res:Strings.BtnCustomizeCss}"
+                                        Click="OnCustomizeCssClick"
+                                        IsEnabled="{Binding Options.AddCustomCss}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </HeaderedContentControl>
+
+                    <!-- Image -->
+                    <CheckBox Content="{x:Static res:Strings.ChkReplacePicture}"
+                              IsChecked="{Binding Options.ReplacePicture}" />
+                    <CheckBox Content="{x:Static res:Strings.ChkEmbedFont}"
+                              IsChecked="{Binding Options.EmbedFont}" />
+
+                    <!-- Export formats -->
+                    <HeaderedContentControl Header="{x:Static res:Strings.GroupExportFormats}">
+                        <StackPanel Spacing="4" Margin="4">
+                            <CheckBox Content="{x:Static res:Strings.ChkConvertMobi}"
+                                      IsChecked="{Binding Options.ConvertMobi}" />
+                            <CheckBox Content="{x:Static res:Strings.ChkConvertKepub}"
+                                      IsChecked="{Binding Options.ConvertKepub}" />
+                        </StackPanel>
+                    </HeaderedContentControl>
+
+                    <!-- Page direction -->
+                    <CheckBox Content="{x:Static res:Strings.ChkPageDirection}"
+                              IsChecked="{Binding Options.ChangePageDirection}" />
+                    <StackPanel Orientation="Horizontal" Spacing="8"
+                                IsEnabled="{Binding Options.ChangePageDirection}">
+                        <RadioButton Content="{x:Static res:Strings.RdoPageRTL}"
+                                     IsChecked="{Binding Options.PageDirectionRTL}" />
+                        <RadioButton Content="{x:Static res:Strings.RdoPageLTR}"
+                                     IsChecked="{Binding !Options.PageDirectionRTL}" />
+                    </StackPanel>
+
+                    <!-- Chinese conversion -->
+                    <CheckBox Content="{x:Static res:Strings.ChkConvertChinese}"
+                              IsChecked="{Binding Options.ConvertChinese}" />
+                    <StackPanel Orientation="Horizontal" Spacing="8"
+                                IsEnabled="{Binding Options.ConvertChinese}">
+                        <TextBlock Text="{x:Static res:Strings.LblSimplified}"
+                                   VerticalAlignment="Center" />
+                        <TextBlock Text="→" VerticalAlignment="Center" />
+                        <TextBlock Text="{x:Static res:Strings.LblTraditional}"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+
+                    <!-- Other options -->
+                    <CheckBox Content="{x:Static res:Strings.ChkTruncateTitle}"
+                              IsChecked="{Binding Options.TruncateTitle}" />
+                    <CheckBox Content="{x:Static res:Strings.ChkReplacePunctuation}"
+                              IsChecked="{Binding Options.ReplacePunctuation}" />
+                    <CheckBox Content="{x:Static res:Strings.ChkDecodeHtml}"
+                              IsChecked="{Binding Options.DecodeHtmlBeforeParsing}" />
+
+                </StackPanel>
+            </ScrollViewer>
+
+        </Grid>
+    </DockPanel>
+</Window>

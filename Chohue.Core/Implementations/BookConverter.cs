@@ -8,6 +8,7 @@ namespace Chohue.Core.Implementations;
 /// <summary>
 /// Orchestrates the full EPUB conversion pipeline.
 /// Maps to Load() + Convert() in the original Book.cs.
+/// Split into two phases: LoadAsync (extract + parse) and ConvertAsync (process + repackage).
 /// </summary>
 public class BookConverter : IBookConverter
 {
@@ -41,11 +42,9 @@ public class BookConverter : IBookConverter
     }
 
     /// <inheritdoc/>
-    public async Task<ConversionResult> ConvertAsync(string inputPath, ConversionOptions options)
+    public async Task<ConversionResult> LoadAsync(string inputPath)
     {
-        _logger.LogInformation("Starting conversion: {InputPath}", inputPath);
-
-        string? uncompressedPath = null;
+        _logger.LogInformation("Loading book: {InputPath}", inputPath);
 
         try
         {
@@ -59,7 +58,7 @@ public class BookConverter : IBookConverter
             }
 
             // Step 2: Extract EPUB
-            uncompressedPath = _packer.Extract(inputPath);
+            string uncompressedPath = _packer.Extract(inputPath);
 
             // Step 3: Parse manifest
             EpubManifest manifest = _parser.ReadManifest(uncompressedPath);
@@ -71,7 +70,8 @@ public class BookConverter : IBookConverter
                 var (upgraded, newPath) = await UpgradeEpub2Async(inputPath);
                 if (!upgraded)
                 {
-                    await _dialog.ShowErrorAsync("EPUB 2.x files require Pandoc. Please configure the Pandoc path in Settings.");
+                    await _dialog.ShowErrorAsync(
+                        "EPUB 2.x files require Pandoc. Please configure the Pandoc path in Settings.");
                     return Fail("EPUB 2 to 3 upgrade failed.");
                 }
                 // Re-extract the upgraded EPUB
@@ -79,15 +79,41 @@ public class BookConverter : IBookConverter
                 manifest = _parser.ReadManifest(uncompressedPath);
             }
 
-            // Step 5: Truncate title if needed
+            _logger.LogInformation("Book loaded: \"{Title}\" by {Author}, EPUB {Version}, {XhtmlCount} XHTML, {CssCount} CSS",
+                manifest.Title, manifest.Author, manifest.EpubVersion,
+                manifest.XhtmlFiles.Count, manifest.CssFiles.Count);
+
+            return new ConversionResult
+            {
+                Success = true,
+                Manifest = manifest,
+                UncompressedPath = uncompressedPath
+            };
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Failed to load {InputPath}", inputPath);
+            return Fail(ex.Message);
+        }
+    }
+
+    /// <inheritdoc/>
+    public async Task<ConversionResult> ConvertAsync(EpubManifest manifest, ConversionOptions options)
+    {
+        _logger.LogInformation("Converting: \"{Title}\"", manifest.Title);
+
+        try
+        {
+            // Step 1: Truncate title if needed
             if (options.TruncateTitle)
                 manifest.Title = TruncateTitle(manifest.Title);
 
-            // Step 6: Process CSS files
+            // Step 2: Process CSS files
             var cssOptions = new CssProcessingOptions
             {
                 EmbedFont = options.EmbedFont,
                 Verticalize = !options.DoNotVerticalize,
+                DoNotVerticalize = options.DoNotVerticalize,
                 ClearStylesheet = options.ClearStylesheet,
                 AddCustomCss = options.AddCustomCss,
                 CustomCss = options.CustomCss
@@ -98,7 +124,7 @@ public class BookConverter : IBookConverter
                 _cssVerticalizer.ProcessFile(cssPath, cssOptions);
             }
 
-            // Step 7: Process XHTML files
+            // Step 3: Process XHTML files
             var htmlOptions = new HtmlProcessingOptions
             {
                 ConvertChinese = options.ConvertChinese,
@@ -113,41 +139,62 @@ public class BookConverter : IBookConverter
                 _htmlProcessor.ProcessFile(xhtmlPath, htmlOptions);
             }
 
-            // Step 8: Replace images if requested
+            // Step 4: Replace images if requested
             if (options.ReplacePicture)
                 _imageReplacer.ReplaceImages(manifest.ImageFiles);
 
-            // Step 9: Write OPF metadata
+            // Step 5: Write OPF metadata (page direction, etc.)
             _parser.WriteOpf(manifest, options);
 
-            // Step 10: Package back to EPUB
-            string outputPath = _packer.Package(uncompressedPath, manifest.Title);
+            // Step 6: Package back to EPUB
+            string outputPath = _packer.Package(manifest.UncompressedPath, manifest.Title);
             _logger.LogInformation("EPUB packaged: {OutputPath}", outputPath);
 
-            // Step 11: Optional format conversions
+            // Step 7: Optional format conversions
             if (options.ConvertMobi)
                 await ConvertToMobiAsync(outputPath);
 
             if (options.ConvertKepub)
                 await ConvertToKepubAsync(outputPath);
 
-            return new ConversionResult { Success = true, OutputPath = outputPath };
+            return new ConversionResult
+            {
+                Success = true,
+                OutputPath = outputPath,
+                Manifest = manifest
+            };
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Conversion failed for {InputPath}", inputPath);
+            _logger.LogError(ex, "Conversion failed for \"{Title}\"", manifest.Title);
             return Fail(ex.Message);
         }
         finally
         {
             // Clean up temp directory
-            if (uncompressedPath != null && Directory.Exists(uncompressedPath))
+            if (Directory.Exists(manifest.UncompressedPath))
             {
-                try { Directory.Delete(uncompressedPath, recursive: true); }
-                catch (Exception ex) { _logger.LogWarning(ex, "Failed to clean up temp dir: {Path}", uncompressedPath); }
+                try { Directory.Delete(manifest.UncompressedPath, recursive: true); }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Failed to clean up temp dir: {Path}", manifest.UncompressedPath);
+                }
             }
         }
     }
+
+    /// <inheritdoc/>
+    public async Task<ConversionResult> ConvertAsync(string inputPath, ConversionOptions options)
+    {
+        // Full pipeline: load first, then convert
+        var loadResult = await LoadAsync(inputPath);
+        if (!loadResult.Success || loadResult.Manifest is null)
+            return loadResult;
+
+        return await ConvertAsync(loadResult.Manifest, options);
+    }
+
+    // ─── Private helpers ───
 
     private async Task<string?> ConvertTxtToEpubAsync(string txtPath)
     {
@@ -216,9 +263,9 @@ public class BookConverter : IBookConverter
     private static string TruncateTitle(string title)
     {
         if (title.Length <= 18) return title;
-        return $"{title.Substring(0, 9)}…{title.Substring(title.Length - 8, 8)}";
+        return $"{title[..9]}…{title[^8..]}";
     }
 
     private static ConversionResult Fail(string message) =>
-        new ConversionResult { Success = false, ErrorMessage = message };
+        new() { Success = false, ErrorMessage = message };
 }

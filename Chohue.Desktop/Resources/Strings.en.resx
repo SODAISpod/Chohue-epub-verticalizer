@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+
+  <data name="AppTitle" xml:space="preserve">
+    <value>Chohue Verticalizer</value>
+  </data>
+
+  <data name="MenuOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="BtnOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BtnConvert" xml:space="preserve">
+    <value>Forge</value>
+  </data>
+  <data name="BtnOpenOutputFolder" xml:space="preserve">
+    <value>Open Output Folder</value>
+  </data>
+  <data name="BtnClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+
+  <data name="ColTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ColStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+
+  <data name="GroupCss" xml:space="preserve">
+    <value>CSS</value>
+  </data>
+  <data name="GroupExportFormats" xml:space="preserve">
+    <value>Also export those format</value>
+  </data>
+  <data name="GroupChinese" xml:space="preserve">
+    <value>Traditional and Simplified Chinese</value>
+  </data>
+
+  <data name="ChkVerticalize" xml:space="preserve">
+    <value>Verticalize</value>
+  </data>
+  <data name="ChkDoNotVerticalize" xml:space="preserve">
+    <value>Don't verticalize</value>
+  </data>
+  <data name="ChkRemoveInlineStyles" xml:space="preserve">
+    <value>Remove styles in HTML element</value>
+  </data>
+  <data name="ChkRemoveStylesheet" xml:space="preserve">
+    <value>Remove CSS in stylesheet</value>
+  </data>
+  <data name="ChkAddCustomCss" xml:space="preserve">
+    <value>Add customize CSS</value>
+  </data>
+  <data name="BtnCustomizeCss" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="ChkReplacePicture" xml:space="preserve">
+    <value>Replace images</value>
+  </data>
+  <data name="ChkEmbedFont" xml:space="preserve">
+    <value>Embedded font</value>
+  </data>
+  <data name="ChkConvertMobi" xml:space="preserve">
+    <value>Export .mobi</value>
+  </data>
+  <data name="ChkConvertKepub" xml:space="preserve">
+    <value>Export .kepub</value>
+  </data>
+  <data name="ChkConvertChinese" xml:space="preserve">
+    <value>Traditional/Simplified Chinese</value>
+  </data>
+  <data name="LblSimplified" xml:space="preserve">
+    <value>Simplified</value>
+  </data>
+  <data name="LblTraditional" xml:space="preserve">
+    <value>Traditional</value>
+  </data>
+  <data name="ChkPageDirection" xml:space="preserve">
+    <value>Paging direction</value>
+  </data>
+  <data name="RdoPageRTL" xml:space="preserve">
+    <value>RTL</value>
+  </data>
+  <data name="RdoPageLTR" xml:space="preserve">
+    <value>LTR</value>
+  </data>
+  <data name="ChkTruncateTitle" xml:space="preserve">
+    <value>Truncate title</value>
+  </data>
+  <data name="ChkReplacePunctuation" xml:space="preserve">
+    <value>Replace to TW style punctuation</value>
+  </data>
+  <data name="ChkDecodeHtml" xml:space="preserve">
+    <value>Decode HTML before parsing</value>
+  </data>
+
+  <data name="LblMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="StatusReady" xml:space="preserve">
+    <value>Greetings!</value>
+  </data>
+  <data name="StatusProcessing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="GroupExternalTools" xml:space="preserve">
+    <value>External Tool Paths</value>
+  </data>
+  <data name="LblPandocPath" xml:space="preserve">
+    <value>Pandoc path</value>
+  </data>
+  <data name="LblCalibrePath" xml:space="preserve">
+    <value>Calibre path</value>
+  </data>
+  <data name="LblKepubifyPath" xml:space="preserve">
+    <value>Kepubify path</value>
+  </data>
+  <data name="GroupImage" xml:space="preserve">
+    <value>Image replacement</value>
+  </data>
+  <data name="ChkUseBuiltinImage" xml:space="preserve">
+    <value>Use built-in image</value>
+  </data>
+  <data name="BtnBrowse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Settings saved.</value>
+  </data>
+
+  <data name="DragDropHint" xml:space="preserve">
+    <value>Drag and drop EPUB or TXT files here</value>
+  </data>
+
+</root>

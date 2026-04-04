@@ -66,18 +66,47 @@ public partial class MainViewModel : ObservableObject
 
     /// <summary>
     /// Add books to the list from file paths (e.g. drag-drop or file picker).
-    /// Replaces bw_DoWork loading in Main.cs.
+    /// Extracts each EPUB and parses its manifest immediately so the title
+    /// and metadata are available before the user clicks "Forge".
+    /// 新增書籍到清單，立即解壓並解析 manifest，讓標題和中繼資料在按「製作」之前就可用。
     /// </summary>
     [RelayCommand]
-    private void AddBooks(IEnumerable<string> paths)
+    private async Task AddBooksAsync(IEnumerable<string> paths)
     {
+        IsProcessing = true;
+        int loaded = 0;
+
         foreach (var path in paths)
         {
             // Avoid duplicates
             if (Books.Any(b => b.FilePath == path)) continue;
-            Books.Add(BookItemViewModel.FromPath(path));
+
+            var book = BookItemViewModel.FromPath(path);
+            book.Status = "Loading...";
+            Books.Add(book);
+
+            // Load: extract + parse manifest
+            var result = await _converter.LoadAsync(path);
+
+            if (result.Success && result.Manifest is not null)
+            {
+                book.Manifest = result.Manifest;
+                book.UncompressedPath = result.UncompressedPath;
+                book.Title = result.Manifest.Title;
+                book.Status = "Ready";
+                AppendLog($"✓ Loaded: {result.Manifest.Title}");
+                loaded++;
+            }
+            else
+            {
+                book.Status = "Load Failed";
+                book.ErrorMessage = result.ErrorMessage;
+                AppendLog($"✗ Failed to load: {path} — {result.ErrorMessage}");
+            }
         }
-        StatusMessage = $"{Books.Count} book(s) loaded.";
+
+        IsProcessing = false;
+        StatusMessage = $"{loaded} book(s) loaded, {Books.Count} total.";
     }
 
     /// <summary>
@@ -99,8 +128,9 @@ public partial class MainViewModel : ObservableObject
     private void ClearAll() => Books.Clear();
 
     /// <summary>
-    /// Convert all books in the list.
-    /// Replaces bwConvertBatch_DoWork + bwConvertBatch_RunWorkerCompleted in Main.cs.
+    /// Convert all books in the list that have a loaded manifest.
+    /// Passes the pre-loaded manifest to ConvertAsync() — no re-extraction needed.
+    /// 轉換清單中所有已載入 manifest 的書籍，直接傳入已準備好的 manifest。
     /// </summary>
     [RelayCommand(CanExecute = nameof(CanConvertAll))]
     private async Task ConvertAllAsync(CancellationToken ct)
@@ -120,11 +150,22 @@ public partial class MainViewModel : ObservableObject
         {
             if (ct.IsCancellationRequested) break;
 
+            // Skip books that failed to load
+            if (book.Manifest is null)
+            {
+                book.Status = "Skipped (not loaded)";
+                AppendLog($"⏭ Skipped: {book.Title} (manifest not loaded)");
+                failed++;
+                Progress++;
+                continue;
+            }
+
             book.Status = "Processing...";
             StatusMessage = $"Converting: {book.Title}";
             AppendLog($"▶ {book.Title}");
 
-            var result = await _converter.ConvertAsync(book.FilePath, Options);
+            // Use the pre-loaded manifest — no re-extraction
+            var result = await _converter.ConvertAsync(book.Manifest, Options);
 
             if (result.Success)
             {
@@ -140,7 +181,7 @@ public partial class MainViewModel : ObservableObject
                 failed++;
             }
 
-            Progress = ++done + failed - 1;
+            Progress++;
         }
 
         IsProcessing = false;

@@ -9,6 +9,8 @@ public class ConversionOptions
     public bool ConvertChinese { get; set; }
     public bool ToTraditional { get; set; }
     public bool ChangePageDirection { get; set; }
+    /// <summary>True = page turns right-to-left (vertical books); false = left-to-right.</summary>
+    public bool PageDirectionRTL { get; set; } = true;
     public bool ConvertMobi { get; set; }
     public bool ConvertKepub { get; set; }
     public bool EmbedFont { get; set; }
