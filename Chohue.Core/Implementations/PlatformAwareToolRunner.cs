@@ -85,7 +85,7 @@ public class PlatformAwareToolRunner : IToolRunner
         return tool switch
         {
             ExternalTool.Pandoc or ExternalTool.PandocWithReload =>
-                Path.Combine(_settings.GetToolPath("PandocPath") ?? "", $"pandoc{ext}"),
+                _settings.GetToolPath("PandocPath"),
 
             ExternalTool.Calibre or ExternalTool.CalibreTxtToEpub =>
                 Path.Combine(_settings.GetToolPath("CalibrePath") ?? "", $"ebook-convert{ext}"),

@@ -1,6 +1,7 @@
 using Chohue.Core.Interfaces;
 using Ionic.Zip;
 using Microsoft.Extensions.Logging;
+using System.Text.Unicode;
 
 namespace Chohue.Core.Implementations;
 
@@ -55,27 +56,27 @@ public class ZipEpubPacker : IEpubPacker
     public string Package(string sourceDir, string title)
     {
         string safeTitle = SanitizeFileName(title);
-        string outputDir = "output";
-        string outputPath = Path.Combine(outputDir, $"{safeTitle}.epub");
+        string exportDir = "output";
+        string exportPathAndName = Path.Combine(exportDir, $"{safeTitle}.epub");
 
-        if (!Directory.Exists(outputDir))
-            Directory.CreateDirectory(outputDir);
+        if (!Directory.Exists(exportDir))
+            Directory.CreateDirectory(exportDir);
 
         // Deduplicate filename if already exists
-        if (File.Exists(outputPath))
+        if (File.Exists(exportPathAndName))
         {
             int index = 1;
-            while (File.Exists(Path.Combine(outputDir, $"{safeTitle} ({index}).epub")))
+            while (File.Exists(Path.Combine(exportDir, $"{safeTitle} ({index}).epub")))
                 index++;
-            outputPath = Path.Combine(outputDir, $"{safeTitle} ({index}).epub");
+            exportPathAndName = Path.Combine(exportDir, $"{safeTitle} ({index}).epub");
         }
 
-        _logger.LogInformation("Packaging EPUB to {OutputPath}", outputPath);
+        _logger.LogInformation("Packaging EPUB to {exportPathAndName}", exportPathAndName);
 
         try
         {
             // Step 1: Write mimetype as first entry with no compression (EPUB spec requirement)
-            using (var zs = new ZipOutputStream(outputPath))
+            using (var zs = new ZipOutputStream(exportPathAndName))
             {
                 var entry = zs.PutNextEntry("mimetype");
                 entry.CompressionLevel = Ionic.Zlib.CompressionLevel.None;
@@ -93,11 +94,11 @@ public class ZipEpubPacker : IEpubPacker
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Failed to package EPUB: {OutputPath}", outputPath);
+            _logger.LogError(ex, "Failed to package EPUB: {exportPathAndName}", exportPathAndName);
             throw;
         }
 
-        return outputPath;
+        return exportPathAndName;
     }
 
     private static string SanitizeFileName(string fileName)

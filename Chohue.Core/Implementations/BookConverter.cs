@@ -203,7 +203,6 @@ public class BookConverter : IBookConverter
             await _dialog.ShowErrorAsync("Converting TXT requires Calibre. Please configure the Calibre path in Settings.");
             return null;
         }
-
         string outName = Path.GetRandomFileName().Replace(".", "");
         string outPath = Path.Combine("temp", $"{outName}.epub");
         string args = $"\"{txtPath}\" \"{outPath}\" --epub-version 3 --no-default-epub-cover";
@@ -220,8 +219,10 @@ public class BookConverter : IBookConverter
         string outName = Path.GetRandomFileName().Replace(".", "");
         string outPath = Path.Combine("temp", $"{outName}.epub");
         string args = $"-o \"{outPath}\" -t epub3 \"{epubPath}\"";
-
+        _logger.LogInformation("UpgradeEpub2Async {args}", args);
         var result = await _toolRunner.RunAsync(ExternalTool.PandocWithReload, args);
+        _logger.LogInformation("UpgradeEpub2Async result {result}", result);
+
         return (result == ToolResult.Success, outPath);
     }
 
